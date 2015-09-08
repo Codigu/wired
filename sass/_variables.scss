@@ -1,0 +1,61 @@
+@include font-face("proximaNova", "../fonts/proximaNova/proximanova-regular-webfont");
+
+/* Color Swatch
+------------------------- */
+$color-base: #626262;
+$color-darkest: #000000;
+$color-darker: #1A1A1A;
+$color-darken: #2b303b;
+$color-dark: #2C2C2C;
+
+$color-white: #fff;
+$color-light: #E6E6E6;
+$color-lighter: #F0F0F0;
+$color-lightest: #FAFAFA;
+$color-gray: #9199AA;
+$color-menu: #2b303b;
+$color-disabled: #f8f8f8;
+
+$color-primary: #5F68A7;
+$color-primary-light: rgba($color-primary, 0.90);
+$color-primary-dark: darken($color-primary, 5%);
+
+$color-complete: #48b0f7;
+$color-complete-light: rgba($color-complete, 0.90);
+$color-complete-dark: darken($color-complete, 5%);
+
+$color-info: #3498db;
+$color-info-light: rgba($color-info, 0.90);
+$color-info-dark: darken($color-info, 5%);
+
+$color-success: #2ecc71;
+$color-success-light: rgba($color-success, 0.90);
+$color-success-dark: darken($color-success, 5%);
+
+$color-danger: #f55753;
+$color-danger-light: rgba($color-danger, 0.90);
+$color-danger-dark: darken($color-danger, 5%);
+
+$color-warning: #f8d053;
+$color-warning-light: rgba($color-warning, 0.90);
+$color-warning-dark: darken($color-warning, 5%);
+
+$color-link: #337ab7;
+$color-link-light: rgba( $color-link, 0.90 );
+$color-link-dark: darken($color-link, 5%);
+
+/* Fonts
+------------------------- */
+$font-size-base			: 14px; 
+$line-height-base		: 1.7;
+$letter-spacing-base	: 0.01em;
+$font-base				: 'proximaNova', sans-serif;
+$font-heading			: 'Montserrat', sans-serif;
+
+/* Media
+------------------------- */
+$screen-xs		: 270px;
+$screen-phablet	: 640px;
+$screen-sm		: 768px;
+$screen-md 		: 992px;
+$screen-lg 		: 1200px;

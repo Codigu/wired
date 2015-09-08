@@ -1,0 +1,225 @@
+<section id="helpers">
+  <h1 class="page-header fs-18 text-uppercase mg-b-10">Helpers</h1>
+  <p class="fs-15"> Helper css classes allow you to build your custom layout without touching any CSS code.</p>
+  <p>These classes are generic helper classes predifined in the CSS of pages, here is quick view what they can do</p>
+  <ul class="fs-13 pd-l-25">
+	<li class="mg-b-5">Set margins - Available for all directions from 5 - 85 px stepping value 5px </li>
+	<li class="mg-b-5">Set padding - Available for all directions from 5 - 85 px stepping value 5px </li>
+	<li class="mg-b-5">Set border - Available for all sides, default pages border color</li>
+	<li class="mg-b-5">Border Radius - Option to set border radius, size sm / md / lg</li>
+  </ul>
+
+  <section>
+	<h3 class="fs-16">Margins</h3>
+	<p>You can add this helper class to any element in your HTML code to set Margins</p>
+	<div class="table-responsive">
+	<table class="table table-bordered table-condensed table-striped">
+	<thead>
+	<tr>
+	<th>
+	First Prefix ( mg-*)
+	</th>
+	<th>
+	Second Prefix(mg-t/b/l/r-*)
+	</th>
+	<th>
+	Last Prefix(mg-t-$value)
+	</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr>
+	<td>mg for margin</td>
+	<td>t : top, b : bottom, l : left, r : right</td>
+	<td>5, 10, 15, 20, ... 85</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+	<p class="text-uppercase fs-12 bold">Example :</p>
+	<code>mg-t-10</code> <span class="fs-13">which means Margin Top 10px</span>
+	<br>
+	<code>mg-b-20</code> <span class="fs-13">which means Margin Bottom 20px</span>
+	<br>
+	<code>mg-l-5</code> <span class="fs-13">which means Margin Left 5px</span>
+	<br>
+	<code>mg-r-35</code> <span class="fs-13">which means Margin Right 35px</span>
+	<br>
+	<p class="text-uppercase fs-12 bold mg-t-30">
+	Rule :
+	</p>
+	<p>Value can not be anything, 1,2,4,5,6. It has a step of 5px, eg: 5,10,15</p>
+	<p class="all-caps fs-12 bold m-t-30">
+	Other options :
+	</p>
+	<p>To remove margin from a HTML element add the class <code>mg-0</code></p>
+	</section>
+
+	<section>
+		<h3 class="fs-16">Padding</h3>
+		<p>You can add this helper class to any element in your HTML code to set Padding</p>
+		<div class="table-responsive">
+		<table class="table table-bordered table-condensed table-striped">
+		<thead>
+		<tr>
+		<th>
+		First Prefix ( pd-*)
+		</th>
+		<th>
+		Second Prefix(pd-t/b/l/r-*)
+		</th>
+		<th>
+		Last Prefix(pd-t-$value)
+		</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td>pd for padding</td>
+		<td>t : top, b : bottom, l : left, r : right</td>
+		<td>5,10,15,20, ... 85</td>
+		</tr>
+		</tbody>
+		</table>
+		</div>
+		<p class="text-uppercase fs-12 bold">Example :</p>
+		<code>pd-t-10</code> <span class="fs-13">which means Padding Top 10px</span>
+		<br>
+		<code>pd-b-20</code> <span class="fs-13">which means Padding Bottom 20px</span>
+		<br>
+		<code>pd-l-5</code> <span class="fs-13">which means Padding Left 5px</span>
+		<br>
+		<code>pd-r-35</code> <span class="fs-13">which means Padding Right 35px</span>
+		<br>
+		<p class="text-uppercase fs-12 bold mg-t-30">Rule :</p>
+		<p>Value can not be anything, 1,2,4,5,6. It has a step of 5px, eg: 5,10,15</p>
+		<p class="all-caps fs-12 bold m-t-30">
+		Other options :
+		</p>
+		<p>To remove padding from a HTML element add the class <code>pd-0</code></p>
+		</section>
+
+		<section>
+		<h3 class="fs-15">Border</h3>
+		<p>You can add this helper class to any element in your HTML code to set Border, border currently supports one pixel</p>
+		<div class="table-responsive ">
+		<table class="table table-bordered table-condensed table-striped">
+		<thead>
+		<tr>
+		<th>
+		First Prefix ( bd-*)
+		</th>
+		<th>
+		Second Prefix(bd-t/b/l/r/a-*)
+		</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td>bd for border</td>
+		<td>t : top, b : bottom, l : left, r : right, a : all</td>
+		</tr>
+		</tbody>
+		</table>
+		</div>
+		<br>
+		<h5 class="mg-b-15">Border Color</h5>
+		<p>By default pages is shipped with border helper classes are of two</p>
+		<p><code>bd-transparent</code> 40% opacity</p>
+		<p><code>bd-grey</code></p>
+		<p><code>bd-primary</code></p>
+		<p><code>bd-success</code></p>
+		<p><code>bd-complete</code></p>
+		<p><code>bd-danger</code></p>
+		<p><code>bd-warning</code></p>
+				
+		<h5 class="mg-b-15">Border Style</h5>
+		<p><code>bd-dashed</code> - change the border style to 'dashed'</p>
+		<p><code>bd-thick</code> - change the border width to 2px</p>
+		</section>
+
+		<section>
+		<h5 class="fs-15">Border Radius</h5>
+		<p>Helpy class to apply quick border radius, you can change the value in misc.less or in style.css</p>
+		<div class="table-responsive ">
+		<table class="table table-bordered table-condensed table-striped">
+		<thead>
+		<tr>
+		<th>
+		Class
+		</th>
+		<th>
+		Description
+		</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td><code>bd-rd-sm</code></td>
+		<td>3px border radius</td>
+		</tr>
+		<tr>
+		<td><code>bd-rd-md</code></td>
+		<td>5px border radius</td>
+		</tr>
+		<tr>
+		<td><code>bd-rd-lg</code></td>
+		<td>7px border radius</td>
+		</tr>
+		</tbody>
+		</table>
+		</div>
+		</section>
+
+		<section>
+<h5 class="">Misc. classes</h5>
+<div class="table-responsive ">
+<table class="table table-bordered table-condensed table-striped">
+<thead>
+<tr>
+<th>
+Class name
+</th>
+<th>
+Description
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>full-width</code></td>
+<td>Spans the element to have 100% width of the parent</td>
+</tr>
+<tr>
+<td><code>full-height</code></td>
+<td>Spans the element to have 100% height of the parent</td>
+</tr>
+<tr>
+<td><code>scrollable</code></td>
+<td>Adds <code>overflow-y:auto</code></td>
+</tr>
+<tr>
+<td><code>center-margin</code></td>
+<td>Adds <code>margin-left:auto; margin-right:auto</code>. Useful when center aligning any div</td>
+</tr>
+<tr>
+<td><code>inherit-size</code></td>
+<td>Inherits width and height from parent</td>
+</tr>
+<tr>
+<td><code>inherit-height</code></td>
+<td>Inherits only the height from parent</td>
+</tr>
+<tr>
+<td><code>hide</code></td>
+<td>Hides any element</td>
+</tr>
+<tr>
+<td><code>inline</code></td>
+<td>Adds <code>display:inline-block</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
