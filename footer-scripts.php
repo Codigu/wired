@@ -4,6 +4,8 @@
         <script src="js/vendor/modernizr.min.js"></script>
         <script src="js/vendor/pace.min.js"></script>
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="js/vendor/bootstrap-datepicker.min.js"></script>
+        <script src="js/vendor/bootstrap-select2.min.js"></script>
         <script src="js/plugins.js"></script>
 
     </body>

@@ -1421,6 +1421,102 @@ fieldset[disabled] .form-control {
 	    }
 	}
 
+	/**
+	* Rounded Button -------------- */ 
+
+	&.btn-rounded{
+	    @include border-radius(100px);
+	}
+
+	/**
+	* Animated Button -------------- */ 
+
+	&.btn-animated {
+		position: relative;
+	    overflow:hidden;
+	    font-family: $font-base;
+	    line-height: inherit;
+	    -webkit-backface-visibility:hidden;
+	    -moz-backface-visibility:hidden;
+	    backface-visibility:hidden;
+	    -webkit-transform-style:preserve-3d;
+	    -moz-transform-style:preserve-3d;
+	    transform-style:preserve-3d;
+
+	    &:before {
+	        position:absolute;
+	        height:100%;
+	        width:100%;
+	        font-size:100%;
+	        line-height: 2.7;
+	        @include transition(all 0.3s ease-in-out);
+	    }
+
+	    &:after {
+	        content:'';
+	        position:absolute;
+	        z-index:-1;
+	        @include transition(all 0.3s ease-in-out);
+	    }
+
+	    &.from-top {
+
+	        &:before{
+	            left:0;
+	            top:-100%;
+	        }
+
+	        &:hover{
+	            &:before{
+	                top:0;
+	            }
+
+	            &>span{
+	                @include transform(translateY(300%));
+	            }
+	        }
+	    }
+
+	    &.from-left {
+	        
+	        &:before{
+	            top:0;
+	            left:-100%;
+	        }
+
+	        &:hover{
+	            &:before{
+	                left:0;
+	            }
+
+	            &>span{
+	                @include transform(translateX(200%));
+	            }
+	        }
+	    }
+
+	    &.fa{
+	        &:before {
+	            font-family: 'FontAwesome';
+	        }
+	    }
+
+	    &>span {
+	        display:inline-block;
+	        width:100%;
+	        height:100%;
+	        -webkit-backface-visibility:hidden;
+	        -moz-backface-visibility:hidden;
+	        backface-visibility:hidden;
+	        -webkit-transform-style:preserve-3d;
+	        -moz-transform-style:preserve-3d;
+	        transform-style:preserve-3d;
+	        @include transition(all 0.3s ease-in-out);
+	    } 
+	}
+
+}
+
 /* [ Radio and Checkbox ]
 ------------------------ */
 
@@ -2158,101 +2254,7 @@ fieldset[disabled] .form-control {
 }
 
 
-	/**
-	* Rounded Button -------------- */ 
-
-	&.btn-rounded{
-	    @include border-radius(100px);
-	}
-
-	/**
-	* Animated Button -------------- */ 
-
-	&.btn-animated {
-		position: relative;
-	    overflow:hidden;
-	    font-family: $font-base;
-	    line-height: inherit;
-	    -webkit-backface-visibility:hidden;
-	    -moz-backface-visibility:hidden;
-	    backface-visibility:hidden;
-	    -webkit-transform-style:preserve-3d;
-	    -moz-transform-style:preserve-3d;
-	    transform-style:preserve-3d;
-
-	    &:before {
-	        position:absolute;
-	        height:100%;
-	        width:100%;
-	        font-size:100%;
-	        line-height: 2.7;
-	        @include transition(all 0.3s ease-in-out);
-	    }
-
-	    &:after {
-	        content:'';
-	        position:absolute;
-	        z-index:-1;
-	        @include transition(all 0.3s ease-in-out);
-	    }
-
-	    &.from-top {
-
-	        &:before{
-	            left:0;
-	            top:-100%;
-	        }
-
-	        &:hover{
-	            &:before{
-	                top:0;
-	            }
-
-	            &>span{
-	                @include transform(translateY(300%));
-	            }
-	        }
-	    }
-
-	    &.from-left {
-	        
-	        &:before{
-	            top:0;
-	            left:-100%;
-	        }
-
-	        &:hover{
-	            &:before{
-	                left:0;
-	            }
-
-	            &>span{
-	                @include transform(translateX(200%));
-	            }
-	        }
-	    }
-
-	    &.fa{
-	        &:before {
-	            font-family: 'FontAwesome';
-	        }
-	    }
-
-	    &>span {
-	        display:inline-block;
-	        width:100%;
-	        height:100%;
-	        -webkit-backface-visibility:hidden;
-	        -moz-backface-visibility:hidden;
-	        backface-visibility:hidden;
-	        -webkit-transform-style:preserve-3d;
-	        -moz-transform-style:preserve-3d;
-	        transform-style:preserve-3d;
-	        @include transition(all 0.3s ease-in-out);
-	    } 
-	}
-
-}
+	
 
 /**
 * Jumbotron -------------- */ 
