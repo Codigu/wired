@@ -1,4 +1,4 @@
-### [Wired] 
+### Wired
 A Hand Crafted UI Framework on top of Bootstrap 3
 
 ### Simple Setup
