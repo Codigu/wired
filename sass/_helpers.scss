@@ -1,4 +1,42 @@
-/* Misc classes
+/*
+* Wired v1.0.0
+* Helpers - Table of Contents
+*
+* 1. Misc Classes
+* 2. Padding
+* 3. Margin
+* 4. Border
+* 5. Border Radius
+* 6. Box Shadow
+* 7. Contextual Backgrounds
+* 8. Contextual Colors
+* 9. Font Size
+* 10. Font Weights
+* 11. Font Family
+* 12. Tables
+* 13. Gutter
+* 14. Breadcrumb
+* 15. Overlay
+* 16. Overlayer
+* 17. Vertical Alignment
+* 18. Text Alignment
+* 19. Form Controls
+* 20. Form Theme
+* 21. Form Material
+* 22. Buttons
+* 23. Radio and Checkbox
+* 24. Input Group
+* 25. Progress
+* 26. Modal
+* 27. Popover
+* 28. Tooltip
+* 29. Datepicker
+* 30. Selectbox
+* 31. Panels
+*
+*/
+
+/* [ Misc classes ]
 ------------------------- */
 .overflow-hidden { overflow: hidden !important; } 
 .overflow-auto { overflow: auto !important; } 
@@ -24,33 +62,43 @@
 .full-height { height:100%!important; }
 .full-width { width:100%; }
 .full-height-vh { height: 100vh; }
-.full-height-mid-vh{ height: 50vh; }
-.full-height-semi-vh{ height: 90vh; }
+.full-height-vw { width: 100vh; }
 
 .caret{ margin-top: -5px; }
 .hint{ @include opacity(0.7); }
 .help{ font-size: 12px; color: rgba($color-base, 0.55);}
 .link{ 
 	@include opacity(0.7); 
-
 	&:hover{ @include opacity(1); } 
 } 
-.message{ 
-	font-size: 12px; 
-	margin-top: 5px; 
-	margin-bottom: 5px; 
 
-	&.primary{ color: $color-primary !important; }
-	&.success{ color: $color-success !important; }
-	&.info{ color: $color-info !important; }
-	&.warning{ color: $color-warning !important; }
-	&.error, &.danger{ color: $color-danger !important; }
- }
+.container-xs{
+	max-width: $screen-phablet;
+	margin-left: auto;
+	margin-right: auto;
+}
 
+.container-sm{
+	max-width: $screen-sm;
+	margin-left: auto;
+	margin-right: auto;
+}
 
-/* Padding All
+.container-md{
+	max-width: $screen-md;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container-lg{
+	max-width: $screen-lg;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* [ Padding ]
 -------------------------------*/
-.pd-0{ padding: 0px !important; } 
+.pd-0, .pd-none{ padding: 0px !important; } 
 .pd-5{ padding: 5px !important; } 
 .pd-10{ padding: 10px !important; } 
 .pd-15{ padding: 15px !important; } 
@@ -72,7 +120,7 @@
 
 /* Padding Top
 -------------------------------*/
-.pd-t-0{ padding-top: 0 !important; } 
+.pd-t-0, .pd-t-none{ padding-top: 0 !important; } 
 .pd-t-5{ padding-top: 5px !important; } 
 .pd-t-10{ padding-top: 10px !important; } 
 .pd-t-15{ padding-top: 15px !important; } 
@@ -93,7 +141,7 @@
 
 /* Padding Bottom
 -------------------------------*/
-.pd-b-0{ padding-bottom: 0 !important; } 
+.pd-b-0, .pd-b-none{ padding-bottom: 0 !important; } 
 .pd-b-5{ padding-bottom: 5px !important; } 
 .pd-b-10{ padding-bottom: 10px !important; } 
 .pd-b-15{ padding-bottom: 15px !important; } 
@@ -113,7 +161,7 @@
 
 /* Padding Left
 -------------------------------*/
-.pd-l-0{ padding-left: 0 !important; } 
+.pd-l-0, .pd-l-none{ padding-left: 0 !important; } 
 .pd-l-5{ padding-left: 5px !important; } 
 .pd-l-10{ padding-left: 10px !important; } 
 .pd-l-15{ padding-left: 15px !important; } 
@@ -134,7 +182,7 @@
 
 /* Padding Right
 -------------------------------*/
-.pd-r-0{ padding-right: 0 !important; } 
+.pd-r-0, .pd-r-none{ padding-right: 0 !important; } 
 .pd-r-5{ padding-right: 5px !important; } 
 .pd-r-10{ padding-right: 10px !important; } 
 .pd-r-15{ padding-right: 15px !important; } 
@@ -155,49 +203,49 @@
 
 /* Padding Left and Right
 -------------------------------*/
-.pd-x-0{  padding-right: 0; padding-left: 0 !important; } 
-.pd-x-5{  padding-right: 5px; padding-left: 5px !important; } 
-.pd-x-10{ padding-left: 10px; padding-right: 10px !important; } 
-.pd-x-15{ padding-left: 15px; padding-right: 15px !important; } 
-.pd-x-20{ padding-left: 20px; padding-right: 20px !important; } 
-.pd-x-25{ padding-left: 25px; padding-right: 25px !important; } 
-.pd-x-30{ padding-left: 30px; padding-right: 30px !important; } 
-.pd-x-35{ padding-left: 35px; padding-right: 35px !important; } 
-.pd-x-40{ padding-left: 40px; padding-right: 40px !important; } 
-.pd-x-45{ padding-left: 45px; padding-right: 45px !important; } 
-.pd-x-50{ padding-left: 50px; padding-right: 50px !important; } 
-.pd-x-55{ padding-left: 55px; padding-right: 55px !important; } 
-.pd-x-60{ padding-left: 60px; padding-right: 60px !important; } 
-.pd-x-65{ padding-left: 65px; padding-right: 65px !important; } 
-.pd-x-70{ padding-left: 70px; padding-right: 70px !important; } 
-.pd-x-75{ padding-left: 75px; padding-right: 75px !important; } 
-.pd-x-80{ padding-left: 80px; padding-right: 80px !important; } 
-.pd-x-85{ padding-left: 85px; padding-right: 85px !important; } 
+.pd-x-0, .pd-x-none{  padding-right: 0 !important; padding-left: 0 !important; } 
+.pd-x-5{  padding-right: 5px !important; padding-left: 5px !important; } 
+.pd-x-10{ padding-left: 10px !important; padding-right: 10px !important; } 
+.pd-x-15{ padding-left: 15px !important; padding-right: 15px !important; } 
+.pd-x-20{ padding-left: 20px !important; padding-right: 20px !important; } 
+.pd-x-25{ padding-left: 25px !important; padding-right: 25px !important; } 
+.pd-x-30{ padding-left: 30px !important; padding-right: 30px !important; } 
+.pd-x-35{ padding-left: 35px !important; padding-right: 35px !important; } 
+.pd-x-40{ padding-left: 40px !important; padding-right: 40px !important; } 
+.pd-x-45{ padding-left: 45px !important; padding-right: 45px !important; } 
+.pd-x-50{ padding-left: 50px !important; padding-right: 50px !important; } 
+.pd-x-55{ padding-left: 55px !important; padding-right: 55px !important; } 
+.pd-x-60{ padding-left: 60px !important; padding-right: 60px !important; } 
+.pd-x-65{ padding-left: 65px !important; padding-right: 65px !important; } 
+.pd-x-70{ padding-left: 70px !important; padding-right: 70px !important; } 
+.pd-x-75{ padding-left: 75px !important; padding-right: 75px !important; } 
+.pd-x-80{ padding-left: 80px !important; padding-right: 80px !important; } 
+.pd-x-85{ padding-left: 85px !important; padding-right: 85px !important; } 
 
 /* Padding Top and Bottom
 -------------------------------*/
-.pd-y-0{  padding-top: 0;  padding-bottom: 0 !important; } 
-.pd-y-5{  padding-top: 5px;  padding-bottom: 5px !important; } 
-.pd-y-10{ padding-top: 10px; padding-bottom: 10px !important; } 
-.pd-y-15{ padding-top: 15px; padding-bottom: 15px !important; } 
-.pd-y-20{ padding-top: 20px; padding-bottom: 20px !important; } 
-.pd-y-25{ padding-top: 25px; padding-bottom: 25px !important; } 
-.pd-y-30{ padding-top: 30px; padding-bottom: 30px !important; } 
-.pd-y-35{ padding-top: 35px; padding-bottom: 35px !important; } 
-.pd-y-40{ padding-top: 40px; padding-bottom: 40px !important; } 
-.pd-y-45{ padding-top: 45px; padding-bottom: 45px !important; } 
-.pd-y-50{ padding-top: 50px; padding-bottom: 50px !important; } 
-.pd-y-55{ padding-top: 55px; padding-bottom: 55px !important; } 
-.pd-y-60{ padding-top: 60px; padding-bottom: 60px !important; } 
-.pd-y-65{ padding-top: 65px; padding-bottom: 65px !important; } 
-.pd-y-70{ padding-top: 70px; padding-bottom: 70px !important; } 
-.pd-y-75{ padding-top: 75px; padding-bottom: 75px !important; } 
-.pd-y-80{ padding-top: 80px; padding-bottom: 80px !important; } 
-.pd-y-85{ padding-top: 85px; padding-bottom: 85px !important; } 
+.pd-y-0, .pd-y-none{  padding-top: 0 !important;  padding-bottom: 0 !important; } 
+.pd-y-5{  padding-top: 5px !important;  padding-bottom: 5px !important; } 
+.pd-y-10{ padding-top: 10px !important; padding-bottom: 10px !important; } 
+.pd-y-15{ padding-top: 15px !important; padding-bottom: 15px !important; } 
+.pd-y-20{ padding-top: 20px !important; padding-bottom: 20px !important; } 
+.pd-y-25{ padding-top: 25px !important; padding-bottom: 25px !important; } 
+.pd-y-30{ padding-top: 30px !important; padding-bottom: 30px !important; } 
+.pd-y-35{ padding-top: 35px !important; padding-bottom: 35px !important; } 
+.pd-y-40{ padding-top: 40px !important; padding-bottom: 40px !important; } 
+.pd-y-45{ padding-top: 45px !important; padding-bottom: 45px !important; } 
+.pd-y-50{ padding-top: 50px !important; padding-bottom: 50px !important; } 
+.pd-y-55{ padding-top: 55px !important; padding-bottom: 55px !important; } 
+.pd-y-60{ padding-top: 60px !important; padding-bottom: 60px !important; } 
+.pd-y-65{ padding-top: 65px !important; padding-bottom: 65px !important; } 
+.pd-y-70{ padding-top: 70px !important; padding-bottom: 70px !important; } 
+.pd-y-75{ padding-top: 75px !important; padding-bottom: 75px !important; } 
+.pd-y-80{ padding-top: 80px !important; padding-bottom: 80px !important; } 
+.pd-y-85{ padding-top: 85px !important; padding-bottom: 85px !important; } 
 
-/* Margin All
+/* [ Margin ]
 ------------------------- */
-.mg-0{ margin: 0 !important; }
+.mg-0, .mg-none{ margin: 0 !important; }
 .mg-5{ margin: 5px auto !important; }
 .mg-10{ margin: 10px auto !important; }
 .mg-15{ margin: 15px auto !important; }
@@ -222,7 +270,7 @@
 
 /* Margin Top
 ------------------------- */
-.mg-t-0{ margin-top: 0 !important; }
+.mg-t-0, .mg-t-none{ margin-top: 0 !important; }
 .mg-t-5{ margin-top: 5px !important; }
 .mg-t-10{ margin-top: 10px !important; }
 .mg-t-15{ margin-top: 15px !important; }
@@ -243,7 +291,7 @@
 
 /* Margin Bottom
 ------------------------- */
-.mg-b-0{ margin-bottom: 0 !important; }
+.mg-b-0, .mg-b-none{ margin-bottom: 0 !important; }
 .mg-b-5{ margin-bottom: 5px !important; }
 .mg-b-10{ margin-bottom: 10px !important; }
 .mg-b-15{ margin-bottom: 15px !important; }
@@ -263,7 +311,7 @@
 
 /* Margin Left
 ------------------------- */
-.mg-l-0{ margin-left: 0 !important; }
+.mg-l-0, .mg-l-none{ margin-left: 0 !important; }
 .mg-l-5{ margin-left: 5px !important; }
 .mg-l-10{ margin-left: 10px !important; }
 .mg-l-15{ margin-left: 15px !important; }
@@ -284,7 +332,7 @@
 
 /* Margin Right
 ------------------------- */
-.mg-r-0{ margin-right: 0 !important; }
+.mg-r-0, .mg-r-none{ margin-right: 0 !important; }
 .mg-r-5{ margin-right: 5px !important; }
 .mg-r-10{ margin-right: 10px !important; }
 .mg-r-15{ margin-right: 15px !important; }
@@ -305,7 +353,7 @@
 
 /* Margin Left and Right
 ------------------------- */
-.mg-x-0{ margin-right: 0 !important; margin-left: 0 !important; }
+.mg-x-0, .mg-x-none{ margin-right: 0 !important; margin-left: 0 !important; }
 .mg-x-5{ margin-right: 5px !important; margin-left: 5px !important; }
 .mg-x-10{ margin-left: 10px !important; margin-right: 10px !important; }
 .mg-x-15{ margin-left: 10px !important; margin-right: 10px !important; }
@@ -326,7 +374,7 @@
 
 /* Margin Top and Bottom
 ------------------------- */
-.mg-y-0{ margin-top: 0 !important;   margin-bottom: 0 !important; }
+.mg-y-0, .mg-y-none{ margin-top: 0 !important;   margin-bottom: 0 !important; }
 .mg-y-5{ margin-top: 5px !important;   margin-bottom: 5px !important; }
 .mg-y-10{ margin-top: 10px !important; margin-bottom: 10px !important; }
 .mg-y-15{ margin-top: 15px !important; margin-bottom: 15px !important; }
@@ -345,7 +393,7 @@
 .mg-y-80{ margin-top: 80px !important;  margin-bottom: 80px !important; }
 .mg-y-85{ margin-top: 85px !important;  margin-bottom: 50px !important; }
 
-/* Border Defaults
+/* [ Border ]
 ------------------------- */
 .bd-a, .bd-l, .bd-r, .bd-t, .bd-b{ border-style: solid; border-width: 0; }
 .bd-none{ border: none !important; }
@@ -376,8 +424,10 @@
 .bd-danger{ border-color: $color-danger; }
 .bd-warning{ border-color: $color-warning; }
 
-/* Border Radius
+/* [ Border Radius ]
 ------------------------ */
+.bd-rd-none{ @include border-radius(0); } 
+
 .bd-rd-sm{ @include border-radius(2px); }
 .bd-t-l-rd-sm{ @include border-radius(2px 0 0 0); }
 .bd-t-r-rd-sm{ @include border-radius(0 2px 0 0); }
@@ -393,12 +443,17 @@
 .bd-rd-lg{ @include border-radius(7px); }
 .bd-t-l-rd-lg{ @include border-radius(27px 0 0 0); }
 .bd-t-r-rd-lg{ @include border-radius(0 27px 0 0); }
-.bd-b-r-rd-lg{ @include border-radius(0 0 27px 0); }
 .bd-b-l-rd-lg{ @include border-radius(0 0 0 27px); }
+.bd-b-r-rd-lg{ @include border-radius(0 0 27px 0); }
 
-
-/* Contextual backgrounds
+/* [ Box Shadow ]
 ------------------------ */
+.bx-sd-none{ @include box-shadow(none); }
+
+
+/* [ Contextual backgrounds ]
+------------------------ */
+.bg-transparent{ background-color: transparent !important; }
 .bg-white{ background-color: $color-white !important; color: $color-white !important; }
 .bg-dark{ background-color: $color-dark !important; color: $color-white !important; }
 .bg-darken{ background-color: $color-darken !important; color: $color-white !important; }
@@ -413,8 +468,9 @@
 .bg-link{ background-color: $color-link !important; color: $color-white !important; }
 .bg-base{ background-color: $color-base !important; color: $color-white !important; }
 .bg-menu{ background-color: $color-menu !important; color: $color-white !important; }
+.bg-cover{ background-size: cover; background-repeat: no-repeat; background-position: center center; }
 
-/* Contextual colors
+/* [ Contextual colors ]
 ------------------------ */
 .text-white{ color: $color-white !important; }
 .text-dark{ color: $color-dark !important; }
@@ -428,8 +484,9 @@
 .text-warning{  color: $color-warning !important; }
 .text-link{ color: $color-link !important; }
 
-/* Font Sizes
+/* [ Font Sizes ]
 ------------------------ */
+.fs-10{ font-size: 10px !important; }
 .fs-11{ font-size: 11px !important; }
 .fs-12{ font-size: 12px !important; }
 .fs-13{ font-size: 13px !important; }
@@ -440,14 +497,15 @@
 .fs-18{ font-size: 18px !important; }
 .fs-20{ font-size: 20px !important; }
 .fs-22{ font-size: 22px !important; }
+.fs-24{ font-size: 24px !important; }
 
-/* Font Weights
+/* [ Font Weights ]
 ------------------------ */
 .light{ font-weight: 300 !important; }
 .semi-bold{ font-weight: 500 !important; }
 .bold{ font-weight: bold !important; }
 
-/* Font Family
+/* [ Font Family ]
 ------------------------ */
 .font-base{ font-family: $font-base !important; }
 .font-heading{ font-family: $font-heading !important; }
@@ -460,7 +518,7 @@
     letter-spacing: 0.03em;
 }
 
-/* Tables
+/* [ Tables ]
 ------------------------ */
 .table{
   &.no-border{
@@ -495,7 +553,7 @@
 	}
 }
 
-/* Gutter
+/* [ Gutter ]
 ------------------------ */
 .row.no-gutter {
   > {
@@ -530,10 +588,10 @@
   margin-right: -10px;
 }
 
-/* Breadcrumb
+/* [ Breadcrumb ]
 ------------------------ */
 .breadcrumb {
-    font-family: 'Montserrat';
+    font-family: $font-heading;
     -webkit-border-radius: 0px;
     -moz-border-radius: 0px;
     border-radius: 0px;
@@ -547,7 +605,7 @@
      font-size: 11px!important;
 
     a {
-	    font-family: 'Montserrat';
+	    font-family: $font-heading;
 	    font-size: 11px!important;
 	    font-weight: 400;
 	    color: #7b7d82;
@@ -577,7 +635,7 @@
 	}
 }
 
-/* Overlay
+/* [ Overlay ]
 ------------------------ */
 .overlay {
     position: fixed;
@@ -620,7 +678,7 @@
     top: 25px;
 }
 
-/* Overlayer
+/* [Overlayer]
 ------------------------ */
 .overlayer {
     position:absolute;
@@ -668,7 +726,7 @@
     top:0;
 }
 
-/* Vertical Alignment
+/* [ Vertical Alignment ]
 ------------------------ */
 .v-align-top { vertical-align: top; }
 .v-align-middle { vertical-align: middle; }
@@ -745,23 +803,23 @@
 }
 
 
-/* Text Alignment
+/* [ Text Alignment ] 
 ------------------------ */
-@media (min-width: $screen-xs){
+@media screen and (min-width: $screen-xs){
   .text-xs-left{ text-align: left; }
   .text-xs-center{ text-align: center; }
   .text-xs-right{ text-align: right; }
   .text-xs-justify{ text-align: justify; }
 }
 
-@media (min-width: $screen-sm){
+@media screen and (min-width: $screen-sm){
   .text-sm-left{ text-align: left; }
   .text-sm-center{ text-align: center; }
   .text-sm-right{ text-align: right; }
   .text-sm-justify{ text-align: justify; }
 }
 
-@media (min-width: $screen-md){
+@media screen and (min-width: $screen-md){
   .text-md-left{ text-align: left; }
   .text-md-center{ text-align: center; }
   .text-md-right{ text-align: right; }
@@ -770,25 +828,25 @@
 
 /* Float
 ------------------------ */
-@media (min-width: $screen-xs){
+@media screen and (min-width: $screen-xs){
   .pull-xs-left{ float: left; }
   .pull-xs-right{ float: right; }
   .pull-xs-none{ float: none; }
 }
 
-@media (min-width: $screen-sm){
+@media screen and (min-width: $screen-sm){
   .pull-sm-left{ float: left; }
   .pull-sm-right{ float: right; }
   .pull-sm-none{ float: none; }
 }
 
-@media (min-width: $screen-md){
+@media screen and (min-width: $screen-md){
   .pull-md-left{ float: left; }
   .pull-md-right{ float: right; }
   .pull-md-none{ float: none; }
 }
 
-/* Form Controls
+/* [ Form Controls ]
 ------------------------ */
 
 label, input, button, select, textarea {
@@ -830,6 +888,10 @@ input {
 
 form legend {
   margin: 15px 0px 10px 0px;
+}
+
+textarea{
+	resize: vertical;
 }
 
 .has-primary .form-control{ 
@@ -937,6 +999,430 @@ fieldset[disabled] .form-control {
   padding: 11px 13px;
   @include border-radius(2px);
 }
+
+
+/* [ Form Theme Control ]
+------------------------ */
+
+.form-theme-primary{
+	.form-control{
+		&:focus{ border-color: $color-primary; }
+	}
+}
+
+.form-theme-success{
+	.form-control{
+		&:focus{ border-color: $color-success; }
+	}
+}
+
+.form-theme-info{
+	.form-control{
+		&:focus{ border-color: $color-info; }
+	}
+}
+
+.form-theme-warning{
+	.form-control{
+		&:focus{ border-color: $color-warning; }
+	}
+}
+
+.form-theme-danger{
+	.form-control{
+		&:focus{ border-color: $color-danger; }
+	}
+}
+
+.form-group {
+    margin-bottom:10px;
+    position: relative;
+
+	&.required:after {
+		color: #f55753;
+		content: "*";
+		font-family: arial;
+		font-size: 20px;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+    label:not(.message) {
+      font-family: $font-heading;
+      font-size:11px;
+      text-transform:uppercase;
+      font-weight:600;
+  	}
+}
+
+/* [ Form Material ]
+------------------------ */
+
+.form-material {
+	 position: relative;
+  
+  .form-control {
+  	border: none;
+  	background-color: transparent;
+    border-bottom:  1px solid rgba($color-dark, 0.10);
+    @include box-shadow(0, 0, 0);
+    @include border-radius(0);
+
+    &:focus {
+      background: none;
+      border: 0;
+      @include box-shadow(0,2px,0, $color-primary);
+    }
+
+    &.filter-primary{ @include box-shadow(0,2px,0, $color-primary); }
+	&.filter-success{ @include box-shadow(0,2px,0, $color-success); }
+	&.filter-info{ @include box-shadow(0,2px,0, $color-info); }
+	&.filter-warning{ @include box-shadow(0,2px,0, $color-warning); }
+	&.filter-error, &.filter-danger{ @include box-shadow(0,2px,0, $color-danger); }
+
+  }
+
+  &.form-theme-primary{
+  	.form-control{
+	  	&:focus {
+	  		@include box-shadow(0,2px,0, $color-primary);
+	    }
+	}
+  }
+
+  &.form-theme-success{
+  	.form-control{
+	  	&:focus {
+	      @include box-shadow(0,2px,0, $color-success);
+	    }
+	}
+  }
+
+  &.form-theme-info{
+  	.form-control{
+	  	&:focus {
+	      @include box-shadow(0,2px,0, $color-info);
+	    }
+	}
+  }
+
+  &.form-theme-warning{
+  	.form-control{
+	  	&:focus {
+	      @include box-shadow(0,2px,0, $color-warning);
+	    }
+	}
+  }
+
+  &.form-theme-danger{
+  	.form-control{
+	  	&:focus {
+	      @include box-shadow(0,2px,0, $color-danger);
+	    }
+	}
+  }
+  
+}
+
+/* [ Button ]
+------------------------ */
+
+.btn{
+	cursor:pointer;
+	outline: 0 !important;
+	padding: 10px 20px;
+	-webkit-font-smoothing:antialiased;
+	-webkit-text-size-adjust:100%;
+	-ms-text-size-adjust:100%;
+	text-shadow:none;
+	background-color: $color-lightest;
+		border-color: rgba($color-dark, 0.07);
+	box-shadow:none !important; 
+	@include transition();
+	@include border-radius(2px);
+
+	/**
+	* Button Themes -------------- */
+
+	&.btn-default{
+		background-color: $color-white;
+		border: 1px solid $color-light !important;
+
+		&:hover{
+			background-color: lighten($color-lightest, 0.1%);
+		}
+
+		&.active,
+		&:active{
+			background-color: $color-lighter;
+		}
+	}
+
+	&.btn-reverse{
+		color: $color-white;
+		background-color: $color-dark;
+		border: 1px solid $color-darker !important;
+
+		&:hover{
+			background-color: $color-darker;
+		}
+
+		&.active,
+		&:active{
+			background-color: $color-darkest;
+		}
+	}
+
+	&.btn-inverse{
+		color: $color-white;
+		background-color: transparent;
+		border: 2px solid $color-white;
+
+		&:hover,
+		&.active,		
+		&:active{
+			border: 2px solid rgba($color-white, 0.5);
+		}
+	}
+
+	&.btn-primary{
+		background-color: $color-primary;
+		border: 1px solid $color-primary-dark !important;
+
+		&:hover{
+			background-color: $color-primary-light; 
+			border-color:  $color-primary-light !important;
+		}
+
+		&.active,
+		&:active{
+			background-color: $color-primary-dark;
+		}
+	}
+
+	&.btn-info{
+		background-color: $color-info;
+		border: 1px solid $color-info-dark !important;
+
+		&:hover{
+			background-color: $color-info-light;
+			border-color:  $color-info-light !important;
+		}
+
+		&.active,		
+		&:active{
+			background-color: $color-info-dark;
+		}
+	}
+
+	&.btn-danger{
+		background-color: $color-danger;
+		border: 1px solid $color-danger-dark !important;
+
+		&:hover{
+			background-color: $color-danger-light;
+			border-color:  $color-danger-light !important;
+		}
+
+		&.active,
+		&:active{
+			background-color: $color-danger-dark;
+		}
+	}
+
+	&.btn-warning{
+		background-color: $color-warning;
+		border: 1px solid $color-warning-dark !important;
+
+		&:hover{
+			background-color: $color-warning-light;
+			border-color: $color-warning-light !important;
+		}
+
+		&.active,
+		&:active{
+			background-color: $color-warning-dark;
+		}
+	}
+
+	&.btn-success{
+		background-color: $color-success;
+		border: 1px solid $color-success-dark !important;
+
+		&:hover{
+			background-color: $color-success-light;
+			border-color: $color-success-light;
+		}
+
+		&.active,
+		&:active{
+			background-color: $color-success-dark;
+		}
+	}
+
+	&.btn-link{
+		background-color: transparent;
+		border: 0;
+		color: $color-info;
+
+		&:hover,
+		&.active,
+		&:active{
+			text-decoration: underline;
+		}
+
+	}
+
+
+	/**
+	* Button Outlines -------------- */ 
+
+	&.btn-primary-outline{
+		background-color: transparent;
+		border: 1px solid $color-primary !important;
+		color: $color-primary !important;
+
+		&:hover{
+			background-color: $color-primary-light; 
+			border-color:  $color-primary-light !important;
+			color: $color-white !important;
+		}
+
+		&.active,
+		&:active{
+			background-color: $color-primary-dark;
+			color: $color-white !important;
+		}
+	}
+
+	&.btn-info-outline{
+		background-color: transparent;
+		border: 1px solid $color-info !important;
+		color: $color-info !important;
+
+		&:hover{
+			background-color: $color-info-light;
+			border-color:  $color-info-light !important;
+			color: $color-white !important;
+		}
+
+		&.active,		
+		&:active{
+			background-color: $color-info-dark;
+			color: $color-white !important;
+		}
+	}
+
+	&.btn-danger-outline{
+		background-color: transparent;
+		border: 1px solid $color-danger !important;
+		color: $color-danger !important;
+
+		&:hover{
+			background-color: $color-danger-light;
+			border-color:  $color-danger-light !important;
+			color: $color-white !important;
+		}
+
+		&.active,
+		&:active{
+			background-color: $color-danger-dark;
+			color: $color-white !important;
+		}
+	}
+
+	&.btn-warning-outline{
+		background-color: transparent;
+		border: 1px solid $color-warning !important;
+		color: $color-warning !important;
+
+		&:hover{
+			background-color: $color-warning-light;
+			border-color: $color-warning-light !important;
+			color: $color-white !important;
+		}
+
+		&.active,
+		&:active{
+			background-color: $color-warning-dark;
+			color: $color-white !important;
+		}
+	}
+
+	&.btn-success-outline{
+		background-color: transparent;
+		border: 1px solid $color-success !important;
+		color: $color-success !important;
+
+		&:hover{
+			background-color: $color-success-light;
+			border-color: $color-success-light;
+			color: $color-white !important;
+		}
+
+		&.active,
+		&:active{
+			background-color: $color-success-dark;
+			color: $color-white !important;
+		}
+	}
+
+	&.btn-link-outline{
+		background-color: transparent;
+		border: 1px solid $color-info !important;
+		color: $color-info !important;
+
+		&:hover,
+		&.active,
+		&:active{
+			text-decoration: underline;
+		}
+
+	}
+
+	/**
+	* Button Sizes -------------- */ 
+
+	&.btn-lg{
+		padding-left: 30px;
+	    padding-right: 30px;
+	    line-height: 23px;
+	}
+
+	&.btn-group-lg{
+	    & > .btn{
+	        padding-left: 28px;
+	        padding-right: 28px;
+	        line-height: 23px;
+	    }
+	}
+
+	&.btn-sm{
+		padding: 7px 16px;
+	    line-height: 20px;
+	}
+
+	&.btn-group-sm{
+	    & > .btn{
+	        padding: 7px 16px;
+	        line-height: 20px;
+	    }
+	} 
+
+	&.btn-xs{
+		padding: 2px 9px;
+	}
+
+	&.btn-group-xs{
+	    & > .btn{
+	        padding: 2px 9px;
+	        font-size: $font-size-base;
+	    }
+	}
+
+/* [ Radio and Checkbox ]
+------------------------ */
 
 .radio, .checkbox {
   margin-bottom: 10px;
@@ -1111,6 +1597,9 @@ fieldset[disabled] .form-control {
   }
 }
 
+/* [ Input Group ]
+------------------------ */
+
 .input-group-addon {
   background-color: $color-lightest;
   border-color: rgba($color-dark, 0.07);
@@ -1160,7 +1649,7 @@ fieldset[disabled] .form-control {
 
 }
 
-/* Progress
+/* [ Progress ]
 ------------------------ */
 
 .progress {
@@ -1243,27 +1732,73 @@ fieldset[disabled] .form-control {
 }
 
 
-/* Tooltip
+/* [ Modal ]
+------------------------ */
+
+.modal{
+	.modal-content{
+		border: 0;
+		@include border-radius(2px);
+		@include box-shadow(none);
+	}
+}
+ 
+/* [ Popover ]
+------------------------ */
+
+.popover{
+	border-color: rgba($color-dark, 0.10); 
+	@include border-radius(2px);
+	@include box-shadow(none);
+
+	&.top{
+		.arrow{ border-top-color: rgba($color-dark, 0.20) !important; }
+	}
+
+	&.right{
+		.arrow{ border-right-color: rgba($color-dark, 0.20) !important; }
+	}
+
+	&.bottom{
+		.arrow{ border-bottom-color: rgba($color-dark, 0.20) !important; }
+	}
+
+	&.left{
+		.arrow{ border-left-color: rgba($color-dark, 0.20) !important; }
+	}
+}
+
+/* [ Tooltip ]
 ------------------------ */
 
 .tooltip{
 
-	&.in{
-		opacity: 1;
+	&.in{ opacity: 1; }
+
+	&.top{
+		.tooltip-arrow{ border-top-color: $color-darker !important; }
 	}
 
-	.tooltip-arrow{
-		border-bottom-color: #4c545a !important;
+	&.right{
+		.tooltip-arrow{ border-right-color: $color-darker !important; }
+	}
+
+	&.bottom{
+		.tooltip-arrow{ border-bottom-color: $color-darker !important; }
+	}
+
+	&.left{
+		.tooltip-arrow{ border-left-color: $color-darker !important; }
 	}
 
 	.tooltip-inner{
-		background: #4c545a;
+		background: $color-darker;
 		padding: 10px;
 		width: 120px;
 	}
 }
 
-/* Date Picker
+/* [ Date Picker ]
 ------------------------ */
 
 .datepicker {
@@ -1414,7 +1949,7 @@ fieldset[disabled] .form-control {
 	}
 }
 
-/* Select Box
+/* [ Select Box ]
 ------------------------ */
 
 .form-group-default .select2-container .select2-choice, .select2-container-multi .select2-choices {
@@ -1622,439 +2157,6 @@ fieldset[disabled] .form-control {
   z-index: 700;
 }
 
-/* Form Control
------------------------- */
-
-.form-theme-primary{
-	.form-control{
-		&:focus{
-			border-color: $color-primary;
-		}
-	}
-}
-
-.form-theme-success{
-	.form-control{
-		&:focus{
-			border-color: $color-success;
-		}
-	}
-}
-
-.form-theme-info{
-	.form-control{
-		&:focus{
-			border-color: $color-info;
-		}
-	}
-}
-
-.form-theme-warning{
-	.form-control{
-		&:focus{
-			border-color: $color-warning;
-		}
-	}
-}
-
-.form-theme-danger{
-	.form-control{
-		&:focus{
-			border-color: $color-danger;
-		}
-	}
-}
-
-.form-group {
-    margin-bottom:10px;
-    position: relative;
-
-	&.required:after {
-		color: #f55753;
-		content: "*";
-		font-family: arial;
-		font-size: 20px;
-		position: absolute;
-		right: 0;
-		top: 0;
-	}
-
-    label:not(.message) {
-      font-family: $font-heading;
-      font-size:11px;
-      text-transform:uppercase;
-      font-weight:600;
-  	}
-}
-
-/* Form Material
-* modern layout for input fields
------------------------- */
-
-.form-material {
-	 position: relative;
-  
-  .form-control {
-  	border: none;
-  	background-color: transparent;
-    border-bottom:  1px solid rgba($color-dark, 0.10);
-    @include box-shadow(0, 0, 0);
-    @include border-radius(0);
-
-    &:focus {
-      background: none;
-      border: 0;
-      @include box-shadow(0,2px,0, $color-primary);
-    }
-
-    &.filter-primary{ @include box-shadow(0,2px,0, $color-primary); }
-	&.filter-success{ @include box-shadow(0,2px,0, $color-success); }
-	&.filter-info{ @include box-shadow(0,2px,0, $color-info); }
-	&.filter-warning{ @include box-shadow(0,2px,0, $color-warning); }
-	&.filter-error, &.filter-danger{ @include box-shadow(0,2px,0, $color-danger); }
-
-  }
-
-  &.form-theme-primary{
-  	.form-control{
-	  	&:focus {
-	  		@include box-shadow(0,2px,0, $color-primary);
-	    }
-	}
-  }
-
-  &.form-theme-success{
-  	.form-control{
-	  	&:focus {
-	      @include box-shadow(0,2px,0, $color-success);
-	    }
-	}
-  }
-
-  &.form-theme-info{
-  	.form-control{
-	  	&:focus {
-	      @include box-shadow(0,2px,0, $color-info);
-	    }
-	}
-  }
-
-  &.form-theme-warning{
-  	.form-control{
-	  	&:focus {
-	      @include box-shadow(0,2px,0, $color-warning);
-	    }
-	}
-  }
-
-  &.form-theme-danger{
-  	.form-control{
-	  	&:focus {
-	      @include box-shadow(0,2px,0, $color-danger);
-	    }
-	}
-  }
-  
-}
-
-/* Button
------------------------- */
-
-.btn{
-	cursor:pointer;
-	outline: 0 !important;
-	padding: 10px 20px;
-	-webkit-font-smoothing:antialiased;
-    -webkit-text-size-adjust:100%;
-    -ms-text-size-adjust:100%;
-    text-shadow:none;
-    background-color: $color-lightest;
-  	border-color: rgba($color-dark, 0.07);
-    box-shadow:none !important; 
-	@include transition();
-	@include border-radius(2px);
-
-	/**
-	* Button Themes -------------- */
-
-	&.btn-default{
-		background-color: $color-white;
-		border: 1px solid $color-light !important;
-
-		&:hover{
-			background-color: lighten($color-lightest, 0.1%);
-		}
-
-		&.active,
-		&:active{
-			background-color: $color-lighter;
-		}
-	}
-
-	&.btn-reverse{
-		color: $color-white;
-		background-color: $color-dark;
-		border: 1px solid $color-darker !important;
-
-		&:hover{
-			background-color: $color-darker;
-		}
-
-		&.active,
-		&:active{
-			background-color: $color-darkest;
-		}
-	}
-
-	&.btn-inverse{
-		color: $color-white;
-		background-color: $color-menu;
-		border: 1px solid darken($color-menu, 5%);
-
-		&:hover{
-			background-color: lighten($color-menu, 3%);
-		}
-
-		&.active,		
-		&:active{
-			background-color: darken($color-menu, 10%);
-		}
-	}
-
-	&.btn-primary{
-		background-color: $color-primary;
-		border: 1px solid $color-primary-dark !important;
-
-		&:hover{
-			background-color: $color-primary-light; 
-			border-color:  $color-primary-light !important;
-		}
-
-		&.active,
-		&:active{
-			background-color: $color-primary-dark;
-		}
-	}
-
-	&.btn-info{
-		background-color: $color-info;
-		border: 1px solid $color-info-dark !important;
-
-		&:hover{
-			background-color: $color-info-light;
-			border-color:  $color-info-light !important;
-		}
-
-		&.active,		
-		&:active{
-			background-color: $color-info-dark;
-		}
-	}
-
-	&.btn-danger{
-		background-color: $color-danger;
-		border: 1px solid $color-danger-dark !important;
-
-		&:hover{
-			background-color: $color-danger-light;
-			border-color:  $color-danger-light !important;
-		}
-
-		&.active,
-		&:active{
-			background-color: $color-danger-dark;
-		}
-	}
-
-	&.btn-warning{
-		background-color: $color-warning;
-		border: 1px solid $color-warning-dark !important;
-
-		&:hover{
-			background-color: $color-warning-light;
-			border-color: $color-warning-light !important;
-		}
-
-		&.active,
-		&:active{
-			background-color: $color-warning-dark;
-		}
-	}
-
-	&.btn-success{
-		background-color: $color-success;
-		border: 1px solid $color-success-dark !important;
-
-		&:hover{
-			background-color: $color-success-light;
-			border-color: $color-success-light;
-		}
-
-		&.active,
-		&:active{
-			background-color: $color-success-dark;
-		}
-	}
-
-	&.btn-link{
-		background-color: transparent;
-		border: 0;
-		color: $color-info;
-
-		&:hover,
-		&.active,
-		&:active{
-			text-decoration: underline;
-		}
-
-	}
-
-
-	/**
-	* Button Outlines -------------- */ 
-
-	&.btn-primary-outline{
-		background-color: transparent;
-		border: 1px solid $color-primary !important;
-		color: $color-primary !important;
-
-		&:hover{
-			background-color: $color-primary-light; 
-			border-color:  $color-primary-light !important;
-			color: $color-white !important;
-		}
-
-		&.active,
-		&:active{
-			background-color: $color-primary-dark;
-			color: $color-white !important;
-		}
-	}
-
-	&.btn-info-outline{
-		background-color: transparent;
-		border: 1px solid $color-info !important;
-		color: $color-info !important;
-
-		&:hover{
-			background-color: $color-info-light;
-			border-color:  $color-info-light !important;
-			color: $color-white !important;
-		}
-
-		&.active,		
-		&:active{
-			background-color: $color-info-dark;
-			color: $color-white !important;
-		}
-	}
-
-	&.btn-danger-outline{
-		background-color: transparent;
-		border: 1px solid $color-danger !important;
-		color: $color-danger !important;
-
-		&:hover{
-			background-color: $color-danger-light;
-			border-color:  $color-danger-light !important;
-			color: $color-white !important;
-		}
-
-		&.active,
-		&:active{
-			background-color: $color-danger-dark;
-			color: $color-white !important;
-		}
-	}
-
-	&.btn-warning-outline{
-		background-color: transparent;
-		border: 1px solid $color-warning !important;
-		color: $color-warning !important;
-
-		&:hover{
-			background-color: $color-warning-light;
-			border-color: $color-warning-light !important;
-			color: $color-white !important;
-		}
-
-		&.active,
-		&:active{
-			background-color: $color-warning-dark;
-			color: $color-white !important;
-		}
-	}
-
-	&.btn-success-outline{
-		background-color: transparent;
-		border: 1px solid $color-success !important;
-		color: $color-success !important;
-
-		&:hover{
-			background-color: $color-success-light;
-			border-color: $color-success-light;
-			color: $color-white !important;
-		}
-
-		&.active,
-		&:active{
-			background-color: $color-success-dark;
-			color: $color-white !important;
-		}
-	}
-
-	&.btn-link-outline{
-		background-color: transparent;
-		border: 1px solid $color-info !important;
-		color: $color-info !important;
-
-		&:hover,
-		&.active,
-		&:active{
-			text-decoration: underline;
-		}
-
-	}
-
-	/**
-	* Button Sizes -------------- */ 
-
-	&.btn-lg{
-		padding-left: 30px;
-        padding-right: 30px;
-        line-height: 23px;
-	}
-
-	&.btn-group-lg{
-	    & > .btn{
-	        padding-left: 28px;
-	        padding-right: 28px;
-	        line-height: 23px;
-	    }
-	}
-
-	&.btn-sm{
-		padding: 7px 16px;
-        line-height: 20px;
-	}
-
-	&.btn-group-sm{
-	    & > .btn{
-	        padding: 7px 16px;
-	        line-height: 20px;
-	    }
-	} 
-
-	&.btn-xs{
-		padding: 2px 9px;
-	}
-
-	&.btn-group-xs{
-	    & > .btn{
-	        padding: 2px 9px;
-	        font-size: $font-size-base;
-	    }
-	}
 
 	/**
 	* Rounded Button -------------- */ 
@@ -2261,7 +2363,7 @@ fieldset[disabled] .form-control {
 }
 
 
-/* Panels
+/* [ Panels ]
 ------------------------ */
 
 .panel {
@@ -2309,17 +2411,63 @@ fieldset[disabled] .form-control {
 	}
 }
 
-/* Tables
+/* [ Article ]
 ------------------------ */
-.table{
-	&.no-border{
-		thead>tr>th,
-		tbody>tr>th,
-		tfoot>tr>th,
-		thead>tr>td,
-		tbody>tr>td,
-		tfoot>tr>td{
-			border: 0;
-		}
+.article{
+	.article-title{
+		font-size: 36px;
+	    line-height: 42px;
+	    font-weight: 300;
+	    text-transform: none;
+	}
+
+	.article-meta{
+		font-size: 12px;
+	    line-height: 18px;
+	    color: $color-light;
+	}
+
+	.article-lead{
+		color: $color-dark;
+		font-size: 18px;
+	    line-height: 24px;
+	    font-weight: 400;
+	}
+
+}
+
+
+/* [ Comment ]
+------------------------ */
+
+.comment{
+	.comment-header{
+		margin-bottom: 15px;
+	    padding: 10px;
+	    border: 1px solid rgba($color-dark, 0.10);;
+	    background: $color-lightest;
+
+	    .comment-avatar{
+	    	margin-right: 15px;
+    		float: left;
+	    }
+
+	    .comment-title{
+	    	margin: 5px 0 0 0;
+		    font-size: 16px;
+		    line-height: 22px;
+	    }
+
+	    .comment-meta{
+	    	margin: 2px 0 0 0;
+		    font-size: 11px;
+		    line-height: 16px;
+		    color: $color-lighter;
+	    }
+	}
+
+	.comment-body{
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }

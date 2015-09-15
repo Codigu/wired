@@ -20,13 +20,14 @@
         
         <!-- Google fonts -->
         <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
         <!-- Assets -->
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/bootstrap-datepicker.min.css">
         <link rel="stylesheet" href="../css/bootstrap-select2.min.css">
         <link rel="stylesheet" href="../css/font-awesome.min.css">
-        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/style.min.css">
         
     </head>
     <body>
