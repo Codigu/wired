@@ -4,9 +4,6 @@ A Hand Crafted UI Framework on top of Bootstrap 3
 ### Simple Setup
 Include 'wired.min.css' in your project. That's all. The most recent version of Bootstrap is included.
 
-```html
-<link rel="stylesheet" type="text/css" href="css/wired.min.css"> // Add support for Wired UI Framework
-
 ## Versioning
 
 For transparency into our release cycle and in striving to maintain backward compatibility, Wired is maintained under [the Semantic Versioning guidelines](http://semver.org/). 
