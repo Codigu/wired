@@ -2,39 +2,41 @@
 * Wired v1.0.0
 * Helpers - Table of Contents
 *
-* 1. Misc Classes
-* 2. Padding
-* 3. Margin
-* 4. Border
-* 5. Border Radius
-* 6. Box Shadow
-* 7. Contextual Backgrounds
-* 8. Contextual Colors
-* 9. Font Size
-* 10. Font Weights
-* 11. Font Family
-* 12. Tables
-* 13. Gutter
-* 14. Breadcrumb
-* 15. Overlay
-* 16. Overlayer
-* 17. Vertical Alignment
-* 18. Text Alignment
-* 19. Form Controls
-* 20. Form Theme
-* 21. Form Material
-* 22. Buttons
-* 23. Radio and Checkbox
-* 24. Input Group
-* 25. Progress
-* 26. Modal
-* 27. Popover
-* 28. Tooltip
-* 29. Datepicker
-* 30. Selectbox
-* 31. Panels
-* 32. Article
-* 35. Comment
+* $ Misc Classes 
+* $ Container 
+* $ Padding 
+* $ Margin 
+* $ Border 
+* $ Border Radius 
+* $ Box Shadow 
+* $ Contextual Backgrounds 
+* $ Contextual Colors 
+* $ Font Size 
+* $ Font Weights
+* $ Font Family
+* $ Tables
+* $ Lists
+* $ Gutter
+* $ Breadcrumb
+* $ Overlay
+* $ Overlayer
+* $ Vertical Alignment
+* $ Text Alignment
+* $ Form Controls
+* $ Form Theme
+* $ Form Material
+* $ Buttons
+* $ Radio and Checkbox
+* $ Input Group
+* $ Progress
+* $ Modal
+* $ Popover
+* $ Tooltip
+* $ Datepicker
+* $ Selectbox
+* $ Panels
+* $ Article
+* $ Comment
 *
 */
 
@@ -73,6 +75,9 @@
 	@include opacity(0.7); 
 	&:hover{ @include opacity(1); } 
 } 
+
+/* [ Container ]
+-------------------------------*/
 
 .container-xs{
 	max-width: $screen-phablet;
@@ -553,6 +558,25 @@
 			}
 		}
 	}
+}
+
+/* [ Lists ]
+------------------------ */
+.list-inline-block{
+	padding-left: 0;
+	list-style: none;
+
+	li{
+		display: block;
+	}
+
+	@media screen and (min-width: $screen-sm) {
+		li{
+			display: inline-block;
+		}
+	}
+
+	
 }
 
 /* [ Gutter ]
@@ -1180,6 +1204,7 @@ fieldset[disabled] .form-control {
 		color: $color-white;
 		background-color: transparent;
 		border: 2px solid $color-white;
+		@include border-radius(4px);
 
 		&:hover,
 		&.active,		
