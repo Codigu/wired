@@ -19,6 +19,6 @@ See [the Releases section of our GitHub project](https://github.com/larrygeams/w
 [Larry Geams Parangan](http://larrygeams.github.io) creative UI / UX designer and Front End developer based in Cebu, Philippines. Utilizing design tools and web technologies to provide client satisfaction results.
 
 ### License
-The MIT License (MIT)
+[The MIT License (MIT)](https://opensource.org/licenses/MIT)
 
 &copy; Copyright 2015 Larry Geams Parangan
