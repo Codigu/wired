@@ -2,37 +2,41 @@
 * Wired v1.0.0
 * Helpers - Table of Contents
 *
-* 1. Misc Classes
-* 2. Padding
-* 3. Margin
-* 4. Border
-* 5. Border Radius
-* 6. Box Shadow
-* 7. Contextual Backgrounds
-* 8. Contextual Colors
-* 9. Font Size
-* 10. Font Weights
-* 11. Font Family
-* 12. Tables
-* 13. Gutter
-* 14. Breadcrumb
-* 15. Overlay
-* 16. Overlayer
-* 17. Vertical Alignment
-* 18. Text Alignment
-* 19. Form Controls
-* 20. Form Theme
-* 21. Form Material
-* 22. Buttons
-* 23. Radio and Checkbox
-* 24. Input Group
-* 25. Progress
-* 26. Modal
-* 27. Popover
-* 28. Tooltip
-* 29. Datepicker
-* 30. Selectbox
-* 31. Panels
+* $  Misc Classes
+* $ Padding
+* $ Margin
+* $ Border
+* $ Border Radius
+* $ Box Shadow
+* $ Contextual Backgrounds
+* $ Contextual Colors
+* $ Font Size
+* $ Font Weights
+* $ Font Family
+* $ Tables
+* $ Gutter
+* $ Breadcrumb
+* $ Overlay
+* $ Overlayer
+* $ Vertical Alignment
+* $ Text Alignment
+* $ Form Controls
+* $ Form Theme
+* $ Form Material
+* $ Buttons
+* $ Radio and Checkbox
+* $ Switch
+* $ Input Group
+* $ Progress
+* $ Panels
+* $ Article
+* $ Comment
+* $ List
+* $ Modal
+* $ Popover
+* $ Tooltip
+* $ Datepicker
+* $ Selectbox
 *
 */
 
@@ -468,6 +472,10 @@
 .bg-link{ background-color: $color-link !important; color: $color-white !important; }
 .bg-base{ background-color: $color-base !important; color: $color-white !important; }
 .bg-menu{ background-color: $color-menu !important; color: $color-white !important; }
+.bg-cyan{ background-color: $color-cyan !important; color: $color-white !important; }
+.bg-blue{ background-color: $color-blue !important; color: $color-white !important; }
+.bg-darkblue{ background-color: $color-darkblue !important; color: $color-white !important; }
+.bg-navy{ background-color: $color-navy !important; color: $color-white !important; }
 .bg-cover{ background-size: cover; background-repeat: no-repeat; background-position: center center; }
 
 /* [ Contextual colors ]
@@ -483,6 +491,10 @@
 .text-danger{ color: $color-danger !important; }
 .text-warning{  color: $color-warning !important; }
 .text-link{ color: $color-link !important; }
+.text-cyan{ color: $color-cyan !important; }
+.text-blue{ color: $color-blue !important; }
+.text-darkblue{ color: $color-darkblue !important; }
+.text-navy{ color: $color-navy !important; }
 
 /* [ Font Sizes ]
 ------------------------ */
@@ -498,6 +510,8 @@
 .fs-20{ font-size: 20px !important; }
 .fs-22{ font-size: 22px !important; }
 .fs-24{ font-size: 24px !important; }
+.fs-30{ font-size: 30px !important; }
+.fs-36{ font-size: 36px !important; }
 
 /* [ Font Weights ]
 ------------------------ */
@@ -1137,10 +1151,11 @@ fieldset[disabled] .form-control {
 	-ms-text-size-adjust:100%;
 	text-shadow:none;
 	background-color: $color-lightest;
-		border-color: rgba($color-dark, 0.07);
+	border-color: rgba($color-dark, 0.07);
 	box-shadow:none !important; 
 	@include transition();
 	@include border-radius(2px);
+
 
 	/**
 	* Button Themes -------------- */
@@ -1429,6 +1444,13 @@ fieldset[disabled] .form-control {
 	}
 
 	/**
+	* Unrounded Button -------------- */ 
+
+	&.btn-box{
+		@include border-radius(0);
+	}
+
+	/**
 	* Animated Button -------------- */ 
 
 	&.btn-animated {
@@ -1693,6 +1715,157 @@ fieldset[disabled] .form-control {
   }
 }
 
+/* [ Switch ]
+------------------------ */
+
+.switch {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+
+  input {
+    opacity: 0;
+    position: absolute;
+    + span {
+      position: relative;
+      display: inline-block;
+      width: 1.65em;
+      height: 1em;
+      background: $color-gray;
+      border-radius: 0.5em;
+      vertical-align: middle;
+      @include transition(all 0.4s cubic-bezier(0.17, 0.67, 0.43, 0.98));
+    }
+  }
+  &:active input + span {
+    box-shadow: inset 0 0 0 0.73em #e9e9e9;
+  }
+  input + span {
+    
+    &:after {
+      position: absolute;
+      display: block;
+      content: '';
+      width: 0.875em;
+      height: 0.875em;
+      border-radius: 0.4375em;
+      top: 0.0625em;
+      left: 0.0625em;
+      background: white;
+      @include transition(all 0.25s ease-out);
+    }
+  }
+  &:active input + span:after {
+    width: 1.15em;
+  }
+  input {
+    + span:active:after {
+      width: 1.15em;
+    }
+    &:checked + span {
+      box-shadow: inset 0 0 0 0.73em #4cd964;
+
+      &.switch-primary{
+      	box-shadow: inset 0 0 0 0.73em $color-primary;
+      }
+
+      &.switch-success{
+      	box-shadow: inset 0 0 0 0.73em $color-success;
+      }
+
+      &.switch-warning{
+      	box-shadow: inset 0 0 0 0.73em $color-warning;
+      }
+
+      &.switch-danger{
+      	box-shadow: inset 0 0 0 0.73em $color-danger;
+      }
+
+      &.switch-info{
+      	box-shadow: inset 0 0 0 0.73em $color-info;
+      }
+
+      &:after {
+        left: 0.7125em;
+      }
+    }
+  }
+  &:active input:checked + span:after {
+    left: 0.4375em;
+  }
+  input {
+    &:checked + span:active:after {
+      left: 0.4375em;
+    }
+    &:focus {
+      + span {
+        &:after {
+          background: #fff;
+        }
+      }
+      &:checked + span {
+        box-shadow: inset 0 0 0 0.73em #33be4b;
+
+        &.switch-primary{
+      	box-shadow: inset 0 0 0 0.73em $color-primary;
+      }
+
+      &.switch-success{
+      	box-shadow: inset 0 0 0 0.73em $color-success;
+      }
+
+      &.switch-warning{
+      	box-shadow: inset 0 0 0 0.73em $color-warning;
+      }
+
+      &.switch-danger{
+      	box-shadow: inset 0 0 0 0.73em $color-danger;
+      }
+
+      &.switch-info{
+      	box-shadow: inset 0 0 0 0.73em $color-info;
+      }
+
+      }
+    }
+  }
+  &:hover input:focus {
+    + span {
+      &:after {
+        background: #fff;
+      }
+    }
+    &:checked + span {
+
+      &.switch-primary{
+      	box-shadow: inset 0 0 0 0.73em $color-primary;
+      }
+
+      &.switch-success{
+      	box-shadow: inset 0 0 0 0.73em $color-success;
+      }
+
+      &.switch-warning{
+      	box-shadow: inset 0 0 0 0.73em $color-warning;
+      }
+
+      &.switch-danger{
+      	box-shadow: inset 0 0 0 0.73em $color-danger;
+      }
+
+      &.switch-info{
+      	box-shadow: inset 0 0 0 0.73em $color-info;
+      }
+    }
+  }
+}
+
 /* [ Input Group ]
 ------------------------ */
 
@@ -1825,6 +1998,184 @@ fieldset[disabled] .form-control {
 
 .progress-info.progress-striped .bar, .progress-striped .bar-info {
   background-color: $color-info;
+}
+
+
+
+/* [ Panels ]
+------------------------ */
+
+.panel {
+  position: relative;
+  @include box-shadow(0,0,0);
+  @include border-radius(1px);
+  @include transition( all 0.2s ease );
+
+  &.panel-default{
+  	border-color: rgba($color-dark, 0.10);
+  }
+
+  &.panel-transparent{
+  	background-color: transparent;
+  }
+
+  .panel-heading {
+	  background: transparent;
+	  border-bottom: 0px;
+	  font-size: 12px;
+	  font-weight: bold;
+	  position: relative;
+	  @include border-radius(0);
+
+	  &.panel-separator{
+	  	border-bottom: 1px solid rgba($color-dark, 0.10); 
+	  }
+
+	  .panel-title{
+		font-family: $font-heading;
+		color: $color-darker;
+		text-transform: uppercase;
+		display: inline-block;
+		letter-spacing: 0.02em;
+		font-size: 12px;
+		font-weight: 600;
+		margin: 0;
+		padding: 0;
+		line-height: normal;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		-webkit-text-stroke: 0px;
+		@include transition(opacity 0.3s ease);
+	  }
+	}
+}
+
+/* [ Article ]
+------------------------ */
+.article{
+	.article-title{
+		font-size: 36px;
+	    line-height: 42px;
+	    font-weight: 300;
+	    text-transform: none;
+	}
+
+	.article-meta{
+		font-size: 12px;
+	    line-height: 18px;
+	    color: $color-light;
+	}
+
+	.article-lead{
+		color: $color-dark;
+		font-size: 18px;
+	    line-height: 24px;
+	    font-weight: 400;
+	}
+
+}
+
+
+/* [ Comment ]
+------------------------ */
+
+.comment{
+	.comment-header{
+		margin-bottom: 15px;
+	    padding: 10px;
+	    border: 1px solid rgba($color-dark, 0.10);;
+	    background: $color-lightest;
+
+	    .comment-avatar{
+	    	margin-right: 15px;
+    		float: left;
+	    }
+
+	    .comment-title{
+	    	margin: 5px 0 0 0;
+		    font-size: 16px;
+		    line-height: 22px;
+	    }
+
+	    .comment-meta{
+	    	margin: 2px 0 0 0;
+		    font-size: 11px;
+		    line-height: 16px;
+		    color: $color-lighter;
+	    }
+	}
+
+	.comment-body{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+/* [ List ]
+------------------------ */
+.list-item{
+	list-style: none; 
+
+	li{
+		&:before{
+			content: "";
+			margin-left: -20px;
+			margin-top: 5px;
+			position: absolute;
+			width: 8px;
+			height: 8px;
+			background-color: lighten($color-base, 30%);
+			@include border-radius(50%); 
+		} 
+	}
+
+	&.list-primary{
+		li{
+			&:before{
+				background-color: $color-primary;
+			}
+		}
+	}
+
+	&.list-success{
+		li{
+			&:before{
+				background-color: $color-success;
+			}
+		}
+	}
+
+	&.list-info{
+		li{
+			&:before{
+				background-color: $color-info;
+			}
+		}
+	}
+
+	&.list-warning{
+		li{
+			&:before{
+				background-color: $color-warning;
+			}
+		}
+	}
+
+	&.list-danger{
+		li{
+			&:before{
+				background-color: $color-danger;
+			}
+		}
+	}
+
+	&.list-link{
+		li{
+			&:before{
+				background-color: $color-link;
+			}
+		}
+	}
 }
 
 
@@ -2254,8 +2605,6 @@ fieldset[disabled] .form-control {
 }
 
 
-	
-
 /**
 * Jumbotron -------------- */ 
 
@@ -2362,114 +2711,4 @@ fieldset[disabled] .form-control {
 	}
 
  }
-}
-
-
-/* [ Panels ]
------------------------- */
-
-.panel {
-  position: relative;
-  @include box-shadow(0,0,0);
-  @include border-radius(1px);
-  @include transition( all 0.2s ease );
-
-  &.panel-default{
-  	border-color: rgba($color-dark, 0.10);
-  }
-
-  &.panel-transparent{
-  	background-color: transparent;
-  }
-
-  .panel-heading {
-	  background: transparent;
-	  border-bottom: 0px;
-	  font-size: 12px;
-	  font-weight: bold;
-	  position: relative;
-	  @include border-radius(0);
-
-	  &.panel-separator{
-	  	border-bottom: 1px solid rgba($color-dark, 0.10); 
-	  }
-
-	  .panel-title{
-		font-family: $font-heading;
-		color: $color-darker;
-		text-transform: uppercase;
-		display: inline-block;
-		letter-spacing: 0.02em;
-		font-size: 12px;
-		font-weight: 600;
-		margin: 0;
-		padding: 0;
-		line-height: normal;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		-webkit-text-stroke: 0px;
-		@include transition(opacity 0.3s ease);
-	  }
-	}
-}
-
-/* [ Article ]
------------------------- */
-.article{
-	.article-title{
-		font-size: 36px;
-	    line-height: 42px;
-	    font-weight: 300;
-	    text-transform: none;
-	}
-
-	.article-meta{
-		font-size: 12px;
-	    line-height: 18px;
-	    color: $color-light;
-	}
-
-	.article-lead{
-		color: $color-dark;
-		font-size: 18px;
-	    line-height: 24px;
-	    font-weight: 400;
-	}
-
-}
-
-
-/* [ Comment ]
------------------------- */
-
-.comment{
-	.comment-header{
-		margin-bottom: 15px;
-	    padding: 10px;
-	    border: 1px solid rgba($color-dark, 0.10);;
-	    background: $color-lightest;
-
-	    .comment-avatar{
-	    	margin-right: 15px;
-    		float: left;
-	    }
-
-	    .comment-title{
-	    	margin: 5px 0 0 0;
-		    font-size: 16px;
-		    line-height: 22px;
-	    }
-
-	    .comment-meta{
-	    	margin: 2px 0 0 0;
-		    font-size: 11px;
-		    line-height: 16px;
-		    color: $color-lighter;
-	    }
-	}
-
-	.comment-body{
-		padding-left: 10px;
-		padding-right: 10px;
-	}
 }
