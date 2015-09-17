@@ -7,7 +7,8 @@
  * @version 1.0.0
  */
 
-include "header.php"; ?>
+include "header.php";
+include "nav.php"; ?>
 
 <div class="bg-primary full-height">
 	<div class="container-xs-height full-height">
@@ -24,7 +25,7 @@ include "header.php"; ?>
                         <a href="https://github.com/larrygeams/wired/releases" target="_blank" class="text-white hint">Currently pre-release v1.0.0</a> 
                     </div>
                 </div>
-            </div>
+            </div> 
         </div>
 
 	<div class="pull-bottom sm-pull-bottom full-width text-center">

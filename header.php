@@ -24,9 +24,6 @@
 
         <!-- Assets -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
-        <link rel="stylesheet" href="assets/css/bootstrap-select2.min.css">
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
         <link rel="stylesheet" href="dist/css/wired.min.css"> 
         
     </head>

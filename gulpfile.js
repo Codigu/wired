@@ -8,19 +8,19 @@ var gulp 		     = require('gulp'),
 
 gulp.task('sass', function () {
  return gulp.src('sass/*.scss')
-            .pipe(sass().on('error', sass.logError))
-            .pipe(strip())
-            .pipe(gulp.dest('dist/css'))
-            .pipe(sass({outputStyle: 'compressed'}))
-            .pipe(rename('wired.min.css'))
-            .pipe(gulp.dest('dist/css'))
-            .pipe(browserSync.stream());
+          .pipe(sass().on('error', sass.logError))
+          .pipe(strip())
+          .pipe(gulp.dest('dist/css'))
+          .pipe(sass({outputStyle: 'compressed'}))
+          .pipe(rename('wired.min.css'))
+          .pipe(gulp.dest('dist/css'))
+          .pipe(browserSync.stream());
 });
 
 gulp.task('highlight', function () {
     return gulp.src('dev/*.php')
-                .pipe(highlight())
-                .pipe(gulp.dest('docs'));
+              .pipe(highlight())
+              .pipe(gulp.dest('docs'));
 });
  
 gulp.task('watch', function () {

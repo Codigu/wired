@@ -29,6 +29,7 @@
 *  Input Group
 *  Progress
 *  Panels
+*  Jumbotron
 *  Article
 *  Comment
 *  List
@@ -68,7 +69,7 @@
 .full-height-vh { height: 100vh; }
 .full-height-vw { width: 100vh; }
 
-.caret{ margin-top: -5px; }
+.caret{ margin-top: -5px; } 
 .hint{ @include opacity(0.7); }
 .help{ font-size: 12px; color: rgba($color-base, 0.55);}
 .link{ 
@@ -399,22 +400,28 @@
 
 /* [ Border ]
 ------------------------- */
-.bd-a, .bd-l, .bd-r, .bd-t, .bd-b{ border-style: solid; border-width: 0; }
+.bd-a, .bd-l, .bd-r, .bd-t, .bd-b{ border-style: solid; border-width: 0; border-color: rgba($color-dark, 0.10); }
 .bd-none{ border: none !important; }
 
 /* Border Thickness
 ------------------------- */
-.bd-thick{ border-width: 2px; }
 .bd-a{ border-width: 1px; }
 .bd-t{ border-top-width: 1px; }
 .bd-b{ border-bottom-width: 1px; }
 .bd-l{ border-left-width: 1px; }
 .bd-r{ border-right-width: 1px; }
 
+.bd-thick-a{ border-width: 2px; }
+.bd-thick-t{ border-top-width: 2px; }
+.bd-thick-b{ border-bottom-width: 2px; }
+.bd-thick-l{ border-left-width: 2px; }
+.bd-thick-r{ border-right-width: 2px; }
+
 /* Border Style
 ------------------------- */
 .bd-dashed { border-style: dashed; }
 .bd-dotted { border-style: dotted; }
+
 
 /* Border Colors
 ------------------------- */
@@ -432,27 +439,30 @@
 ------------------------ */
 .bd-rd-none{ @include border-radius(0); } 
 
-.bd-rd-sm{ @include border-radius(2px); }
-.bd-t-l-rd-sm{ @include border-radius(2px 0 0 0); }
-.bd-t-r-rd-sm{ @include border-radius(0 2px 0 0); }
-.bd-b-r-rd-sm{ @include border-radius(0 0 2px 0); }
-.bd-b-l-rd-sm{ @include border-radius(0 0 0 2px); }
+.bd-rd-sm{ @include border-radius(3px); }
+.bd-t-l-rd-sm{ @include border-radius(3px 0 0 0); }
+.bd-t-r-rd-sm{ @include border-radius(0 3px 0 0); }
+.bd-b-r-rd-sm{ @include border-radius(0 0 3px 0); }
+.bd-b-l-rd-sm{ @include border-radius(0 0 0 3px); }
 
-.bd-rd-md{ @include border-radius(5px); }
-.bd-t-l-rd-md{ @include border-radius(5px 0 0 0); }
-.bd-t-r-rd-md{ @include border-radius(0 5px 0 0); }
-.bd-b-r-rd-md{ @include border-radius(0 0 5px 0); }
-.bd-b-l-rd-md{ @include border-radius(0 0 0 5px); }
+.bd-rd-md{ @include border-radius(6px); }
+.bd-t-l-rd-md{ @include border-radius(6px 0 0 0); }
+.bd-t-r-rd-md{ @include border-radius(0 6px 0 0); }
+.bd-b-r-rd-md{ @include border-radius(0 0 6px 0); }
+.bd-b-l-rd-md{ @include border-radius(0 0 0 6px); }
 
-.bd-rd-lg{ @include border-radius(7px); }
-.bd-t-l-rd-lg{ @include border-radius(27px 0 0 0); }
-.bd-t-r-rd-lg{ @include border-radius(0 27px 0 0); }
-.bd-b-l-rd-lg{ @include border-radius(0 0 0 27px); }
-.bd-b-r-rd-lg{ @include border-radius(0 0 27px 0); }
+.bd-rd-lg{ @include border-radius(12px); }
+.bd-t-l-rd-lg{ @include border-radius(12px 0 0 0); }
+.bd-t-r-rd-lg{ @include border-radius(0 12px 0 0); }
+.bd-b-l-rd-lg{ @include border-radius(0 0 0 12px); }
+.bd-b-r-rd-lg{ @include border-radius(0 0 12px 0); }
 
 /* [ Box Shadow ]
 ------------------------ */
 .bx-sd-none{ @include box-shadow(none); }
+.bx-sd-sm{ @include box-shadow(0, 1px, 3px, rgba($color-darkest,.12)); }
+.bx-sd-md{ @include box-shadow(0, 2px, 5px, rgba($color-darkest,.16)); }
+.bx-sd-lg{ @include box-shadow(0, 10px, 20px, rgba($color-darkest,.19)); }
 
 
 /* [ Contextual backgrounds ]
@@ -512,6 +522,57 @@
 .fs-24{ font-size: 24px !important; }
 .fs-30{ font-size: 30px !important; }
 .fs-36{ font-size: 36px !important; }
+
+@media (min-width: $screen-sm){
+	.fs-sm-10{ font-size: 10px !important; }
+	.fs-sm-11{ font-size: 11px !important; }
+	.fs-sm-12{ font-size: 12px !important; }
+	.fs-sm-13{ font-size: 13px !important; }
+	.fs-sm-14{ font-size: 14px !important; }
+	.fs-sm-15{ font-size: 15px !important; }
+	.fs-sm-16{ font-size: 16px !important; }
+	.fs-sm-17{ font-size: 17px !important; }
+	.fs-sm-18{ font-size: 18px !important; }
+	.fs-sm-20{ font-size: 20px !important; }
+	.fs-sm-22{ font-size: 22px !important; }
+	.fs-sm-24{ font-size: 24px !important; }
+	.fs-sm-30{ font-size: 30px !important; }
+	.fs-sm-36{ font-size: 36px !important; }
+}
+
+@media (min-width: $screen-md){
+	.fs-md-10{ font-size: 10px !important; }
+	.fs-md-11{ font-size: 11px !important; }
+	.fs-md-12{ font-size: 12px !important; }
+	.fs-md-13{ font-size: 13px !important; }
+	.fs-md-14{ font-size: 14px !important; }
+	.fs-md-15{ font-size: 15px !important; }
+	.fs-md-16{ font-size: 16px !important; }
+	.fs-md-17{ font-size: 17px !important; }
+	.fs-md-18{ font-size: 18px !important; }
+	.fs-md-20{ font-size: 20px !important; }
+	.fs-md-22{ font-size: 22px !important; }
+	.fs-md-24{ font-size: 24px !important; }
+	.fs-md-30{ font-size: 30px !important; }
+	.fs-md-36{ font-size: 36px !important; }
+}
+
+@media (min-width: $screen-lg){
+	.fs-lg-10{ font-size: 10px !important; }
+	.fs-lg-11{ font-size: 11px !important; }
+	.fs-lg-12{ font-size: 12px !important; }
+	.fs-lg-13{ font-size: 13px !important; }
+	.fs-lg-14{ font-size: 14px !important; }
+	.fs-lg-15{ font-size: 15px !important; }
+	.fs-lg-16{ font-size: 16px !important; }
+	.fs-lg-17{ font-size: 17px !important; }
+	.fs-lg-18{ font-size: 18px !important; }
+	.fs-lg-20{ font-size: 20px !important; }
+	.fs-lg-22{ font-size: 22px !important; }
+	.fs-lg-24{ font-size: 24px !important; }
+	.fs-lg-30{ font-size: 30px !important; }
+	.fs-lg-36{ font-size: 36px !important; }
+}
 
 /* [ Font Weights ]
 ------------------------ */
@@ -819,45 +880,46 @@
 
 /* [ Text Alignment ] 
 ------------------------ */
-@media screen and (min-width: $screen-xs){
-  .text-xs-left{ text-align: left; }
-  .text-xs-center{ text-align: center; }
-  .text-xs-right{ text-align: right; }
-  .text-xs-justify{ text-align: justify; }
-}
 
-@media screen and (min-width: $screen-sm){
+@media (min-width: $screen-sm){
   .text-sm-left{ text-align: left; }
   .text-sm-center{ text-align: center; }
   .text-sm-right{ text-align: right; }
   .text-sm-justify{ text-align: justify; }
 }
 
-@media screen and (min-width: $screen-md){
+@media (min-width: $screen-md){
   .text-md-left{ text-align: left; }
   .text-md-center{ text-align: center; }
   .text-md-right{ text-align: right; }
   .text-md-justify{ text-align: justify; }
 }
 
-/* Float
------------------------- */
-@media screen and (min-width: $screen-xs){
-  .pull-xs-left{ float: left; }
-  .pull-xs-right{ float: right; }
-  .pull-xs-none{ float: none; }
+@media (min-width: $screen-lg){
+  .text-lg-left{ text-align: left; }
+  .text-lg-center{ text-align: center; }
+  .text-lg-right{ text-align: right; }
+  .text-lg-justify{ text-align: justify; }
 }
 
-@media screen and (min-width: $screen-sm){
+/* Float
+------------------------ */
+@media (min-width: $screen-sm){
   .pull-sm-left{ float: left; }
   .pull-sm-right{ float: right; }
   .pull-sm-none{ float: none; }
 }
 
-@media screen and (min-width: $screen-md){
+@media (min-width: $screen-md){
   .pull-md-left{ float: left; }
   .pull-md-right{ float: right; }
   .pull-md-none{ float: none; }
+}
+
+@media (min-width: $screen-lg){
+  .pull-lg-left{ float: left; }
+  .pull-lg-right{ float: right; }
+  .pull-lg-none{ float: none; }
 }
 
 /* [ Form Controls ]
@@ -900,53 +962,8 @@ input {
   }
 }
 
-form legend {
-  margin: 15px 0px 10px 0px;
-}
-
-textarea{
-	resize: vertical;
-}
-
-.has-primary .form-control{ 
-	border-color: $color-primary !important; 
-	color: $color-primary !important; 
-
-	&, &:focus{
-	@include box-shadow(0,0,0); }
-}
-
-.has-success .form-control{ 
-	border-color: $color-success !important; 
-	color: $color-success !important; 
-
-	&, &:focus{
-	@include box-shadow(0,0,0); }
-}
-
-.has-info .form-control{ 
-	border-color: $color-info !important; 
-	color: $color-info !important; 
-
-	&, &:focus{
-	@include box-shadow(0,0,0); }
-}
-
-.has-warning .form-control{ 
-	border-color: $color-warning !important; 
-	color: $color-warning !important; 
-
-	&, &:focus{
-	@include box-shadow(0,0,0); }
-}
-
-.has-error .form-control, .has-danger .form-control{ 
-	border-color: $color-danger !important; 
-	color: $color-danger !important; 
-
-	&, &:focus{
-	@include box-shadow(0,0,0); }
-}
+form legend { margin: 15px 0px 10px 0px; }
+textarea{ resize: vertical; }
 
 .form-control {
   background-color: $color-white;
@@ -2050,6 +2067,44 @@ fieldset[disabled] .form-control {
 	}
 }
 
+
+
+/**
+* [ Jumbotron ]
+-------------- */ 
+
+.jumbotron {
+    position: relative;
+    overflow: hidden;
+    display: block;
+    background-color: $color-lighter;
+    @extend .reset;
+
+	h1 {
+	    font-size: 44px;
+	}
+
+    .inner {
+	    position: relative;
+	    z-index: 2;
+	}
+
+	.cover-photo {
+	    width: 100%;
+	    height: inherit;
+	    overflow: hidden;
+	    background-size: cover;
+	    background-color: #10cfbd;
+	    @include transition(opacity 0.3s ease);
+
+	    img {
+		    display: none;
+		}
+	}
+
+}
+
+
 /* [ Article ]
 ------------------------ */
 .article{
@@ -2113,69 +2168,71 @@ fieldset[disabled] .form-control {
 
 /* [ List ]
 ------------------------ */
-.list-item{
+.list{
 	list-style: none; 
+	padding-left: 0;
 
-	li{
+	li{  
 		&:before{
 			content: "";
-			margin-left: -20px;
-			margin-top: 5px;
-			position: absolute;
-			width: 8px;
-			height: 8px;
-			background-color: lighten($color-base, 30%);
+			margin-right: 15px;
+			margin-top: 7px; 
+			width: 7px;
+			height: 7px;
+			display: inline-block;
+			vertical-align: top;
+			background-color: $color-primary;
 			@include border-radius(50%); 
 		} 
 	}
 
 	&.list-primary{
 		li{
-			&:before{
-				background-color: $color-primary;
-			}
+			&:before{ background-color: $color-primary; }
 		}
 	}
 
 	&.list-success{
 		li{
-			&:before{
-				background-color: $color-success;
-			}
+			&:before{ background-color: $color-success; }
 		}
 	}
 
 	&.list-info{
 		li{
-			&:before{
-				background-color: $color-info;
-			}
+			&:before{ background-color: $color-info; }
 		}
 	}
 
 	&.list-warning{
 		li{
-			&:before{
-				background-color: $color-warning;
-			}
+			&:before{ background-color: $color-warning; }
 		}
 	}
 
 	&.list-danger{
 		li{
-			&:before{
-				background-color: $color-danger;
-			}
+			&:before{ background-color: $color-danger; }
 		}
 	}
 
 	&.list-link{
 		li{
-			&:before{
-				background-color: $color-link;
-			}
+			&:before{ background-color: $color-link; }
 		}
 	}
+}
+
+.list-inline-block{
+	padding-left: 0;
+	list-style: none;
+
+	li{ display: block; }
+
+	@media (min-width: $screen-sm) {
+		li{ display: inline-block; }
+	}
+
 }
 
 
@@ -2604,40 +2661,6 @@ fieldset[disabled] .form-control {
   z-index: 700;
 }
 
-
-/**
-* Jumbotron -------------- */ 
-
-.jumbotron {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    background-color: $color-lighter;
-    @extend .reset;
-
-	h1 {
-	    font-size: 44px;
-	}
-
-    .inner {
-	    position: relative;
-	    z-index: 2;
-	}
-
-	.cover-photo {
-	    width: 100%;
-	    height: inherit;
-	    overflow: hidden;
-	    background-size: cover;
-	    background-color: #10cfbd;
-	    @include transition(opacity 0.3s ease);
-
-	    img {
-		    display: none;
-		}
-	}
-
-}
 
 /**
 * Dropdown -------------- */ 

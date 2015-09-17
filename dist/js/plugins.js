@@ -18,6 +18,17 @@
 
     smoothTarget();
 
+    /* Affix.js
+    * Activates your content as affixed content */
+    $('#sidebar').affix({
+      offset: {
+        top: 0,
+        bottom: function () {
+          return (this.bottom = $('.footer').outerHeight(true))
+        }
+      }
+    })
+
     /* Tooltip.js
     * Hover over the links below to see tooltips */
     var toolTip = function(){
@@ -35,6 +46,14 @@
     
     popOver();
 
+    /* Scrollspy.js
+    * Automatically updating nav targets based on scroll position */
+
+    var scrollSpy = function(){
+        $('body').scrollspy({ target: '.sidebar' });
+    }
+
+    scrollSpy();
 
     /* bootstrap-datepicker.js
     * A datepicker for Twitter Bootstrap */
