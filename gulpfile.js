@@ -1,5 +1,7 @@
 var gulp 		     = require('gulp'),
 	 sass 		     = require('gulp-sass'),
+   rename        = require('gulp-rename'),
+   strip         = require('gulp-strip-css-comments'),
 	 watch 		     = require('gulp-watch'),
 	 browserSync   = require('browser-sync').create(),
    highlight     = require('gulp-highlight');
@@ -7,8 +9,11 @@ var gulp 		     = require('gulp'),
 gulp.task('sass', function () {
  return gulp.src('sass/*.scss')
             .pipe(sass().on('error', sass.logError))
+            .pipe(strip())
+            .pipe(gulp.dest('dist/css'))
             .pipe(sass({outputStyle: 'compressed'}))
-            .pipe(gulp.dest('css'))
+            .pipe(rename('wired.min.css'))
+            .pipe(gulp.dest('dist/css'))
             .pipe(browserSync.stream());
 });
 
@@ -25,7 +30,7 @@ gulp.task('watch', function () {
 
   gulp.watch('sass/*.scss', ['sass']);
   gulp.watch('dev/*.php', ['highlight']);
-  gulp.watch("dev/*.php").on('change', browserSync.reload);
+  gulp.watch("**/*.php").on('change', browserSync.reload);
 });
 
 gulp.task('default', ['watch']);

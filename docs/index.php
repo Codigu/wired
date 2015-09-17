@@ -28,14 +28,14 @@
         <link rel="stylesheet" href="../css/bootstrap-select2.min.css">
         <link rel="stylesheet" href="../css/font-awesome.min.css">
         <link rel="stylesheet" href="../css/highlight.min.css">
-        <link rel="stylesheet" href="../css/style.css"> 
+        <link rel="stylesheet" href="../css/wired.css"> 
         
     </head>
-    <body>
-
+    <body>    
+ 
     <header class="navbar navbar-inverse bg-menu navbar-static-top" id="top" role="banner">
       <div class="container bd-b bd-transparent">
-        <div class="navbar-header">
+        <div class="navbar-header"> 
          
           <a href="/" class="navbar-brand pd-y-10">
             <img src="../images/logo-light.svg" width="90" alt="">
@@ -48,25 +48,13 @@
       <main id="main" class="site-main" role="main">
 
         <div class="container">
-            <div class="row">
+            <div class="row"> 
                 <div class="col-sm-9">
                     <section id="introduction" class="pd-t-30 pd-b-30">
                         <h2 class="text-center">Wired Documentation</h2>
-                        <h5 class="text-center">Beautifully Hand Crafted, Light Weight, Hardware Accelerated UI Framework on top of Bootstrap </h5>
+                        <h5 class="text-center">Hand Crafted UI Framework on top of Bootstrap </h5>
                     </section>
 
-                    <?php 
-                    include 'components/helpers.html'; 
-                    include 'components/buttons.html'; 
-                    include 'components/button-group.html'; 
-                    include 'components/button-dropdown.html'; 
-                    include 'components/forms.html'; 
-                    include 'components/input-group.html'; 
-                    include 'components/dropdown.html'; 
-                    include 'components/breadcrumb.html'; 
-                    include 'components/pagination.html'; 
-                    include 'components/progress.html'; 
-                    ?>
                 </div>
                 <div class="col-sm-3">
                     <aside id="sidebar" class="bd-l bd-transparent affix-top" data-spy="affix" data-offset-top="0" data-offset-bottom="200" style="top: 20px;">

@@ -23,11 +23,11 @@
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
         <!-- Assets -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
-        <link rel="stylesheet" href="css/bootstrap-select2.min.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/wired.css">
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
+        <link rel="stylesheet" href="assets/css/bootstrap-select2.min.css">
+        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+        <link rel="stylesheet" href="dist/css/wired.min.css"> 
         
     </head>
     <body>
