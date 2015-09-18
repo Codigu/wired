@@ -1,225 +1,618 @@
-<section id="helpers">
-  <h1 class="page-header fs-18 text-uppercase mg-b-10">Helpers</h1>
-  <p class="fs-15"> Helper css classes allow you to build your custom layout without touching any CSS code.</p>
-  <p>These classes are generic helper classes predifined in the CSS of pages, here is quick view what they can do</p>
-  <ul class="fs-13 pd-l-25">
-	<li class="mg-b-5">Set margins - Available for all directions from 5 - 85 px stepping value 5px </li>
-	<li class="mg-b-5">Set padding - Available for all directions from 5 - 85 px stepping value 5px </li>
-	<li class="mg-b-5">Set border - Available for all sides, default pages border color</li>
-	<li class="mg-b-5">Border Radius - Option to set border radius, size sm / md / lg</li>
-  </ul>
 
-  <section>
-	<h3 class="fs-16">Margins</h3>
-	<p>You can add this helper class to any element in your HTML code to set Margins</p>
-	<div class="table-responsive">
-	<table class="table table-bordered table-condensed table-striped">
-	<thead>
-	<tr>
-	<th>
-	First Prefix ( mg-*)
-	</th>
-	<th>
-	Second Prefix(mg-t/b/l/r-*)
-	</th>
-	<th>
-	Last Prefix(mg-t-$value)
-	</th>
-	</tr>
-	</thead>
-	<tbody>
-	<tr>
-	<td>mg for margin</td>
-	<td>t : top, b : bottom, l : left, r : right</td>
-	<td>5, 10, 15, 20, ... 85</td>
-	</tr>
-	</tbody>
-	</table>
-	</div>
-	<p class="text-uppercase fs-12 bold">Example :</p>
-	<code>mg-t-10</code> <span class="fs-13">which means Margin Top 10px</span>
-	<br>
-	<code>mg-b-20</code> <span class="fs-13">which means Margin Bottom 20px</span>
-	<br>
-	<code>mg-l-5</code> <span class="fs-13">which means Margin Left 5px</span>
-	<br>
-	<code>mg-r-35</code> <span class="fs-13">which means Margin Right 35px</span>
-	<br>
-	<p class="text-uppercase fs-12 bold mg-t-30">
-	Rule :
-	</p>
-	<p>Value can not be anything, 1,2,4,5,6. It has a step of 5px, eg: 5,10,15</p>
-	<p class="all-caps fs-12 bold m-t-30">
-	Other options :
-	</p>
-	<p>To remove margin from a HTML element add the class <code>mg-0</code></p>
-	</section>
+                    <section id="helpers" class="pd-t-30 pd-b-30">
+                        <h3 class="text-uppercase">Helpers</h3>
+                        <p class="fs-16">Helper css classes allow you to build your custom layout without touching any CSS code</p>
+                        <hr>
+                        <p>These classes are generic helper classes predifined in the CSS of pages, here is quick view what they can do</p>
+                        <ul class="list">
+                            <li>Set margins - Available for all directions from 0 - 80 px stepping value 5px</li>
+                            <li>Set padding - Available for all directions from 0 - 80 px stepping value 5px</li>
+                            <li>Set border - Available for all sides, default pages border color</li>
+                            <li>Border Radius - Option to set border radius, size sm / md / lg</li>
+                        </ul>
+                        
+                        <!--/ Padding -->
+                        <h4 id="margins" class="pd-t-30">Margins</h4>
+                        <p>You can add this helper class to any element in your HTML code to set Margins</p>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>First Prefix ( mg-*) </th>
+                                    <th>Second Prefix(mg-t/b/l/r-*)</th>
+                                    <th>Last Prefix(mg-t-$value)</th>
+                                </tr>
+                            </thead> 
+                            <tbody>
+                                <tr>
+                                    <td>mg for margin</td>
+                                    <td>t : top, b : bottom, l : left, r : right</td>
+                                    <td>5,10,15,20, ... 85</td>
+                                </tr> 
+                            </tbody>
+                        </table>
 
-	<section>
-		<h3 class="fs-16">Padding</h3>
-		<p>You can add this helper class to any element in your HTML code to set Padding</p>
-		<div class="table-responsive">
-		<table class="table table-bordered table-condensed table-striped">
-		<thead>
-		<tr>
-		<th>
-		First Prefix ( pd-*)
-		</th>
-		<th>
-		Second Prefix(pd-t/b/l/r-*)
-		</th>
-		<th>
-		Last Prefix(pd-t-$value)
-		</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr>
-		<td>pd for padding</td>
-		<td>t : top, b : bottom, l : left, r : right</td>
-		<td>5,10,15,20, ... 85</td>
-		</tr>
-		</tbody>
-		</table>
-		</div>
-		<p class="text-uppercase fs-12 bold">Example :</p>
-		<code>pd-t-10</code> <span class="fs-13">which means Padding Top 10px</span>
-		<br>
-		<code>pd-b-20</code> <span class="fs-13">which means Padding Bottom 20px</span>
-		<br>
-		<code>pd-l-5</code> <span class="fs-13">which means Padding Left 5px</span>
-		<br>
-		<code>pd-r-35</code> <span class="fs-13">which means Padding Right 35px</span>
-		<br>
-		<p class="text-uppercase fs-12 bold mg-t-30">Rule :</p>
-		<p>Value can not be anything, 1,2,4,5,6. It has a step of 5px, eg: 5,10,15</p>
-		<p class="all-caps fs-12 bold m-t-30">
-		Other options :
-		</p>
-		<p>To remove padding from a HTML element add the class <code>pd-0</code></p>
-		</section>
+                        
+                        <p><code class="nohighlight">mg-0</code> or <code class="nohighlight">mg-none</code> is equivalent to <code class="nohighlight">margin: 0</code> </p>
+                        <p><code class="nohighlight">mg-35</code> is equivalent to <code class="nohighlight">margin: 35px</code> </p>
+                        <p><code class="nohighlight">mg-t-0</code> is equivalent to <code class="nohighlight">margin-top: 0</code> </p>
+                        <p><code class="nohighlight">mg-t-10</code> is equivalent to <code class="nohighlight">margin-top: 10px</code> </p>
+                        <p><code class="nohighlight">mg-b-15</code> is equivalent to <code class="nohighlight">margin-bottom: 15px</code> </p>
+                        <p><code class="nohighlight">mg-l-5</code> is equivalent to <code class="nohighlight">margin-left: 5px</code> </p>
+                        <p><code class="nohighlight">mg-r-65</code> is equivalent to <code class="nohighlight">margin-right: 65px</code> </p>
+                        
 
-		<section>
-		<h3 class="fs-15">Border</h3>
-		<p>You can add this helper class to any element in your HTML code to set Border, border currently supports one pixel</p>
-		<div class="table-responsive ">
-		<table class="table table-bordered table-condensed table-striped">
-		<thead>
-		<tr>
-		<th>
-		First Prefix ( bd-*)
-		</th>
-		<th>
-		Second Prefix(bd-t/b/l/r/a-*)
-		</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr>
-		<td>bd for border</td>
-		<td>t : top, b : bottom, l : left, r : right, a : all</td>
-		</tr>
-		</tbody>
-		</table>
-		</div>
-		<br>
-		<h5 class="mg-b-15">Border Color</h5>
-		<p>By default pages is shipped with border helper classes are of two</p>
-		<p><code>bd-transparent</code> 40% opacity</p>
-		<p><code>bd-grey</code></p>
-		<p><code>bd-primary</code></p>
-		<p><code>bd-success</code></p>
-		<p><code>bd-complete</code></p>
-		<p><code>bd-danger</code></p>
-		<p><code>bd-warning</code></p>
-				
-		<h5 class="mg-b-15">Border Style</h5>
-		<p><code>bd-dashed</code> - change the border style to 'dashed'</p>
-		<p><code>bd-thick</code> - change the border width to 2px</p>
-		</section>
+                        <!--/ Padding -->
+                        <h4 id="padding" class="pd-t-30">Padding</h4>
+                        <p>You can add this helper class to any element in your HTML code to set Padding</p>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>First Prefix ( pd-*) </th>
+                                    <th>Second Prefix(pd-t/b/l/r-*)</th>
+                                    <th>Last Prefix(pd-t-$value)</th>
+                                </tr>
+                            </thead> 
+                            <tbody>
+                                <tr>
+                                    <td>pd for padding</td>
+                                    <td>t : top, b : bottom, l : left, r : right</td>
+                                    <td>5,10,15,20, ... 85</td>
+                                </tr> 
+                            </tbody>
+                        </table>
 
-		<section>
-		<h5 class="fs-15">Border Radius</h5>
-		<p>Helpy class to apply quick border radius, you can change the value in misc.less or in style.css</p>
-		<div class="table-responsive ">
-		<table class="table table-bordered table-condensed table-striped">
-		<thead>
-		<tr>
-		<th>
-		Class
-		</th>
-		<th>
-		Description
-		</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr>
-		<td><code>bd-rd-sm</code></td>
-		<td>3px border radius</td>
-		</tr>
-		<tr>
-		<td><code>bd-rd-md</code></td>
-		<td>5px border radius</td>
-		</tr>
-		<tr>
-		<td><code>bd-rd-lg</code></td>
-		<td>7px border radius</td>
-		</tr>
-		</tbody>
-		</table>
-		</div>
-		</section>
+                        <p><code class="nohighlight">pd-0</code> or <code class="nohighlight">pd-none</code> is equivalent to <code class="nohighlight">padding: 0</code> </p>
+                        <p><code class="nohighlight">pd-35</code> is equivalent to <code class="nohighlight">padding: 35px</code> </p>
+                        <p><code class="nohighlight">pd-t-0</code> is equivalent to <code class="nohighlight">padding-top: 0</code> </p>
+                        <p><code class="nohighlight">pd-t-10</code> is equivalent to <code class="nohighlight">padding-top: 10px</code> </p>
+                        <p><code class="nohighlight">pd-b-15</code> is equivalent to <code class="nohighlight">padding-bottom: 15px</code> </p>
+                        <p><code class="nohighlight">pd-l-5</code> is equivalent to <code class="nohighlight">padding-left: 5px</code> </p>
+                        <p><code class="nohighlight">pd-r-65</code> is equivalent to <code class="nohighlight">padding-right: 65px</code> </p>
+                    
+                        <!--/ Border -->
+                        <h4 id="border" class="pd-t-30">Border</h4>
+                        <p>You can add this helper class to any element in your HTML code to set Border, border currently supports one pixel</p>
+                        <div class="table-responsive ">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>First Prefix ( bd-*)</th>
+                                    <th>Second Prefix(bd-t/b/l/r/a-*)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>bd for border</td>
+                                    <td>t : top, b : bottom, l : left, r : right, a : all</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                        <br>
 
-		<section>
-<h5 class="">Misc. classes</h5>
-<div class="table-responsive ">
-<table class="table table-bordered table-condensed table-striped">
-<thead>
-<tr>
-<th>
-Class name
-</th>
-<th>
-Description
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>full-width</code></td>
-<td>Spans the element to have 100% width of the parent</td>
-</tr>
-<tr>
-<td><code>full-height</code></td>
-<td>Spans the element to have 100% height of the parent</td>
-</tr>
-<tr>
-<td><code>scrollable</code></td>
-<td>Adds <code>overflow-y:auto</code></td>
-</tr>
-<tr>
-<td><code>center-margin</code></td>
-<td>Adds <code>margin-left:auto; margin-right:auto</code>. Useful when center aligning any div</td>
-</tr>
-<tr>
-<td><code>inherit-size</code></td>
-<td>Inherits width and height from parent</td>
-</tr>
-<tr>
-<td><code>inherit-height</code></td>
-<td>Inherits only the height from parent</td>
-</tr>
-<tr>
-<td><code>hide</code></td>
-<td>Hides any element</td>
-</tr>
-<tr>
-<td><code>inline</code></td>
-<td>Adds <code>display:inline-block</code></td>
-</tr>
-</tbody>
-</table>
+                        <h5>Border Color</h5>
+                        <p>Select on variety of pre-defined border colors</p>
+                        <p><code class="nohighlight">bd-transparent</code></p>
+                        <p><code class="nohighlight">bd-transparent-white</code></p>
+                        <p><code class="nohighlight">bd-gray</code></p>
+                        <p><code class="nohighlight">bd-white</code></p>
+                        <p><code class="nohighlight">bd-primary</code></p>
+                        <p><code class="nohighlight">bd-success</code></p>
+                        <p><code class="nohighlight">bd-info</code></p> 
+                        <p><code class="nohighlight">bd-danger</code></p> 
+                        <p><code class="nohighlight">bd-warning</code></p>
+                        <br>  
+
+                        <h5>Border Style</h5>
+                        <p><code class="nohighlight">b-dashed</code> -  change the border style to &apos;dashed&apos;</p>
+                        <p><code class="nohighlight">b-dotted</code> -  change the border style to &apos;dotted&apos;</p>
+                        <p><code class="nohighlight">b-thick-(a/t/b/l/r)</code> - change the border width to 2px</p>
+                        <br>
+<div class="wd-example">  
+<div class="example"> 
+    <h5 class="mg-b-15">Example</h5>  
+    <div class="bd-b bd-primary pd-y-10">This block has a bottom border</div>
+    <div class="bd-b bd-danger bd-dotted pd-y-10">This block has a dotted bottom border</div> 
+    <div class="bd-b bd-primary bd-dashed pd-y-10">This block has a dashed bottom border</div> 
+    <div class="bd-b bd-thick-b bd-primary bd-dashed pd-y-10">This block has a thick bottom border</div> 
+</div> 
+<pre> 
+<code class="html">&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;bd-b bd-primary&quot;</span>&gt;This block has <span class="hljs-tag">a</span> <span class="hljs-attribute">bottom</span> <span class="hljs-attribute">border</span>&lt;/div&gt; 
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;bd-b bd-danger bd-dotted&quot;</span>&gt;This block has <span class="hljs-tag">a</span> dotted <span class="hljs-attribute">bottom</span> <span class="hljs-attribute">border</span>&lt;/div&gt; 
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;bd-b bd-primary bd-dashed&quot;</span>&gt;This block has <span class="hljs-tag">a</span> dashed <span class="hljs-attribute">bottom</span> <span class="hljs-attribute">border</span>&lt;/div&gt; 
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;bd-b bd-thick-b bd-primary bd-dashed pd-y-10&quot;</span>&gt;This block has <span class="hljs-tag">a</span> thick <span class="hljs-attribute">bottom</span> <span class="hljs-attribute">border</span>&lt;/div&gt;</code> 
+</pre> 
 </div>
-</section>
-</section>
+                        
+                       
+                        <!--/ Border Radius -->
+                        <h4 id="border-radius" class="pd-t-30">Border Radius</h4>
+                        <p>Helper class to apply quick border radius</p>
+
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>First Prefix ( bd-rd-*) </th>
+                                    <th>Second Prefix(bd-t/b/l/r-rd-*)</th>
+                                    <th>Last Prefix(bd-t-rd-*)</th>
+                                </tr>
+                            </thead> 
+                            <tbody>
+                                <tr>
+                                    <td>bd-rd for border radius</td>
+                                    <td>t : top, b : bottom, l : left, r : right</td>
+                                    <td>sm: small, md: medium, lg: large</td>
+                                </tr> 
+                            </tbody>
+                        </table>
+                        <br>
+
+                        <p><code class="nohighlight">bd-rd-none</code> is equivalent to <code class="nohighlight">border-radius: 0</code></p>
+                            <p><code class="nohighlight">bd-rd-sm</code> is equivalent to <code class="nohighlight">border-radius: 2px</code></p>
+                            <p><code class="nohighlight">bd-rd-md</code> is equivalent to <code class="nohighlight">border-radius: 4px</code></p>
+                            <p><code class="nohighlight">bd-rd-lg</code> is equivalent to <code class="nohighlight">border-radius: 6px</code></p>
+                            <br>
+                            <p><code class="nohighlight">bd-t-l-sm</code> is equivalent to <code class="nohighlight">border-top-left-radius: 2px</code></p>
+                            <p><code class="nohighlight">bd-t-r-md</code> is equivalent to <code class="nohighlight">border-top-right-radius: 4px</code></p>
+                            <p><code class="nohighlight">bd-b-l-lg</code> is equivalent to <code class="nohighlight">border-bottom-left-radius: 6px</code></p>
+                            <p><code class="nohighlight">bd-b-r-sm</code> is equivalent to <code class="nohighlight">border-bottom-right-radius: 2px</code></p>
+                            <br>
+
+<div class="wd-example">
+    <div class="example">
+        <h5 class="mg-b-15">Example</h5>
+        <div class="row pd-x-15">
+            <div class="col-md-4"><div class="bg-primary bd-rd-sm" style="height: 200px"></div></div>
+            <div class="col-md-4"><div class="bg-primary bd-rd-md" style="height: 200px"></div></div>
+            <div class="col-md-4"><div class="bg-primary bd-rd-lg" style="height: 200px"></div></div>
+        </div>
+    </div>
+<pre>
+<code class="html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;bg-primary bd-rd-sm&quot;</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;bg-primary bd-rd-md&quot;</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;bg-primary bd-rd-lg&quot;</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;</code>
+</pre>
+
+</div>
+
+                        <!--/ Box Shadow -->
+                        <h4 id="box-shadow" class="pd-t-30">Box Shadow</h4>
+                        <p>Helper class to apply quick border radius</p>
+
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>First Prefix ( bx-sd-*) </th>
+                                    <th>Last Prefix(bx-sd-*)</th> 
+                                </tr>
+                            </thead> 
+                            <tbody>
+                                <tr>
+                                    <td>bx-sd for box shadow</td>
+                                    <td>sm: small, md: medium, lg: large</td>
+                                </tr> 
+                            </tbody>
+                        </table>
+                        <br>
+
+<div class="wd-example">
+    <div class="example">
+        <h5 class="mg-b-15">Example</h5>
+        <div class="row pd-x-15">
+            <div class="col-md-4"><div class="bx-sd-sm bd-a" style="height: 200px"></div></div>
+            <div class="col-md-4"><div class="bx-sd-md bd-a" style="height: 200px"></div></div>
+            <div class="col-md-4"><div class="bx-sd-lg bd-a" style="height: 200px"></div></div>
+        </div>
+    </div>
+<pre>
+<code class="html">&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;bx-sd-sm bd-a&quot;</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;bx-sd-md bd-a&quot;</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;
+&lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;bx-sd-lg bd-a&quot;</span>&gt;&lt;/<span class="hljs-keyword">div</span>&gt;</code>
+</pre>
+</div>
+
+                        <!--/ Contextual Colors -->
+                        <h4 id="contextual-colors" class="pd-t-30">Contextual Colors </h4>
+                        <p>Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes.</p>
+
+<div class="wd-example">
+    <div class="example">
+        <h5 class="mg-b-15">Example</h5>
+        <p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+        <p class="text-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+        <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+        <p class="text-danger">Donec ullamcorper nulla non metus auctor fringilla.</p>
+        <p class="text-gray">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <p class="text-dark">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+        <p class="text-darker">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        <p class="text-darkest">Etiam porta sem malesuada magna mollis euismod.</p>
+        <p class="text-link">Donec ullamcorper nulla non metus auctor fringilla.</p>
+        <p class="text-cyan">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <p class="text-blue">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+        <p class="text-darkblue">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        <p class="text-navy">Etiam porta sem malesuada magna mollis euismod.</p>
+    </div>
+<pre>
+<code class="html">
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-primary&quot;</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-success&quot;</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-info&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-warning&quot;</span>&gt;</span>..<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-danger&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-gray&quot;</span>&gt;</span>..<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-dark&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-darker&quot;</span>&gt;</span>......<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-darkest&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-link&quot;</span>&gt;</span>..<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-cyan&quot;</span>&gt;</span>......<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-blue&quot;</span>&gt;</span>..<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-darkblue&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-navy&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+</code>
+</pre>
+</div>
+
+
+                        <!--/ Contextual Backgrounds -->
+                        <h4 id="contextual-bg" class="pd-t-30">Contextual Backgrounds </h4>
+                        <p>Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes.</p>
+<div class="wd-example">
+    <div class="example">
+        <h5 class="mg-b-15">Example</h5>
+        <p class="bg-primary pd-15">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <p class="bg-success pd-15">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+        <p class="bg-info pd-15">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        <p class="bg-warning pd-15">Etiam porta sem malesuada magna mollis euismod.</p>
+        <p class="bg-danger pd-15">Donec ullamcorper nulla non metus auctor fringilla.</p>
+        <p class="bg-gray pd-15">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <p class="bg-dark pd-15">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+        <p class="bg-darker pd-15">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        <p class="bg-darkest pd-15">Etiam porta sem malesuada magna mollis euismod.</p>
+        <p class="bg-link pd-15">Donec ullamcorper nulla non metus auctor fringilla.</p>
+        <p class="bg-cyan pd-15">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <p class="bg-blue pd-15">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+        <p class="bg-darkblue pd-15">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        <p class="bg-navy pd-15">Etiam porta sem malesuada magna mollis euismod.</p>
+    </div>
+<pre>
+<code class="html">
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bg-primary&quot;</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bg-success&quot;</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bg-info&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bg-warning&quot;</span>&gt;</span>..<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bg-danger&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bg-gray&quot;</span>&gt;</span>..<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bg-dark&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bg-darker&quot;</span>&gt;</span>......<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bg-darkest&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bg-link&quot;</span>&gt;</span>..<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bg-cyan&quot;</span>&gt;</span>......<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bg-blue&quot;</span>&gt;</span>..<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bg-darkblue&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bg-navy&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+</code>
+</pre>
+</div>
+
+                    <!--/ Font Size -->
+                        <h4 id="font-size" class="pd-t-30">Font Size </h4>
+                        <p>You can choose on variety of predefined font sizes that may come in handy.</p>
+
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>First Prefix ( fs-*) </th>
+                                    <th>Second Prefix(fs-sm/md/lg-*)</th>
+                                    <th>Last Prefix(fs-sm-$value)</th>
+                                </tr>
+                            </thead> 
+                            <tbody>
+                                <tr>
+                                    <td>bd-rd for border radius</td>
+                                    <td>sm: small, md: medium, lg: large</td>
+                                    <td>10,11,12,...,24,30,36</td>
+                                </tr> 
+                            </tbody>
+                        </table>
+                        <br>
+
+                        <h5>Options</h5>
+                        <p>See how aspects of the font size work across multiple devices with a handy table.</p>
+                        <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th>
+                                Small devices
+                                <small class="fs-12 hint">Tablets (&#x2265;768px)</small>
+                              </th>
+                              <th>
+                                Medium devices
+                                <small class="fs-12 hint">Desktops (&#x2265;992px)</small>
+                              </th>
+                              <th>
+                                Large devices
+                                <small class="fs-12 hint">Desktops (&#x2265;1200px)</small>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th class="text-nowrap" scope="row">Class prefix</th>
+                              <td><code class="nohighlight">.fs-sm-</code></td>
+                              <td><code class="nohighlight">.fs-md-</code></td>
+                              <td><code class="nohighlight">.fs-lg-</code></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <br>
+<div class="wd-example">
+    <div class="example">
+        <h5 class="mg-b-15">Example</h5>
+        <p class="fs-10">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+        <p class="fs-16">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <p class="fs-18">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+        <p class="fs-24">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+        <p class="fs-30">Etiam porta sem malesuada magna mollis euismod.</p>
+        <p class="fs-36">Donec ullamcorper nulla non metus auctor fringilla.</p>
+        <br>
+        <p class="fs-14 fs-md-30">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+        <p class="fs-30 fs-sm-18">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+    </div>
+
+<pre>
+<code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fs-10&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fs-16&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fs-18&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fs-24&quot;</span>&gt;</span>..<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fs-30&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fs-36&quot;</span>&gt;</span>..<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fs-14 fs-md-30&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;fs-30 fs-sm-18&quot;</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code>
+</pre>
+</div>
+
+                    <!--/ Font Weights -->
+                    <h4 id="font-weights" class="pd-t-30">Font Weights </h4>
+                    <p>You can choose on 3 variety of predefined font weights.</p>
+
+<div class="wd-example">
+    <div class="example">
+        <h5 class="mg-b-15">Example</h5>
+        <p class="light">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+        <p class="semi-bold">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <p class="bold">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+    </div>
+
+<pre>
+<code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;light&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;semi-bold&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;bold&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+</code></pre>
+</div>
+
+                  <!--/ Font Face -->
+                  <h4 id="font-face" class="pd-t-30">Font Face </h4>
+                  <p>Apply heading font to paragraph or apply paragraph font to heading, you can switch it either way</p>
+
+<div class="wd-example">
+  <div class="example">
+      <h5 class="mg-b-15">Example</h5>
+      <h4 class="font-base mg-b-15">Howdy! I&apos;m Open Sans</h4>
+      <p class="font-heading">Ahoy! I&apos;m Montserrat</p>
+  </div>
+
+<pre>
+<code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">h4</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;font-base&quot;</span>&gt;</span>Howdy! Im Open Sans<span class="hljs-tag">&lt;/<span class="hljs-title">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;font-heading&quot;</span>&gt;</span>Ahoy! Im Montserrat<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span></code>
+</pre>
+</div>
+
+                  <!--/ Text Alignment -->
+                  <h4 id="text-alignment" class="pd-t-30">Text Alignment</h4>
+                  <p>Extend Bootstrap&apos;s text alignment classes for different alignment on desktop to mobile and vice versa.</p>
+
+                  <table class="table table-bordered">
+                      <thead>
+                          <tr>
+                              <th>First Prefix(text-sm/md/lg-*)</th>
+                              <th>Last Prefix(text-sm-$value)</th>
+                          </tr>
+                      </thead> 
+                      <tbody>
+                          <tr>
+                              <td>sm: small, md: medium, lg: large</td>
+                              <td>left, center, right, justify</td>
+                          </tr> 
+                      </tbody>
+                  </table>
+                  <br>
+                  <h5>Options</h5>
+                  <p>See how aspects of the text alignment work across multiple devices with a handy table.</p>
+                  <div class="table-responsive">
+                  <table class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>
+                          Small devices
+                          <small class="fs-12 hint">Tablets (&#x2265;768px)</small>
+                        </th>
+                        <th>
+                          Medium devices
+                          <small class="fs-12 hint">Desktops (&#x2265;992px)</small>
+                        </th>
+                        <th>
+                          Large devices
+                          <small class="fs-12 hint">Desktops (&#x2265;1200px)</small>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th class="text-nowrap" scope="row">Class prefix</th>
+                        <td><code class="nohighlight">.text-sm-</code></td>
+                        <td><code class="nohighlight">.text-md-</code></td>
+                        <td><code class="nohighlight">.text-lg-</code></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <br>
+<div class="wd-example">
+  <div class="example">
+      <h5 class="mg-b-15">Example</h5>
+      <p class="text-left">Left aligned text.</p>
+      <p class="text-center">Center aligned text.</p>
+      <p class="text-right">Right aligned text.</p>
+      <p class="text-justify">Justified text.</p>
+      <br>
+      <p class="text-center text-sm-right">Tablet - Desktop: Right aligned text. Mobile: Center aligned text.</p>
+      <p class="text-md-center">Desktop: Center aligned text.  Mobile: Left aligned text.</p>
+      <p class="text-right text-lg-left">Large Screens: Left aligned text.  Mobile - Desktop: Right aligned text.</p>
+  </div>
+
+<pre>
+<code><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-left&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-center&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-right&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-justify&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-center text-sm-right&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-md-center&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;text-right text-lg-left&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+</code></pre>
+</div>
+
+                  <!--/ Float Alignment -->
+                  <h4 id="float-alignment" class="pd-t-30">Float Alignment</h4>
+                  <p>Extend Bootstrap&apos;s float alignment classes for different alignment on desktop to mobile and vice versa.</p>
+
+                  <table class="table table-bordered">
+                      <thead>
+                          <tr>
+                              <th>First Prefix(pull-sm/md/lg-*)</th>
+                              <th>Last Prefix(pull-sm-$value)</th>
+                          </tr>
+                      </thead> 
+                      <tbody>
+                          <tr>
+                              <td>sm: small, md: medium, lg: large</td>
+                              <td>left, center, right, justify</td>
+                          </tr> 
+                      </tbody>
+                  </table>
+                  <br>
+                  <h5>Options</h5>
+                  <p>See how aspects of the float work across multiple devices with a handy table.</p>
+                  <div class="table-responsive">
+                  <table class="table table-bordered table-striped">
+                    <thead>
+                      <tr>
+                        <th></th>
+                        <th>
+                          Small devices
+                          <small class="fs-12 hint">Tablets (&#x2265;768px)</small>
+                        </th>
+                        <th>
+                          Medium devices
+                          <small class="fs-12 hint">Desktops (&#x2265;992px)</small>
+                        </th>
+                        <th>
+                          Large devices
+                          <small class="fs-12 hint">Desktops (&#x2265;1200px)</small>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th class="text-nowrap" scope="row">Class prefix</th>
+                        <td><code class="nohighlight">.pull-sm-</code></td>
+                        <td><code class="nohighlight">.pull-md-</code></td>
+                        <td><code class="nohighlight">.pull-lg-</code></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <br>
+<div class="wd-example">
+  <div class="example clearfix">
+      <h5 class="mg-b-15">Example</h5>
+      <p class="pull-left">Float left aligned text.</p>
+      <p class="pull-right">Float right aligned text.</p>
+      <p class="pull-none">Float none aligned text.</p>
+      <br>
+      <p class="pull-sm-right">Tablet - Desktop: Float right. Mobile: Float none.</p>
+      <p class="pull-md-left">Desktop: Float left.  Mobile: Float none.</p>
+      <p class="pull-left pull-lg-right">Large Screens: Float left aligned text.  Mobile - Desktop: Float right aligned text.</p>
+  </div>
+
+<pre>
+<code><span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;pull-left&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;pull-right&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;pull-none&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;pull-sm-right&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;pull-md-left&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">p</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;pull-left pull-lg-right&quot;</span>&gt;</span>....<span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+</code></pre>
+</div>
+
+                  <!--/ Float Alignment -->
+                  <h4 id="misc-classes" class="pd-t-30">Misc Classes</h4>
+                  <div class="table-responsive ">
+                    <table class="table table-bordered table-condensed table-striped">
+                        <thead>
+                            <tr>
+                                <th>Class name</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code class="nohighlight">full-width</code></td>
+                                <td>Spans the element to have 100% width of the parent</td>
+                            </tr>
+                            <tr>
+                                <td><code class="nohighlight">full-height</code></td>
+                                <td>Spans the element to have 100% height of the parent</td>
+                            </tr>
+                            <tr>
+                                <td><code class="nohighlight">scrollable</code></td>
+                                <td>Adds <code class="nohighlight">overflow-y:auto</code></td>
+                            </tr>
+                            <tr> 
+                                <td><code class="nohighlight">center-margin</code></td>
+                                <td>Adds <code class="nohighlight">margin-left:auto; margin-right:auto</code>. Useful when center aligning any div</td>
+                            </tr>
+                            <tr> 
+                                <td><code class="nohighlight">col-center</code></td>
+                                <td>Adds <code class="nohighlight">float: none; margin-left:auto; margin-right:auto</code>. Useful when center aligning any <code class="nohighlight">.col-*</code></td>
+                            </tr>
+                            <tr>
+                                <td><code class="nohighlight">inherit-size</code></td>
+                                <td>Inherits width and height from parent</td>
+                            </tr>
+                            <tr>
+                                <td><code class="nohighlight">inherit-height</code></td>
+                                <td>Inherits only the height from parent</td>
+                            </tr>
+                            <tr>
+                                <td><code class="nohighlight">hide</code></td>
+                                <td>Hides any element</td>
+                            </tr>
+                            <tr>
+                                <td><code class="nohighlight">inline</code></td>
+                                <td>Adds <code class="nohighlight">display:inline-block</code></td>
+                            </tr>
+                            <tr>
+                                <td><code class="nohighlight">block</code></td>
+                                <td>Adds <code class="nohighlight">display:block</code></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+                  </section>
+                    <!--/ #helper -->

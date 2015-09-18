@@ -40,20 +40,18 @@
     * A datepicker for Twitter Bootstrap */
 
     var bootstrapDatepicker = function(){
-        $('.date, .input-group.date, .input-daterange').datepicker();
+        $('[data-plugin="datepicker"]').datepicker();
     }
 
     bootstrapDatepicker();
 
-    /* bootstrap-datepicker.js
-    * Select2 is a jQuery based replacement for select boxes. 
-    * It supports searching, remote data sets, and infinite scrolling of results. */
+    /* chosen.js
+    * jQuery plugin that makes long, unwieldy select boxes much more user-friendly. */
 
-    var boostrapSelect = function(){
-        $('.select2').select2();
+    var selectBox = function(){
+        $('[data-plugin="selectbox"]').chosen();
     }
 
-    boostrapSelect();
-
+    selectBox();
 
 })( jQuery );

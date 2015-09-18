@@ -1,218 +1,128 @@
-<section id="buttons">
-    <h1 class="page-header fs-18 text-uppercase mg-b-10">Buttons</h1>
-    <p class="fs-15 mg-b-15">Use Wired’s custom button styles for actions in forms, dialogs, and more. Includes support for a handful of contextual variations, sizes, states, and more.</p>
+<section id="buttons" class="pd-t-30 pd-b-30">
+                      <h3 class="text-uppercase">Buttons</h3>
+                      <hr>
+                      <h4>Colors</h4>
+                      <p>Wired buttons use the same contextual classes introduced in Bootstrap</p>
+                      
+<div class="wd-example"> 
+    <div class="example">
+      <h5 class="mg-b-15">Example</h5>
+      <button class="btn btn-default">Default</button>
+      <button class="btn btn-primary">Primary</button>
+      <button class="btn btn-success">Success</button>
+      <button class="btn btn-info">Info</button>
+      <button class="btn btn-warning">Warning</button>
+      <button class="btn btn-danger">Danger</button>
+      <button class="btn btn-link">Link</button>
+  </div>
+<pre>
+<code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-default&quot;</span>&gt;</span>Default<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-primary&quot;</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-success&quot;</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-info&quot;</span>&gt;</span>Info<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-warning&quot;</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-danger&quot;</span>&gt;</span>Danger<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-link&quot;</span>&gt;</span>Link<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></code>
+</pre>
+</div>
+<br>
+                    <h4>Button animation</h4>
+                    <p>Content inside a button can be animate on hover. Simply include the classes <code class="nohighlight">.btn-animated</code> together with <code class="nohighlight">.from-top</code> or <code class="nohighlight">.from-left</code> to specify the animation direction, followed by the desired icon font class name (ex: fa fa-check)</p>
+                    
+<div class="wd-example"> 
+    <div class="example">
+      <h5 class="mg-b-15">Example</h5>
+      <button class="btn btn-primary btn-animated from-left fa fa-check" type="button">
+          <span>Checkbox</span>
+      </button>
+      <button class="btn btn-primary btn-animated from-top fa fa-times" type="button">
+          <span>Times</span>
+      </button>
+  </div>
+<pre>
+<code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-primary btn-animated from-left fa fa-check&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;button&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Checkbox<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-primary btn-animated from-top fa fa-times&quot;</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;button&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span>&gt;</span>Times<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></code>
+</pre>
+</div>
+<br>                    
+                    <h4>Outline Buttons</h4>
+                    <p>In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the <code class="nohighlight">.btn-*-outline</code> ones to remove all background images and colors on any button.</p>
+                    
+<div class="wd-example"> 
+    <div class="example">
+      <h5 class="mg-b-15">Example</h5>
+      <button class="btn btn-primary-outline">Primary</button>
+      <button class="btn btn-success-outline">Success</button>
+      <button class="btn btn-info-outline">Info</button>
+      <button class="btn btn-warning-outline">Warning</button>
+      <button class="btn btn-danger-outline">Danger</button>
+  </div>
+<pre>
+<code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-primary-outline&quot;</span>&gt;</span>Primary<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-success-outline&quot;</span>&gt;</span>Success<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-info-outline&quot;</span>&gt;</span>Info<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-warning-outline&quot;</span>&gt;</span>Warning<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-danger-outline&quot;</span>&gt;</span>Danger<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></code>
+</pre>
+</div>
+<br>
 
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="panel-title">Basic Example</div>
-            <p>Use the button classes on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
-        </div>
-        <div class="panel-body">
-            <a class="btn btn-default" href="#" role="button">Link</a>
-            <button class="btn btn-default" type="submit">Button</button>
-            <input class="btn btn-default" type="button" value="Input">
-            <input class="btn btn-default" type="submit" value="Submit">
-        </div>
-    </div>
-    <!--/ panel -->
+                    <h4>Rounded Buttons</h4>
+                    <p>Any button can be made to have rounded corners by adding <code class="nohighlight">.btn-rounded</code></p>
 
-     <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="panel-title">Theme Options</div>
-            <p>Use any of the available button classes to quickly create a styled button.</p>
-        </div>
-        <div class="panel-body">
+<div class="wd-example"> 
+    <div class="example">
+      <h5 class="mg-b-15">Example</h5>
+      <!-- Large rounded button -->
+      <button class="btn btn-primary btn-lg btn-rounded">Large rounded</button>
 
-            <div class="mg-b-15">
-              <button type="button" class="btn btn-primary">Primary</button>
-              <button type="button" class="btn btn-success">Success</button>
-              <button type="button" class="btn btn-info">Info</button>
-              <button type="button" class="btn btn-warning">Warning</button>
-              <button type="button" class="btn btn-danger">Danger</button>
-              <button type="button" class="btn btn-link">Link</button>
-            </div>
+      <!-- Regular rounded button -->
+      <button class="btn btn-primary btn-rounded">Regular</button>
 
-            <div class="mg-b-15">
-              <button type="button" class="btn btn-primary-outline">Primary</button>
-              <button type="button" class="btn btn-success-outline">Success</button>
-              <button type="button" class="btn btn-info-outline">Info</button>
-              <button type="button" class="btn btn-warning-outline">Warning</button>
-              <button type="button" class="btn btn-danger-outline">Danger</button>
-              <button type="button" class="btn btn-link-outline">Link</button>
-            </div>
+      <!-- Small rounded button -->
+      <button class="btn btn-primary btn-sm btn-rounded">Small</button>
+  </div>
+<pre>
+<code class="html"><span class="hljs-comment">&lt;!-- Large rounded button --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-primary btn-lg btn-rounded&quot;</span>&gt;</span>Large rounded<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 
-        </div>
-     </div>
-      <!--/ panel -->
+<span class="hljs-comment">&lt;!-- Regular rounded button --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-primary btn-rounded&quot;</span>&gt;</span>Regular<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 
-       <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="panel-title">Animated Buttons</div>
-            <p>Content inside a button can be animate on hover. Simply include the classes
-  <code>.btn-animated</code> together with <code>.from-top</code> or <code>.from-left</code> to specify the animation direction, followed by the desired <a href="">icon font</a> class name (ex: <code>fa fa-check</code>)
-  </p>
-        </div>
-        <div class="panel-body">
-            <div class="mg-b-15">
-              <button type="button" class="btn btn-primary btn-animated from-left fa fa-flash"><span>Primary</span></button>
-              <button type="button" class="btn btn-success btn-animated from-top fa fa-check"><span>Success</span></button>
-              <button type="button" class="btn btn-info btn-animated from-left fa fa-info"><span>Info</span></button>
-              <button type="button" class="btn btn-warning btn-animated from-left fa fa-warning"><span>Warning</span></button>
-              <button type="button" class="btn btn-danger btn-animated from-left fa fa-times"><span>Danger</span></button>
-            </div>
-        </div>
-      </div>
+<span class="hljs-comment">&lt;!-- Small rounded button --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-primary btn-sm btn-rounded&quot;</span>&gt;</span>Small<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></code>
+</pre>
+</div>
+<br>                   
+                    <h4>Box Buttons</h4>
+                    <p>Don&apos;t like buttons with slightly rounded corners? Just add <code class="nohighlight">.btn-box</code> to turn it into a box button</p> 
+                    
+<div class="wd-example"> 
+    <div class="example">
+      <h5 class="mg-b-15">Example</h5>
+      <button class="btn btn-primary btn-lg btn-box">Large button</button>
 
-      <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="panel-title">Sizes</div>
-            <p>Fancy larger or smaller buttons? Add <code>.btn-lg</code>, <code>.btn-sm</code>, or <code>.btn-xs</code> for additional sizes.</p>
-        </div>
-        <div class="panel-body">
-            <p>
-              <button type="button" class="btn btn-default btn-lg">Large button</button>
-              <button type="button" class="btn btn-primary btn-lg">Large button</button>
-            </p>
-            <p>
-              <button type="button" class="btn btn-default">Default button</button>
-              <button type="button" class="btn btn-primary">Default button</button>
-            </p>
-            <p>
-              <button type="button" class="btn btn-default btn-sm">Small button</button>
-              <button type="button" class="btn btn-primary btn-sm">Small button</button>
-            </p>
-            <p>
-              <button type="button" class="btn btn-default btn-xs">Extra small button</button>
-              <button type="button" class="btn btn-primary btn-xs">Extra small button</button>
-            </p>
-        </div>
-     </div>
-      <!--/ panel -->
+      <!-- Regular box button -->
+      <button class="btn btn-primary btn-box">Regular</button>
 
-      <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="panel-title">Blocks</div>
-            <p>Create block level buttons—those that span the full width of a parent— by adding <code>.btn-block</code>.</p>
-        </div>
-        <div class="panel-body">
-            <div class="center-block" style="max-width: 400px;">
-              <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-              <button type="button" class="btn btn-default btn-lg btn-block">Block level button</button>
-            </div>
-        </div>
-     </div>
-      <!--/ panel -->
+      <!-- Small box button -->
+      <button class="btn btn-primary btn-sm btn-box">Small</button>
+  </div>
+<pre>
+<code class="html"><span class="hljs-comment">&lt;!-- Large box button --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-primary btn-lg btn-box&quot;</span>&gt;</span>Large button<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 
-      <div class="row">
-        <div class="col-sm-6">
+<span class="hljs-comment">&lt;!-- Regular box button --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-primary btn-box&quot;</span>&gt;</span>Regular<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
 
-          <div class="panel panel-default">
-              <div class="panel-heading">
-                  <div class="panel-title">Active State</div>
-                  <p>No need to add <code>:active</code> as it's a pseudo-class, but if you need to force the same appearance, go ahead and add <code>.active</code>.</p>
-              </div>
-              <div class="panel-body">
-                  <button type="button" class="btn btn-default active">Button</button>
-                  <button type="button" class="btn btn-primary active">Primary button</button>
-              </div>
-           </div>
-          <!--/ panel -->
-        </div>
-
-        <div class="col-sm-6">
-
-          <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="panel-title">Disabled State</div>
-                <p>Add the <code>disabled</code> attribute to <code>&lt;button&gt;</code> buttons.</p>
-            </div>
-            <div class="panel-body">
-                <button type="button" class="btn btn-default" disabled="disabled">Button</button>
-                <button type="button" class="btn btn-primary" disabled="disabled">Primary button</button>
-            </div>
-          </div>
-          <!--/ panel -->
-        </div>
-
-      </div>
-
-      <div class="row">
-        <div class="col-sm-6">
-
-          <div class="panel panel-default">
-              <div class="panel-heading">
-                  <div class="panel-title">Checkbox Button</div>
-                  <p>Add <code>data-toggle="buttons"</code> to a <code>.btn-group</code> containing those modified buttons to enable toggling in their respective styles.</p>
-              </div>
-              <div class="panel-body">
-                  <div class="btn-group mg-b-15" data-toggle="buttons">
-                    <label class="btn btn-default active">
-                      <input type="checkbox" checked autocomplete="off"> Checkbox 1
-                    </label>
-                    <label class="btn btn-default">
-                      <input type="checkbox" autocomplete="off"> Checkbox 2
-                    </label>
-                    <label class="btn btn-default">
-                      <input type="checkbox" autocomplete="off"> Checkbox 3
-                    </label>
-                  </div>
-                  <!--/ default -->
-
-                  <div class="btn-group mg-b-15" data-toggle="buttons">
-                    <label class="btn btn-primary active">
-                      <input type="checkbox" checked autocomplete="off"> Checkbox 1
-                    </label>
-                    <label class="btn btn-primary">
-                      <input type="checkbox" autocomplete="off"> Checkbox 2
-                    </label>
-                    <label class="btn btn-primary">
-                      <input type="checkbox" autocomplete="off"> Checkbox 3
-                    </label>
-                  </div>
-                  <!--/ primary -->
-              </div>
-           </div>
-          <!--/ panel -->
-        </div>
-
-        <div class="col-sm-6">
-
-          <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="panel-title">Radio Button</div>
-                <p>Add <code>data-toggle="buttons"</code> to a <code>.btn-group</code> containing those modified buttons to enable toggling in their respective styles.</p>
-            </div>
-            <div class="panel-body">
-                <div class="btn-group mg-b-15" data-toggle="buttons">
-                  <label class="btn btn-default active">
-                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1
-                  </label>
-                  <label class="btn btn-default">
-                    <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
-                  </label>
-                  <label class="btn btn-default">
-                    <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
-                  </label>
-                </div>
-                <!--/ default -->
-
-                <div class="btn-group mg-b-15" data-toggle="buttons">
-                  <label class="btn btn-primary active">
-                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Radio 1
-                  </label>
-                  <label class="btn btn-primary">
-                    <input type="radio" name="options" id="option2" autocomplete="off"> Radio 2
-                  </label>
-                  <label class="btn btn-primary">
-                    <input type="radio" name="options" id="option3" autocomplete="off"> Radio 3
-                  </label>
-                </div>
-                <!--/ primary -->
-            </div>
-          </div>
-          <!--/ panel -->
-        </div>
-
-      </div>
-</section>
-<!--/ #buttons -->
+<span class="hljs-comment">&lt;!-- Small box button --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;btn btn-primary btn-sm btn-box&quot;</span>&gt;</span>Small<span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span></code>
+</pre>
+</div>
+<br>    
+                    </section>
+                    <!--/ #buttons -->

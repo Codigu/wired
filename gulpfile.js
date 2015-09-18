@@ -18,12 +18,16 @@ gulp.task('sass', function () {
 });
 
 gulp.task('highlight', function () {
-    return gulp.src('dev/*.php')
+   gulp.src('dev/*.php')
               .pipe(highlight())
               .pipe(gulp.dest('docs'));
+
+   gulp.src('dev/components/*.html')
+              .pipe(highlight())
+              .pipe(gulp.dest('docs/components'));            
 });
  
-gulp.task('watch', function () {
+gulp.task('watch', function () { 
    browserSync.init({
         proxy: "http://localhost/wired"
     });	

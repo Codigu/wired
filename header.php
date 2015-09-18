@@ -23,7 +23,9 @@
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 
         <!-- Assets -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/plugins/pace/css/pace.min.css">
         <link rel="stylesheet" href="dist/css/wired.min.css"> 
         
     </head>
