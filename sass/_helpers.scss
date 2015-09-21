@@ -22,8 +22,9 @@
 *  Text Alignment
 *  Form Controls
 *  Form Theme
-*  Form Material
+*  Form line
 *  Buttons
+*  Input File
 *  Radio and Checkbox
 *  Switch
 *  Input Group
@@ -38,6 +39,8 @@
 *  Tooltip
 *  Dropdown
 *  Datepicker
+*  Selectbox
+*  Dropzone
 *
 */
 
@@ -468,7 +471,9 @@
 /* [ Contextual backgrounds ]
 ------------------------ */
 .bg-transparent{ background-color: transparent !important; }
-.bg-white{ background-color: $color-white !important; color: $color-white !important; }
+.bg-white{ background-color: $color-white !important; }
+.bg-lighter{ background-color: $color-lighter !important;  }
+.bg-lightest{ background-color: $color-lightest !important;  }
 .bg-dark{ background-color: $color-dark !important; color: $color-white !important; }
 .bg-darken{ background-color: $color-darken !important; color: $color-white !important; }
 .bg-darker{ background-color: $color-darker !important; color: $color-white !important; }
@@ -490,6 +495,7 @@
 
 /* [ Contextual colors ]
 ------------------------ */
+.text-base{ color: $color-base !important; }
 .text-white{ color: $color-white !important; }
 .text-dark{ color: $color-dark !important; }
 .text-darker{ color: $color-darker !important; }
@@ -1081,18 +1087,12 @@ fieldset[disabled] .form-control {
 		top: 0;
 	}
 
-    label:not(.message) {
-      font-family: $font-heading;
-      font-size:11px;
-      text-transform:uppercase;
-      font-weight:600;
-  	}
 }
 
-/* [ Form Material ]
+/* [ Form line ]
 ------------------------ */
 
-.form-material {
+.form-line {
 	 position: relative;
   
   .form-control {
@@ -1105,7 +1105,7 @@ fieldset[disabled] .form-control {
     &:focus {
       background: none;
       border: 0;
-      @include box-shadow(0,2px,0, $color-primary);
+      @include box-shadow(0,2px,0, $color-link);
     }
 
     &.filter-primary{ @include box-shadow(0,2px,0, $color-primary); }
@@ -1116,7 +1116,7 @@ fieldset[disabled] .form-control {
 
   }
 
-  &.form-theme-primary{
+  &.form-line-primary{
   	.form-control{
 	  	&:focus {
 	  		@include box-shadow(0,2px,0, $color-primary);
@@ -1124,7 +1124,7 @@ fieldset[disabled] .form-control {
 	}
   }
 
-  &.form-theme-success{
+  &.form-line-success{
   	.form-control{
 	  	&:focus {
 	      @include box-shadow(0,2px,0, $color-success);
@@ -1132,7 +1132,7 @@ fieldset[disabled] .form-control {
 	}
   }
 
-  &.form-theme-info{
+  &.form-line-info{
   	.form-control{
 	  	&:focus {
 	      @include box-shadow(0,2px,0, $color-info);
@@ -1140,7 +1140,7 @@ fieldset[disabled] .form-control {
 	}
   }
 
-  &.form-theme-warning{
+  &.form-line-warning{
   	.form-control{
 	  	&:focus {
 	      @include box-shadow(0,2px,0, $color-warning);
@@ -1148,7 +1148,7 @@ fieldset[disabled] .form-control {
 	}
   }
 
-  &.form-theme-danger{
+  &.form-line-danger{
   	.form-control{
 	  	&:focus {
 	      @include box-shadow(0,2px,0, $color-danger);
@@ -1558,6 +1558,267 @@ fieldset[disabled] .form-control {
 
 }
 
+
+/* [ File Upload ]
+------------------------ */
+.inputfile{
+	display: inline-block;
+
+	input[type="file"]{
+		width: 0.1px; 
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+
+		& + label {
+		    background-color: $color-white;
+			color: $color-base;
+		    display: inline-block;
+		    cursor: pointer;
+		    padding: 10px 20px; 
+		    @include border-radius(2px);
+		    @include transition();
+		}
+	}
+
+	/*
+	* Contextual Backgrounds */
+
+	&.inputfile-default{
+		input[type="file"]{
+			& + label {
+				border: 1px solid $color-light !important;
+			}
+
+			&:focus +label, 
+			& + label:active{
+				border: 1px solid $color-light;
+	 			background-color: $color-lighter;
+			}
+		}
+	}
+
+	&.inputfile-primary{
+		input[type="file"]{
+			& + label {
+				color: $color-white !important;
+				border-color: transparent !important;
+				background-color: $color-primary !important;
+			}
+
+			&:focus +label, 
+			& + label:hover{
+				border-color: transparent !important;
+				background-color: $color-primary-light !important;
+			}
+
+			& + label:active{
+				border-color: transparent !important;
+				background-color: $color-primary-dark !important;
+			}
+		}
+	}
+
+	&.inputfile-success{
+		input[type="file"]{
+			& + label {
+				color: $color-white !important;
+				border-color: transparent !important;
+				background-color: $color-success !important;
+			}
+
+			&:focus +label, 
+			& + label:hover{
+				border-color: transparent !important;
+				background-color: $color-success-light !important;
+			}
+
+			& + label:active{
+				border-color: transparent !important;
+				background-color: $color-success-dark !important;
+			}
+		}
+	}
+
+	&.inputfile-complete{
+		input[type="file"]{
+			& + label {
+				color: $color-white !important;
+				border-color: transparent !important;
+				background-color: $color-complete !important;
+			}
+
+			&:focus +label, 
+			& + label:hover{
+				border-color: transparent !important;
+				background-color: $color-complete-light !important;
+			}
+
+			& + label:active{
+				border-color: transparent !important;
+				background-color: $color-complete-dark !important;
+			}
+		}
+	}
+
+	&.inputfile-warning{
+		input[type="file"]{
+			& + label {
+				color: $color-white !important;
+				border-color: transparent !important;
+				background-color: $color-warning !important;
+			}
+
+			&:focus +label, 
+			& + label:hover{
+				border-color: transparent !important;
+				background-color: $color-warning-light !important;
+			}
+
+			& + label:active{
+				border-color: transparent !important;
+				background-color: $color-warning-dark !important;
+			}
+		}
+	} 
+
+	&.inputfile-danger{
+		input[type="file"]{
+			& + label {
+				color: $color-white !important;
+				border-color: transparent !important;
+				background-color: $color-danger !important;
+			}
+
+			&:focus +label, 
+			& + label:hover{
+				border-color: transparent !important;
+				background-color: $color-danger-light !important;
+			}
+
+			& + label:active{
+				border-color: transparent !important;
+				background-color: $color-danger-dark !important;
+			}
+		}
+	}
+
+	/*
+	* Border Colors */
+	
+	&.inputfile-primary-outline{
+		input[type="file"]{
+			& + label {
+				color: $color-primary !important;
+				border: 1px solid $color-primary !important;
+			}
+
+			&:focus +label, 
+			& + label:hover{
+				color: $color-white !important; 
+				border-color: transparent !important;
+				background-color: $color-primary-light !important;
+			}
+
+			& + label:active{
+				color: $color-white !important; 
+				border-color: transparent !important;
+				background-color: $color-primary-dark !important;
+			}
+		}
+	}
+
+	&.inputfile-success-outline{
+		input[type="file"]{
+			& + label {
+				color: $color-success !important;
+				border: 1px solid $color-success !important;
+			}
+
+			&:focus +label, 
+			& + label:hover{
+				color: $color-white !important;
+				border-color: transparent !important;
+				background-color: $color-success-light !important;
+			}
+
+			& + label:active{
+				color: $color-white !important;
+				border-color: transparent !important;
+				background-color: $color-success-dark !important;
+			}
+		}
+	}
+
+	&.inputfile-complete-outline{
+		input[type="file"]{
+			& + label {
+				color: $color-complete !important;
+				border: 1px solid $color-complete !important;
+			}
+
+			&:focus +label, 
+			& + label:hover{
+				color: $color-white !important;
+				border-color: transparent !important;
+				background-color: $color-complete-light !important;
+			}
+
+			& + label:active{
+				color: $color-white !important;
+				border-color: transparent !important;
+				background-color: $color-complete-dark !important;
+			}
+		}
+	}
+
+	&.inputfile-warning-outline{
+		input[type="file"]{
+			& + label {
+				color: $color-warning !important;
+				border: 1px solid $color-warning !important;
+			}
+
+			&:focus +label, 
+			& + label:hover{
+				color: $color-white !important;
+				border-color: transparent !important;
+				background-color: $color-warning-light !important;
+			}
+
+			& + label:active{
+				color: $color-white !important;
+				border-color: transparent !important;
+				background-color: $color-warning-dark !important;
+			}
+		}
+	} 
+
+	&.inputfile-danger-outline{
+		input[type="file"]{
+			& + label {
+				color: $color-danger !important;
+				border: 1px solid $color-danger !important;
+			}
+
+			&:focus +label, 
+			& + label:hover{
+				color: $color-white !important;
+				border-color: transparent !important;
+				background-color: $color-danger-light !important;
+			}
+
+			& + label:active{
+				color: $color-white !important;
+				border-color: transparent !important;
+				background-color: $color-danger-dark !important;
+			}
+		}
+	}
+}
+
 /* [ Radio and Checkbox ]
 ------------------------ */
 
@@ -1938,7 +2199,7 @@ fieldset[disabled] .form-control {
 
 .progress-bar {
   box-shadow: none;
-  background-color: $color-primary;
+  background-color: $color-link;
   @include border-radius(0);
   @include transition(all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86));
   -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -2887,3 +3148,276 @@ fieldset[disabled] .form-control {
     padding: 4px 5px 4px 20px;
   }
 }
+
+
+/* [ Dropzone ]
+------------------------ */
+
+.dropzone{
+	border-style: dashed !important; 
+
+	&.dz-drag-hover{ 
+		color: $color-white;
+		background-color: lighten($color-link, 10%);
+		border-color: lighten($color-link, 30%) 
+	}
+
+	.dz-preview{
+		border-color: rgba($color-darkest, 0.10);
+		@include box-shadow(none); 
+
+		&:hover{
+			.dz-filename{
+				display: block;
+			}
+		}
+
+		.dz-filename{
+			display: none;
+		}
+
+		.dz-progress{
+			height: 5px;
+			@include border-radius(0);
+
+			.dz-upload{
+				background: $color-primary;
+			}
+		}
+	}
+}
+
+/* [ Tabs & Accordions ]
+------------------------ */
+.nav-tabs{
+	li{
+		a{
+			border-color: transparent !important;
+			background-color: transparent !important;
+			text-transform: uppercase;
+			font-family: $font-heading;
+			font-size: 12px;
+			color: rgba($color-base, 0.7);
+
+			&:hover,
+			&:focus{
+				color: $color-base;
+			}
+		}
+	} 
+}
+
+.nav-tabs-simple {
+  border-bottom: 0px;
+  &:after {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: relative;
+    bottom: 3px;
+    z-index: 120;
+  }
+  > li {
+    margin-bottom: 0;
+    &:after {
+      -webkit-transition: all 0.1s linear 0s;
+      transition: all 0.1s linear 0s;
+      -webkit-backface-visibility: hidden;
+      width: 100%;
+      display: block;
+      background-color: $color-link;
+      height: 0px;
+      content: '';
+      z-index: 125;
+    }
+  }
+}
+
+.nav-tabs-primary.nav-tabs-simple > li:after {
+  background-color: #6d5cae;
+}
+
+.nav-tabs-success.nav-tabs-simple > li:after {
+  background-color: #10cfbd;
+}
+
+.nav-tabs-complete.nav-tabs-simple > li:after {
+  background-color: #48b0f7;
+}
+
+.nav-tabs-danger.nav-tabs-simple > li:after {
+  background-color: #f55753;
+}
+
+.nav-tabs-warning.nav-tabs-simple > li:after {
+  background-color: #f8d053;
+}
+
+.nav-tabs-info.nav-tabs-simple > li:after {
+  background-color: #3b4752;
+}
+
+.nav-tabs-simple {
+  > li {
+    &.active {
+      a {
+        background-color: transparent;
+        border-color: transparent;
+        &:hover, &:focus {
+          background-color: transparent;
+          border-color: transparent;
+        }
+      }
+      &:after {
+        height: 3px;
+      }
+    }
+    &:hover:after {
+      height: 3px;
+    }
+  }
+  &.nav-tabs-left:after, &.nav-tabs-right:after {
+    border-bottom: 0px;
+  }
+  &.nav-tabs-left > li:after, &.nav-tabs-right > li:after {
+    width: 0px; 
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+  }
+  &.nav-tabs-left > li.active:after, &.nav-tabs-right > li.active:after, &.nav-tabs-left > li:hover:after, &.nav-tabs-right > li:hover:after {
+    width: 3px;
+  }
+  &.nav-tabs-left > li:after {
+    right: 0;
+  }
+  &.nav-tabs-right > li:after {
+    left: 0;
+  }
+}
+
+/* Tabs : Line Triangles
+------------------------------------
+*/
+
+.nav-tabs-caret {
+  border-bottom: 0;
+  &:after {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: relative;
+    bottom: 0;
+  }
+  > li {
+    &.active > a {
+      background: transparent;
+      box-shadow: none;
+      border-color: transparent;
+      &:hover, &:focus, &:active {
+        border-color: transparent;
+        background-color: transparent;
+      }
+      &:after, &:before {
+        border: medium solid transparent;
+        content: "";
+        height: 0;
+        left: 50%;
+        pointer-events: none;
+        position: absolute;
+        width: 0;
+        z-index: 1;
+        top: 100%;
+      }
+      &:after {
+        border-top-color: #fafafa;
+        border-width: 10px;
+        margin-left: -10px;
+      }
+      &:before {
+        border-top-color: rgba(0, 0, 0, 0.2);
+        border-width: 11px;
+        margin-left: -11px;
+      }
+    }
+    > a {
+      span {
+        font-size: 1em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      overflow: visible;
+      -webkit-transition: color 0.2s ease 0s;
+      transition: color 0.2s ease 0s;
+      &:hover, &:focus {
+        overflow: visible;
+        -webkit-transition: color 0.2s ease 0s;
+        transition: color 0.2s ease 0s;
+      }
+    }
+  }
+  ~ .tab-content {
+    background: #fff;
+  }
+  &.nav-tabs-left.nav-tabs {
+    &:after {
+      border-bottom: none;
+    }
+    > li.active > a {
+      &:before {
+        border-top: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        border-left: 11px solid rgba(0, 0, 0, 0.2);
+      }
+      &:after {
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid #fafafa;
+        margin-top: 1px;
+        margin-right: 2px;
+        top: auto;
+        right: -23px;
+        left: auto;
+      }
+      &:before {
+        top: auto;
+        right: -23px;
+        left: auto;
+      }
+    }
+  }
+  &.nav-tabs-right.nav-tabs {
+    &:after {
+      border-bottom: none;
+    }
+    > li.active > a {
+      &:before {
+        border-top: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        border-right: 11px solid rgba(0, 0, 0, 0.2);
+      }
+      &:after {
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid #fafafa;
+        margin-top: 1px;
+        margin-left: -9px;
+        top: auto;
+        left: -12px;
+        right: auto;
+      }
+      &:before {
+        top: auto;
+        left: -12px;
+        right: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 58em) {
+  .nav-tabs-caret {
+    font-size: 0.6em;
+  }
+}
+

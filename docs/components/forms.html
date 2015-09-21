@@ -2,6 +2,211 @@
                       <h3 class="text-uppercase">Forms</h3>
                       <hr>
                       
+                      <h4 id="form-controls" class="pd-t-30">Form Controls</h4>
+                      <p>Form Controls are created using Bootstrap Native Form Controls, they will work as the same way how it works in bootstrap. Individual form controls automatically receive some global styling.</p> 
+                      <p>All textual <code class="nohighlight">input</code>, <code class="nohighlight">textarea</code>, and <code class="nohighlight">select</code> elements with <code class="nohighlight">.form-control</code> are set to <code class="nohighlight">width: 100%</code> by default. Wrap labels and controls in <code class="nohighlight">.form-group</code> for optimum spacing.</p> 
+ 
+                      <a href="http://getbootstrap.com/css/#forms" target="_blank" class="btn btn-primary">Bootstrap Form Control Guides</a>
+                      <br><br>
+                      <h5>Option</h5>
+                      <p>Change native layout of input fields class by wrapping it with <code class="nohighlight">form-line</code>. These are retina compatible and available in all Bootstrap&apos;s contextual classes (ex: <code class="nohighlight">.form-line-primary</code>)</p>
+
+<div class="wd-example"> 
+    <div class="example"> 
+      <h5 class="mg-b-15">Example</h5>
+      <form>
+        <div class="form-group form-line">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+        </div>
+        <div class="form-group form-line">
+          <label for="exampleInputPassword1">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        <div class="form-group form-line"> 
+          <div class="inputfile">
+            <input type="file" name="file" id="file" class="form-control">
+            <label for="file">Choose a file...</label>
+          </div>
+        </div> 
+        <div class="form-group">
+          <div class="checkbox checkbox-success">
+              <input type="checkbox" checked="checked" value="1" id="checkbox1">
+              <label for="checkbox1">Keep Me Signed in</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+      </form>
+    </div>
+<pre>
+<code>&lt;form&gt;
+  &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;form-group form-line&quot;</span>&gt;
+    &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;exampleInputEmail1&quot;</span>&gt;Email address&lt;/label&gt;
+    &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;email&quot;</span> class=<span class="hljs-string">&quot;form-control&quot;</span> id=<span class="hljs-string">&quot;exampleInputEmail1&quot;</span> placeholder=<span class="hljs-string">&quot;Email&quot;</span>&gt;
+  &lt;/div&gt;
+  &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;form-group form-line&quot;</span>&gt;
+    &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;exampleInputPassword1&quot;</span>&gt;Password&lt;/label&gt;
+    &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;password&quot;</span> class=<span class="hljs-string">&quot;form-control&quot;</span> id=<span class="hljs-string">&quot;exampleInputPassword1&quot;</span> placeholder=<span class="hljs-string">&quot;Password&quot;</span>&gt;
+  &lt;/div&gt;
+  &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;form-group form-line&quot;</span>&gt; 
+    &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;inputfile&quot;</span>&gt;
+      &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;file&quot;</span> name=<span class="hljs-string">&quot;file&quot;</span> id=<span class="hljs-string">&quot;file&quot;</span> class=<span class="hljs-string">&quot;form-control&quot;</span>&gt;
+      &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;file&quot;</span>&gt;Choose <span class="hljs-tag">a</span> file...&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt; 
+  &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;form-group&quot;</span>&gt;
+    &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;checkbox checkbox-success&quot;</span>&gt;
+        &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;checkbox&quot;</span> checked=<span class="hljs-string">&quot;checked&quot;</span> value=<span class="hljs-string">&quot;1&quot;</span> id=<span class="hljs-string">&quot;checkbox1&quot;</span>&gt;
+        &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;checkbox1&quot;</span>&gt;Keep Me Signed <span class="hljs-keyword">in</span>&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;form-group&quot;</span>&gt;
+    &lt;<span class="hljs-tag">button</span> type=<span class="hljs-string">&quot;submit&quot;</span> class=<span class="hljs-string">&quot;btn btn-default&quot;</span>&gt;Submit&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code>
+</pre>    
+</div>
+                      <h4 id="inputfile" class="pd-t-30">Input File</h4>
+                      <p>Get rid of native look n&apos; feel with our very own custom input file written purely in CSS. These are retina compatible and available in all Bootstrap&apos;s contextual classes (ex: <code class="nohighlight">.inputfile-primary</code>)</p>
+
+<div class="wd-example"> 
+    <div class="example">
+      <h5 class="mg-b-15">Example</h5>
+
+          <div class="inputfile">
+            <input type="file" name="file" id="file1" class="form-control">
+            <label for="file1">Choose a file...</label>
+          </div>
+
+          <div class="inputfile inputfile-default">
+            <input type="file" name="file" id="file2" class="form-control">
+            <label for="file2"><i class="fa fa-fw fa-upload"></i> Choose a file...</label>
+          </div>
+
+          <div class="inputfile inputfile-primary">
+            <input type="file" name="file" id="file3" class="form-control">
+            <label for="file3"><i class="fa fa-fw fa-upload"></i> Choose a file...</label>
+          </div>
+
+          <div class="inputfile inputfile-success">
+            <input type="file" name="file" id="file4" class="form-control">
+            <label for="file4"><i class="fa fa-fw fa-upload"></i> Choose a file...</label>
+          </div>
+
+          <div class="inputfile inputfile-complete">
+            <input type="file" name="file" id="file5" class="form-control">
+            <label for="file5"><i class="fa fa-fw fa-upload"></i> Choose a file...</label>
+          </div>
+
+          <div class="inputfile inputfile-warning">
+            <input type="file" name="file" id="file6" class="form-control">
+            <label for="file6"><i class="fa fa-fw fa-upload"></i> Choose a file...</label>
+          </div>
+
+          <div class="inputfile inputfile-danger">
+            <input type="file" name="file" id="file7" class="form-control">
+            <label for="file7"><i class="fa fa-fw fa-upload"></i> Choose a file...</label>
+          </div>
+
+    </div>
+<pre><code>&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;inputfile&quot;</span>&gt;
+  &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;file&quot;</span> name=<span class="hljs-string">&quot;file&quot;</span> id=<span class="hljs-string">&quot;file1&quot;</span> class=<span class="hljs-string">&quot;form-control&quot;</span>&gt;
+  &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;file1&quot;</span>&gt;Choose <span class="hljs-tag">a</span> file...&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;inputfile inputfile-default&quot;</span>&gt;
+  &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;file&quot;</span> name=<span class="hljs-string">&quot;file&quot;</span> id=<span class="hljs-string">&quot;file2&quot;</span> class=<span class="hljs-string">&quot;form-control&quot;</span>&gt;
+  &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;file2&quot;</span>&gt;&lt;<span class="hljs-tag">i</span> class=<span class="hljs-string">&quot;fa fa-fw fa-upload&quot;</span>&gt;&lt;/i&gt; Choose <span class="hljs-tag">a</span> file...&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;inputfile inputfile-primary&quot;</span>&gt;
+  &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;file&quot;</span> name=<span class="hljs-string">&quot;file&quot;</span> id=<span class="hljs-string">&quot;file3&quot;</span> class=<span class="hljs-string">&quot;form-control&quot;</span>&gt;
+  &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;file3&quot;</span>&gt;&lt;<span class="hljs-tag">i</span> class=<span class="hljs-string">&quot;fa fa-fw fa-upload&quot;</span>&gt;&lt;/i&gt; Choose <span class="hljs-tag">a</span> file...&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;inputfile inputfile-success&quot;</span>&gt;
+  &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;file&quot;</span> name=<span class="hljs-string">&quot;file&quot;</span> id=<span class="hljs-string">&quot;file4&quot;</span> class=<span class="hljs-string">&quot;form-control&quot;</span>&gt;
+  &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;file4&quot;</span>&gt;&lt;<span class="hljs-tag">i</span> class=<span class="hljs-string">&quot;fa fa-fw fa-upload&quot;</span>&gt;&lt;/i&gt; Choose <span class="hljs-tag">a</span> file...&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;inputfile inputfile-complete&quot;</span>&gt;
+  &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;file&quot;</span> name=<span class="hljs-string">&quot;file&quot;</span> id=<span class="hljs-string">&quot;file5&quot;</span> class=<span class="hljs-string">&quot;form-control&quot;</span>&gt;
+  &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;file5&quot;</span>&gt;&lt;<span class="hljs-tag">i</span> class=<span class="hljs-string">&quot;fa fa-fw fa-upload&quot;</span>&gt;&lt;/i&gt; Choose <span class="hljs-tag">a</span> file...&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;inputfile inputfile-warning&quot;</span>&gt;
+  &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;file&quot;</span> name=<span class="hljs-string">&quot;file&quot;</span> id=<span class="hljs-string">&quot;file6&quot;</span> class=<span class="hljs-string">&quot;form-control&quot;</span>&gt;
+  &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;file6&quot;</span>&gt;&lt;<span class="hljs-tag">i</span> class=<span class="hljs-string">&quot;fa fa-fw fa-upload&quot;</span>&gt;&lt;/i&gt; Choose <span class="hljs-tag">a</span> file...&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;inputfile inputfile-danger&quot;</span>&gt;
+  &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;file&quot;</span> name=<span class="hljs-string">&quot;file&quot;</span> id=<span class="hljs-string">&quot;file7&quot;</span> class=<span class="hljs-string">&quot;form-control&quot;</span>&gt;
+  &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;file7&quot;</span>&gt;&lt;<span class="hljs-tag">i</span> class=<span class="hljs-string">&quot;fa fa-fw fa-upload&quot;</span>&gt;&lt;/i&gt; Choose <span class="hljs-tag">a</span> file...&lt;/label&gt;
+&lt;/div&gt;</code>
+</pre>
+</div>
+<br>         
+                      <h5>Outline Input File</h5>
+                      <p>Replace the default modifier classes with the <code class="nohighlight">.inputfile-*-outline</code> ones to remove all background images and colors on any input file.</p>
+                      <div class="wd-example"> 
+    <div class="example">
+      <h5 class="mg-b-15">Example</h5>
+
+          <div class="inputfile inputfile-primary-outline">
+            <input type="file" name="file" id="file8" class="form-control">
+            <label for="file8"><i class="fa fa-fw fa-upload"></i> Choose a file...</label>
+          </div>
+
+          <div class="inputfile inputfile-success-outline">
+            <input type="file" name="file" id="file9" class="form-control">
+            <label for="file9"><i class="fa fa-fw fa-upload"></i> Choose a file...</label>
+          </div>
+
+          <div class="inputfile inputfile-complete-outline">
+            <input type="file" name="file" id="file10" class="form-control">
+            <label for="file10"><i class="fa fa-fw fa-upload"></i> Choose a file...</label>
+          </div>
+
+          <div class="inputfile inputfile-warning-outline">
+            <input type="file" name="file" id="file11" class="form-control">
+            <label for="file11"><i class="fa fa-fw fa-upload"></i> Choose a file...</label>
+          </div>
+
+          <div class="inputfile inputfile-danger-outline">
+            <input type="file" name="file" id="file12" class="form-control">
+            <label for="file12"><i class="fa fa-fw fa-upload"></i> Choose a file...</label>
+          </div>
+
+    </div>
+<pre><code>&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;inputfile inputfile-primary-outline&quot;</span>&gt;
+  &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;file&quot;</span> name=<span class="hljs-string">&quot;file&quot;</span> id=<span class="hljs-string">&quot;file8&quot;</span> class=<span class="hljs-string">&quot;form-control&quot;</span>&gt;
+  &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;file8&quot;</span>&gt;&lt;<span class="hljs-tag">i</span> class=<span class="hljs-string">&quot;fa fa-fw fa-upload&quot;</span>&gt;&lt;/i&gt; Choose <span class="hljs-tag">a</span> file...&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;inputfile inputfile-success-outline&quot;</span>&gt;
+  &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;file&quot;</span> name=<span class="hljs-string">&quot;file&quot;</span> id=<span class="hljs-string">&quot;file9&quot;</span> class=<span class="hljs-string">&quot;form-control&quot;</span>&gt;
+  &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;file9&quot;</span>&gt;&lt;<span class="hljs-tag">i</span> class=<span class="hljs-string">&quot;fa fa-fw fa-upload&quot;</span>&gt;&lt;/i&gt; Choose <span class="hljs-tag">a</span> file...&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;inputfile inputfile-complete-outline&quot;</span>&gt;
+  &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;file&quot;</span> name=<span class="hljs-string">&quot;file&quot;</span> id=<span class="hljs-string">&quot;file10&quot;</span> class=<span class="hljs-string">&quot;form-control&quot;</span>&gt;
+  &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;file10&quot;</span>&gt;&lt;<span class="hljs-tag">i</span> class=<span class="hljs-string">&quot;fa fa-fw fa-upload&quot;</span>&gt;&lt;/i&gt; Choose <span class="hljs-tag">a</span> file...&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;inputfile inputfile-warning-outline&quot;</span>&gt;
+  &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;file&quot;</span> name=<span class="hljs-string">&quot;file&quot;</span> id=<span class="hljs-string">&quot;file11&quot;</span> class=<span class="hljs-string">&quot;form-control&quot;</span>&gt;
+  &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;file11&quot;</span>&gt;&lt;<span class="hljs-tag">i</span> class=<span class="hljs-string">&quot;fa fa-fw fa-upload&quot;</span>&gt;&lt;/i&gt; Choose <span class="hljs-tag">a</span> file...&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;inputfile inputfile-danger-outline&quot;</span>&gt;
+  &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;file&quot;</span> name=<span class="hljs-string">&quot;file&quot;</span> id=<span class="hljs-string">&quot;file12&quot;</span> class=<span class="hljs-string">&quot;form-control&quot;</span>&gt;
+  &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;file12&quot;</span>&gt;&lt;<span class="hljs-tag">i</span> class=<span class="hljs-string">&quot;fa fa-fw fa-upload&quot;</span>&gt;&lt;/i&gt; Choose <span class="hljs-tag">a</span> file...&lt;/label&gt;
+&lt;/div&gt;</code>
+</pre>
+</div>
+
                       <h4 id="checkbox-controls" class="pd-t-30">Checkbox controls</h4>
                       <p>Get rid of native look n&apos; feel with our very own custom checkboxes written purely in CSS. These are retina compatible and available in all Bootstrap&apos;s contextual classes (ex: <code class="nohighlight">.checkbox-primary</code>)</p>
 
@@ -44,27 +249,27 @@
     &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;checkbox1&quot;</span>&gt;Keep Me Signed <span class="hljs-keyword">in</span>&lt;/label&gt;
 &lt;/div&gt;
 
-&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;checkbox check-success  &quot;</span>&gt;
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;checkbox checkbox-success  &quot;</span>&gt;
     &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;checkbox&quot;</span> checked=<span class="hljs-string">&quot;checked&quot;</span> value=<span class="hljs-string">&quot;1&quot;</span> id=<span class="hljs-string">&quot;checkbox2&quot;</span>&gt;
     &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;checkbox2&quot;</span>&gt;I agree&lt;/label&gt;
 &lt;/div&gt;
 
-&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;checkbox check-primary&quot;</span>&gt;
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;checkbox checkbox-primary&quot;</span>&gt;
     &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;checkbox&quot;</span> checked=<span class="hljs-string">&quot;checked&quot;</span> value=<span class="hljs-string">&quot;1&quot;</span> id=<span class="hljs-string">&quot;checkbox3&quot;</span>&gt;
     &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;checkbox3&quot;</span>&gt;Mark&lt;/label&gt;
 &lt;/div&gt;
 
-&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;checkbox check-info&quot;</span>&gt;
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;checkbox checkbox-info&quot;</span>&gt;
     &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;checkbox&quot;</span> checked=<span class="hljs-string">&quot;checked&quot;</span> value=<span class="hljs-string">&quot;1&quot;</span> id=<span class="hljs-string">&quot;checkbox4&quot;</span>&gt;
     &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;checkbox4&quot;</span>&gt;Steve Jobs&lt;/label&gt;
 &lt;/div&gt;
 
-&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;checkbox check-warning&quot;</span>&gt;
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;checkbox checkbox-warning&quot;</span>&gt;
     &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;checkbox&quot;</span> checked=<span class="hljs-string">&quot;checked&quot;</span> value=<span class="hljs-string">&quot;1&quot;</span> id=<span class="hljs-string">&quot;checkbox5&quot;</span>&gt;
     &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;checkbox5&quot;</span>&gt;Action&lt;/label&gt;
 &lt;/div&gt;
 
-&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;checkbox check-danger&quot;</span>&gt;
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;checkbox checkbox-danger&quot;</span>&gt;
     &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;checkbox&quot;</span> checked=<span class="hljs-string">&quot;checked&quot;</span> value=<span class="hljs-string">&quot;1&quot;</span> id=<span class="hljs-string">&quot;checkbox6&quot;</span>&gt;
     &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;checkbox6&quot;</span>&gt;Mark as read&lt;/label&gt;
 &lt;/div&gt;</code>
@@ -289,6 +494,35 @@
 </div>
 <pre>
 <code class="html">
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;switch&quot;</span>&gt;
+    &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;checkbox&quot;</span> checked value=<span class="hljs-string">&quot;switch&quot;</span> name=<span class="hljs-string">&quot;switch&quot;</span> id=<span class="hljs-string">&quot;switch1&quot;</span>&gt;
+    &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;switch1&quot;</span>&gt;&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;switch switch-primary&quot;</span>&gt;
+    &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;checkbox&quot;</span> checked value=<span class="hljs-string">&quot;switch&quot;</span> name=<span class="hljs-string">&quot;switch&quot;</span> id=<span class="hljs-string">&quot;switch2&quot;</span>&gt;
+    &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;switch2&quot;</span>&gt;&lt;/label&gt;
+&lt;/div&gt;
+
+ &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;switch switch-success&quot;</span>&gt;
+    &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;checkbox&quot;</span> checked value=<span class="hljs-string">&quot;switch&quot;</span> name=<span class="hljs-string">&quot;switch&quot;</span> id=<span class="hljs-string">&quot;switch3&quot;</span>&gt;
+    &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;switch3&quot;</span>&gt;&lt;/label&gt;
+&lt;/div&gt;
+
+ &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;switch switch-info&quot;</span>&gt;
+    &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;checkbox&quot;</span> checked value=<span class="hljs-string">&quot;switch&quot;</span> name=<span class="hljs-string">&quot;switch&quot;</span> id=<span class="hljs-string">&quot;switch4&quot;</span>&gt;
+    &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;switch4&quot;</span>&gt;&lt;/label&gt;
+&lt;/div&gt;
+
+ &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;switch switch-warning&quot;</span>&gt;
+    &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;checkbox&quot;</span> checked value=<span class="hljs-string">&quot;switch&quot;</span> name=<span class="hljs-string">&quot;switch&quot;</span> id=<span class="hljs-string">&quot;switch5&quot;</span>&gt;
+    &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;switch5&quot;</span>&gt;&lt;/label&gt;
+&lt;/div&gt;
+
+ &lt;<span class="hljs-tag">div</span> class=<span class="hljs-string">&quot;switch switch-danger&quot;</span>&gt;
+    &lt;<span class="hljs-tag">input</span> type=<span class="hljs-string">&quot;checkbox&quot;</span> checked value=<span class="hljs-string">&quot;switch&quot;</span> name=<span class="hljs-string">&quot;switch&quot;</span> id=<span class="hljs-string">&quot;switch6&quot;</span>&gt;
+    &lt;<span class="hljs-tag">label</span> <span class="hljs-keyword">for</span>=<span class="hljs-string">&quot;switch6&quot;</span>&gt;&lt;/label&gt;
+&lt;/div&gt;
 
 </code>
 </pre>
@@ -302,9 +536,9 @@
                 </div>
 <br>
                 <h5>Step one</h5>
-                <p>Include the stylesheet <code class="nohighlight">bootstrap-datepicker.min.css</code> inside the <code class="nohighlight"><head></head></code>. </p>
+                <p>Include the stylesheet <code class="nohighlight">bootstrap-datepicker.min.css</code> inside the <code class="nohighlight">head</code> tag. </p>
 <pre>
-<code class="html"> 
+<code class="html">
   &lt;link <span class="hljs-variable">type=</span><span class="hljs-string">&quot;text/css&quot;</span> <span class="hljs-variable">rel=</span><span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-variable">href=</span><span class="hljs-string">&quot;assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css&quot;</span>&gt;
 </code>
 </pre>
@@ -350,5 +584,136 @@
 </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code>
 </pre>
 </div>
+
+<h4 id="selectbox" class="pd-t-30">Selectbox</h4>
+                <p>These are powered by <a href="https://harvesthq.github.io/chosen/" target="_blank">Chosen jQuery</a> plugin. Follow these steps to initialize a datepicker in your page</p>
+
+                <div class="alert alert-info">
+                    <p>Please refer to <a href="https://harvesthq.github.io/chosen/" target="_blank">Chosen Documentation</a> to learn about plugin options</p>
+                </div>
+<br>
+                <h5>Step one</h5>
+                <p>Include the stylesheet <code class="nohighlight">chosen.min.css</code> inside the <code class="nohighlight">head</code> tag. </p>
+<pre>
+<code class="html">
+  &lt;link <span class="hljs-variable">type=</span><span class="hljs-string">&quot;text/css&quot;</span> <span class="hljs-variable">rel=</span><span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-variable">href=</span><span class="hljs-string">&quot;assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css&quot;</span>&gt;
+</code>
+</pre>
+<br>
+                <h5>Step two</h5> 
+                <p>Include the required javascript files inside the <code class="nohighlight">body</code> before core template script inclusions..</p>
+
+<pre>
+<code class="html">
+  &lt;link <span class="hljs-variable">type=</span><span class="hljs-string">&quot;text/css&quot;</span> <span class="hljs-variable">rel=</span><span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-variable">href=</span><span class="hljs-string">&quot;assets/plugins/chosen/js/chosen.min.js&quot;</span>&gt;
+</code>
+</pre>                
+<br>
+              
+              <h5>Step three</h5> 
+              <p>Add the markup.</p>
+
+<pre>
+<code class="html">
+  &lt;div id=<span class="hljs-string">&quot;datepicker-component&quot;</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">&quot;input-group&quot;</span>&gt;
+    &lt;input <span class="hljs-class"><span class="hljs-keyword">type</span>=</span><span class="hljs-string">&quot;text&quot;</span> <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">&quot;form-control&quot;</span> placeholder=<span class="hljs-string">&quot;Datepicker&quot;</span> data-plugin=<span class="hljs-string">&quot;datepicker&quot;</span>&gt;
+    &lt;span <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">&quot;input-group-addon bd-l-0&quot;</span>&gt;&lt;i <span class="hljs-class"><span class="hljs-keyword">class</span>=</span><span class="hljs-string">&quot;fa fa-calendar&quot;</span>&gt;&lt;/i&gt;&lt;/span&gt;
+  &lt;/div&gt;
+</code>
+</pre>
+<br> 
+            <h5>Step four</h5> 
+            <p>Apply the plugin.</p>
+
+<div class="wd-example">  
+  <div class="example"> 
+    <h5 class="mg-b-15">Example</h5>
+
+      <div class="form-group">
+        <select class="form-control" data-plugin="selectbox">
+          <option value=""></option>
+          <option value="United States">United States</option>
+          <option value="United Kingdom">United Kingdom</option>
+          <option value="Afghanistan">Afghanistan</option>
+          <option value="Albania">Albania</option>
+          <option value="Algeria">Algeria</option>
+          <option value="American Samoa">American Samoa</option>
+          <option value="Andorra">Andorra</option>
+          <option value="Angola">Angola</option>
+          <option value="Anguilla">Anguilla</option>
+          <option value="Antarctica">Antarctica</option>
+          <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+        </select>
+      </div>
+  </div>
+<pre>
+<code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+  $(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+      $(<span class="hljs-string">&apos;[data-plugin=&quot;selectbox&quot;]&apos;</span>).chosen();
+  });
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code>
+</pre>
+</div>  
+
+<h4 id="dropzone" class="pd-t-30">Dropzone</h4>
+                <p>These are powered by <a href="http://www.dropzonejs.com/" target="_blank">Dropzone jQuery</a> plugin. Follow these steps to initialize a datepicker in your page</p>
+
+                <div class="alert alert-info">
+                    <p>Please refer to <a href="http://www.dropzonejs.com/" target="_blank">Dropzone Documentation</a> to learn about plugin options</p>
+                </div>
+<br>
+
+              <h5>Step one</h5>
+                <p>Include the stylesheet <code class="nohighlight">dropzone.min.css</code> inside the <code class="nohighlight">head</code> tag. </p>
+<pre>
+<code class="html">
+  &lt;link <span class="hljs-variable">type=</span><span class="hljs-string">&quot;text/css&quot;</span> <span class="hljs-variable">rel=</span><span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-variable">href=</span><span class="hljs-string">&quot;assets/plugins/dropzone/css/dropzone.min.css&quot;</span>&gt;
+</code>
+</pre>
+<br>
+                <h5>Step two</h5> 
+                <p>Include the required javascript files inside the <code class="nohighlight">body</code> before core template script inclusions..</p>
+
+<pre>
+<code class="html">
+  &lt;link <span class="hljs-variable">type=</span><span class="hljs-string">&quot;text/css&quot;</span> <span class="hljs-variable">rel=</span><span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-variable">href=</span><span class="hljs-string">&quot;assets/plugins/dropzone/js/dropzone.min.js&quot;</span>&gt;
+</code>
+</pre>                
+<br>
+              
+              <h5>Step three</h5> 
+              <p>Add the markup.</p>  
+
+<pre> 
+<code class="html">  
+  &lt;form <span class="hljs-variable">action=</span><span class="hljs-string">&quot;/file-upload&quot;</span> <span class="hljs-variable">class=</span><span class="hljs-string">&quot;dropzone&quot;</span> <span class="hljs-variable">data-plugin=</span><span class="hljs-string">&quot;dropzone&quot;</span>&gt;
+    &lt;div <span class="hljs-variable">class=</span><span class="hljs-string">&quot;fallback&quot;</span>&gt;
+      &lt;input <span class="hljs-variable">name=</span><span class="hljs-string">&quot;file&quot;</span> <span class="hljs-variable">type=</span><span class="hljs-string">&quot;file&quot;</span> multiple&gt; 
+    &lt;/div&gt;   
+  &lt;/form&gt;  
+</code>
+</pre> 
+<br>
+            <h5>Step four</h5> 
+            <p>Apply the plugin.</p>
+
+<div class="wd-example">  
+  <div class="example"> 
+    <h5 class="mg-b-15">Example</h5>
+
+      <form action="http://localhost:3000/wired/upload" class="dropzone" data-plugin="dropzone">
+        <div class="fallback">
+          <input name="file" type="file" multiple>
+        </div>
+      </form>
+  </div> 
+<pre>
+<code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
+  $(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
+      $(<span class="hljs-string">&apos;[data-plugin=&quot;dropzone&quot;]&apos;</span>).dropzone();
+  });
+</span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code> 
+</pre>
+</div>
                 </section>                  
-                <!--/ #forms -->
+                <!--/ #forms --> 
