@@ -63,6 +63,9 @@
  
     dropZone();
 
+    /* InputFile
+    * Adding the filename label to the input file button */
+
     function inputFile(){ 
         var inputs = $('.inputfile input[type="file"]');
 
@@ -79,6 +82,51 @@
     }
 
     inputFile();
+
+    /* sweetalert2.js
+    * A beautiful and customizable replacement for Javascript's "Alert" */
+ 
+    function sweetAlert(){
+
+        // Show basic message
+         $('[data-plugin="sweetAlert"]').on('click', function(){
+             swal('The Internet?', 'That thing is still around?');
+          });
+
+        // Show success message
+        $('[data-plugin="sweetAlert"][data-alert="success"]').on('click', function(){
+           swal(   'Good job!',  'You clicked the button!',   'success' );
+        });
+
+        // Show error message
+        $('[data-plugin="sweetAlert"][data-alert="danger"]').on('click', function(){
+         swal(   'Oops...',  'Something went wrong!!',   'error' );
+        });
+    }
+ 
+    sweetAlert();
+
+    /* TinyMCE
+    * A platform independent web-based JavaScript HTML WYSIWYG editor control. */
+
+
+    function tinyMCE(){ 
+        tinymce.init({
+            selector: '[data-plugin="tinyMCE"]',
+            theme   : "modern",
+            skin    : 'light',
+            menubar : false,
+            plugins : [
+                "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+                "searchreplace wordcount visualblocks visualchars code fullscreen",
+                "insertdatetime media nonbreaking save table contextmenu directionality",
+                "emoticons template paste textcolor colorpicker textpattern imagetools"
+            ],
+            toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+        });
+    }
+
+    tinyMCE();
 
     
 

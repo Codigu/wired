@@ -17,13 +17,13 @@
                           </div> 
                         </div>
                         
-                        <br><br>
+                        <br/><br/>
                         <h4>CSS Preprocessors</h4> 
-                        <p>Wired uses <a href="http://sass-lang.com/" target="_blank" class="bd-b bd-dashed bold">Sass</a> just because it gives us extra power while coding. <a href="http://bourbon.io/" target="_blank" class="bd-b bd-dashed bold">Bourbon</a> is our mixin library of choice. However if you&#x2019;re not into preprocessors (you should really give it a try!), you can just use the CSS files and delete the SASS folder.</p>
-                        <br><br>
+                        <p>Wired uses <a href="http://sass-lang.com/" target="_blank" class="bd-b bd-dashed bold">Sass</a> just because it gives us extra power while coding. <a href="http://bourbon.io/" target="_blank" class="bd-b bd-dashed bold">Bourbon</a> is our mixin library of choice. However if you’re not into preprocessors (you should really give it a try!), you can just use the CSS files and delete the SASS folder.</p>
+                        <br/><br/>
                         <h4>Compiling CSS</h4> 
-                      <p>Wired uses <a href="http://gulpjs.com/" target="_blank" class="bd-b bd-dashed bold">Gulp</a> for its build system, with convenient methods for working with the framework. It&apos;s how we compile our code, run tests, and more.</p>
-                      <br>
+                      <p>Wired uses <a href="http://gulpjs.com/" target="_blank" class="bd-b bd-dashed bold">Gulp</a> for its build system, with convenient methods for working with the framework. It's how we compile our code, run tests, and more.</p>
+                      <br/>
                       <h4>Installing Gulp</h4>
                       <ol>
                         <li class="mg-b-15">Install gulp globally:
@@ -35,18 +35,18 @@
                         <li class="mg-b-15">Create a <code class="nohighlight">gulpfile.js</code> at the root of your project:
                         <div class="pd-10 bg-lighter text-base">
 <pre class="bd-none"><code>
-var gulp         = <span class="hljs-built_in">require</span>(gulp),
-   sass          = <span class="hljs-built_in">require</span>(gulp-sass),
-   watch         = <span class="hljs-built_in">require</span>(gulp-watch);
+var gulp         = require(gulp),
+   sass          = require(gulp-sass),
+   watch         = require(gulp-watch);
 
-gulp.task(sass, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span></span> {
- <span class="hljs-keyword">return</span> gulp.src(sass/*.scss)
-          .pipe(sass().on(<span class="hljs-built_in">error</span>, sass.logError))
+gulp.task(sass, function () {
+ return gulp.src(sass/*.scss)
+          .pipe(sass().on(error, sass.logError))
           .pipe(gulp.dest(dist/css))
           .pipe(sass({outputStyle: compressed}));
 });
 
-gulp.task(watch, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">()</span></span> { 
+gulp.task(watch, function () { 
   gulp.watch(sass/*.scss, [sass]);
 });
 

@@ -23,12 +23,14 @@
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" rel="stylesheet" type="text/css">
 
         <!-- Assets -->  
-        <link rel="stylesheet" href="../assets/css/wired.docs.min.css"> 
+        <link rel="stylesheet" href="../assets/css/wired.docs.min.css">  
 
         <link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="../assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css">
         <link rel="stylesheet" href="../assets/plugins/chosen/css/chosen.min.css">
         <link rel="stylesheet" href="../assets/plugins/dropzone/css/dropzone.min.css">
+        <link rel="stylesheet" href="../assets/plugins/sweetalert/css/sweetalert2.min.css">
+        <link rel="stylesheet" href="../assets/plugins/bootstrap-wysihtml5/css/bootstrap-wysihtml5.min.css">
         <link rel="stylesheet" href="../assets/plugins/font-awesome/font-awesome.min.css"> 
         <link rel="stylesheet" href="../assets/plugins/highlight/highlight.min.css"> 
         <link rel="stylesheet" href="../dist/css/wired.min.css"> 
@@ -77,79 +79,31 @@
                                     </td>
                                     <td style="width:50%; height:30px" class="bg-info text-white text-center fs-14 pd-t-5 pd-b-5">Icons
                                         <div class="fs-12">48KB</div> 
-                                    </td>     
+                                    </td>      
                                 </tr>    
                             </tbody>         
                        </table>            
                     </section>            
                     <!--/ #introduction -->            
-                    
-                    <section id="get-started" class="pd-t-30 pd-b-30">
-                        <h3 class="text-uppercase">Get Started</h3>
-                        <hr>
-
-                        <p>Wired (currently v1.1.0) has a few easy ways to quickly get started, each one appealing to a different skill level and use case. Read through to see what suits your particular needs.</p>
-                        
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <h4>Wired</h4>
-                            <p>Compiled and minified CSS, JavaScript, and fonts. No docs or original source files are included.</p>
-                            <a href="#0" class="btn btn-primary">Download Wired</a>
-                          </div>
-                          <div class="col-sm-6">
-                            <h4>Source Code</h4>
-                            <p>Source Sass, JavaScript, and font files, along with our docs. Requires a Sass compiler and some setup.</p>
-                            <a href="#0" class="btn btn-primary">Download source</a>
-                          </div> 
-                        </div>
-                        
-                        <br/>
-                    </section>
-
-                    <section class="pd-t-30 pd-b-30">
-                      <h3 class="text-uppercase">Compiling CSS</h3> 
-                      <hr>
-                      <p>Wired uses <a href="http://gulpjs.com/" target="_blank">Gulp</a> for its build system, with convenient methods for working with the framework. It's how we compile our code, run tests, and more.</p>
-                      <br/>
-                      <h4>Installing Gulp</h4>
-                      <ol>
-                        <li class="mg-b-15">Install gulp globally:
-                        <div class="pd-10 bg-lighter text-base">$ npm install --global gulp</div>
-                        </li>
-                        <li class="mg-b-15">Install gulp in your project devDependencies:
-                        <div class="pd-10 bg-lighter text-base">npm install --save-dev gulp</div>
-                        </li>
-                        <li class="mg-b-15">Create a <code class="nohighlight">gulpfile.js</code> at the root of your project:
-                        <div class="pd-10 bg-lighter text-base">
-<pre class="bd-none"><code class="js">
-  var gulp = require(gulp);
-
-  gulp.task(default, function() {
-    // place code for your default task here
-  });</code>
-</pre>
-                        </div>
-                        </li>
-                        <li class="mg-b-15">Run gulp:
-                        <div class="pd-10 bg-lighter text-base">$ npm install --global gulp</div>
-                        </li>
-                      </ol>
-                    </section>
-
+                     
 
                     <?php              
-                    //include "components/get-started.html";      
+                    include "components/get-started.html";       
                     include "components/grid.html";      
                     include "components/typography.html";         
                     include "components/icons.html";          
-                    include "components/buttons.html";     
+                    include "components/buttons.html";      
                     include "components/breadcrumbs.html";              
                     include "components/dropdowns.html";                
                     include "components/progress-bars.html";        
                     include "components/tabs.html";           
+                    include "components/notifications.html";           
                     include "components/forms.html";   
                     include "components/helpers.html";               
                     ?>              
+
+                    
+
          
                               
                 </div>      
@@ -166,6 +120,7 @@
                             <li><a class="target fs-13 block" href="#progress">Progress</a></li>   
                             <li><a class="target fs-13 block" href="#dropdowns">Dropdowns</a></li>
                             <li><a class="target fs-13 block" href="#tabs">Tabs</a></li>
+                            <li><a class="target fs-13 block" href="#notification">Notification</a></li>
                             <li><a class="target fs-13 block" href="#forms">Forms</a> 
                                <ul class="nav menu">   
                                     <li><a class="target fs-13 block" href="#form-controls">Form Controls</a></li>
@@ -173,12 +128,13 @@
                                     <li><a class="target fs-13 block" href="#checkbox-controls">Checkbox</a></li>
                                     <li><a class="target fs-13 block" href="#toggle-controls">Toggle</a></li>
                                     <li><a class="target fs-13 block" href="#switch-controls">Switch</a></li>
+                                    <li><a class="target fs-13 block" href="#editor">WYSIWYG editor</a></li>  
                                     <li><a class="target fs-13 block" href="#datepicker">Datepicker</a></li>  
                                     <li><a class="target fs-13 block" href="#selectbox">Selectbox</a></li> 
                                     <li><a class="target fs-13 block" href="#dropzone">Dropzone</a></li> 
-                                </ul> 
+                                </ul>  
                             </li>
-                            <li>
+                            <li> 
                                 <a class="target fs-13 block" href="#helpers">Helpers</a>
                                 <ul class="nav menu">
                                     <li><a class="target fs-13 block" href="#margins">Margins</a></li>
@@ -197,8 +153,8 @@
                                 </ul> 
                             </li>
                            
-                        </ul>   
-                       </aside>
+                        </ul>    
+                       </aside> 
                 </div>
             </div>
         </div>
@@ -214,6 +170,9 @@
         <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
         <script src="../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
         <script src="../assets/plugins/dropzone/js/dropzone.min.js"></script>
+        <script src="../assets/plugins/sweetalert/js/sweetalert2.min.js"></script>
+        <script src="http://bootstrap-wysiwyg.github.io/bootstrap3-wysiwyg/components/wysihtml5x/dist/wysihtml5x-toolbar.min.js"></script>
+        <script src="../assets/plugins/bootstrap-wysihtml5/js/bootstrap-wysihtml5.min.js"></script>
         <script src="../assets/plugins/chosen/js/chosen.min.js"></script>
 
         <script src="../assets/js/plugins.js"></script>

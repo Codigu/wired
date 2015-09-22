@@ -34,6 +34,7 @@
 *  Article
 *  Comment
 *  List
+*  Tab
 *  Modal
 *  Popover
 *  Tooltip
@@ -41,6 +42,8 @@
 *  Datepicker
 *  Selectbox
 *  Dropzone
+*  Notification
+*  TinyMCE
 *
 */
 
@@ -2481,6 +2484,243 @@ fieldset[disabled] .form-control {
 }
 
 
+/* [ Tabs & Accordions ]
+------------------------ */
+.nav-tabs{
+	li{
+		a{
+			border-color: transparent !important;
+			background-color: transparent !important;
+			text-transform: uppercase;
+			font-family: $font-heading;
+			font-size: 12px;
+			color: rgba($color-base, 0.7);
+
+			&:hover,
+			&:focus{
+				color: $color-base;
+			}
+		}
+	} 
+}
+
+.nav-tabs-simple {
+  border-bottom: 0px;
+  &:after {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: relative;
+    bottom: 3px;
+    z-index: 120;
+  }
+  > li {
+    margin-bottom: 0;
+    &:after {
+      -webkit-transition: all 0.1s linear 0s;
+      transition: all 0.1s linear 0s;
+      -webkit-backface-visibility: hidden;
+      width: 100%;
+      display: block;
+      background-color: $color-link;
+      height: 0px;
+      content: '';
+      z-index: 125;
+    }
+  }
+}
+
+.nav-tabs-primary.nav-tabs-simple > li:after {
+  background-color: #6d5cae;
+}
+
+.nav-tabs-success.nav-tabs-simple > li:after {
+  background-color: #10cfbd;
+}
+
+.nav-tabs-complete.nav-tabs-simple > li:after {
+  background-color: #48b0f7;
+}
+
+.nav-tabs-danger.nav-tabs-simple > li:after {
+  background-color: #f55753;
+}
+
+.nav-tabs-warning.nav-tabs-simple > li:after {
+  background-color: #f8d053;
+}
+
+.nav-tabs-info.nav-tabs-simple > li:after {
+  background-color: #3b4752;
+}
+
+.nav-tabs-simple {
+  > li {
+    &.active {
+      a {
+        background-color: transparent;
+        border-color: transparent;
+        &:hover, &:focus {
+          background-color: transparent;
+          border-color: transparent;
+        }
+      }
+      &:after {
+        height: 3px;
+      }
+    }
+    &:hover:after {
+      height: 3px;
+    }
+  }
+  &.nav-tabs-left:after, &.nav-tabs-right:after {
+    border-bottom: 0px;
+  }
+  &.nav-tabs-left > li:after, &.nav-tabs-right > li:after {
+    width: 0px; 
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+  }
+  &.nav-tabs-left > li.active:after, &.nav-tabs-right > li.active:after, &.nav-tabs-left > li:hover:after, &.nav-tabs-right > li:hover:after {
+    width: 3px;
+  }
+  &.nav-tabs-left > li:after {
+    right: 0;
+  }
+  &.nav-tabs-right > li:after {
+    left: 0;
+  }
+}
+
+/* Tabs : Line Triangles
+------------------------------------
+*/
+
+.nav-tabs-caret {
+  border-bottom: 0;
+  &:after {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: relative;
+    bottom: 0;
+  }
+  > li {
+    &.active > a {
+      background: transparent;
+      box-shadow: none;
+      border-color: transparent;
+      &:hover, &:focus, &:active {
+        border-color: transparent;
+        background-color: transparent;
+      }
+      &:after, &:before {
+        border: medium solid transparent;
+        content: "";
+        height: 0;
+        left: 50%;
+        pointer-events: none;
+        position: absolute;
+        width: 0;
+        z-index: 1;
+        top: 100%;
+      }
+      &:after {
+        border-top-color: #fafafa;
+        border-width: 10px;
+        margin-left: -10px;
+      }
+      &:before {
+        border-top-color: rgba(0, 0, 0, 0.2);
+        border-width: 11px;
+        margin-left: -11px;
+      }
+    }
+    > a {
+      span {
+        font-size: 1em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      overflow: visible;
+      -webkit-transition: color 0.2s ease 0s;
+      transition: color 0.2s ease 0s;
+      &:hover, &:focus {
+        overflow: visible;
+        -webkit-transition: color 0.2s ease 0s;
+        transition: color 0.2s ease 0s;
+      }
+    }
+  }
+  ~ .tab-content {
+    background: #fff;
+  }
+  &.nav-tabs-left.nav-tabs {
+    &:after {
+      border-bottom: none;
+    }
+    > li.active > a {
+      &:before {
+        border-top: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        border-left: 11px solid rgba(0, 0, 0, 0.2);
+      }
+      &:after {
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid #fafafa;
+        margin-top: 1px;
+        margin-right: 2px;
+        top: auto;
+        right: -23px;
+        left: auto;
+      }
+      &:before {
+        top: auto;
+        right: -23px;
+        left: auto;
+      }
+    }
+  }
+  &.nav-tabs-right.nav-tabs {
+    &:after {
+      border-bottom: none;
+    }
+    > li.active > a {
+      &:before {
+        border-top: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        border-right: 11px solid rgba(0, 0, 0, 0.2);
+      }
+      &:after {
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        border-right: 10px solid #fafafa;
+        margin-top: 1px;
+        margin-left: -9px;
+        top: auto;
+        left: -12px;
+        right: auto;
+      }
+      &:before {
+        top: auto;
+        left: -12px;
+        right: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 58em) {
+  .nav-tabs-caret {
+    font-size: 0.6em;
+  }
+}
+
+
+
+
 /* [ Modal ]
 ------------------------ */
 
@@ -3187,237 +3427,123 @@ fieldset[disabled] .form-control {
 	}
 }
 
-/* [ Tabs & Accordions ]
+/* [ Notification ]
 ------------------------ */
-.nav-tabs{
-	li{
-		a{
-			border-color: transparent !important;
-			background-color: transparent !important;
-			text-transform: uppercase;
-			font-family: $font-heading;
-			font-size: 12px;
-			color: rgba($color-base, 0.7);
 
-			&:hover,
-			&:focus{
-				color: $color-base;
+.sweet-alert{
+	outline: 0 !important;
+
+
+	button{
+		font-size: 13px;
+		font-family: $font-heading;
+		@include border-radius(2px);
+
+		&.confirm{
+			background-color: $color-success !important;
+			border: 1px solid $color-success-dark !important;
+
+			&:hover{
+				background-color: $color-success-light !important;
+				border-color: $color-success-light !important; 
+			}
+ 
+			&.active,
+			&:active{
+				background-color: $color-success-dark !important;
 			}
 		}
-	} 
+
+		&.cancel{
+			background-color: $color-danger !important;
+			border: 1px solid $color-danger-dark !important;
+
+			&:hover{
+				background-color: $color-danger-light;
+				border-color:  $color-danger-light !important;
+			}
+
+			&.active,
+			&:active{
+				background-color: $color-danger-dark !important;
+			}
+		}
+	}
 }
 
-.nav-tabs-simple {
-  border-bottom: 0px;
-  &:after {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    width: 100%;
-    position: relative;
-    bottom: 3px;
-    z-index: 120;
-  }
-  > li {
-    margin-bottom: 0;
-    &:after {
-      -webkit-transition: all 0.1s linear 0s;
-      transition: all 0.1s linear 0s;
-      -webkit-backface-visibility: hidden;
-      width: 100%;
-      display: block;
-      background-color: $color-link;
-      height: 0px;
-      content: '';
-      z-index: 125;
-    }
-  }
+
+/* [ TinyMCE ]
+------------------------ */
+
+.mce-container{
+
+	*{
+		font-family: $font-open-sans !important;
+	}
+
+	button{
+		border: 1px solid transparent;
+		text-transform: capitalize;
+		letter-spacing: 0.5px;
+	}
+
+	.mce-window-head{
+		.mce-close{
+			color: #666;
+		    padding: 0;
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+		    width: 36px;
+		    height: 36px;
+		    text-align: center;
+		    background: 0 0;
+		    border: none;
+		    cursor: pointer;
+		}
+	}
 }
 
-.nav-tabs-primary.nav-tabs-simple > li:after {
-  background-color: #6d5cae;
+.post-editor{
+	.form-group{
+		margin-bottom: 10px;
+	}
+
+	h2{
+		font-size: 23px;
+	    font-weight: 400;
+	    padding: 9px 15px 4px 0;
+	    line-height: 29px;
+
+	    a.add-new-h2{
+			margin-left: 4px;
+			padding: 4px 8px;
+			position: relative;
+			top: -3px;
+			text-decoration: none;
+			border: none;
+			background: #e0e0e0;
+			text-shadow: none;
+			font-weight: 600;
+			font-size: 13px;
+			font-family: $font-open-sans;
+			@include border-radius(2px);
+
+			&:hover{
+				background-color: $complete;
+				color: $white;
+			}
+	    }
+	}
+
+	#post-title{
+		font-size: 1.3em;
+		color: #333;
+	}
 }
 
-.nav-tabs-success.nav-tabs-simple > li:after {
-  background-color: #10cfbd;
+.mce-window-head{
+	 .mce-title{
+	 	font-family: $font-montserrat !important;
+	 }
 }
-
-.nav-tabs-complete.nav-tabs-simple > li:after {
-  background-color: #48b0f7;
-}
-
-.nav-tabs-danger.nav-tabs-simple > li:after {
-  background-color: #f55753;
-}
-
-.nav-tabs-warning.nav-tabs-simple > li:after {
-  background-color: #f8d053;
-}
-
-.nav-tabs-info.nav-tabs-simple > li:after {
-  background-color: #3b4752;
-}
-
-.nav-tabs-simple {
-  > li {
-    &.active {
-      a {
-        background-color: transparent;
-        border-color: transparent;
-        &:hover, &:focus {
-          background-color: transparent;
-          border-color: transparent;
-        }
-      }
-      &:after {
-        height: 3px;
-      }
-    }
-    &:hover:after {
-      height: 3px;
-    }
-  }
-  &.nav-tabs-left:after, &.nav-tabs-right:after {
-    border-bottom: 0px;
-  }
-  &.nav-tabs-left > li:after, &.nav-tabs-right > li:after {
-    width: 0px; 
-    height: 100%;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-  }
-  &.nav-tabs-left > li.active:after, &.nav-tabs-right > li.active:after, &.nav-tabs-left > li:hover:after, &.nav-tabs-right > li:hover:after {
-    width: 3px;
-  }
-  &.nav-tabs-left > li:after {
-    right: 0;
-  }
-  &.nav-tabs-right > li:after {
-    left: 0;
-  }
-}
-
-/* Tabs : Line Triangles
-------------------------------------
-*/
-
-.nav-tabs-caret {
-  border-bottom: 0;
-  &:after {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    width: 100%;
-    position: relative;
-    bottom: 0;
-  }
-  > li {
-    &.active > a {
-      background: transparent;
-      box-shadow: none;
-      border-color: transparent;
-      &:hover, &:focus, &:active {
-        border-color: transparent;
-        background-color: transparent;
-      }
-      &:after, &:before {
-        border: medium solid transparent;
-        content: "";
-        height: 0;
-        left: 50%;
-        pointer-events: none;
-        position: absolute;
-        width: 0;
-        z-index: 1;
-        top: 100%;
-      }
-      &:after {
-        border-top-color: #fafafa;
-        border-width: 10px;
-        margin-left: -10px;
-      }
-      &:before {
-        border-top-color: rgba(0, 0, 0, 0.2);
-        border-width: 11px;
-        margin-left: -11px;
-      }
-    }
-    > a {
-      span {
-        font-size: 1em;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-      overflow: visible;
-      -webkit-transition: color 0.2s ease 0s;
-      transition: color 0.2s ease 0s;
-      &:hover, &:focus {
-        overflow: visible;
-        -webkit-transition: color 0.2s ease 0s;
-        transition: color 0.2s ease 0s;
-      }
-    }
-  }
-  ~ .tab-content {
-    background: #fff;
-  }
-  &.nav-tabs-left.nav-tabs {
-    &:after {
-      border-bottom: none;
-    }
-    > li.active > a {
-      &:before {
-        border-top: 11px solid transparent;
-        border-bottom: 11px solid transparent;
-        border-left: 11px solid rgba(0, 0, 0, 0.2);
-      }
-      &:after {
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        border-left: 10px solid #fafafa;
-        margin-top: 1px;
-        margin-right: 2px;
-        top: auto;
-        right: -23px;
-        left: auto;
-      }
-      &:before {
-        top: auto;
-        right: -23px;
-        left: auto;
-      }
-    }
-  }
-  &.nav-tabs-right.nav-tabs {
-    &:after {
-      border-bottom: none;
-    }
-    > li.active > a {
-      &:before {
-        border-top: 11px solid transparent;
-        border-bottom: 11px solid transparent;
-        border-right: 11px solid rgba(0, 0, 0, 0.2);
-      }
-      &:after {
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
-        border-right: 10px solid #fafafa;
-        margin-top: 1px;
-        margin-left: -9px;
-        top: auto;
-        left: -12px;
-        right: auto;
-      }
-      &:before {
-        top: auto;
-        left: -12px;
-        right: auto;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 58em) {
-  .nav-tabs-caret {
-    font-size: 0.6em;
-  }
-}
-
