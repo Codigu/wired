@@ -33,6 +33,7 @@
         <link rel="stylesheet" href="../assets/plugins/bootstrap-wysihtml5/css/bootstrap-wysihtml5.min.css">
         <link rel="stylesheet" href="../assets/plugins/font-awesome/css/font-awesome.min.css"> 
         <link rel="stylesheet" href="../assets/plugins/highlight/highlight.min.css"> 
+
         <link rel="stylesheet" href="../dist/css/wired.min.css"> 
          
     </head>   
@@ -59,9 +60,6 @@
             <li>
               <a href="docs/">Documentation</a>
             </li>
-            <li>
-              <a href="examples/">Examples</a>
-            </li>
           </ul>
         </nav>
     </div></header> 
@@ -86,7 +84,7 @@
                         <p>Production level usage using minified and gzipped files</p>    
                         <table style="width:100%">        
                             <tbody>             
-                                <tr>      
+                                <tr>       
                                     <td style="width:80%; height:30px" class="bg-danger text-white text-center fs-14 pd-t-5 pd-b-5">
                                         CSS 
                                         <div class="fs-12">80KB</div>  
@@ -100,20 +98,21 @@
                                 </tr>    
                             </tbody>         
                        </table>            
-                    </section>            
-                    <!--/ #introduction -->            
-                     
+                    </section>             
+                    <!--/ #introduction -->    
 
+ 
                     <?php              
                     include "components/get-started.html";       
-                    include "components/grid.html";      
-                    include "components/typography.html";         
+                    include "components/grid.html";       
+                    include "components/typography.html";           
                     include "components/icons.html";          
                     include "components/buttons.html";      
+                    include "components/offcanvas.html";         
                     include "components/breadcrumbs.html";              
                     include "components/dropdowns.html";                
                     include "components/progress-bars.html";        
-                    include "components/tabs.html";           
+                    include "components/tabs.html";            
                     include "components/notifications.html";           
                     include "components/forms.html";   
                     include "components/helpers.html";               
@@ -125,14 +124,16 @@
                                
                 </div>      
                 <div class="col-sm-3 hidden-xs"> 
-                    <aside id="wd-docs-sidebar" class="wd-docs-sidebar bd-l bd-transparent affix">   
+                    <aside id="wd-docs-sidebar" class="wd-docs-sidebar bd-l bd-transparent affix">    
                         <ul class="nav menu"> 
                             <li><a class="target fs-13 block" href="#introduction">Introduction</a></li> 
                             <li><a class="target fs-13 block" href="#get-started">Get Started</a></li>  
+                            <li><a class="target fs-13 block" href="#examples">Examples</a></li>  
                             <li><a class="target fs-13 block" href="#grid">Grid</a></li>
                             <li><a class="target fs-13 block" href="#typography">Typography</a></li>
                             <li><a class="target fs-13 block" href="#icons">Icons</a></li>
                             <li><a class="target fs-13 block" href="#buttons">Buttons</a></li>
+                            <li><a class="target fs-13 block" href="#offcanvas">Offcanvas</a></li>   
                             <li><a class="target fs-13 block" href="#breadcrumbs">Breadcrumbs</a></li>   
                             <li><a class="target fs-13 block" href="#progress">Progress</a></li>   
                             <li><a class="target fs-13 block" href="#dropdowns">Dropdowns</a></li>
@@ -191,6 +192,6 @@
         <script src="../assets/plugins/bootstrap-wysihtml5/js/bootstrap-wysihtml5.min.js"></script> 
         <script src="../assets/plugins/chosen/js/chosen.min.js"></script>
 
-        <script src="../assets/js/plugins.js"></script>
+        <script src="../dist/js/wired.js"></script>
     </body>
 </html>

@@ -1,6 +1,22 @@
 (function( $ ) {
 
     /*
+    * Wired v1.0.0
+    * JS - Table of Contents
+    *
+    * smoothTarget();
+    * offcanvasMenu();
+    * inputFile();
+    * toolTip();
+    * popOver();
+    * datePicker();
+    * selectBox();
+    * dropZone();
+    * sweetAlert();
+    * wysiHtml5();
+    */
+
+    /*
     * Add Smooth Scrolling Transition */
     function smoothTarget(){
 
@@ -17,6 +33,43 @@
     }
 
     smoothTarget();
+ 
+    /*
+    * Offcanvas Menu 
+    * Replaced Bootstrap's native collapsable menu */
+
+    function offcanvasMenu(){
+        $('[data-toggle="offcanvas"]').on('click', function(){
+            var self    =   $(this),
+                target  =   self.data('target');
+
+            $(target).toggleClass('offcanvas-open');
+        }); 
+    }
+
+    offcanvasMenu();
+
+
+    /* InputFile
+    * Adding the filename label to the input file button */
+
+    function inputFile(){ 
+        var inputs = $('.inputfile input[type="file"]');
+
+        inputs.each(function(){ 
+            $(this).on('change', function(){
+                var self        =   $(this),
+                    fileName    =   '';
+                    fileName    =   self.val().split( '\\' ).pop();
+                
+                if(fileName){
+                    $(this).next('label').text(fileName);
+                }
+            });
+        });
+    }
+
+    inputFile();
 
     /* Tooltip.js
     * Hover over the links below to see tooltips */
@@ -39,11 +92,11 @@
     /* bootstrap-datepicker.js
     * A datepicker for Twitter Bootstrap */
 
-    function bootstrapDatepicker(){
+    function datePicker(){
         $('[data-plugin="datepicker"]').datepicker();
     }
 
-    bootstrapDatepicker();
+    datePicker();
 
     /* chosen.js
     * jQuery plugin that makes long, unwieldy select boxes much more user-friendly. */
@@ -63,25 +116,6 @@
  
     dropZone();
 
-    /* InputFile
-    * Adding the filename label to the input file button */
-
-    function inputFile(){ 
-        var inputs = $('.inputfile input[type="file"]');
-
-        inputs.each(function(){ 
-            $(this).on('change', function(){
-                var fileName = '';
-                fileName =  $(this).val().split( '\\' ).pop();
-                
-                if(fileName){
-                    $(this).next('label').text(fileName);
-                }
-            });
-        });
-    }
-
-    inputFile();
 
     /* sweetalert2.js
     * A beautiful and customizable replacement for Javascript's "Alert" */

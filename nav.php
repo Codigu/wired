@@ -18,9 +18,6 @@
         <li>
           <a href="docs/">Documentation</a>
         </li>
-        <li>
-          <a href="examples/">Examples</a>
-        </li>
       </ul>
     </nav>
   </div>

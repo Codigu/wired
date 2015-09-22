@@ -11,7 +11,7 @@ gulp.task('sass', function () {
           .pipe(sass().on('error', sass.logError))
           .pipe(strip())
           .pipe(gulp.dest('dist/css'))
-          .pipe(sass({outputStyle: 'compressed'}))
+          .pipe(sass({outputStyle: 'compressed'})) 
           .pipe(rename('wired.min.css'))
           .pipe(gulp.dest('dist/css'))
           .pipe(browserSync.stream());
@@ -29,12 +29,12 @@ gulp.task('highlight', function () {
  
 gulp.task('watch', function () { 
    browserSync.init({
-        proxy: "http://localhost/wired"
+        proxy: "http://localhost/wired" 
     });	
 
   gulp.watch('sass/*.scss', ['sass']);
-  gulp.watch('dev/*.php', ['highlight']);
-  gulp.watch("**/*.php").on('change', browserSync.reload);
+  gulp.watch('dev/*.*', ['highlight']);
+  gulp.watch("**/*.*").on('change', browserSync.reload);
 });
 
 gulp.task('default', ['watch']);
