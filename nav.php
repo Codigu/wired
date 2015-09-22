@@ -2,7 +2,6 @@
   <div class="container">
     <div class="navbar-header">
       <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#wd-navbar" aria-controls="wd-navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -14,13 +13,13 @@
     <nav id="wd-navbar" class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a href="index.php">Tour</a>
+          <a href="index.php">Discover</a>
         </li>
         <li>
           <a href="docs/">Documentation</a>
         </li>
         <li>
-          <a href="">Demo</a>
+          <a href="examples/">Examples</a>
         </li>
       </ul>
     </nav>

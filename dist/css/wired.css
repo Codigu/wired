@@ -48,7 +48,7 @@
 .image-responsive-width {
   height: 100% !important; }
 
-.cursor, [role="button"], [role="chec  kbox"], [role="radio"] {
+.cursor, [role="button"], [role="checkbox"], [role="radio"] {
   cursor: pointer !important; }
 
 .block {
@@ -3845,6 +3845,61 @@ fieldset[disabled] .form-control {
       .sweet-alert button.cancel:active {
         background-color: #f44945 !important; }
 
+
+.wysihtml5-wrapper ul.wysihtml5-toolbar {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  background-color: rgba(0, 0, 0, 0.03); }
+  .wysihtml5-wrapper ul.wysihtml5-toolbar > li {
+    margin: 0;
+    padding: 0; }
+  .wysihtml5-wrapper ul.wysihtml5-toolbar .btn.btn-default {
+    background: none repeat scroll 0 0 transparent;
+    border-color: transparent;
+    color: #47525d;
+    font-size: 16px;
+    font-weight: normal;
+    border: 0 !important;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    filter: alpha(opacity=80);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    -webkit-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    -moz-opacity: 0.8;
+    -ms-opacity: 0.8;
+    -o-opacity: 0.8;
+    opacity: 0.8;
+    -webkit-border-radius: 0;
+    -khtml-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -khtml-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none; }
+    .wysihtml5-wrapper ul.wysihtml5-toolbar .btn.btn-default:hover,
+    .wysihtml5-wrapper ul.wysihtml5-toolbar .btn.btn-default.wysihtml5-command-active {
+      color: #2C2C2C;
+      background-color: #ddd;
+      filter: alpha(opacity=100);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      -webkit-opacity: 1;
+      -khtml-opacity: 1;
+      -moz-opacity: 1;
+      -ms-opacity: 1;
+      -o-opacity: 1;
+      opacity: 1; }
+
+.wysihtml5-wrapper .wysihtml5-sandbox {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-top: 0 !important;
+  padding: 16px 16px 50px !important;
+  width: 100% !important; }
+
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3916,12 +3971,11 @@ input, button {
 
 .navbar {
   background-color: #fff; }
-  .navbar .navbar-toggle .icon-bar {
-    background-color: #1A1A1A; }
-  .navbar .navbar-toggle.toggle-light .icon-bar {
-    background-color: #fff; }
-  .navbar.navbar-inverse {
-    background-color: #1A1A1A; }
+  .navbar .navbar-toggle {
+    background-color: transparent !important;
+    border-color: transparent !important; }
+    .navbar .navbar-toggle .icon-bar {
+      background-color: #1A1A1A; }
 
 .navbar-nav > li.active > a {
   filter: alpha(opacity=100);
@@ -3957,15 +4011,41 @@ input, button {
     -o-opacity: 1;
     opacity: 1; }
 
-.navbar-toggle {
-  border: 0;
-  background-color: transparent !important; }
+.navbar-inverse {
+  background-color: #1A1A1A; }
+  .navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #fff; }
+  .navbar-inverse .navbar-collapse {
+    border-color: transparent !important;
+    -webkit-box-shadow: none;
+    -khtml-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none; }
+  .navbar-inverse .navbar-nav > li.active > a {
+    filter: alpha(opacity=100);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    -webkit-opacity: 1;
+    -khtml-opacity: 1;
+    -moz-opacity: 1;
+    -ms-opacity: 1;
+    -o-opacity: 1;
+    opacity: 1; }
+  .navbar-inverse .navbar-nav > li > a {
+    font-weight: normal;
+    color: #F0F0F0; }
+    .navbar-inverse .navbar-nav > li > a:hover {
+      filter: alpha(opacity=100);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      -webkit-opacity: 1;
+      -khtml-opacity: 1;
+      -moz-opacity: 1;
+      -ms-opacity: 1;
+      -o-opacity: 1;
+      opacity: 1; }
 
-.menu-bar {
-  border: 0;
-  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
-  -khtml-box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
-  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
-  -ms-box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
-  -o-box-shadow: 0 0 0 rgba(0, 0, 0, 0.4);
-  box-shadow: 0 0 0 rgba(0, 0, 0, 0.4); }
+.navbar-toggle.navbar-toggle-left {
+  float: left;
+  margin-right: auto;
+  margin-left: 15px; }

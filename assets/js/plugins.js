@@ -106,27 +106,15 @@
  
     sweetAlert();
 
-    /* TinyMCE
-    * A platform independent web-based JavaScript HTML WYSIWYG editor control. */
+    /* bootstrap-wysihtml5.js
+    * Simple, beautiful wysiwyg editors */
 
 
-    function tinyMCE(){ 
-        tinymce.init({
-            selector: '[data-plugin="tinyMCE"]',
-            theme   : "modern",
-            skin    : 'light',
-            menubar : false,
-            plugins : [
-                "advlist autolink lists link image charmap print preview hr anchor pagebreak",
-                "searchreplace wordcount visualblocks visualchars code fullscreen",
-                "insertdatetime media nonbreaking save table contextmenu directionality",
-                "emoticons template paste textcolor colorpicker textpattern imagetools"
-            ],
-            toolbar1: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
-        });
+    function wysiHtml5(){ 
+        $('[data-plugin="wysihtml5"]').wysihtml5();
     }
 
-    tinyMCE();
+    wysiHtml5();
 
     
 

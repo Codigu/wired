@@ -48,12 +48,12 @@ a , .link{
     text-decoration: none !important;
   }
 }
-
+  
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6{
   font-family: $font-heading;
-  color: $color-dark; 
-}
+  color: $color-dark;  
+} 
 
 ul, ol{
 	padding-left: 20px;
@@ -90,23 +90,18 @@ input, button{
 /* [ Header & Navigation ]
 ------------------------- */
 
+// Mode: Light
+
 .navbar{
   background-color: $color-white;
 
   .navbar-toggle{
+      background-color: transparent !important;
+      border-color: transparent !important;
+
       .icon-bar{
         background-color: $color-darker;
       }
-
-    &.toggle-light{
-      .icon-bar{
-          background-color: $color-white;
-        }
-    }
-  }
-
-  &.navbar-inverse{
-    background-color: $color-darker;
   }
 }
 
@@ -124,7 +119,7 @@ input, button{
       font-family: $font-heading;
       font-size: $font-size-base - 1;
       color: $color-darkest;
-      font-weight: bold;
+      font-weight: bold; 
       background-color: transparent !important;
       @include opacity(0.7);
  
@@ -135,16 +130,56 @@ input, button{
   } 
 
 }
+
+// Mode: Dark
+
+.navbar-inverse{
+  background-color: $color-darker;
+
+  .navbar-toggle{
+      .icon-bar{
+        background-color: $color-white;
+      }
+  }
  
-.navbar-toggle{ 
-  border: 0;
-  background-color: transparent !important;
+  .navbar-collapse{
+    border-color: transparent !important;
+    @include box-shadow(none);
+  }
+
+  .navbar-nav{
+  
+    & > li{ 
+
+      &.active{
+        & > a{
+          @include opacity(1);
+        }
+      } 
+  
+      & > a{
+        font-weight: normal; 
+        color: $color-lighter;
+
+        &:hover{
+          @include opacity(1);
+        } 
+      }  
+    } 
+
+  }
+
 }
 
-.menu-bar{
-  border: 0;
-  @include box-shadow(0,0,0);
-} 
+// Burger Menu
+ 
+.navbar-toggle {
+  &.navbar-toggle-left{
+    float: left;
+    margin-right: auto;
+    margin-left: 15px; 
+  }
+}
 
  
    

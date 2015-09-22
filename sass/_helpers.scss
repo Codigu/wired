@@ -43,7 +43,7 @@
 *  Selectbox
 *  Dropzone
 *  Notification
-*  TinyMCE
+*  Editor
 *
 */
 
@@ -62,7 +62,7 @@
 .image-responsive-height { width: 100% !important; } 
 .image-responsive-width { height: 100% !important; }
 
-.cursor, [role="button"], [role="chec  kbox"], [role="radio"] { cursor: pointer !important; } 
+.cursor, [role="button"], [role="checkbox"], [role="radio"] { cursor: pointer !important; } 
 
 .block{ display: block; }
 .inline{ display: inline-block; }
@@ -3472,78 +3472,46 @@ fieldset[disabled] .form-control {
 }
 
 
-/* [ TinyMCE ]
+/* [ Editor ]
 ------------------------ */
+.wysihtml5-wrapper{
 
-.mce-container{
+	ul.wysihtml5-toolbar {
+		border: 1px solid rgba($color-darkest, 0.1) !important; 
+		background-color: rgba($color-darkest, 0.03);   
 
-	*{
-		font-family: $font-open-sans !important;
-	}
-
-	button{
-		border: 1px solid transparent;
-		text-transform: capitalize;
-		letter-spacing: 0.5px;
-	}
-
-	.mce-window-head{
-		.mce-close{
-			color: #666;
-		    padding: 0;
-		    position: absolute;
-		    top: 0;
-		    right: 0;
-		    width: 36px;
-		    height: 36px;
-		    text-align: center;
-		    background: 0 0;
-		    border: none;
-		    cursor: pointer;
+		& > li {
+		  margin: 0;
+		  padding: 0;
 		}
-	}
-}
 
-.post-editor{
-	.form-group{
-		margin-bottom: 10px;
-	}
-
-	h2{
-		font-size: 23px;
-	    font-weight: 400;
-	    padding: 9px 15px 4px 0;
-	    line-height: 29px;
-
-	    a.add-new-h2{
-			margin-left: 4px;
-			padding: 4px 8px;
-			position: relative;
-			top: -3px;
-			text-decoration: none;
-			border: none;
-			background: #e0e0e0;
-			text-shadow: none;
-			font-weight: 600;
-			font-size: 13px;
-			font-family: $font-open-sans;
-			@include border-radius(2px);
-
-			&:hover{
-				background-color: $complete;
-				color: $white;
+		.btn.btn-default{
+			background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+		    border-color: transparent; 
+		    color: $color-base;
+		    font-size: 16px;
+		    font-weight: normal; 
+		    border: 0 !important; 
+		   
+		    font-size: 12px;  
+		    font-family: $font-heading;
+		    @include opacity(0.8);
+			@include border-radius(0);   
+			@include box-shadow(none); 
+			 
+			&:hover, 
+			&.wysihtml5-command-active{ 
+				color: $color-dark;    
+				background-color: #ddd; 
+				@include opacity(1);
 			}
-	    }
-	}
-
-	#post-title{
-		font-size: 1.3em;
-		color: #333;
-	}
-}
-
-.mce-window-head{
-	 .mce-title{
-	 	font-family: $font-montserrat !important;
-	 }
-}
+		} 
+	} 
+	  
+    .wysihtml5-sandbox {
+	    border: 1px solid rgba($color-darkest, 0.1) !important;  
+	    border-top: 0 !important;
+	    padding: 16px 16px 50px !important;
+	    width: 100% !important;
+	}  
+}     

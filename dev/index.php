@@ -14,9 +14,9 @@
         <!-- Favicons -->
         <link rel="apple-touch-icon" href="../assets/images/ico/60.png">
         <link rel="apple-touch-icon" sizes="76x76" href="../assets/images/ico/76.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="../assets/images/ico/120.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../assets/images/ico/120.png"> 
         <link rel="apple-touch-icon" sizes="152x152" href="../assets/images/ico/152.png">
-        <link rel="icon" type="image/x-icon" href="../assets/images/ico/favicon.png">
+        <link rel="icon" type="image/x-icon" href="../assets/images/ico/favicon.png"> 
          
         <!-- Google fonts -->
         <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -31,7 +31,7 @@
         <link rel="stylesheet" href="../assets/plugins/dropzone/css/dropzone.min.css">
         <link rel="stylesheet" href="../assets/plugins/sweetalert/css/sweetalert2.min.css">
         <link rel="stylesheet" href="../assets/plugins/bootstrap-wysihtml5/css/bootstrap-wysihtml5.min.css">
-        <link rel="stylesheet" href="../assets/plugins/font-awesome/font-awesome.min.css"> 
+        <link rel="stylesheet" href="../assets/plugins/font-awesome/css/font-awesome.min.css"> 
         <link rel="stylesheet" href="../assets/plugins/highlight/highlight.min.css"> 
         <link rel="stylesheet" href="../dist/css/wired.min.css"> 
          
@@ -41,12 +41,29 @@
     <header class="navbar navbar-inverse bg-menu navbar-static-top" id="top" role="banner">
       <div class="container bd-b bd-transparent"> 
         <div class="navbar-header"> 
-          
+           <button class="navbar-toggle navbar-toggle-left collapsed" type="button" data-toggle="collapse" data-target="#wd-navbar" aria-controls="wd-navbar" aria-expanded="false">
+            <span class="icon-bar"></span> 
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <a href="../" class="navbar-brand pd-y-10">
             <img src="../assets/images/logo-light.svg" width="90" alt="">
           </a>
         </div>
         <!--/ .navbar-header --> 
+        <nav id="wd-navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="../">Discover</a>
+            </li>
+            <li>
+              <a href="docs/">Documentation</a>
+            </li>
+            <li>
+              <a href="examples/">Examples</a>
+            </li>
+          </ul>
+        </nav>
     </div></header> 
 
     <div id="primary" class="content-area"> 
@@ -102,16 +119,16 @@
                     include "components/helpers.html";               
                     ?>              
 
-                    
+                     
 
-         
-                              
+          
+                               
                 </div>      
                 <div class="col-sm-3 hidden-xs"> 
                     <aside id="wd-docs-sidebar" class="wd-docs-sidebar bd-l bd-transparent affix">   
                         <ul class="nav menu"> 
                             <li><a class="target fs-13 block" href="#introduction">Introduction</a></li> 
-                            <li><a class="target fs-13 block" href="#get-started">Get Started</a></li>
+                            <li><a class="target fs-13 block" href="#get-started">Get Started</a></li>  
                             <li><a class="target fs-13 block" href="#grid">Grid</a></li>
                             <li><a class="target fs-13 block" href="#typography">Typography</a></li>
                             <li><a class="target fs-13 block" href="#icons">Icons</a></li>
@@ -120,7 +137,7 @@
                             <li><a class="target fs-13 block" href="#progress">Progress</a></li>   
                             <li><a class="target fs-13 block" href="#dropdowns">Dropdowns</a></li>
                             <li><a class="target fs-13 block" href="#tabs">Tabs</a></li>
-                            <li><a class="target fs-13 block" href="#notification">Notification</a></li>
+                            <li><a class="target fs-13 block" href="#notification">Notification</a></li>  
                             <li><a class="target fs-13 block" href="#forms">Forms</a> 
                                <ul class="nav menu">   
                                     <li><a class="target fs-13 block" href="#form-controls">Form Controls</a></li>
@@ -150,29 +167,28 @@
                                     <li><a class="target fs-13 block" href="#text-alignment">Text Alignment</a></li> 
                                     <li><a class="target fs-13 block" href="#float-alignment">Float Alignment</a></li> 
                                     <li><a class="target fs-13 block" href="#misc-classes">Misc Classes</a></li> 
-                                </ul> 
-                            </li>
+                                </ul>  
+                            </li>   
                            
-                        </ul>    
-                       </aside> 
-                </div>
-            </div>
+                        </ul>     
+                       </aside>   
+                </div>  
+            </div> 
         </div>
         
-      </main>
-    </div>
-
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      </main>  
+    </div>  
+ 
+          
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> 
         <script>window.jQuery || document.write('<script src="../assets/plugins/jquery/jquery.min.js"><\/script>')</script>
         <script src="../assets/plugins/modernizr/modernizr.min.js"></script>
-        <script src="../assets/plugins/pace/js/pace.min.js"></script>
+        <script src="../assets/plugins/pace/js/pace.min.js"></script> 
         <script src="../assets/plugins/bootstrap/js/bootstrap.min.js"></script>
         <script src="../assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
         <script src="../assets/plugins/dropzone/js/dropzone.min.js"></script>
         <script src="../assets/plugins/sweetalert/js/sweetalert2.min.js"></script>
-        <script src="http://bootstrap-wysiwyg.github.io/bootstrap3-wysiwyg/components/wysihtml5x/dist/wysihtml5x-toolbar.min.js"></script>
-        <script src="../assets/plugins/bootstrap-wysihtml5/js/bootstrap-wysihtml5.min.js"></script>
+        <script src="../assets/plugins/bootstrap-wysihtml5/js/bootstrap-wysihtml5.min.js"></script> 
         <script src="../assets/plugins/chosen/js/chosen.min.js"></script>
 
         <script src="../assets/js/plugins.js"></script>

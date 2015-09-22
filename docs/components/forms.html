@@ -535,58 +535,53 @@
                 </div>
 <br>
 
-                <h5>Step one</h5> 
+                <h5>Step one</h5>
+                <p>Include the stylesheet <code class="nohighlight">bootstrap-wysihtml5.min.css</code> inside the <code class="nohighlight">head</code> tag. </p>
+<pre>
+<code class="html">
+  &lt;link <span class="hljs-variable">type=</span><span class="hljs-string">&quot;text/css&quot;</span> <span class="hljs-variable">rel=</span><span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-variable">href=</span><span class="hljs-string">&quot;assets/plugins/bootstrap-wysihtml5/css/bootstrap-wysihtml5.min.css&quot;</span>&gt;
+</code>
+</pre>
+<br>
+                <h5>Step two</h5> 
                 <p>Include the required javascript files inside the <code class="nohighlight">body</code> before core template script inclusions..</p>
 
-<pre> 
+<pre>
 <code class="html">
-  &lt;link <span class="hljs-variable">type=</span><span class="hljs-string">&quot;text/css&quot;</span> <span class="hljs-variable">rel=</span><span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-variable">href=</span><span class="hljs-string">&quot;assets/plugins/tinymce/tinymce.min.js&quot;</span>&gt;
+  &lt;link <span class="hljs-variable">type=</span><span class="hljs-string">&quot;text/css&quot;</span> <span class="hljs-variable">rel=</span><span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-variable">href=</span><span class="hljs-string">&quot;assets/plugins/bootstrap-wysihtml5/js/bootstrap-wysihtml5.min.js&quot;</span>&gt;
 </code>
 </pre>                
 <br>
-              <h5>Step two</h5> 
+              
+              <h5>Step three</h5> 
               <p>Add the markup.</p>
 
 <pre>
 <code class="html">
-  &lt;textarea <span class="hljs-variable">name=</span><span class="hljs-string">&quot;&quot;</span> <span class="hljs-variable">id=</span><span class="hljs-string">&quot;&quot;</span> <span class="hljs-variable">cols=</span><span class="hljs-string">&quot;30&quot;</span> <span class="hljs-variable">rows=</span><span class="hljs-string">&quot;10&quot;</span> <span class="hljs-variable">data-plugin=</span><span class="hljs-string">&quot;wysihtml5&quot;</span>&gt;&lt;/textarea&gt;
+  &lt;textarea <span class="hljs-variable">name=</span><span class="hljs-string">&quot;&quot;</span> <span class="hljs-variable">id=</span><span class="hljs-string">&quot;&quot;</span> <span class="hljs-variable">cols=</span><span class="hljs-string">&quot;30&quot;</span> <span class="hljs-variable">rows=</span><span class="hljs-string">&quot;10&quot;</span> <span class="hljs-variable">data-plugin=</span><span class="hljs-string">&quot;wysihtml5&quot;</span> <span class="hljs-variable">placeholder=</span><span class="hljs-string">&quot;Write something...&quot;</span>&gt;&lt;/textarea&gt; 
 </code>
 </pre>
 <br>
-
-            <h5>Step three</h5> 
+            <h5>Step four</h5> 
             <p>Apply the plugin.</p>
 
 <div class="wd-example">  
   <div class="example"> 
     <h5 class="mg-b-15">Example</h5>
-
-     <textarea name="" id="" cols="30" rows="10" data-plugin="wysihtml5"></textarea>
+    
+      <div class="wysihtml5-wrapper">
+        <textarea name="" id="" cols="30" rows="10" data-plugin="wysihtml5" class="wysiwyg" placeholder="Write something..."></textarea> 
+     </div>
   </div>
 <pre>
 <code class="html"><span class="hljs-tag">&lt;<span class="hljs-title">script</span>&gt;</span><span class="javascript">
   $(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> </span>{
-      $(<span class="hljs-string">&apos;[data-plugin=&quot;wysihtml5&quot;]&apos;</span>).init({
-          selector: <span class="hljs-string">&apos;[data-plugin=&quot;tinyMCE&quot;]&apos;</span>,
-          theme   : <span class="hljs-string">&quot;modern&quot;</span>,
-          skin    : <span class="hljs-string">&apos;light&apos;</span>,
-          menubar : <span class="hljs-literal">false</span>,
-          plugins : [
-              <span class="hljs-string">&quot;advlist autolink lists link image charmap print preview hr anchor pagebreak&quot;</span>,
-              <span class="hljs-string">&quot;searchreplace wordcount visualblocks visualchars code fullscreen&quot;</span>,
-              <span class="hljs-string">&quot;insertdatetime media nonbreaking save table contextmenu directionality&quot;</span>,
-              <span class="hljs-string">&quot;emoticons template paste textcolor colorpicker textpattern imagetools&quot;</span>
-          ],
-          toolbar1: <span class="hljs-string">&quot;insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image&quot;</span>,
-      });
+      $(<span class="hljs-string">&apos;[data-plugin=&quot;wysihtml5&quot;]&apos;</span>).wysihtml5();
   });
 </span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code>
 </pre>
 </div>
 
-                <div class="alert alert-info">
-                    <p>Please refer to <a href="http://www.tinymce.com/wiki.php" target="_blank">TinyMCE Documentation</a> to learn about plugin options</p>
-                </div>
 <br>
                 <h4 id="datepicker" class="pd-t-30">Datepicker</h4>
                 <p>These are powered by <a href="http://eternicode.github.io/bootstrap-datepicker" target="_blank">Datepicker for Bootstrap jQuery</a> plugin. Follow these steps to initialize a datepicker in your page</p>
