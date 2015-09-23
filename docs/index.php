@@ -95,12 +95,12 @@
                                     <td style="width:50%; height:30px" class="bg-info text-white text-center fs-14 pd-t-5 pd-b-5">Icons
                                         <div class="fs-12">48KB</div> 
                                     </td>      
-                                </tr>    
-                            </tbody>         
-                       </table>            
+                                </tr>     
+                            </tbody>          
+                       </table>               
                     </section>             
-                    <!--/ #introduction -->    
-
+                    <!--/ #introduction -->     
+ 
  
                     <?php              
                     include "components/get-started.html";       
@@ -113,15 +113,12 @@
                     include "components/dropdowns.html";                
                     include "components/progress-bars.html";        
                     include "components/tabs.html";            
+                    include "components/tooltip.html";            
                     include "components/notifications.html";           
                     include "components/forms.html";   
                     include "components/helpers.html";               
                     ?>              
-
-                     
-
-          
-                               
+      
                 </div>      
                 <div class="col-sm-3 hidden-xs"> 
                     <aside id="wd-docs-sidebar" class="wd-docs-sidebar bd-l bd-transparent affix">    
@@ -133,11 +130,12 @@
                             <li><a class="target fs-13 block" href="#typography">Typography</a></li>
                             <li><a class="target fs-13 block" href="#icons">Icons</a></li>
                             <li><a class="target fs-13 block" href="#buttons">Buttons</a></li>
-                            <li><a class="target fs-13 block" href="#offcanvas">Offcanvas</a></li>   
+                            <li><a class="target fs-13 block" href="#offcanvas">Offcanvas</a></li>    
                             <li><a class="target fs-13 block" href="#breadcrumbs">Breadcrumbs</a></li>   
                             <li><a class="target fs-13 block" href="#progress">Progress</a></li>   
                             <li><a class="target fs-13 block" href="#dropdowns">Dropdowns</a></li>
                             <li><a class="target fs-13 block" href="#tabs">Tabs</a></li>
+                            <li><a class="target fs-13 block" href="#tooltip">Tooltip</a></li>
                             <li><a class="target fs-13 block" href="#notification">Notification</a></li>  
                             <li><a class="target fs-13 block" href="#forms">Forms</a> 
                                <ul class="nav menu">   

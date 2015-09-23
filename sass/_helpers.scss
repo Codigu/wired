@@ -2781,32 +2781,121 @@ fieldset[disabled] .form-control {
 	&.in{ opacity: 1; }
 
 	&.top{
-		.tooltip-arrow{ border-top-color: $color-darker !important; }
+		.tooltip-arrow{ border-top-color: $color-menu !important; }
 	}
 
 	&.right{
-		.tooltip-arrow{ border-right-color: $color-darker !important; }
+		.tooltip-arrow{ border-right-color: $color-menu !important; }
 	}
 
 	&.bottom{
-		.tooltip-arrow{ border-bottom-color: $color-darker !important; }
+		.tooltip-arrow{ border-bottom-color: $color-menu !important; }
 	}
 
 	&.left{
-		.tooltip-arrow{ border-left-color: $color-darker !important; }
+		.tooltip-arrow{ border-left-color: $color-menu !important; } 
 	}
 
 	.tooltip-inner{
-		background: $color-darker;
+		background: $color-menu;
 		padding: 10px;
 		width: 120px;
 	}
 }
 
+.tooltip-primary{
+	& + .tooltip{
+		&.top{
+			.tooltip-arrow{ border-top-color: $color-primary !important; }
+		}
+		&.right{
+			.tooltip-arrow{ border-right-color: $color-primary !important; }
+		}
+		&.bottom{
+			.tooltip-arrow{ border-bottom-color: $color-primary !important; }
+		}
+		&.left{
+			.tooltip-arrow{ border-left-color: $color-primary !important; }
+		}
+		.tooltip-inner{ background: $color-primary; }
+	}
+}
 
-/**
+.tooltip-success{
+	& + .tooltip{
+		&.top{
+			.tooltip-arrow{ border-top-color: $color-success !important; }
+		}
+		&.right{
+			.tooltip-arrow{ border-right-color: $color-success !important; }
+		}
+		&.bottom{
+			.tooltip-arrow{ border-bottom-color: $color-success !important; }
+		}
+		&.left{
+			.tooltip-arrow{ border-left-color: $color-success !important; }
+		}
+		.tooltip-inner{ background: $color-success; }
+	}
+}
+
+.tooltip-info{
+	& + .tooltip{
+		&.top{
+			.tooltip-arrow{ border-top-color: $color-info !important; }
+		}
+		&.right{
+			.tooltip-arrow{ border-right-color: $color-info !important; }
+		}
+		&.bottom{
+			.tooltip-arrow{ border-bottom-color: $color-info !important; }
+		}
+		&.left{
+			.tooltip-arrow{ border-left-color: $color-info !important; }
+		}
+		.tooltip-inner{ background: $color-info; }
+	}
+} 
+
+.tooltip-warning{
+	& + .tooltip{
+		&.top{
+			.tooltip-arrow{ border-top-color: $color-warning !important; }
+		}
+		&.right{
+			.tooltip-arrow{ border-right-color: $color-warning !important; }
+		}
+		&.bottom{
+			.tooltip-arrow{ border-bottom-color: $color-warning !important; }
+		}
+		&.left{
+			.tooltip-arrow{ border-left-color: $color-warning !important; }
+		}
+		.tooltip-inner{ background: $color-warning; }
+	}
+}
+ 
+.tooltip-danger{
+	& + .tooltip{
+		&.top{
+			.tooltip-arrow{ border-top-color: $color-danger !important; }
+		}
+		&.right{
+			.tooltip-arrow{ border-right-color: $color-danger !important; }
+		}
+		&.bottom{
+			.tooltip-arrow{ border-bottom-color: $color-danger !important; }
+		}
+		&.left{
+			.tooltip-arrow{ border-left-color: $color-danger !important; }
+		}
+		.tooltip-inner{ background: $color-danger; }
+	}
+}
+
+/** 
 * Dropdown -------------- */ 
-
+ 
 .dropdown-menu{
 	border: 1px solid $color-light;
 	@include border-radius(0);
@@ -3125,8 +3214,8 @@ fieldset[disabled] .form-control {
       text-indent: -5000px;
       width: 9px;
     }
-  }
-  .chosen-results-scroll-down {
+  } 
+  .chosen-results-scroll-down { 
     bottom: 0;
     span {
       background: url("../plugins/chosen/img/chosen-sprite.png") no-repeat -4px -3px;
