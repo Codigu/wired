@@ -3,9 +3,9 @@
 * Wired v1.0.0
 * Variables - Table of Contents
 *
-* $ Color Swatch
-* $ Fonts
-* $ Break Points
+* Color Swatch
+* Fonts
+* Break Points
 *
 /
 
@@ -51,9 +51,25 @@ $color-warning  		: #f8d053;
 $color-warning-light 	: rgba($color-warning, 0.90);
 $color-warning-dark 	: darken($color-warning, 3%);
 
-$color-link 			: #337ab7;
+$color-link 			: #3887be;
 $color-link-light 		: rgba( $color-link, 0.90 );
 $color-link-dark 		: darken($color-link, 3%);
+
+$color-cyan 			: #3bb2d0;
+$color-cyan-light 		: rgba( $color-cyan, 0.90 );
+$color-cyan-dark 		: darken($color-cyan, 3%);
+
+$color-blue 			: #3887be;
+$color-blue-light 		: rgba( $color-blue, 0.90 );
+$color-blue-dark 		: darken($color-blue, 3%);
+
+$color-darkblue 		: #223b53;
+$color-darkblue-light 	: rgba( $color-darkblue, 0.90 );
+$color-darkblue-dark 	: darken($color-darkblue, 3%);
+
+$color-navy 			: #28353d;
+$color-navy-light 		: rgba( $color-navy, 0.90 );
+$color-navy-dark 		: darken($color-navy, 3%);
 
 /* [ Fonts ]
 ------------------------- */

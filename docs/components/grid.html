@@ -1,0 +1,165 @@
+<section id="grid" class="pd-t-30 pd-b-30">
+                        <h3 class="text-uppercase">Grid</h3>
+                        <p class="fs-16">Bootstrap grid includes a responsive, mobile first fluid grid system that appropriately scales up to 12 columns as the device or viewport size increases. It includes predefined classes for easy layout options, as well as powerful mixins for generating more semantic layouts</p>
+                        <hr>
+                        <ul class="list">
+                            <li><code class="nohighlight">row</code> must be placed within a <code class="nohighlight">.container</code> (fixed-width), <code class="nohighlight">.container-fluid</code> (full-width) for proper alignment and padding or either <code class="nohighlight">.container-xs</code> <code class="nohighlight">.container-sm</code> <code class="nohighlight">.container-md</code> <code class="nohighlight">.container-lg</code> for different width sizes</li>
+                            <li>Use rows to create horizontal groups of columns. You must start with <code class="nohighlight">row</code></li>
+                            <li>There are predefined classes of columns starting from 1 to 12, example <code class="nohighlight">col-md-1</code> to <code class="nohighlight">col-md-12</code></li>
+                            <li>Each of these value represent a percentage of the screen, 1 being the smallest and 12 being 100%</li>
+                            <li>You can create different grid pattern that finally forms 12</li>
+                            <li>You can change the gutter (padding between columns) size by adding <code class="nohighlight">no-gutter</code>, <code class="nohighlight">sm-gutter</code>, <code class="nohighlight">md-gutter</code> beside <code class="nohighlight">row</code></li>
+                        </ul>
+
+<div class="wd-example"> 
+    <div class="example">
+        <h5 class="mg-b-15">Example</h5>
+        <div class="pd-x-15">
+            <div class="row show-grid">
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+              <div class="col-md-1">.col-md-1</div>
+            </div>
+
+            <div class="row show-grid">
+              <div class="col-md-8">.col-md-8</div>
+              <div class="col-md-4">.col-md-4</div>
+            </div>
+
+            <div class="row show-grid"> 
+              <div class="col-md-4">.col-md-4</div> 
+              <div class="col-md-4">.col-md-4</div>
+              <div class="col-md-4">.col-md-4</div>
+            </div>
+
+            <div class="row show-grid">
+              <div class="col-md-6">.col-md-6</div>
+              <div class="col-md-6">.col-md-6</div>
+            </div>
+        </div>    
+    </div>    
+<pre>
+<code class="html">
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-1&quot;</span>&gt;.col-md-<span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-1&quot;</span>&gt;.col-md-<span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-1&quot;</span>&gt;.col-md-<span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-1&quot;</span>&gt;.col-md-<span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-1&quot;</span>&gt;.col-md-<span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-1&quot;</span>&gt;.col-md-<span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-1&quot;</span>&gt;.col-md-<span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-1&quot;</span>&gt;.col-md-<span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-1&quot;</span>&gt;.col-md-<span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-1&quot;</span>&gt;.col-md-<span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-1&quot;</span>&gt;.col-md-<span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-1&quot;</span>&gt;.col-md-<span class="hljs-number">1</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-8&quot;</span>&gt;.col-md-<span class="hljs-number">8</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-4&quot;</span>&gt;.col-md-<span class="hljs-number">4</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;row&quot;</span>&gt; 
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-4&quot;</span>&gt;.col-md-<span class="hljs-number">4</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-4&quot;</span>&gt;.col-md-<span class="hljs-number">4</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-4&quot;</span>&gt;.col-md-<span class="hljs-number">4</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+
+    &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;row&quot;</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-6&quot;</span>&gt;.col-md-<span class="hljs-number">6</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+      &lt;<span class="hljs-keyword">div</span> <span class="hljs-type">class</span>=<span class="hljs-string">&quot;col-md-6&quot;</span>&gt;.col-md-<span class="hljs-number">6</span>&lt;/<span class="hljs-keyword">div</span>&gt;
+    &lt;/<span class="hljs-keyword">div</span>&gt;
+</code>
+</pre>
+</div>
+                        
+                        <br>
+                    <h4>Options</h4>
+                    <p>See how aspects of the Bootstrap grid system work across multiple devices with a handy table.</p>
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped">
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th>
+                                Extra small devices
+                                <small class="fs-12 hint">Phones (&lt;768px)</small>
+                              </th>
+                              <th>
+                                Small devices
+                                <small class="fs-12 hint">Tablets (&#x2265;768px)</small>
+                              </th>
+                              <th>
+                                Medium devices
+                                <small class="fs-12 hint">Desktops (&#x2265;992px)</small>
+                              </th>
+                              <th>
+                                Large devices
+                                <small class="fs-12 hint">Desktops (&#x2265;1200px)</small>
+                              </th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <th class="text-nowrap" scope="row">Grid behavior</th>
+                              <td>Horizontal at all times</td>
+                              <td colspan="3">Collapsed to start, horizontal above breakpoints</td>
+                            </tr>
+                            <tr>
+                              <th class="text-nowrap" scope="row">Container width</th>
+                              <td>None (auto)</td>
+                              <td>750px</td>
+                              <td>970px</td>
+                              <td>1170px</td>
+                            </tr> 
+                            <tr> 
+                              <th class="text-nowrap" scope="row">Class prefix</th>
+                              <td><code class="nohighlight">.col-xs-</code></td>
+                              <td><code class="nohighlight">.col-sm-</code></td>
+                              <td><code class="nohighlight">.col-md-</code></td>
+                              <td><code class="nohighlight">.col-lg-</code></td>
+                            </tr>
+                            <tr>
+                              <th class="text-nowrap" scope="row"># of columns</th>
+                              <td colspan="4">12</td>
+                            </tr>
+                            <tr>
+                              <th class="text-nowrap" scope="row">Column width</th>
+                              <td class="text-muted">Auto</td>
+                              <td>~62px</td>
+                              <td>~81px</td>
+                              <td>~97px</td>
+                            </tr>
+                            <tr>
+                              <th class="text-nowrap" scope="row">Gutter width</th>
+                              <td colspan="4">30px (15px on each side of a column)</td>
+                            </tr>
+                            <tr>
+                              <th class="text-nowrap" scope="row">Nestable</th>
+                              <td colspan="4">Yes</td>
+                            </tr>
+                            <tr>
+                              <th class="text-nowrap" scope="row">Offsets</th>
+                              <td colspan="4">Yes</td>
+                            </tr>
+                            <tr> 
+                              <th class="text-nowrap" scope="row">Column ordering</th>
+                              <td colspan="4">Yes</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+
+                    </section>
+                    <!--/ #grid -->

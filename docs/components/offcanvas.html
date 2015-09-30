@@ -1,0 +1,258 @@
+
+                     <section id="offcanvas" class="pd-t-30 pd-b-30">
+                        <h3 class="text-uppercase">Offcanvas</h3>
+                        <p class="fs-16">Replaced Bootstrap&apos;s native collapsable menu bar on mobile</p>
+                        <hr>
+<div class="wd-example"> 
+    <div class="example"> 
+      <h5 class="mg-b-15">Example</h5>
+
+      <nav class="navbar navbar-inverse bg-menu navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button> 
+              <a href="../../" class="navbar-brand pd-y-10">
+                 <img src="../assets/images/logo-light.svg" width="90" alt="">
+              </a>
+            </div>
+            <div id="navbar" class="navbar-offcanvas" data-direction="right" data-theme="">
+              <button type="button" class="dismiss hidden-sm hidden-md hidden-lg" data-toggle="offcanvas" data-target="#navbar">
+                <span aria-hidden="true">&#xD7;</span>
+              </button>
+
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#0">Home</a></li>
+                <li><a href="#0">About</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Grid</a></li>
+                    <li><a href="#">Colors</a></li>
+                    <li><a href="#">Typography</a></li>
+                    <li><a href="#">Forms</a></li>
+                    <li><a href="#">Helpers</a></li>
+                  </ul>
+                </li>
+                 <li><a href="#0">Contact</a></li>
+              </ul>
+            </div><!--/.nav-offcanvas -->
+          </div>
+        </nav>
+
+    </div>   
+<pre>
+<code><span class="hljs-tag">&lt;<span class="hljs-title">nav</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar navbar-inverse bg-menu navbar-static-top&quot;</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;container&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar-header&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;button&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar-toggle&quot;</span> <span class="hljs-attribute">data-toggle</span>=<span class="hljs-value">&quot;offcanvas&quot;</span> <span class="hljs-attribute">data-target</span>=<span class="hljs-value">&quot;#navbar&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;icon-bar&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;icon-bar&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;icon-bar&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span> 
+      <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;../../&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar-brand pd-y-10&quot;</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">img</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">&quot;../assets/images/logo-light.svg&quot;</span> <span class="hljs-attribute">width</span>=<span class="hljs-value">&quot;90&quot;</span> <span class="hljs-attribute">alt</span>=<span class="hljs-value">&quot;&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">&quot;navbar&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;navbar-offcanvas&quot;</span> <span class="hljs-attribute">data-direction</span>=<span class="hljs-value">&quot;right&quot;</span> <span class="hljs-attribute">data-theme</span>=<span class="hljs-value">&quot;&quot;</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">button</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">&quot;button&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;dismiss hidden-sm hidden-md hidden-lg&quot;</span> <span class="hljs-attribute">data-toggle</span>=<span class="hljs-value">&quot;offcanvas&quot;</span> <span class="hljs-attribute">data-target</span>=<span class="hljs-value">&quot;#navbar&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">aria-hidden</span>=<span class="hljs-value">&quot;true&quot;</span>&gt;</span>&amp;#xD7;<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">button</span>&gt;</span>
+
+      <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;nav navbar-nav&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;active&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#0&quot;</span>&gt;</span>Home<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#0&quot;</span>&gt;</span>About<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">li</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;dropdown&quot;</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;dropdown-toggle&quot;</span> <span class="hljs-attribute">data-toggle</span>=<span class="hljs-value">&quot;dropdown&quot;</span> <span class="hljs-attribute">role</span>=<span class="hljs-value">&quot;button&quot;</span> <span class="hljs-attribute">aria-haspopup</span>=<span class="hljs-value">&quot;true&quot;</span> <span class="hljs-attribute">aria-expanded</span>=<span class="hljs-value">&quot;false&quot;</span>&gt;</span>Dropdown <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;caret&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">ul</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">&quot;dropdown-menu&quot;</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Grid<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Colors<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Typography<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Forms<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#&quot;</span>&gt;</span>Helpers<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+          <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+         <span class="hljs-tag">&lt;<span class="hljs-title">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">&quot;#0&quot;</span>&gt;</span>Contact<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">li</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-comment">&lt;!--/.nav-offcanvas --&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">nav</span>&gt;</span></code>
+</pre>
+</div>
+<br>                    
+
+                    <h4>Direction</h4>
+                    <p>Change Offcanvas&apos; position via <code class="nohighlight">data-direction</code></p>
+<div class="wd-example"> 
+    <div class="example"> 
+      <h5 class="mg-b-15">Example</h5>
+        
+      <nav class="navbar navbar-inverse bg-menu navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#direction-right">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button> 
+              <a href="../../" class="navbar-brand pd-y-10">
+                 <img src="../assets/images/logo-light.svg" width="90" alt="">
+              </a>
+            </div>
+            <div id="direction-right" class="navbar-offcanvas" data-direction="right" data-theme="">
+              <button type="button" class="dismiss hidden-sm hidden-md hidden-lg" data-toggle="offcanvas" data-target="#direction-right">
+                <span aria-hidden="true">&#xD7;</span>
+              </button>
+
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#0">Home</a></li>
+                <li><a href="#0">About</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Grid</a></li>
+                    <li><a href="#">Colors</a></li>
+                    <li><a href="#">Typography</a></li>
+                    <li><a href="#">Forms</a></li>
+                    <li><a href="#">Helpers</a></li>
+                  </ul>
+                </li>
+                 <li><a href="#0">Contact</a></li>
+              </ul> 
+            </div><!--/.nav-offcanvas -->
+          </div>
+        </nav>
+
+        <nav class="navbar navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#direction-left">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button> 
+              <a href="../../" class="navbar-brand pd-y-10">
+                 <img src="../assets/images/logo-dark.svg" width="90" alt="">
+              </a>
+            </div>
+            <div id="direction-left" class="navbar-offcanvas" data-direction="left" data-theme="">
+              <button type="button" class="dismiss hidden-sm hidden-md hidden-lg" data-toggle="offcanvas" data-target="#direction-left">
+                <span aria-hidden="true">&#xD7;</span>
+              </button>
+
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#0">Home</a></li>
+                <li><a href="#0">About</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Grid</a></li>
+                    <li><a href="#">Colors</a></li>
+                    <li><a href="#">Typography</a></li>
+                    <li><a href="#">Forms</a></li>
+                    <li><a href="#">Helpers</a></li>
+                  </ul>
+                </li>
+                 <li><a href="#0">Contact</a></li>
+              </ul>
+            </div><!--/.nav-offcanvas -->
+          </div>
+        </nav>
+
+    </div>   
+<pre>
+<code>&lt;div id=<span class="hljs-string">&quot;navbar&quot;</span> class=<span class="hljs-string">&quot;navbar-offcanvas&quot;</span> data-direction=<span class="hljs-string">&quot;right&quot;</span>&gt;<span class="hljs-keyword">...</span>&lt;/div&gt; 
+&lt;div id=<span class="hljs-string">&quot;navbar&quot;</span> class=<span class="hljs-string">&quot;navbar-offcanvas&quot;</span> data-direction=<span class="hljs-string">&quot;left&quot;</span>&gt;<span class="hljs-keyword">...</span>&lt;/div&gt; </code>
+</pre>
+</div> 
+<br>
+
+ <h4>Theme</h4>
+                    <p>Change Offcanvas&apos; theme via <code class="nohighlight">data-theme</code></p>
+<div class="wd-example"> 
+    <div class="example"> 
+      <h5 class="mg-b-15">Example</h5>
+        
+      <nav class="navbar navbar-inverse bg-menu navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#theme-dark">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button> 
+              <a href="../../" class="navbar-brand pd-y-10">
+                 <img src="../assets/images/logo-light.svg" width="90" alt="">
+              </a>
+            </div>
+            <div id="theme-dark" class="navbar-offcanvas" data-direction="right" data-theme="dark">
+              <button type="button" class="dismiss hidden-sm hidden-md hidden-lg" data-toggle="offcanvas" data-target="#theme-dark">
+                <span aria-hidden="true">&#xD7;</span>
+              </button>
+
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#0">Home</a></li>
+                <li><a href="#0">About</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Grid</a></li>
+                    <li><a href="#">Colors</a></li>
+                    <li><a href="#">Typography</a></li>
+                    <li><a href="#">Forms</a></li>
+                    <li><a href="#">Helpers</a></li>
+                  </ul>
+                </li>
+                 <li><a href="#0">Contact</a></li>
+              </ul> 
+            </div><!--/.nav-offcanvas -->
+          </div>
+        </nav> 
+
+        <nav class="navbar navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#theme-light">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button> 
+              <a href="../../" class="navbar-brand pd-y-10">
+                 <img src="../assets/images/logo-dark.svg" width="90" alt="">
+              </a>
+            </div>
+            <div id="theme-light" class="navbar-offcanvas" data-direction="left" data-theme="light">
+              <button type="button" class="dismiss hidden-sm hidden-md hidden-lg" data-toggle="offcanvas" data-target="#theme-light">
+                <span aria-hidden="true">&#xD7;</span>
+              </button>
+
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#0">Home</a></li>
+                <li><a href="#0">About</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Grid</a></li>
+                    <li><a href="#">Colors</a></li>
+                    <li><a href="#">Typography</a></li>
+                    <li><a href="#">Forms</a></li>
+                    <li><a href="#">Helpers</a></li>
+                  </ul>
+                </li>
+                 <li><a href="#0">Contact</a></li>
+              </ul>
+            </div><!--/.nav-offcanvas -->
+          </div>
+        </nav>
+ 
+    </div>   
+<pre>
+<code>&lt;div id=<span class="hljs-string">&quot;navbar&quot;</span> class=<span class="hljs-string">&quot;navbar-offcanvas&quot;</span> data-direction=<span class="hljs-string">&quot;right&quot;</span> data-theme=<span class="hljs-string">&quot;dark&quot;</span>&gt;<span class="hljs-keyword">...</span>&lt;/div&gt; 
+&lt;div id=<span class="hljs-string">&quot;navbar&quot;</span> class=<span class="hljs-string">&quot;navbar-offcanvas&quot;</span> data-direction=<span class="hljs-string">&quot;left&quot;</span> data-theme=<span class="hljs-string">&quot;light&quot;</span>&gt;<span class="hljs-keyword">...</span>&lt;/div&gt; </code>
+</pre>
+</div>
+<br> 
+                    </section>
