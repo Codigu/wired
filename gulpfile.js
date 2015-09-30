@@ -18,7 +18,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('highlight', function () {
-   gulp.src('dev/*.php')
+   gulp.src('dev/*.*')
               .pipe(highlight())
               .pipe(gulp.dest('docs'));
 

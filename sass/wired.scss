@@ -6,7 +6,7 @@
 /* Mixins Libraries 
 ------------------------- */
 @import '../bourbon/bourbon'; // http://bourbon.io/
-@import 'mixins';  
+@import 'mixins';   
  
 /* Core  
 ------------------------- */   
@@ -15,10 +15,10 @@
   
    
 *, *::after, *::before {
-  @include box-sizing(border-box); 
+  @include box-sizing(border-box);  
 }  
 
-html {
+html { 
     height: 100%;
     -webkit-text-size-adjust: none;
 }

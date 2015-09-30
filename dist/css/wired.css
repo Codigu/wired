@@ -1771,6 +1771,16 @@
     float: none !important; } }
 
 
+.text-uppercase {
+  text-transform: uppercase; }
+
+.text-lowercase {
+  text-transform: lowercase; }
+
+.text-capitalize {
+  text-transform: capitalize; }
+
+
 @media (min-width: 768px) {
   .text-sm-left {
     text-align: left; }
