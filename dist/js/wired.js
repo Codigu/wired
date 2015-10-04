@@ -78,48 +78,27 @@
 
     /* Tooltip.js
     * Hover over the links below to see tooltips */
-    function toolTip(){
-        $('[data-toggle="tooltip"]').tooltip();
-    }
-
-    toolTip();
-
+    $('[data-toggle="tooltip"]').tooltip();
 
     /* Popover.js
     * Add small overlays of content */
-    function popOver(){
-        $('[data-toggle="popover"]').popover()
-    }
-    
-    popOver();
-
+    $('[data-toggle="popover"]').popover()
 
     /* bootstrap-datepicker.js
     * A datepicker for Twitter Bootstrap */
-
-    function datePicker(){
-        $('[data-plugin="datepicker"]').datepicker();
-    }
-
-    datePicker();
+    $('[data-plugin="datepicker"]').datepicker();
 
     /* chosen.js
     * jQuery plugin that makes long, unwieldy select boxes much more user-friendly. */
-
-    function selectBox(){
-        $('[data-plugin="selectbox"]').chosen();
-    }
-
-    selectBox();
+    $('[data-plugin="selectbox"]').chosen();
 
     /* dropzone.js
     * An open source library that provides drag’n’drop file uploads with image previews. */
- 
-    function dropZone(){
-        $('[data-plugin="dropzone"]').dropzone();
-    }
- 
-    dropZone();
+    $('[data-plugin="dropzone"]').dropzone();
+
+    /* bootstrap-wysihtml5.js
+    * Simple, beautiful wysiwyg editors */
+    $('[data-plugin="wysihtml5"]').wysihtml5();
 
 
     /* sweetalert2.js
@@ -144,17 +123,6 @@
     }
  
     sweetAlert();
-
-    /* bootstrap-wysihtml5.js
-    * Simple, beautiful wysiwyg editors */
-
-
-    function wysiHtml5(){ 
-        $('[data-plugin="wysihtml5"]').wysihtml5();
-    }
-
-    wysiHtml5();
-
     
 
 })( jQuery ); 
