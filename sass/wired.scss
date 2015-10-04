@@ -223,6 +223,18 @@ input, button{
 
 // Offcanvas Menu
 @media (max-width: $screen-sm - 1){
+
+  .menu-open{
+     .navbar{
+        &:before{
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          background-color: rgba($color-darkest, 0.6);
+          content: "";
+        }
+     }
+  }
  
   .navbar-offcanvas{
     display: none;

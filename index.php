@@ -22,7 +22,7 @@ include "nav.php"; ?>
                             <li class="mg-b-10"><a href="https://github.com/larrygeams/wired" target="_blank" class="btn btn-block btn-inverse pd-x-40"><i class="fa fa-github"></i> View on Github</a></li>
                         </ul>
 
-                        <a href="https://github.com/larrygeams/wired/releases" target="_blank" class="text-white hint">Currently pre-release v1.0.0</a> 
+                        <a href="https://github.com/larrygeams/wired/releases" target="_blank" class="text-white hint">Currently pre-release v1.1.0</a> 
                     </div>
                 </div>
             </div> 

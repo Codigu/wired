@@ -39,12 +39,17 @@
     * Replaced Bootstrap's native collapsable menu */
 
     function offcanvasMenu(){
-        $('[data-toggle="offcanvas"]').on('click', function(){
+        $('[data-toggle="offcanvas"]').on('click', function(event){
             var self    =   $(this),
-                target  =   self.data('target');
-
+                target  =   self.data('target'),
+                body    =   document.body;
+ 
+            $(body).toggleClass('menu-open');
             $(target).toggleClass('offcanvas-open');
+
+            return false;
         }); 
+
     }
 
     offcanvasMenu();

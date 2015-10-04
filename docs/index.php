@@ -99,35 +99,12 @@
                             </tbody>           
                        </table>               
                     </section>              
-                    <!--/ #introduction -->   
- 
-                    <section id="examples" class="pd-t-30 pd-b-30"> 
-                        <h3 class="text-uppercase">Examples</h3>
-                        <p>Extension to Bootstrap&apos;s native templates</p>
-                        <hr>
- 
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <a href="../examples/bootstrap-template" class="thumbnail" target="_blank">
-                                    <img src="../examples/bootstrap-template/screenshot/screenshot.jpg" alt="" class="center-block">
-                                </a>
-                                <h3 class="h4">Bootstrap template</h3>
-                                <p>This is Bootstrap&apos;s native template. Nothing but the basics: compiled CSS and JavaScript along with a container.</p>
-                            </div>
-
-                            <div class="col-xs-6">
-                                <a href="../examples/wired-template" class="thumbnail" target="_blank">
-                                    <img src="../examples/wired-template/screenshot/screenshot.jpg" alt="" class="center-block">
-                                </a>
-                                <h3 class="h4">Wired template</h3>
-                                <p>This is Wired&apos;s starter template. Replacing Bootstrap&apos;s native collapsable menu on mobile.</p>
-                            </div>
-                        </div>
-                    </section>        
+                    <!--/ #introduction -->        
                      
                     <?php              
                     include "components/get-started.html";       
-                    include "components/grid.html";       
+                    include "components/examples.html";       
+                    include "components/grid.html";        
                     include "components/typography.html";           
                     include "components/icons.html";          
                     include "components/buttons.html";      

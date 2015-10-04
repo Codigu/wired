@@ -4201,6 +4201,12 @@ input, button {
   margin-left: 15px; }
 
 @media (max-width: 767px) {
+  .menu-open .navbar:before {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    content: ""; }
   .navbar-offcanvas {
     display: none;
     position: fixed;
