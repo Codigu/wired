@@ -18,63 +18,48 @@
 
     /*
     * Add Smooth Scrolling Transition */
-    function smoothTarget(){
+    $('a.target[href^="#"]').click(function(event) {
 
-        $('a.target[href^="#"]').click(function(event) {
+        var id      = $(this).attr("href"),
+            target  = $(id).offset().top;
 
-            var id      = $(this).attr("href"),
-                target  = $(id).offset().top;
+        $('html, body').animate({ scrollTop:target }, 500);
 
-            $('html, body').animate({ scrollTop:target }, 500);
+        event.preventDefault();
+    });
 
-            event.preventDefault();
-        });
-
-    }
-
-    smoothTarget();
  
     /*
     * Offcanvas Menu 
     * Replaced Bootstrap's native collapsable menu */
+    $('[data-toggle="offcanvas"]').on('click', function(event){
+        var self    =   $(this),
+            target  =   self.data('target'),
+            body    =   document.body;
 
-    function offcanvasMenu(){
-        $('[data-toggle="offcanvas"]').on('click', function(event){
-            var self    =   $(this),
-                target  =   self.data('target'),
-                body    =   document.body;
- 
-            $(body).toggleClass('menu-open');
-            $(target).toggleClass('offcanvas-open');
+        $(body).toggleClass('menu-open');
+        $(target).toggleClass('offcanvas-open');
 
-            return false;
-        }); 
-
-    }
-
-    offcanvasMenu();
+        return false;
+    }); 
 
 
     /* InputFile
     * Adding the filename label to the input file button */
+    var inputs = $('.inputfile input[type="file"]');
 
-    function inputFile(){ 
-        var inputs = $('.inputfile input[type="file"]');
-
-        inputs.each(function(){ 
-            $(this).on('change', function(){
-                var self        =   $(this),
-                    fileName    =   '';
-                    fileName    =   self.val().split( '\\' ).pop();
-                
-                if(fileName){
-                    $(this).next('label').text(fileName);
-                }
-            });
+    inputs.each(function(){ 
+        $(this).on('change', function(){
+            var self        =   $(this),
+                fileName    =   '';
+                fileName    =   self.val().split( '\\' ).pop();
+            
+            if(fileName){
+                $(this).next('label').text(fileName);
+            }
         });
-    }
-
-    inputFile();
+    });
+   
 
     /* Tooltip.js
     * Hover over the links below to see tooltips */
@@ -103,26 +88,22 @@
 
     /* sweetalert2.js
     * A beautiful and customizable replacement for Javascript's "Alert" */
- 
-    function sweetAlert(){
 
-        // Show basic message
-         $('[data-plugin="sweetAlert"]').on('click', function(){
-             swal('The Internet?', 'That thing is still around?');
-          });
+    // Show basic message
+     $('[data-plugin="sweetAlert"]').on('click', function(){
+         swal('The Internet?', 'That thing is still around?');
+      });
 
-        // Show success message
-        $('[data-plugin="sweetAlert"][data-alert="success"]').on('click', function(){
-           swal(   'Good job!',  'You clicked the button!',   'success' );
-        });
+    // Show success message
+    $('[data-plugin="sweetAlert"][data-alert="success"]').on('click', function(){
+       swal(   'Good job!',  'You clicked the button!',   'success' );
+    });
 
-        // Show error message
-        $('[data-plugin="sweetAlert"][data-alert="danger"]').on('click', function(){
-         swal(   'Oops...',  'Something went wrong!!',   'error' );
-        });
-    }
- 
-    sweetAlert();
+    // Show error message
+    $('[data-plugin="sweetAlert"][data-alert="danger"]').on('click', function(){
+     swal(   'Oops...',  'Something went wrong!!',   'error' );
+    });
+    
     
 
 })( jQuery ); 
