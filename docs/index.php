@@ -99,12 +99,14 @@
                             </tbody>           
                        </table>               
                     </section>              
-                    <!--/ #introduction -->        
+                    <!--/ #introduction -->   
+ 
+                            
                      
                     <?php              
                     include "components/get-started.html";       
                     include "components/examples.html";       
-                    include "components/grid.html";        
+                    include "components/grid.html";       
                     include "components/typography.html";           
                     include "components/icons.html";          
                     include "components/buttons.html";      
