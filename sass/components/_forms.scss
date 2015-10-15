@@ -1,0 +1,229 @@
+
+/* [ Form Controls ]
+------------------------ */
+
+label, input, button, select, textarea {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+}
+
+input {
+  &[type="radio"], &[type="checkbox"] {
+    margin-top: 1px 0 0;
+    line-height: normal;
+    cursor: pointer;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+select {
+  &[multiple], &[size] {
+    height: auto !important;
+  }
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+input {
+  &[type="file"]:focus, &[type="radio"]:focus, &[type="checkbox"]:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+form legend { margin: 15px 0px 10px 0px; }
+textarea{ resize: vertical; }
+
+.form-control {
+  background-color: $color-white;
+  background-image: none;
+  border: 1px solid rgba($color-darkest, 0.15);
+  font-family: Arial, sans-serif;
+  -webkit-appearance: none;
+  color: darken($color-base, 50%);
+  outline: 0;
+  height: 42px;
+  padding: 9px 12px;
+  line-height: normal;
+  font-size: 14px;
+  font-weight: normal;
+  vertical-align: middle;
+  min-height: 35px;
+  @include box-shadow(0,0,0);
+  @include border-radius(2px);
+  @include transition();
+
+	  &:focus {
+	    border-color: rgba(0, 0, 0, 0.1);
+	    background-color: lighten($color-lightest, 0.1%);
+	    outline: 0 !important;
+	    @include box-shadow(0,0,0);
+
+	    @include placeholder(){
+	       color: inherit;
+	      opacity: 0.7;
+	    }
+	  }
+
+	  @include placeholder(){
+	    color: inherit;
+	    @include opacity(0.5);
+	  }
+
+	  &[disabled], &[readonly] {
+	    background: $color-disabled;
+	    color: rgba(98, 98, 98, 0.23);
+	  }
+
+	&.filter-primary{ border-color: $color-primary; }
+	&.filter-success{ border-color: $color-success; }
+	&.filter-info{ border-color: $color-info; }
+	&.filter-warning{ border-color: $color-warning; }
+	&.filter-error, &.filter-danger{ border-color: $color-danger; }
+}
+
+fieldset[disabled] .form-control {
+  background: $color-disabled;
+  color: rgba(98, 98, 98, 0.23);
+}
+
+.input-sm, .form-horizontal .form-group-sm .form-control {
+  font-size: $font-size-base;
+  height: 36px;
+  padding: 8px 9px;
+}
+
+.input-lg, .form-horizontal .form-group-lg .form-control {
+  font-size: $font-size-base;
+  height: 42px;
+  padding: 11px 13px;
+  @include border-radius(2px);
+}
+
+
+/* [ Form Theme Control ]
+------------------------ */
+
+.form-theme-primary{
+	.form-control{
+		&:focus{ border-color: $color-primary; }
+	}
+}
+
+.form-theme-success{
+	.form-control{
+		&:focus{ border-color: $color-success; }
+	}
+}
+
+.form-theme-info{
+	.form-control{
+		&:focus{ border-color: $color-info; }
+	}
+}
+
+.form-theme-warning{
+	.form-control{
+		&:focus{ border-color: $color-warning; }
+	}
+}
+
+.form-theme-danger{
+	.form-control{
+		&:focus{ border-color: $color-danger; }
+	}
+}
+
+.form-group {
+    margin-bottom:10px;
+    position: relative;
+
+	&.required:after {
+		color: #f55753;
+		content: "*";
+		font-family: arial;
+		font-size: 20px;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+}
+
+/* [ Form line ]
+------------------------ */
+
+.form-line {
+	 position: relative;
+  
+  .form-control {
+  	border: none;
+  	background-color: transparent;
+    border-bottom:  1px solid rgba($color-dark, 0.10);
+    @include box-shadow(0, 0, 0);
+    @include border-radius(0);
+
+    &:focus {
+      background: none;
+      border: 0;
+      @include box-shadow(0,2px,0, $color-link);
+    }
+
+    &.filter-primary{ @include box-shadow(0,2px,0, $color-primary); }
+	&.filter-success{ @include box-shadow(0,2px,0, $color-success); }
+	&.filter-info{ @include box-shadow(0,2px,0, $color-info); }
+	&.filter-warning{ @include box-shadow(0,2px,0, $color-warning); }
+	&.filter-error, &.filter-danger{ @include box-shadow(0,2px,0, $color-danger); }
+
+  }
+
+  &.form-line-primary{
+  	.form-control{
+	  	&:focus {
+	  		@include box-shadow(0,2px,0, $color-primary);
+	    }
+	}
+  }
+
+  &.form-line-success{
+  	.form-control{
+	  	&:focus {
+	      @include box-shadow(0,2px,0, $color-success);
+	    }
+	}
+  }
+
+  &.form-line-info{
+  	.form-control{
+	  	&:focus {
+	      @include box-shadow(0,2px,0, $color-info);
+	    }
+	}
+  }
+
+  &.form-line-warning{
+  	.form-control{
+	  	&:focus {
+	      @include box-shadow(0,2px,0, $color-warning);
+	    }
+	}
+  }
+
+  &.form-line-danger{
+  	.form-control{
+	  	&:focus {
+	      @include box-shadow(0,2px,0, $color-danger);
+	    }
+	}
+  }
+  
+}
+

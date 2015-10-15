@@ -1,0 +1,152 @@
+
+
+/* [ Date Picker ]
+------------------------ */
+
+.datepicker {
+  padding: 16px 25px;
+  border-radius: 2px;
+  font-size: 12px;
+
+  &:after {
+    border-bottom-color: #fafafa;
+  }
+
+  thead tr {
+    .datepicker-switch {
+      font-family: $font-heading;
+      color: $color-base;
+      font-size: 13px;
+    }
+    .next, .prev {
+      color: $color-primary;
+      content: '';
+      font-size: 0px;
+    }
+    .next:before {
+      color: $color-primary;
+      font-family: 'FontAwesome';
+      font-size: 10px;
+    }
+    .prev:before {
+      color: $color-primary;
+      font-family: 'FontAwesome';
+      font-size: 10px;
+      content: "\f053";
+    }
+    .next:before {
+      content: "\f054";
+    }
+    .dow {
+      font-family: $font-heading;
+      color: #6d5cae;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+    th {
+      width: 31px;
+      height: 29px;
+    }
+  }
+  tbody tr .odd {
+    color: #d0d3d8;
+  }
+  table tr td {
+    width: 31px;
+    height: 29px;
+    &.old, &.new {
+      color: rgba($color-dark, 0.3);
+    }
+    &.day:hover {
+      background: $color-lighter;
+    }
+    &.active {
+      background-color: $color-primary !important;
+      background-image: none;
+      text-shadow: none;
+      font-weight: 600;
+      &:hover {
+        background-image: none;
+        text-shadow: none;
+        font-weight: 600;
+      }
+      &.disabled {
+        background-image: none;
+        text-shadow: none;
+        font-weight: 600;
+        &:hover {
+          background-image: none;
+          text-shadow: none;
+          font-weight: 600;
+        }
+      }
+    }
+    &.today {
+      background-color: $color-lighter;
+      background-image: none;
+      color: $color-white;
+      &:hover {
+        background-color: $color-lighter;
+        background-image: none;
+        color: $color-white;
+      }
+      &.disabled {
+        background-color: $color-lighter;
+        background-image: none;
+        color: $color-white;
+        &:hover {
+          background-color: $color-lighter;
+          background-image: none;
+          color: $color-white;
+        }
+      }
+    }
+    span {
+      border-radius: 4px;
+      width: 42px;
+      height: 42px;
+      line-height: 42px;
+
+      &.active {
+        background-color: $color-primary !important;
+        background-image: none;
+        border: none;
+        text-shadow: none;
+        &:hover {
+          background-image: none;
+          border: none;
+          text-shadow: none;
+        }
+        &.disabled {
+          background-image: none;
+          border: none;
+          text-shadow: none;
+          &:hover {
+            background-image: none;
+            border: none;
+            text-shadow: none;
+          }
+        }
+      }
+    }
+  }
+  &.dropdown-menu {
+    border-color: rgba($color-dark, 0.10);
+    color: #626262;
+  }
+
+  &.datepicker-dropdown.datepicker-orient-bottom:before {
+    border-top-color: rgba($color-dark, 0.10);
+  }
+
+  &.datepicker-dropdown:before{
+  	 border-bottom-color: rgba($color-dark, 0.10);
+  }
+}
+
+.input-daterange{
+	.input-group-addon{
+		border-color: rgba($color-dark, 0.10);
+		background-color: $color-lightest;
+	}
+}

@@ -1,0 +1,62 @@
+
+
+/* [ Article ]
+------------------------ */
+.article{
+	.article-title{
+		font-size: 36px;
+	    line-height: 42px;
+	    font-weight: 300;
+	    text-transform: none;
+	}
+
+	.article-meta{
+		font-size: 12px;
+	    line-height: 18px;
+	    color: $color-light;
+	}
+
+	.article-lead{
+		color: $color-dark;
+		font-size: 18px;
+	    line-height: 24px;
+	    font-weight: 400;
+	}
+
+}
+
+
+/* [ Comment ]
+------------------------ */
+
+.comment{
+	.comment-header{
+		margin-bottom: 15px;
+	    padding: 10px;
+	    border: 1px solid rgba($color-dark, 0.10);;
+	    background: $color-lightest;
+
+	    .comment-avatar{
+	    	margin-right: 15px;
+    		float: left;
+	    }
+
+	    .comment-title{
+	    	margin: 5px 0 0 0;
+		    font-size: 16px;
+		    line-height: 22px;
+	    }
+
+	    .comment-meta{
+	    	margin: 2px 0 0 0;
+		    font-size: 11px;
+		    line-height: 16px;
+		    color: $color-lighter;
+	    }
+	}
+
+	.comment-body{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}

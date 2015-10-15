@@ -1,0 +1,50 @@
+
+/* [ Panels ]
+------------------------ */
+
+.panel {
+  position: relative;
+  @include box-shadow(0,0,0);
+  @include border-radius(1px);
+  @include transition( all 0.2s ease );
+
+  &.panel-default{
+  	border-color: rgba($color-dark, 0.10);
+  }
+
+  &.panel-transparent{
+  	background-color: transparent;
+  }
+
+  .panel-heading {
+	  background: transparent;
+	  border-bottom: 0px;
+	  font-size: 12px;
+	  font-weight: bold;
+	  position: relative;
+	  @include border-radius(0);
+
+	  &.panel-separator{
+	  	border-bottom: 1px solid rgba($color-dark, 0.10); 
+	  }
+
+	  .panel-title{
+		font-family: $font-heading;
+		color: $color-darker;
+		text-transform: uppercase;
+		display: inline-block;
+		letter-spacing: 0.02em;
+		font-size: 12px;
+		font-weight: 600;
+		margin: 0;
+		padding: 0;
+		line-height: normal;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		-webkit-text-stroke: 0px;
+		@include transition(opacity 0.3s ease);
+	  }
+	}
+}
+
+

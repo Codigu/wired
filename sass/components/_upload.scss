@@ -1,0 +1,261 @@
+
+
+/* [ File Upload ]
+------------------------ */
+.inputfile{
+  display: inline-block;
+
+  input[type="file"]{
+    width: 0.1px; 
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+
+    & + label {
+        background-color: $color-white;
+      color: $color-base;
+        display: inline-block;
+        cursor: pointer;
+        padding: 10px 20px; 
+        @include border-radius(2px);
+        @include transition();
+    }
+  }
+
+  /*
+  * Contextual Backgrounds */
+
+  &.inputfile-default{
+    input[type="file"]{
+      & + label {
+        border: 1px solid $color-light !important;
+      }
+
+      &:focus +label, 
+      & + label:active{
+        border: 1px solid $color-light;
+        background-color: $color-lighter;
+      }
+    }
+  }
+
+  &.inputfile-primary{
+    input[type="file"]{
+      & + label {
+        color: $color-white !important;
+        border-color: transparent !important;
+        background-color: $color-primary !important;
+      }
+
+      &:focus +label, 
+      & + label:hover{
+        border-color: transparent !important;
+        background-color: $color-primary-light !important;
+      }
+
+      & + label:active{
+        border-color: transparent !important;
+        background-color: $color-primary-dark !important;
+      }
+    }
+  }
+
+  &.inputfile-success{
+    input[type="file"]{
+      & + label {
+        color: $color-white !important;
+        border-color: transparent !important;
+        background-color: $color-success !important;
+      }
+
+      &:focus +label, 
+      & + label:hover{
+        border-color: transparent !important;
+        background-color: $color-success-light !important;
+      }
+
+      & + label:active{
+        border-color: transparent !important;
+        background-color: $color-success-dark !important;
+      }
+    }
+  }
+
+  &.inputfile-complete{
+    input[type="file"]{
+      & + label {
+        color: $color-white !important;
+        border-color: transparent !important;
+        background-color: $color-complete !important;
+      }
+
+      &:focus +label, 
+      & + label:hover{
+        border-color: transparent !important;
+        background-color: $color-complete-light !important;
+      }
+
+      & + label:active{
+        border-color: transparent !important;
+        background-color: $color-complete-dark !important;
+      }
+    }
+  }
+
+  &.inputfile-warning{
+    input[type="file"]{
+      & + label {
+        color: $color-white !important;
+        border-color: transparent !important;
+        background-color: $color-warning !important;
+      }
+
+      &:focus +label, 
+      & + label:hover{
+        border-color: transparent !important;
+        background-color: $color-warning-light !important;
+      }
+
+      & + label:active{
+        border-color: transparent !important;
+        background-color: $color-warning-dark !important;
+      }
+    }
+  } 
+
+  &.inputfile-danger{
+    input[type="file"]{
+      & + label {
+        color: $color-white !important;
+        border-color: transparent !important;
+        background-color: $color-danger !important;
+      }
+
+      &:focus +label, 
+      & + label:hover{
+        border-color: transparent !important;
+        background-color: $color-danger-light !important;
+      }
+
+      & + label:active{
+        border-color: transparent !important;
+        background-color: $color-danger-dark !important;
+      }
+    }
+  }
+
+  /*
+  * Border Colors */
+  
+  &.inputfile-primary-outline{
+    input[type="file"]{
+      & + label {
+        color: $color-primary !important;
+        border: 1px solid $color-primary !important;
+      }
+
+      &:focus +label, 
+      & + label:hover{
+        color: $color-white !important; 
+        border-color: transparent !important;
+        background-color: $color-primary-light !important;
+      }
+
+      & + label:active{
+        color: $color-white !important; 
+        border-color: transparent !important;
+        background-color: $color-primary-dark !important;
+      }
+    }
+  }
+
+  &.inputfile-success-outline{
+    input[type="file"]{
+      & + label {
+        color: $color-success !important;
+        border: 1px solid $color-success !important;
+      }
+
+      &:focus +label, 
+      & + label:hover{
+        color: $color-white !important;
+        border-color: transparent !important;
+        background-color: $color-success-light !important;
+      }
+
+      & + label:active{
+        color: $color-white !important;
+        border-color: transparent !important;
+        background-color: $color-success-dark !important;
+      }
+    }
+  }
+
+  &.inputfile-complete-outline{
+    input[type="file"]{
+      & + label {
+        color: $color-complete !important;
+        border: 1px solid $color-complete !important;
+      }
+
+      &:focus +label, 
+      & + label:hover{
+        color: $color-white !important;
+        border-color: transparent !important;
+        background-color: $color-complete-light !important;
+      }
+
+      & + label:active{
+        color: $color-white !important;
+        border-color: transparent !important;
+        background-color: $color-complete-dark !important;
+      }
+    }
+  }
+
+  &.inputfile-warning-outline{
+    input[type="file"]{
+      & + label {
+        color: $color-warning !important;
+        border: 1px solid $color-warning !important;
+      }
+
+      &:focus +label, 
+      & + label:hover{
+        color: $color-white !important;
+        border-color: transparent !important;
+        background-color: $color-warning-light !important;
+      }
+
+      & + label:active{
+        color: $color-white !important;
+        border-color: transparent !important;
+        background-color: $color-warning-dark !important;
+      }
+    }
+  } 
+
+  &.inputfile-danger-outline{
+    input[type="file"]{
+      & + label {
+        color: $color-danger !important;
+        border: 1px solid $color-danger !important;
+      }
+
+      &:focus +label, 
+      & + label:hover{
+        color: $color-white !important;
+        border-color: transparent !important;
+        background-color: $color-danger-light !important;
+      }
+
+      & + label:active{
+        color: $color-white !important;
+        border-color: transparent !important;
+        background-color: $color-danger-dark !important;
+      }
+    }
+  }
+}

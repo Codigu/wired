@@ -1,0 +1,11 @@
+
+/* [ Modal ]
+------------------------ */
+
+.modal{
+	.modal-content{
+		border: 0;
+		@include border-radius(2px);
+		@include box-shadow(none);
+	}
+}

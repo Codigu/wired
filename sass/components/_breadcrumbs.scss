@@ -1,0 +1,47 @@
+
+/* [ Breadcrumb ]
+------------------------ */
+.breadcrumb {
+    font-family: $font-heading;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    box-shadow: none;
+    background-color: transparent;
+    padding: 15px 0;
+    margin: 0;
+    border: none;
+    text-transform: uppercase;
+    display: block;
+     font-size: 11px!important;
+
+    a {
+	    font-family: $font-heading;
+	    font-size: 11px!important;
+	    font-weight: 400;
+	    color: #7b7d82;
+
+	    &.active {
+		    font-weight: 600;
+		    color: #0090d9;
+		}
+	}
+
+	li {
+	    padding-left: 0px;
+	}
+
+	&> li + li:before {
+	    padding: 0 5px;
+	    color: #515050;
+	    font-family: 'FontAwesome';
+	    content: "\f105";
+	    font-weight: bold;
+	}
+
+	a, i, span, li{
+	color: #7b7d82;
+    font-weight: 300;
+    text-shadow: none;
+	}
+}

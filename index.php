@@ -19,7 +19,7 @@ include "nav.php"; ?>
                         <p class="lead text-white">Hand Crafted UI Framework on top of Bootstrap</p>
 
                         <ul class="list-inline-block text-center mg-t-40 mg-b-20 pd-x-15">
-                            <li class="mg-b-10"><a href="https://github.com/larrygeams/wired" target="_blank" class="btn btn-block btn-inverse pd-x-40"><i class="fa fa-github"></i> View on Github</a></li>
+                            <li class="mg-b-10"><a href="https://github.com/larrygeams/wired" target="_blank" class="btn btn-block btn-default-outline pd-x-40"><i class="fa fa-github"></i> View on Github</a></li>
                         </ul>
 
                         <a href="https://github.com/larrygeams/wired/releases" target="_blank" class="text-white hint">Currently pre-release v1.1.0</a> 

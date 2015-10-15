@@ -1,0 +1,52 @@
+
+/* [ Input Group ]
+------------------------ */
+
+.input-group-addon {
+  background-color: $color-lightest;
+  border-color: rgba($color-darkest, 0.15);
+
+	&.addon-default{
+		background-color: $color-white;
+		border: 1px solid $color-light !important;
+		color: $color-white;
+	}
+
+	&.addon-reverse{
+		color: $color-white;
+		background-color: $color-dark;
+		border: 1px solid $color-darker !important;
+		color: $color-white;
+	}
+
+	&.addon-primary{
+		background-color: $color-primary;
+		border: 1px solid $color-primary-dark !important;
+		color: $color-white;
+	}
+
+	&.addon-info{
+		background-color: $color-info;
+		border: 1px solid $color-info-dark !important;
+		color: $color-white;
+	}
+
+	&.addon-danger{
+		background-color: $color-danger;
+		border: 1px solid $color-danger-dark !important;
+		color: $color-white;
+	}
+
+	&.addon-warning{
+		background-color: $color-warning;
+		border: 1px solid $color-warning-dark !important;
+		color: $color-white;
+	}
+
+	&.addon-success{
+		background-color: $color-success;
+		border: 1px solid $color-success-dark !important;
+		color: $color-white;
+	}
+
+}

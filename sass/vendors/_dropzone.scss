@@ -1,0 +1,37 @@
+
+/* [ Dropzone ]
+------------------------ */
+
+.dropzone{
+	border-style: dashed !important; 
+
+	&.dz-drag-hover{ 
+		color: $color-white;
+		background-color: lighten($color-link, 10%);
+		border-color: lighten($color-link, 30%) 
+	}
+
+	.dz-preview{
+		border-color: rgba($color-darkest, 0.10);
+		@include box-shadow(none); 
+
+		&:hover{
+			.dz-filename{
+				display: block;
+			}
+		}
+
+		.dz-filename{
+			display: none;
+		}
+
+		.dz-progress{
+			height: 5px;
+			@include border-radius(0);
+
+			.dz-upload{
+				background: $color-primary;
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+
+
+/* [ Notification ]
+------------------------ */
+
+.sweet-alert{
+	outline: 0 !important;
+
+
+	button{
+		font-size: 13px;
+		font-family: $font-heading;
+		@include border-radius(2px);
+
+		&.confirm{
+			background-color: $color-success !important;
+			border: 1px solid $color-success-dark !important;
+
+			&:hover{
+				background-color: $color-success-light !important;
+				border-color: $color-success-light !important; 
+			}
+ 
+			&.active,
+			&:active{
+				background-color: $color-success-dark !important;
+			}
+		}
+
+		&.cancel{
+			background-color: $color-danger !important;
+			border: 1px solid $color-danger-dark !important;
+
+			&:hover{
+				background-color: $color-danger-light;
+				border-color:  $color-danger-light !important;
+			}
+
+			&.active,
+			&:active{
+				background-color: $color-danger-dark !important;
+			}
+		}
+	}
+}
