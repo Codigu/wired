@@ -30,10 +30,19 @@
 @import 'components/navbar'; 
 @import 'components/offcanvas'; 
 @import 'components/panels'; 
-@import 'components/popover'; 
+@import 'components/popover';  
 @import 'components/progress'; 
-@import 'components/tables'; 
+@import 'components/tables';  
 @import 'components/tabs'; 
 @import 'components/toggles'; 
 @import 'components/tooltip'; 
+@import 'components/upload'; 
 @import 'components/utilities'; 
+
+
+/* Vendors  
+------------------------- */   
+@import 'vendors/datepicker'; 
+@import 'vendors/dropzone'; 
+@import 'vendors/notification'; 
+@import 'vendors/selectbox'; 

@@ -12,7 +12,7 @@
         <meta content="" name="author"> 
         
         <!-- Favicons -->
-        <link rel="apple-touch-icon" href="../assets/images/ico/60.png">
+        <link rel="apple-touch-icon" href="../assets/images/ico/60.png"> 
         <link rel="apple-touch-icon" sizes="76x76" href="../assets/images/ico/76.png">
         <link rel="apple-touch-icon" sizes="120x120" href="../assets/images/ico/120.png"> 
         <link rel="apple-touch-icon" sizes="152x152" href="../assets/images/ico/152.png">
