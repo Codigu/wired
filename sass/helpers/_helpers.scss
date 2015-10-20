@@ -1513,36 +1513,26 @@
 
 /* [ Container ]
 ------------------------ */
-
-.container-xs{
-	max-width: $screen-phablet;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.container-sm{
-	max-width: $screen-sm;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.container-md{
-	max-width: $screen-md;
-	margin-left: auto;
-	margin-right: auto;
-}
-
+.container-xs,
+.container-sm,
+.container-md,
 .container-lg{
-	max-width: $screen-lg;
 	margin-left: auto;
 	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
 }
+
+.container-xs{ max-width: $screen-phablet; }
+.container-sm{ max-width: $screen-sm; }
+.container-md{ max-width: $screen-md; }
+.container-lg{ max-width: $screen-lg; }
 
 /* [ Vertical Alignment ]
 ------------------------ */
 .v-align-top { vertical-align: top; }
 .v-align-middle { vertical-align: middle; }
-.v-align-bottom { vertical-align: bottom; }
+.v-align-bottom { vertical-align: bottom; } 
 
 .col-top { vertical-align: top; }
 .col-middle { vertical-align: middle; }
