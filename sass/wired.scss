@@ -8,7 +8,7 @@
 @import '../bourbon/bourbon'; // http://bourbon.io/
   
  
-/* Helpers  
+/* Helpers   
 ------------------------- */   
 @import 'helpers/mixins'; 
 @import 'helpers/variables';   
@@ -42,7 +42,7 @@
 
 
 /* Vendors  
-------------------------- */   
+------------------------- */     
 @import 'vendors/datepicker'; 
 @import 'vendors/dropzone'; 
 @import 'vendors/editor'; 

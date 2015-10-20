@@ -32,7 +32,7 @@ gulp.task('watch', function () {
         proxy: "http://localhost/wired" 
     });	
 
-  gulp.watch('sass/*.scss', ['sass']);
+  gulp.watch('**/*.scss', ['sass']);
   gulp.watch('dev/*.*', ['highlight']);
   gulp.watch("**/*.*").on('change', browserSync.reload);
 });

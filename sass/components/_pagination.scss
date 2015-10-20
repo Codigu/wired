@@ -4,7 +4,7 @@
 	> .active{
 		a{
 			border-color: transparent; 
-			background-color: $color-gull-gray; 
+			background-color: $color-base; 
 
 			&:hover,  
 			&:focus{
@@ -17,7 +17,7 @@
 	> li > a,
 	> li > span{ 
 		font-family: $font-heading;
-		color: $color-bali-hai;
+		color: $color-base;
 		font-size: 12px;
 
 		&:hover,  

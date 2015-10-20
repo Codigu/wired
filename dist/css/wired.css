@@ -3482,7 +3482,6 @@
     display: table-cell !important;
     float: none !important; } }
 
-
 *, *::after, *::before {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3551,6 +3550,7 @@ pre {
 
 input, button {
   outline: 0 !important; }
+
 
 
 .article .article-title {
@@ -4595,6 +4595,26 @@ fieldset[disabled] .form-control {
           .navbar-offcanvas .navbar-nav .open .dropdown-menu li a:focus,
           .navbar-offcanvas .navbar-nav .open .dropdown-menu li a:hover {
             color: #2C2C2C; } }
+
+
+.pagination > .active a {
+  border-color: transparent;
+  background-color: #47525d; }
+  .pagination > .active a:hover,
+  .pagination > .active a:focus {
+    background-color: #5F68A7;
+    border-color: transparent; }
+
+.pagination > li > a,
+.pagination > li > span {
+  font-family: "Montserrat", sans-serif;
+  color: #47525d;
+  font-size: 12px; }
+  .pagination > li > a:hover,
+  .pagination > li > a:focus,
+  .pagination > li > span:hover,
+  .pagination > li > span:focus {
+    color: #5F68A7; }
 
 
 .panel {
@@ -5657,6 +5677,61 @@ fieldset[disabled] .form-control {
         background: #5F68A7; }
 
 
+.wysihtml5-wrapper ul.wysihtml5-toolbar {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  background-color: rgba(0, 0, 0, 0.03); }
+  .wysihtml5-wrapper ul.wysihtml5-toolbar > li {
+    margin: 0;
+    padding: 0; }
+  .wysihtml5-wrapper ul.wysihtml5-toolbar .btn.btn-default {
+    background: none repeat scroll 0 0 transparent;
+    border-color: transparent;
+    color: #47525d;
+    font-size: 16px;
+    font-weight: normal;
+    border: 0 !important;
+    font-size: 12px;
+    font-family: "Montserrat", sans-serif;
+    filter: alpha(opacity=80);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    -webkit-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    -moz-opacity: 0.8;
+    -ms-opacity: 0.8;
+    -o-opacity: 0.8;
+    opacity: 0.8;
+    -webkit-border-radius: 0;
+    -khtml-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -khtml-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none; }
+    .wysihtml5-wrapper ul.wysihtml5-toolbar .btn.btn-default:hover,
+    .wysihtml5-wrapper ul.wysihtml5-toolbar .btn.btn-default.wysihtml5-command-active {
+      color: #2C2C2C;
+      background-color: #ddd;
+      filter: alpha(opacity=100);
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+      -webkit-opacity: 1;
+      -khtml-opacity: 1;
+      -moz-opacity: 1;
+      -ms-opacity: 1;
+      -o-opacity: 1;
+      opacity: 1; }
+
+.wysihtml5-wrapper .wysihtml5-sandbox {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-top: 0 !important;
+  padding: 16px 16px 50px !important;
+  width: 100% !important; }
+
+
 .sweet-alert {
   outline: 0 !important; }
   .sweet-alert button {
@@ -5695,7 +5770,8 @@ fieldset[disabled] .form-control {
   display: inline-block;
   font-size: 14px;
   position: relative;
-  vertical-align: middle; }
+  vertical-align: middle;
+  min-width: 100% !important; }
   .chosen-container .chosen-drop {
     background: #ffffff;
     border: 1px solid #cccccc;
@@ -5727,7 +5803,8 @@ fieldset[disabled] .form-control {
       line-height: 1.42857143;
       list-style: none;
       margin: 0;
-      padding: 5px 6px; }
+      padding: 5px 6px;
+      font-size: 14px; }
       .chosen-container .chosen-results li em {
         background: #feffde;
         font-style: normal; }
@@ -5777,7 +5854,7 @@ fieldset[disabled] .form-control {
   border: 1px solid #ddd;
   color: #555555;
   display: block;
-  height: 34px;
+  height: 39px;
   overflow: hidden;
   line-height: 34px;
   padding: 0 0 0 8px;
@@ -5873,21 +5950,29 @@ fieldset[disabled] .form-control {
   left: -9000px; }
 
 .chosen-container-multi .chosen-choices {
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  cursor: text;
-  height: auto !important;
-  height: 1%;
-  margin: 0;
+  background: #ffffff;
+  border: 1px solid #ddd;
+  color: #555555;
+  display: block;
+  height: 39px;
   overflow: hidden;
-  padding: 0;
-  position: relative; }
+  line-height: 34px;
+  padding: 0 0 0 8px;
+  position: relative;
+  text-decoration: none;
+  white-space: nowrap;
+  -webkit-border-radius: 0;
+  -khtml-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+  -khtml-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none; }
   .chosen-container-multi .chosen-choices li {
     float: left;
     list-style: none; }
@@ -5904,22 +5989,20 @@ fieldset[disabled] .form-control {
       height: 32px;
       margin: 0;
       padding: 4px;
-      outline: 0; }
+      outline: 0;
+      font-size: 14px !important; }
     .chosen-container-multi .chosen-choices .search-field .default {
       color: #999; }
   .chosen-container-multi .chosen-choices .search-choice {
-    -webkit-background-clip: padding-box;
-    -moz-background-clip: padding;
-    background-clip: padding-box;
-    background-color: #eeeeee;
     border: 1px solid #ddd;
     background-repeat: repeat-x;
-    color: #333333;
     cursor: default;
-    line-height: 13px;
+    line-height: initial !important;
     margin: 6px 0 3px 5px;
-    padding: 3px 20px 3px 5px;
-    position: relative; }
+    padding: 5px 30px 5px 5px !important;
+    position: relative;
+    background: #ffffff !important;
+    border: 1px solid #ddd !important; }
     .chosen-container-multi .chosen-choices .search-choice .search-choice-close {
       background: url("../plugins/chosen/img/chosen-sprite.png") right top no-repeat;
       display: block;
@@ -5927,8 +6010,8 @@ fieldset[disabled] .form-control {
       height: 10px;
       position: absolute;
       right: 4px;
-      top: 5px;
-      width: 12px;
+      top: 8px !important;
+      width: 22px !important;
       cursor: pointer; }
       .chosen-container-multi .chosen-choices .search-choice .search-choice-close:hover {
         background-position: right -11px; }
@@ -5938,8 +6021,12 @@ fieldset[disabled] .form-control {
       background-position: right -11px; }
 
 .chosen-container-multi .chosen-results {
-  margin: 0 0 0 0;
-  padding: 0; }
+  margin: 0 4px 4px 0;
+  padding: 4px 0 0 4px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; }
 
 .chosen-container-multi .chosen-drop .result-selected {
   display: none; }
@@ -5988,7 +6075,7 @@ fieldset[disabled] .form-control {
       background-position: -23px 5px; }
 
 .chosen-container-active .chosen-choices {
-  border: 1px solid #66afe9; }
+  border: 1px solid #ddd; }
   .chosen-container-active .chosen-choices .search-field input[type="text"] {
     color: #111 !important; }
 
@@ -6040,3 +6127,33 @@ fieldset[disabled] .form-control {
     background: url("../plugins/chosen/img/chosen-sprite.png") no-repeat -28px -22px, #ffffff;
     direction: rtl;
     padding: 4px 5px 4px 20px; }
+
+
+.dropzone {
+  border-style: dashed !important; }
+  .dropzone.dz-drag-hover {
+    color: #fff;
+    background-color: #5a9fcf;
+    border-color: #a9cde6; }
+  .dropzone .dz-preview {
+    border-color: rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: none;
+    -khtml-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none; }
+    .dropzone .dz-preview:hover .dz-filename {
+      display: block; }
+    .dropzone .dz-preview .dz-filename {
+      display: none; }
+    .dropzone .dz-preview .dz-progress {
+      height: 5px;
+      -webkit-border-radius: 0;
+      -khtml-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      -o-border-radius: 0;
+      border-radius: 0; }
+      .dropzone .dz-preview .dz-progress .dz-upload {
+        background: #5F68A7; }
