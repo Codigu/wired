@@ -13,10 +13,10 @@
 @import 'helpers/mixins'; 
 @import 'helpers/variables';   
 @import 'helpers/helpers';  
+@import 'helpers/scaffolding';  
 
 /* Components  
 ------------------------- */   
-@import 'components/scaffolding'; 
 @import 'components/articles'; 
 @import 'components/breadcrumbs'; 
 @import 'components/buttons'; 
@@ -29,6 +29,7 @@
 @import 'components/modals'; 
 @import 'components/navbar'; 
 @import 'components/offcanvas'; 
+@import 'components/pagination'; 
 @import 'components/panels'; 
 @import 'components/popover';  
 @import 'components/progress'; 
@@ -44,5 +45,6 @@
 ------------------------- */   
 @import 'vendors/datepicker'; 
 @import 'vendors/dropzone'; 
+@import 'vendors/editor'; 
 @import 'vendors/notification'; 
 @import 'vendors/selectbox'; 

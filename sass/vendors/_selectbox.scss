@@ -11,7 +11,9 @@
   display: inline-block;
   font-size: 14px;
   position: relative;
-  vertical-align: middle;
+  vertical-align: middle; 
+  min-width: 100% !important;
+
   .chosen-drop {
     background: #ffffff;
     border: 1px solid #cccccc;
@@ -41,6 +43,8 @@
       list-style: none;
       margin: 0;
       padding: 5px 6px;
+      font-size: 14px;
+       
       em {
         background: #feffde;
         font-style: normal;
@@ -107,7 +111,7 @@
     border: 1px solid #ddd;
     color: #555555;
     display: block;
-    height: 34px;
+    height: 39px; 
     overflow: hidden;
     line-height: 34px;
     padding: 0 0 0 8px;
@@ -172,7 +176,7 @@
       border-bottom-right-radius: 4px;
       border-bottom-left-radius: 4px;
       @include border-radius(0);
-   	  @include box-shadow(none);
+      @include box-shadow(none);
       margin: 1px 0;
       padding: 4px 20px 4px 4px;
       width: 100%;
@@ -195,21 +199,20 @@
 
 .chosen-container-multi {
   .chosen-choices {
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-    border-top-right-radius: 4px;
-    border-top-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-    border-bottom-left-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-    cursor: text;
-    height: auto !important;
-    height: 1%;
-    margin: 0;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    color: #555555;
+    display: block;
+    height: 39px; 
     overflow: hidden;
-    padding: 0;
+    line-height: 34px; 
+    padding: 0 0 0 8px;
     position: relative;
+    text-decoration: none;
+    white-space: nowrap;
+    @include border-radius(0);
+    @include box-shadow(none);
+
     li {
       float: left;
       list-style: none;
@@ -228,33 +231,32 @@
         margin: 0;
         padding: 4px;
         outline: 0;
+        font-size: 14px !important;
       }
       .default {
         color: #999;
       }
     }
     .search-choice {
-      -webkit-background-clip: padding-box;
-      -moz-background-clip: padding;
-      background-clip: padding-box;
-      background-color: #eeeeee;
       border: 1px solid #ddd;
-      background-repeat: repeat-x;
-      color: #333333;
+      background-repeat: repeat-x; 
       cursor: default;
-      line-height: 13px;
+      line-height: initial !important;
       margin: 6px 0 3px 5px;
-      padding: 3px 20px 3px 5px;
+      padding: 5px 30px 5px 5px !important;  
       position: relative;
+      background: #ffffff !important;
+      border: 1px solid #ddd !important;
+
       .search-choice-close {
         background: url("../plugins/chosen/img/chosen-sprite.png") right top no-repeat;
         display: block;
         font-size: 1px;
         height: 10px;
-        position: absolute;
+        position: absolute; 
         right: 4px;
-        top: 5px;
-        width: 12px;
+        top: 8px !important;
+        width: 22px !important;
         cursor: pointer;
         &:hover {
           background-position: right -11px;
@@ -268,9 +270,13 @@
       }
     }
   }
-  .chosen-results {
-    margin: 0 0 0 0;
-    padding: 0;
+  .chosen-results { 
+    margin: 0 4px 4px 0;
+    padding: 4px 0 0 4px;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
   .chosen-drop .result-selected {
     display: none;
@@ -279,7 +285,7 @@
 
 .chosen-container-active {
   .chosen-single {
-  	background: #ffffff;
+    background: #ffffff;
     @include transition(border linear .2s, box-shadow linear .2s);
     @include border-radius(0);
     @include box-shadow(none);
@@ -293,7 +299,7 @@
     @include border-radius(0);
     @include box-shadow(none);
  
-    div {
+    div { 
       background: transparent;
       border-left: none;
       b {
@@ -302,13 +308,13 @@
     }
   }
   .chosen-choices {
-    border: 1px solid #66afe9;
+    border: 1px solid #ddd; 
     .search-field input[type="text"] {
       color: #111 !important;
     }
   }
   &.chosen-with-drop .chosen-choices {
-    border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0; 
     border-bottom-left-radius: 0;
   }
 }
@@ -372,5 +378,43 @@
     background: url("../plugins/chosen/img/chosen-sprite.png") no-repeat -28px -22px, #ffffff;
     direction: rtl;
     padding: 4px 5px 4px 20px;
+  }
+}
+
+
+/* [ Dropzone ]
+------------------------ */
+
+.dropzone{
+  border-style: dashed !important; 
+
+  &.dz-drag-hover{ 
+    color: $color-white;
+    background-color: lighten($color-link, 10%);
+    border-color: lighten($color-link, 30%) 
+  }
+
+  .dz-preview{
+    border-color: rgba($color-darkest, 0.10);
+    @include box-shadow(none); 
+
+    &:hover{
+      .dz-filename{
+        display: block;
+      }
+    }
+
+    .dz-filename{
+      display: none;
+    }
+
+    .dz-progress{
+      height: 5px;
+      @include border-radius(0);
+
+      .dz-upload{
+        background: $color-primary;
+      }
+    }
   }
 }

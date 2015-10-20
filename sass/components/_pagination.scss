@@ -1,0 +1,34 @@
+/* [ Pagination ]
+------------------------ */
+.pagination{
+	> .active{
+		a{
+			border-color: transparent; 
+			background-color: $color-gull-gray; 
+
+			&:hover,  
+			&:focus{
+				background-color: $color-primary;
+				border-color: transparent; 
+			}
+		}
+	} 
+
+	> li > a,
+	> li > span{ 
+		font-family: $font-heading;
+		color: $color-bali-hai;
+		font-size: 12px;
+
+		&:hover,  
+		&:focus{
+			color: $color-primary;
+		}
+	}
+}
+
+.pager{
+	> li > a{ 
+		
+	}
+}
