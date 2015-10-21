@@ -4,35 +4,21 @@
  * 
  *
  * @package Wired
- * @version 1.0.0
+ * @version 1.1.0
  */
 
 include "header.php";
-include "nav.php"; ?>
+include "nav.php" ?>
 
-<div class="bg-primary full-height">
-	<div class="container-xs-height full-height">
-            <div class="row-xs-height">
-                <div class="col-xs-height col-middle">
-                    <div class="container-xs text-center">
-                        <h1 class="text-white bold" style="font-size: 65px">wired.</h1>
-                        <p class="lead text-white">Hand Crafted UI Framework on top of Bootstrap</p>
+<div id="primary" class="content-area">
+    <main class="site-main" class="site-main" role="main">
 
-                        <ul class="list-inline-block text-center mg-t-40 mg-b-20 pd-x-15">
-                            <li class="mg-b-10"><a href="https://github.com/larrygeams/wired" target="_blank" class="btn btn-block btn-default-outline pd-x-40"><i class="fa fa-github"></i> View on Github</a></li>
-                        </ul>
-
-                        <a href="https://github.com/larrygeams/wired/releases" target="_blank" class="text-white hint">Currently pre-release v1.1.0</a> 
-                    </div>
-                </div>
-            </div> 
-        </div>
-
-	<div class="pull-bottom sm-pull-bottom full-width text-center">
-		<p class="text-white hint">Made with <i class="fa fa-heart fs-12"></i> by <a href="http://larrygeams.github.io/" class="text-white bd-b bd-dotted" target="_blank">Larry Geams Parangan</a></p> 
-	</div>
-
+      <div class="container"> 
+         <h1 class="bold mg-b-30">Wired template</h1>
+         <p class="fs-18 semi-bold">Basic template we use as starting point while coding a resource project</p>
+      </div>
+      
+    </main>
 </div>
 
-<?php
-include "scripts.php"; ?> 
+<?php include "footer.php" ?>
