@@ -1,5 +1,5 @@
 /*
-* Wired v1.0.0 */
+* Wired v1.1.0 */
 
 /* [ Misc classes ]
 ------------------------- */
@@ -8,7 +8,7 @@
 .scrollable{ overflow-x: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 
 .center-margin { margin-left: auto; margin-right: auto !important; } 
-.col-center{ float: none; margin-left: auto; margin-right: auto; }
+.col-center{ float: none; margin-left: auto; margin-right: auto; } 
 
 .inherit-size { width: inherit; height: inherit !important; } 
 .inherit-height { height: inherit !important; } 
@@ -29,6 +29,10 @@
 .full-height-vh { height: 100vh; } 
 .full-height-vw { width: 100vh; }
 
+.caret{ margin-top: -5px; } 
+.quiet{ @include opacity(0.7); }
+.help{ font-size: 12px; color: rgba($color-base, 0.55);}
+
 .dismiss{
 	background: transparent;
 	border: 0; 
@@ -45,13 +49,371 @@
 		font-size: 25px;
 	}
 }
-.caret{ margin-top: -5px; } 
-.hint{ @include opacity(0.7); }
-.help{ font-size: 12px; color: rgba($color-base, 0.55);}
-.link{ 
-	@include opacity(0.7); 
-	&:hover{ @include opacity(1); } 
-} 
+
+/* [ Position ]
+-------------------------------*/
+.relative{ position: relative; }
+.fixed{ position: fixed; }
+.absolute{ position: absolute; }
+.static{ position: static; }
+
+
+/* [ Font Weights ]
+------------------------ */
+.light{ font-weight: 300 !important; }
+.semi-bold{ font-weight: 500 !important; }
+.bold{ font-weight: bold !important; }
+
+/* [ Font Family ]
+------------------------ */
+.font-base{ font-family: $font-base !important; }
+.font-heading{ font-family: $font-heading !important; }
+
+.block-title{
+	font-family: $font-heading;
+    font-weight: 400;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+
+/* [ Overlay ]
+------------------------ */
+.overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.95);
+    z-index: 1010;
+    overflow: auto;
+}
+
+.overlay .overlay-close {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+}
+
+/* [Overlayer]
+------------------------ */
+.overlayer {
+    position:absolute;
+    display:block;
+    z-index:21;
+ }
+.overlayer.fullwidth {
+    width:100%;
+}
+.overlayer-wrapper {
+    position:relative;
+    display:block;
+    z-index:10;
+}
+.overlay-fixed {
+    position:fixed!important;
+    top:auto!important;
+}
+.top-left {
+    position:absolute!important;
+    top:0;
+    left:0;
+}
+.top-right {
+    position:absolute!important;
+    top:1px;
+    right:0;
+}
+.bottom-left {
+    position:absolute!important;
+    bottom:1px;
+    left:0;
+}
+.bottom-right {
+    position:absolute!important;
+    bottom:0;
+    right:0;
+}
+.pull-bottom {
+    position:absolute!important;
+    bottom:0;
+}
+.pull-up {
+    position:absolute!important;
+    top:0;
+}
+
+
+/* [ Container ]
+------------------------ */
+.container-xs,
+.container-sm,
+.container-md,
+.container-lg{
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.container-xs{ max-width: $screen-phablet; }
+.container-sm{ max-width: $screen-sm; }
+.container-md{ max-width: $screen-md; }
+.container-lg{ max-width: $screen-lg; }
+
+/* [ Vertical Alignment ]
+------------------------ */
+.v-align-top { vertical-align: top; }
+.v-align-middle { vertical-align: middle; }
+.v-align-bottom { vertical-align: bottom; } 
+
+.container-xs-height {
+  display: table;
+  padding-left: 0px;
+  padding-right: 0px;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.row-xs-height { display: table-row; }
+.col-xs-height { display: table-cell; float: none; }
+
+@media (min-width: $screen-sm) {
+  .container-sm-height {
+    display: table;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  .row-sm-height { display: table-row; }
+
+  .col-sm-height {
+    display: table-cell !important;
+    float: none !important;
+  }
+}
+
+@media (min-width: $screen-md) {
+  .container-md-height {
+    display: table;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  .row-md-height { display: table-row; }
+
+  .col-md-height {
+    display: table-cell !important;
+    float: none !important;
+  }
+}
+
+@media (min-width: $screen-lg) {
+  .container-lg-height {
+    display: table;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  .row-lg-height { display: table-row; }
+
+  .col-lg-height {
+    display: table-cell !important;
+    float: none !important;
+  }
+}
+
+
+/* [ Border ]
+------------------------- */
+.bd-a, .bd-l, .bd-r, .bd-t, .bd-b{ border-style: solid; border-width: 0; border-color: rgba($color-dark, 0.10); }
+.bd-none{ border: none !important; }
+
+/* Border Thickness
+------------------------- */
+.bd-a{ border-width: 1px; }
+.bd-t{ border-top-width: 1px; }
+.bd-b{ border-bottom-width: 1px; }
+.bd-l{ border-left-width: 1px; }
+.bd-r{ border-right-width: 1px; }
+
+.bd-thick-a{ border-width: 2px; }
+.bd-thick-t{ border-top-width: 2px; }
+.bd-thick-b{ border-bottom-width: 2px; }
+.bd-thick-l{ border-left-width: 2px; }
+.bd-thick-r{ border-right-width: 2px; }
+
+/* Border Style
+------------------------- */
+.bd-dashed { border-style: dashed; }
+.bd-dotted { border-style: dotted; }
+
+
+/* Border Colors
+------------------------- */
+.bd-transparent{ border-color: rgba($color-dark, 0.10); }
+.bd-transparent-white{ border-color: rgba($color-white, 0.10); }
+.bd-gray{ border-color: $color-gray; }
+.bd-white{ border-color: $color-white; }
+.bd-primary{ border-color: $color-primary; }
+.bd-success{ border-color: $color-success; }
+.bd-info{ border-color: $color-info; }
+.bd-danger{ border-color: $color-danger; }
+.bd-warning{ border-color: $color-warning; }
+
+/* [ Border Radius ]
+------------------------ */
+.bd-rd-none{ @include border-radius(0); } 
+
+.bd-rd-sm{ @include border-radius(3px); }
+.bd-t-l-rd-sm{ @include border-radius(3px 0 0 0); }
+.bd-t-r-rd-sm{ @include border-radius(0 3px 0 0); }
+.bd-b-r-rd-sm{ @include border-radius(0 0 3px 0); }
+.bd-b-l-rd-sm{ @include border-radius(0 0 0 3px); }
+
+.bd-rd-md{ @include border-radius(6px); }
+.bd-t-l-rd-md{ @include border-radius(6px 0 0 0); }
+.bd-t-r-rd-md{ @include border-radius(0 6px 0 0); }
+.bd-b-r-rd-md{ @include border-radius(0 0 6px 0); }
+.bd-b-l-rd-md{ @include border-radius(0 0 0 6px); }
+
+.bd-rd-lg{ @include border-radius(12px); }
+.bd-t-l-rd-lg{ @include border-radius(12px 0 0 0); }
+.bd-t-r-rd-lg{ @include border-radius(0 12px 0 0); }
+.bd-b-l-rd-lg{ @include border-radius(0 0 0 12px); }
+.bd-b-r-rd-lg{ @include border-radius(0 0 12px 0); }
+
+/* [ Box Shadow ]
+------------------------ */
+.bx-sd-none{ @include box-shadow(none); }
+.bx-sd-sm{ @include box-shadow(0, 1px, 3px, rgba($color-darkest,.12)); }
+.bx-sd-md{ @include box-shadow(0, 2px, 5px, rgba($color-darkest,.16)); }
+.bx-sd-lg{ @include box-shadow(0, 10px, 20px, rgba($color-darkest,.19)); }
+
+
+/* [ Contextual backgrounds ]
+------------------------ */
+.bg-transparent{ background-color: transparent !important; }
+.bg-white{ background-color: $color-white !important; }
+.bg-lighter{ background-color: $color-lighter !important;  }
+.bg-lightest{ background-color: $color-lightest !important;  }
+.bg-dark{ background-color: $color-dark !important; color: $color-white !important; }
+.bg-darken{ background-color: $color-darken !important; color: $color-white !important; }
+.bg-darker{ background-color: $color-darker !important; color: $color-white !important; }
+.bg-darkest{ background-color: $color-darkest !important; color: $color-white !important; }
+.bg-gray{ background-color: $color-gray !important; color: $color-white !important; }
+.bg-primary{ background-color: $color-primary !important; color: $color-white !important; }
+.bg-success{ background-color: $color-success !important; color: $color-white !important; }
+.bg-info{ background-color: $color-info !important; color: $color-white !important;  }
+.bg-danger{ background-color: $color-danger !important; color: $color-white !important; }
+.bg-warning{  background-color: $color-warning !important; color: $color-white !important; }
+.bg-link{ background-color: $color-link !important; color: $color-white !important; }
+.bg-base{ background-color: $color-base !important; color: $color-white !important; }
+.bg-menu{ background-color: $color-menu !important; color: $color-white !important; }
+.bg-cyan{ background-color: $color-cyan !important; color: $color-white !important; }
+.bg-blue{ background-color: $color-blue !important; color: $color-white !important; }
+.bg-darkblue{ background-color: $color-darkblue !important; color: $color-white !important; }
+.bg-navy{ background-color: $color-navy !important; color: $color-white !important; }
+.bg-cover{ background-size: cover; background-repeat: no-repeat; background-position: center center; }
+
+/* [ Contextual colors ]
+------------------------ */
+.text-base{ color: $color-base !important; }
+.text-white{ color: $color-white !important; }
+.text-dark{ color: $color-dark !important; }
+.text-darker{ color: $color-darker !important; }
+.text-darkest{ color: $color-darkest !important; }
+.text-gray{ color: $color-gray !important; }
+.text-primary{ color: $color-primary !important; }
+.text-success{ color: $color-success !important; }
+.text-info{ color: $color-info !important; } 
+.text-danger{ color: $color-danger !important; }
+.text-warning{  color: $color-warning !important; }
+.text-link{ color: $color-link !important; }
+.text-cyan{ color: $color-cyan !important; }
+.text-blue{ color: $color-blue !important; }
+.text-darkblue{ color: $color-darkblue !important; }
+.text-navy{ color: $color-navy !important; }
+
+/* [ Font Sizes ]
+------------------------ */
+.fs-10{ font-size: 10px !important; }
+.fs-11{ font-size: 11px !important; }
+.fs-12{ font-size: 12px !important; }
+.fs-13{ font-size: 13px !important; }
+.fs-14{ font-size: 14px !important; }
+.fs-15{ font-size: 15px !important; }
+.fs-16{ font-size: 16px !important; }
+.fs-17{ font-size: 17px !important; }
+.fs-18{ font-size: 18px !important; }
+.fs-20{ font-size: 20px !important; }
+.fs-22{ font-size: 22px !important; }
+.fs-24{ font-size: 24px !important; }
+.fs-30{ font-size: 30px !important; }
+.fs-36{ font-size: 36px !important; }
+
+@media (min-width: $screen-sm){
+	.fs-sm-10{ font-size: 10px !important; }
+	.fs-sm-11{ font-size: 11px !important; }
+	.fs-sm-12{ font-size: 12px !important; }
+	.fs-sm-13{ font-size: 13px !important; }
+	.fs-sm-14{ font-size: 14px !important; }
+	.fs-sm-15{ font-size: 15px !important; }
+	.fs-sm-16{ font-size: 16px !important; }
+	.fs-sm-17{ font-size: 17px !important; }
+	.fs-sm-18{ font-size: 18px !important; }
+	.fs-sm-20{ font-size: 20px !important; }
+	.fs-sm-22{ font-size: 22px !important; }
+	.fs-sm-24{ font-size: 24px !important; }
+	.fs-sm-30{ font-size: 30px !important; }
+	.fs-sm-36{ font-size: 36px !important; }
+}
+
+@media (min-width: $screen-md){
+	.fs-md-10{ font-size: 10px !important; }
+	.fs-md-11{ font-size: 11px !important; }
+	.fs-md-12{ font-size: 12px !important; }
+	.fs-md-13{ font-size: 13px !important; }
+	.fs-md-14{ font-size: 14px !important; }
+	.fs-md-15{ font-size: 15px !important; }
+	.fs-md-16{ font-size: 16px !important; }
+	.fs-md-17{ font-size: 17px !important; }
+	.fs-md-18{ font-size: 18px !important; }
+	.fs-md-20{ font-size: 20px !important; }
+	.fs-md-22{ font-size: 22px !important; }
+	.fs-md-24{ font-size: 24px !important; }
+	.fs-md-30{ font-size: 30px !important; }
+	.fs-md-36{ font-size: 36px !important; }
+}
+
+@media (min-width: $screen-lg){
+	.fs-lg-10{ font-size: 10px !important; }
+	.fs-lg-11{ font-size: 11px !important; }
+	.fs-lg-12{ font-size: 12px !important; }
+	.fs-lg-13{ font-size: 13px !important; }
+	.fs-lg-14{ font-size: 14px !important; }
+	.fs-lg-15{ font-size: 15px !important; }
+	.fs-lg-16{ font-size: 16px !important; }
+	.fs-lg-17{ font-size: 17px !important; }
+	.fs-lg-18{ font-size: 18px !important; }
+	.fs-lg-20{ font-size: 20px !important; }
+	.fs-lg-22{ font-size: 22px !important; }
+	.fs-lg-24{ font-size: 24px !important; }
+	.fs-lg-30{ font-size: 30px !important; }
+	.fs-lg-36{ font-size: 36px !important; }
+}
 
 
 /* [ Padding ]
@@ -1220,387 +1582,3 @@
 	.mg-y-lg-80{ margin-top: 80px !important;  margin-bottom: 80px !important; }
 	.mg-y-lg-85{ margin-top: 85px !important;  margin-bottom: 50px !important; }
 }
-
-/* [ Border ]
-------------------------- */
-.bd-a, .bd-l, .bd-r, .bd-t, .bd-b{ border-style: solid; border-width: 0; border-color: rgba($color-dark, 0.10); }
-.bd-none{ border: none !important; }
-
-/* Border Thickness
-------------------------- */
-.bd-a{ border-width: 1px; }
-.bd-t{ border-top-width: 1px; }
-.bd-b{ border-bottom-width: 1px; }
-.bd-l{ border-left-width: 1px; }
-.bd-r{ border-right-width: 1px; }
-
-.bd-thick-a{ border-width: 2px; }
-.bd-thick-t{ border-top-width: 2px; }
-.bd-thick-b{ border-bottom-width: 2px; }
-.bd-thick-l{ border-left-width: 2px; }
-.bd-thick-r{ border-right-width: 2px; }
-
-/* Border Style
-------------------------- */
-.bd-dashed { border-style: dashed; }
-.bd-dotted { border-style: dotted; }
-
-
-/* Border Colors
-------------------------- */
-.bd-transparent{ border-color: rgba($color-dark, 0.10); }
-.bd-transparent-white{ border-color: rgba($color-white, 0.10); }
-.bd-gray{ border-color: $color-gray; }
-.bd-white{ border-color: $color-white; }
-.bd-primary{ border-color: $color-primary; }
-.bd-success{ border-color: $color-success; }
-.bd-info{ border-color: $color-info; }
-.bd-danger{ border-color: $color-danger; }
-.bd-warning{ border-color: $color-warning; }
-
-/* [ Border Radius ]
------------------------- */
-.bd-rd-none{ @include border-radius(0); } 
-
-.bd-rd-sm{ @include border-radius(3px); }
-.bd-t-l-rd-sm{ @include border-radius(3px 0 0 0); }
-.bd-t-r-rd-sm{ @include border-radius(0 3px 0 0); }
-.bd-b-r-rd-sm{ @include border-radius(0 0 3px 0); }
-.bd-b-l-rd-sm{ @include border-radius(0 0 0 3px); }
-
-.bd-rd-md{ @include border-radius(6px); }
-.bd-t-l-rd-md{ @include border-radius(6px 0 0 0); }
-.bd-t-r-rd-md{ @include border-radius(0 6px 0 0); }
-.bd-b-r-rd-md{ @include border-radius(0 0 6px 0); }
-.bd-b-l-rd-md{ @include border-radius(0 0 0 6px); }
-
-.bd-rd-lg{ @include border-radius(12px); }
-.bd-t-l-rd-lg{ @include border-radius(12px 0 0 0); }
-.bd-t-r-rd-lg{ @include border-radius(0 12px 0 0); }
-.bd-b-l-rd-lg{ @include border-radius(0 0 0 12px); }
-.bd-b-r-rd-lg{ @include border-radius(0 0 12px 0); }
-
-/* [ Box Shadow ]
------------------------- */
-.bx-sd-none{ @include box-shadow(none); }
-.bx-sd-sm{ @include box-shadow(0, 1px, 3px, rgba($color-darkest,.12)); }
-.bx-sd-md{ @include box-shadow(0, 2px, 5px, rgba($color-darkest,.16)); }
-.bx-sd-lg{ @include box-shadow(0, 10px, 20px, rgba($color-darkest,.19)); }
-
-
-/* [ Contextual backgrounds ]
------------------------- */
-.bg-transparent{ background-color: transparent !important; }
-.bg-white{ background-color: $color-white !important; }
-.bg-lighter{ background-color: $color-lighter !important;  }
-.bg-lightest{ background-color: $color-lightest !important;  }
-.bg-dark{ background-color: $color-dark !important; color: $color-white !important; }
-.bg-darken{ background-color: $color-darken !important; color: $color-white !important; }
-.bg-darker{ background-color: $color-darker !important; color: $color-white !important; }
-.bg-darkest{ background-color: $color-darkest !important; color: $color-white !important; }
-.bg-gray{ background-color: $color-gray !important; color: $color-white !important; }
-.bg-primary{ background-color: $color-primary !important; color: $color-white !important; }
-.bg-success{ background-color: $color-success !important; color: $color-white !important; }
-.bg-info{ background-color: $color-info !important; color: $color-white !important;  }
-.bg-danger{ background-color: $color-danger !important; color: $color-white !important; }
-.bg-warning{  background-color: $color-warning !important; color: $color-white !important; }
-.bg-link{ background-color: $color-link !important; color: $color-white !important; }
-.bg-base{ background-color: $color-base !important; color: $color-white !important; }
-.bg-menu{ background-color: $color-menu !important; color: $color-white !important; }
-.bg-cyan{ background-color: $color-cyan !important; color: $color-white !important; }
-.bg-blue{ background-color: $color-blue !important; color: $color-white !important; }
-.bg-darkblue{ background-color: $color-darkblue !important; color: $color-white !important; }
-.bg-navy{ background-color: $color-navy !important; color: $color-white !important; }
-.bg-cover{ background-size: cover; background-repeat: no-repeat; background-position: center center; }
-
-/* [ Contextual colors ]
------------------------- */
-.text-base{ color: $color-base !important; }
-.text-white{ color: $color-white !important; }
-.text-dark{ color: $color-dark !important; }
-.text-darker{ color: $color-darker !important; }
-.text-darkest{ color: $color-darkest !important; }
-.text-gray{ color: $color-gray !important; }
-.text-primary{ color: $color-primary !important; }
-.text-success{ color: $color-success !important; }
-.text-info{ color: $color-info !important; } 
-.text-danger{ color: $color-danger !important; }
-.text-warning{  color: $color-warning !important; }
-.text-link{ color: $color-link !important; }
-.text-cyan{ color: $color-cyan !important; }
-.text-blue{ color: $color-blue !important; }
-.text-darkblue{ color: $color-darkblue !important; }
-.text-navy{ color: $color-navy !important; }
-
-/* [ Font Sizes ]
------------------------- */
-.fs-10{ font-size: 10px !important; }
-.fs-11{ font-size: 11px !important; }
-.fs-12{ font-size: 12px !important; }
-.fs-13{ font-size: 13px !important; }
-.fs-14{ font-size: 14px !important; }
-.fs-15{ font-size: 15px !important; }
-.fs-16{ font-size: 16px !important; }
-.fs-17{ font-size: 17px !important; }
-.fs-18{ font-size: 18px !important; }
-.fs-20{ font-size: 20px !important; }
-.fs-22{ font-size: 22px !important; }
-.fs-24{ font-size: 24px !important; }
-.fs-30{ font-size: 30px !important; }
-.fs-36{ font-size: 36px !important; }
-
-@media (min-width: $screen-sm){
-	.fs-sm-10{ font-size: 10px !important; }
-	.fs-sm-11{ font-size: 11px !important; }
-	.fs-sm-12{ font-size: 12px !important; }
-	.fs-sm-13{ font-size: 13px !important; }
-	.fs-sm-14{ font-size: 14px !important; }
-	.fs-sm-15{ font-size: 15px !important; }
-	.fs-sm-16{ font-size: 16px !important; }
-	.fs-sm-17{ font-size: 17px !important; }
-	.fs-sm-18{ font-size: 18px !important; }
-	.fs-sm-20{ font-size: 20px !important; }
-	.fs-sm-22{ font-size: 22px !important; }
-	.fs-sm-24{ font-size: 24px !important; }
-	.fs-sm-30{ font-size: 30px !important; }
-	.fs-sm-36{ font-size: 36px !important; }
-}
-
-@media (min-width: $screen-md){
-	.fs-md-10{ font-size: 10px !important; }
-	.fs-md-11{ font-size: 11px !important; }
-	.fs-md-12{ font-size: 12px !important; }
-	.fs-md-13{ font-size: 13px !important; }
-	.fs-md-14{ font-size: 14px !important; }
-	.fs-md-15{ font-size: 15px !important; }
-	.fs-md-16{ font-size: 16px !important; }
-	.fs-md-17{ font-size: 17px !important; }
-	.fs-md-18{ font-size: 18px !important; }
-	.fs-md-20{ font-size: 20px !important; }
-	.fs-md-22{ font-size: 22px !important; }
-	.fs-md-24{ font-size: 24px !important; }
-	.fs-md-30{ font-size: 30px !important; }
-	.fs-md-36{ font-size: 36px !important; }
-}
-
-@media (min-width: $screen-lg){
-	.fs-lg-10{ font-size: 10px !important; }
-	.fs-lg-11{ font-size: 11px !important; }
-	.fs-lg-12{ font-size: 12px !important; }
-	.fs-lg-13{ font-size: 13px !important; }
-	.fs-lg-14{ font-size: 14px !important; }
-	.fs-lg-15{ font-size: 15px !important; }
-	.fs-lg-16{ font-size: 16px !important; }
-	.fs-lg-17{ font-size: 17px !important; }
-	.fs-lg-18{ font-size: 18px !important; }
-	.fs-lg-20{ font-size: 20px !important; }
-	.fs-lg-22{ font-size: 22px !important; }
-	.fs-lg-24{ font-size: 24px !important; }
-	.fs-lg-30{ font-size: 30px !important; }
-	.fs-lg-36{ font-size: 36px !important; }
-}
-
-/* [ Font Weights ]
------------------------- */
-.light{ font-weight: 300 !important; }
-.semi-bold{ font-weight: 500 !important; }
-.bold{ font-weight: bold !important; }
-
-/* [ Font Family ]
------------------------- */
-.font-base{ font-family: $font-base !important; }
-.font-heading{ font-family: $font-heading !important; }
-
-.block-title{
-	font-family: $font-heading;
-    font-weight: 400;
-    font-size: 15px;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-}
-
-
-/* [ Overlay ]
------------------------- */
-.overlay {
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background: rgba(255, 255, 255, 0.95);
-    z-index: 1010;
-    padding-left: 64px;
-    overflow: auto;
-}
-.overlay .inline-block {
-    display: inline-block;
-}
-.overlay .overlay-brand {
-    margin-left: 7px;
-}
-.overlay>div {
-    width: 100%;
-    display: block;
-    overflow: hidden;
-}
-.overlay .has-results {
-    overflow: visible;
-}
-.overlay .overlay-search {
-    font-weight: 700;
-    font-size: 77px;
-    height: 100px;
-    letter-spacing: -1.925px;
-    line-height: 100px;
-    width: 100%;
-    padding-left: 0!important;
-}
-.overlay .overlay-close {
-    position: absolute;
-    right: 20px;
-    top: 25px;
-}
-
-/* [Overlayer]
------------------------- */
-.overlayer {
-    position:absolute;
-    display:block;
-    z-index:21;
- }
-.overlayer.fullwidth {
-    width:100%;
-}
-.overlayer-wrapper {
-    position:relative;
-    display:block;
-    z-index:10;
-}
-.overlay-fixed {
-    position:fixed!important;
-    top:auto!important;
-}
-.top-left {
-    position:absolute!important;
-    top:0;
-    left:0;
-}
-.top-right {
-    position:absolute!important;
-    top:1px;
-    right:0;
-}
-.bottom-left {
-    position:absolute!important;
-    bottom:1px;
-    left:0;
-}
-.bottom-right {
-    position:absolute!important;
-    bottom:0;
-    right:0;
-}
-.pull-bottom {
-    position:absolute!important;
-    bottom:0;
-}
-.pull-up {
-    position:absolute!important;
-    top:0;
-}
-
-
-/* [ Container ]
------------------------- */
-.container-xs,
-.container-sm,
-.container-md,
-.container-lg{
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 15px;
-	padding-right: 15px;
-}
-
-.container-xs{ max-width: $screen-phablet; }
-.container-sm{ max-width: $screen-sm; }
-.container-md{ max-width: $screen-md; }
-.container-lg{ max-width: $screen-lg; }
-
-/* [ Vertical Alignment ]
------------------------- */
-.v-align-top { vertical-align: top; }
-.v-align-middle { vertical-align: middle; }
-.v-align-bottom { vertical-align: bottom; } 
-
-.col-top { vertical-align: top; }
-.col-middle { vertical-align: middle; }
-.col-bottom { vertical-align: bottom; }
-
-.container-xs-height {
-  display: table;
-  padding-left: 0px;
-  padding-right: 0px;
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-}
-
-.row-xs-height { display: table-row; }
-.col-xs-height { display: table-cell; float: none; }
-
-@media (min-width: $screen-sm) {
-  .container-sm-height {
-    display: table;
-    padding-left: 0px;
-    padding-right: 0px;
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-  }
-
-  .row-sm-height { display: table-row; }
-
-  .col-sm-height {
-    display: table-cell !important;
-    float: none !important;
-  }
-}
-
-@media (min-width: $screen-md) {
-  .container-md-height {
-    display: table;
-    padding-left: 0px;
-    padding-right: 0px;
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-  }
-
-  .row-md-height { display: table-row; }
-
-  .col-md-height {
-    display: table-cell !important;
-    float: none !important;
-  }
-}
-
-@media (min-width: $screen-lg) {
-  .container-lg-height {
-    display: table;
-    padding-left: 0px;
-    padding-right: 0px;
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-  }
-
-  .row-lg-height { display: table-row; }
-
-  .col-lg-height {
-    display: table-cell !important;
-    float: none !important;
-  }
-}
-

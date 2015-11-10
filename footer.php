@@ -3,7 +3,7 @@
     <script src="plugins/modernizr/modernizr.min.js"></script>
     <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="plugins/pace/js/pace.min.js"></script>
-    <script src="js/wired.js"></script>
+    <script src="js/app.js"></script>
 
   </body>
 </html>

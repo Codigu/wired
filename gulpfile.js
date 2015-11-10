@@ -13,7 +13,7 @@ gulp.task('sass', function () {
  
 gulp.task('watch', function () { 
    browserSync.init({ 
-        proxy: "http://localhost/project_name" 
+        proxy: "http://localhost/wired" 
     });	 
 
   gulp.watch('**/*.scss', ['sass']); 
