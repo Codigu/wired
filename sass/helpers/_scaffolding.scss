@@ -1,4 +1,8 @@
 
+/*
+* Wired Framework
+* Scaffolding 
+*/
    
 *, *::after, *::before {
   @include box-sizing(border-box);  
@@ -53,9 +57,6 @@ img{
 
 p, ol, ul{
   line-height: 1.6;
-  color: $color-base;
-  font-family: $font-base;
-  font-size: $font-size-base;
   font-weight: normal;
 } 
 

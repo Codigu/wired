@@ -1,5 +1,5 @@
 /*!
- * Wired v1.0.0
+ * Wired Framework
  * Copyright 2015 Larry Geams Parangan
  */
 
@@ -12,11 +12,11 @@
 ------------------------- */   
 @import 'helpers/mixins'; 
 @import 'helpers/variables';   
-@import 'helpers/scaffolding';  
+@import 'helpers/scaffolding';   
 @import 'helpers/helpers';   
 
 
-/* Components   
+/* Components  
 ------------------------- */   
 @import 'components/articles'; 
 @import 'components/breadcrumbs'; 
@@ -34,9 +34,19 @@
 @import 'components/panels'; 
 @import 'components/popover';  
 @import 'components/progress'; 
+@import 'components/scrollbar'; 
 @import 'components/tables';  
 @import 'components/tabs'; 
 @import 'components/toggles'; 
 @import 'components/tooltip'; 
 @import 'components/upload'; 
 @import 'components/utilities'; 
+
+
+/* Vendors  
+------------------------- */     
+@import 'vendors/datepicker'; 
+@import 'vendors/dropzone'; 
+@import 'vendors/editor'; 
+@import 'vendors/notification'; 
+@import 'vendors/selectbox'; 

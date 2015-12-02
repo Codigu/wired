@@ -33,3 +33,19 @@
   margin-left: -10px;
   margin-right: -10px;
 }
+
+/* [ Row Table ]
+------------------------ */
+@media (min-width: $screen-sm){
+  .row-table{
+    display: table;
+    height: 100%;
+
+    & > [class^="col-"]{
+      display: table-cell;
+      height: 100%;
+      float: none;
+      vertical-align: top;
+    }
+  }
+}

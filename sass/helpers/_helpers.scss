@@ -1,5 +1,8 @@
 /*
-* Wired v1.1.0 */
+* Wired Framework
+* Helpers 
+*
+/
 
 /* [ Misc classes ]
 ------------------------- */
@@ -165,9 +168,9 @@
 
 /* [ Vertical Alignment ]
 ------------------------ */
-.v-align-top { vertical-align: top; }
-.v-align-middle { vertical-align: middle; }
-.v-align-bottom { vertical-align: bottom; } 
+.v-align-top, .col-top { vertical-align: top; }
+.v-align-middle, .col-middle { vertical-align: middle; }
+.v-align-bottom, .col-bottom { vertical-align: bottom; } 
 
 .container-xs-height {
   display: table;

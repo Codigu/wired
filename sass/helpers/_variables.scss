@@ -1,11 +1,7 @@
 
 /*
-* Wired v1.0.0
-* Variables - Table of Contents
-*
-* Color Swatch
-* Fonts
-* Break Points
+* Wired Framework
+* Variables 
 *
 /
 
@@ -59,7 +55,7 @@ $color-cyan 			: #3bb2d0;
 $color-cyan-light 		: rgba( $color-cyan, 0.90 );
 $color-cyan-dark 		: darken($color-cyan, 3%);
 
-$color-blue 			: #3887be;
+$color-blue 			: #007ee5;
 $color-blue-light 		: rgba( $color-blue, 0.90 );
 $color-blue-dark 		: darken($color-blue, 3%);
 
@@ -88,3 +84,4 @@ $screen-phablet			: 640px;
 $screen-sm				: 768px;
 $screen-md 				: 992px;
 $screen-lg 				: 1200px;
+$screen-xlg 			: 1400px;

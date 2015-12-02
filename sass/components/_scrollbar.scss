@@ -1,0 +1,36 @@
+
+// Google Chrome Scrollbar
+
+::-webkit-scrollbar {
+	height: 5px !important;
+	overflow: visible !important;
+	width: 5px !important;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(0,0,0,.26);
+	border: 0;
+	min-height: 28px !important;
+	padding: 100px 0px 0px !important;
+} 
+
+::-webkit-scrollbar-thumb:hover {
+	bbackground: rgba(0,0,0,.35);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+	background: rgba(0,0,0,.40);
+}
+
+::-webkit-scrollbar-button {
+	height: 0px !important;
+	width: 0px !important;
+}
+
+::-webkit-scrollbar-track {
+
+}
+
+::-webkit-scrollbar-corner {
+	background: transparent !important;
+}

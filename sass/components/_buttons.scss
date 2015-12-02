@@ -11,7 +11,7 @@
 	-ms-text-size-adjust:100%;
 	text-shadow:none;
 	background-color: $color-lightest;
-	border-color: rgba($color-dark, 0.07);
+	border: 0;
 	box-shadow:none !important; 
 	@include transition();
 	@include border-radius(2px);
@@ -22,7 +22,6 @@
 
 	&.btn-default{
 		background-color: $color-white;
-		border: 1px solid $color-light !important;
 
 		&:hover{
 			background-color: lighten($color-lightest, 0.1%);
@@ -37,7 +36,6 @@
 	&.btn-inverse{
 		color: $color-white;
 		background-color: $color-dark;
-		border: 1px solid $color-darker !important;
 
 		&:hover{
 			background-color: $color-darker;
@@ -51,7 +49,6 @@
 
 	&.btn-primary{
 		background-color: $color-primary;
-		border: 1px solid $color-primary-dark !important;
 
 		&:hover{
 			background-color: $color-primary-light; 
@@ -66,7 +63,6 @@
 
 	&.btn-info{
 		background-color: $color-info;
-		border: 1px solid $color-info-dark !important;
 
 		&:hover{
 			background-color: $color-info-light;
@@ -81,7 +77,6 @@
 
 	&.btn-danger{
 		background-color: $color-danger;
-		border: 1px solid $color-danger-dark !important;
 
 		&:hover{
 			background-color: $color-danger-light;
@@ -96,7 +91,6 @@
 
 	&.btn-warning{
 		background-color: $color-warning;
-		border: 1px solid $color-warning-dark !important;
 
 		&:hover{
 			background-color: $color-warning-light;
@@ -111,7 +105,6 @@
 
 	&.btn-success{
 		background-color: $color-success;
-		border: 1px solid $color-success-dark !important;
 
 		&:hover{
 			background-color: $color-success-light;
@@ -156,7 +149,7 @@
 
 	&.btn-primary-outline{
 		background-color: transparent;
-		border: 1px solid $color-primary !important;
+		border: 2px solid $color-primary !important;
 		color: $color-primary !important;
 
 		&:hover{
@@ -174,7 +167,7 @@
 
 	&.btn-info-outline{
 		background-color: transparent;
-		border: 1px solid $color-info !important;
+		border: 2px solid $color-info !important;
 		color: $color-info !important;
 
 		&:hover{
@@ -192,7 +185,7 @@
 
 	&.btn-danger-outline{
 		background-color: transparent;
-		border: 1px solid $color-danger !important;
+		border: 2px solid $color-danger !important;
 		color: $color-danger !important;
 
 		&:hover{
@@ -210,7 +203,7 @@
 
 	&.btn-warning-outline{
 		background-color: transparent;
-		border: 1px solid $color-warning !important;
+		border: 2px solid $color-warning !important;
 		color: $color-warning !important;
 
 		&:hover{
@@ -228,7 +221,7 @@
 
 	&.btn-success-outline{
 		background-color: transparent;
-		border: 1px solid $color-success !important;
+		border: 2px solid $color-success !important;
 		color: $color-success !important;
 
 		&:hover{
@@ -246,7 +239,7 @@
 
 	&.btn-link-outline{
 		background-color: transparent;
-		border: 1px solid $color-info !important;
+		border: 2px solid $color-info !important;
 		color: $color-info !important;
 
 		&:hover,
@@ -307,7 +300,8 @@
 	/**
 	* Unrounded Button -------------- */ 
 
-	&.btn-box{
+	&.btn-box, 
+	&.btn-square{
 		@include border-radius(0);
 	}
 
