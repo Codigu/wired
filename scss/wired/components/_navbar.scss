@@ -24,6 +24,10 @@
   }
 }
 
+.navbar-height {
+  line-height: 110px;
+}
+
 .navbar {
   position: relative;
   min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
@@ -57,7 +61,7 @@
     padding-right: 10px;
     background-color: transparent;
     background-image: none;
-    border: 1px solid transparent;
+    border: 0 !important;
     @include border-radius(4px);
     z-index: 100;
     cursor: pointer;
@@ -630,7 +634,6 @@
       &:hover,
       &:focus {
         color: $navbar-inverse-link-hover-color;
-        background-color: $navbar-inverse-link-hover-bg;
       }
     }
     > .active > a {
@@ -638,7 +641,6 @@
       &:hover,
       &:focus {
         color: $navbar-inverse-link-active-color;
-        background-color: $navbar-inverse-link-active-bg;
       }
     }
     > .disabled > a {

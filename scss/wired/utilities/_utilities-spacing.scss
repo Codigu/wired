@@ -5,7 +5,7 @@
   margin-left:  auto !important;
 }
  
-@each $prop, $abbrev in (margin: m, padding: p) {
+@each $prop, $abbrev in (margin: mg, padding: pd) {
   @each $size, $lengths in $spacers {
     $length-x:   map-get($lengths, x); 
     $length-y:   map-get($lengths, y);

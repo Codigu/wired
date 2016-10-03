@@ -91,6 +91,9 @@ a.btn {
 
 // Outline buttons
 // ------------------------- 
+.btn-outline {
+  @include button-variant($brand-white, transparent , $brand-white);
+}
 
 .btn-outline-default {
   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
@@ -115,6 +118,60 @@ a.btn {
   @include button-outline-variant($btn-danger-bg);
 }
 
+// Social buttons
+// ------------------------- 
+.btn-facebook {
+  @include button-variant($brand-white, $brand-facebook, $brand-facebook);
+}
+
+.btn-twitter {
+  @include button-variant($brand-white, $brand-twitter, $brand-twitter);
+}
+
+.btn-google {
+  @include button-variant($brand-white, $brand-google, $brand-google);
+}
+
+.btn-linkedin {
+  @include button-variant($brand-white, $brand-linkedin, $brand-linkedin);
+}
+
+.btn-instagram {
+  @include button-variant($brand-white, $brand-instagram, $brand-facebook);
+}
+
+.btn-youtube {
+  @include button-variant($brand-white, $brand-youtube, $brand-youtube);
+}
+
+// Icon buttons
+// -------------------------
+
+.btn-icon {
+  position: relative;
+  padding-left: 55px !important;
+  padding-right: 21px !important;
+
+  .fa {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    line-height: 1;
+    width: 36px;
+    text-align: center;
+    margin: 0;
+    background-color: rgba($brand-black, .05);
+  }
+
+  .fa:before { 
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
 
 // Link buttons
 // -------------------------
