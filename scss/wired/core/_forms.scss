@@ -312,20 +312,20 @@ input[type="search"] {
     label {
         display: block;
         opacity: 1;
+        margin-bottom: 10px;
         @include transition(opacity .2s ease);
+
         &.label-lg {
             font-size: 13px;
-            left: 13px;
-            top: 9px;
         }
         &.label-sm {
             font-size: 11px;
-            left: 11px;
-            top: 6px;
         }
+
         &.highlight{
             opacity: 1;
         }
+        
         &.fade{
             opacity: .5;
             @include backface-visibility(hidden);
@@ -516,11 +516,11 @@ input[type="search"] {
         }
         &::after { 
             display: inline-block;
-            width: 16px;
+            width: 16px; 
             height: 16px;
             position: absolute; 
-            left: 3px;
-            top: 4px;
+            left: 3px; 
+            top: 0;
             font-size: 11px;
             @include transition(border 0.2s linear 0s, color 0.2s linear 0s);
         }

@@ -123,7 +123,11 @@ mark,
   color: $text-muted;
 }
 
-@include text-emphasis-variant('.text-primary', $brand-primary);
+.text-white { 
+  color: $brand-white; 
+}
+
+@include text-emphasis-variant('.text-primary', $state-primary-bg);
 
 @include text-emphasis-variant('.text-success', $state-success-text);
 
@@ -136,17 +140,16 @@ mark,
 // Contextual backgrounds
 // For now we'll leave these alongside the text classes until v4 when we can
 // safely shift things around (per SemVer rules).
-.bg-primary {
-  // Given the contrast here, this is the only class to have its color inverted
-  // automatically.
-  color: $brand-white;
-}
-
 .bg-white {
   background-color: $brand-white !important;
 }
 
-@include bg-variant('.bg-primary', $brand-primary);
+.bg-black {
+  background-color: $brand-black; 
+  color: $brand-white;
+} 
+
+@include bg-variant('.bg-primary', $state-primary-bg);
 
 @include bg-variant('.bg-success', $state-success-bg);
 

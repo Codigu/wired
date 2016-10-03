@@ -1,6 +1,8 @@
 // Variables
 // --------------------------------------------------
 
+// Base Urls
+$base-img-url:          "../images" !default;
 
 // Colors
 //
@@ -13,6 +15,7 @@ $gray:                  lighten($gray-base, 33.5%) !default; // #555
 $gray-light:            lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:          lighten($gray-base, 93.5%) !default; // #eee
 
+// Wired Colors
 $brand-base:            $gray-dark !default;
 $brand-primary:         #5f68a7 !default; 
 $brand-success:         #10cfbd !default;
@@ -24,13 +27,18 @@ $brand-white:           #fff !default;
 $brand-gray:            #f0f0f0 !default;
 $brand-black:           $gray-base;
 
+// Social COlors
+$brand-facebook:        #3B5998 !default;
+$brand-twitter:         #55ACEE !default;
+$brand-google:          #DD4B39  !default;
+$brand-linkedin:        #1F88BE  !default;
+$brand-instagram:       #8146B0  !default;
+$brand-youtube:         #CC181E  !default;
+
 // Options
 $enable-rounded:        false !default;
 $enable-shadows:        false !default;
 $enable-gradients:      false !default;
-
-// Base Urls
-$base-img-url:          "../images" !default;
 
 // Spacing
 //
@@ -530,8 +538,8 @@ $container-lg:                 $container-large-desktop !default;
 $navbar-height:                    50px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
 $navbar-border-radius:             $border-radius-base !default;
+$navbar-padding-vertical:          10px !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
-$navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
 
 $navbar-default-color:             #777 !default;
@@ -665,21 +673,24 @@ $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5)) !default;
 // Form states and alerts
 //
 //## Define colors for form feedback states and, by default, alerts.
+$state-primary-text:             $brand-white !default;
+$state-primary-bg:               $brand-primary !default;
+$state-primary-border:           darken(adjust-hue($state-primary-bg, -10), 5%) !default;
 
-$state-success-text:             #3c763d !default;
-$state-success-bg:               #dff0d8 !default;
+$state-success-text:             $brand-white !default;
+$state-success-bg:               $brand-success !default;
 $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
 
-$state-info-text:                #31708f !default;
-$state-info-bg:                  #d9edf7 !default;
+$state-info-text:                $brand-white !default;
+$state-info-bg:                  $brand-info !default;
 $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 
-$state-warning-text:             #8a6d3b !default;
+$state-warning-text:             $brand-white !default;
 $state-warning-bg:               #fcf8e3 !default;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
-$state-danger-text:              #a94442 !default;
-$state-danger-bg:                #f2dede !default;
+$state-danger-text:              $brand-white !default;
+$state-danger-bg:                $brand-danger !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
 
 
