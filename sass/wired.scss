@@ -1,52 +1,63 @@
 /*!
- * Wired Framework
- * Copyright 2015 Larry Geams Parangan
+ * Name: Wired 
+ * url: http://larrygeams.github.io/wired
+ * author: Larry Geams Parangan
+ * version: 2.0 
  */
 
-/* Mixins Libraries 
-------------------------- */
-@import '../bourbon/bourbon'; // http://bourbon.io/
-  
+// Core variables and mixins 
+
+@import "wired/core/variables";   
+@import "wired/core/mixins";
  
-/* Helpers   
-------------------------- */   
-@import 'helpers/mixins'; 
-@import 'helpers/variables';   
-@import 'helpers/scaffolding';   
-@import 'helpers/helpers';   
+// Reset and dependencies 
+@import "wired/reset/normalize";
+@import "wired/reset/print"; 
+ 
+// Core CSS 
+@import "wired/core/type";
+@import "wired/core/buttons"; 
+@import "wired/core/code";
+@import "wired/core/forms"; 
+@import "wired/core/grid"; 
+@import "wired/core/icons";
+@import "wired/core/images";
+@import "wired/core/scaffolding";
+@import "wired/core/tables"; 
 
+// Components
+@import "wired/components/component-animations"; 
+@import "wired/components/dropdowns"; 
+@import "wired/components/fullscreen"; 
+@import "wired/components/button-groups";
+@import "wired/components/input-groups";
+@import "wired/components/navs";
+@import "wired/components/navbar";
+@import "wired/components/breadcrumbs";
+@import "wired/components/pagination";
+@import "wired/components/pager";
+@import "wired/components/labels";
+@import "wired/components/badges";
+@import "wired/components/jumbotron";
+@import "wired/components/thumbnails";
+@import "wired/components/alerts";
+@import "wired/components/progress-bars";
+@import "wired/components/media";
+@import "wired/components/list-group";
+@import "wired/components/offcanvas";
+@import "wired/components/panels";
+@import "wired/components/responsive-embed";
+@import "wired/components/wells";
+@import "wired/components/close";
+ 
+// Components w/ JavaScript
+@import "wired/components/modals";
+@import "wired/components/tooltip";
+@import "wired/components/popovers";
+@import "wired/components/carousel";
 
-/* Components  
-------------------------- */   
-@import 'components/articles'; 
-@import 'components/breadcrumbs'; 
-@import 'components/buttons'; 
-@import 'components/dropdown'; 
-@import 'components/forms'; 
-@import 'components/grid'; 
-@import 'components/input-groups'; 
-@import 'components/jumbotron'; 
-@import 'components/lists'; 
-@import 'components/modals'; 
-@import 'components/navbar'; 
-@import 'components/offcanvas'; 
-@import 'components/pagination'; 
-@import 'components/panels'; 
-@import 'components/popover';  
-@import 'components/progress'; 
-@import 'components/scrollbar'; 
-@import 'components/tables';  
-@import 'components/tabs'; 
-@import 'components/toggles'; 
-@import 'components/tooltip'; 
-@import 'components/upload'; 
-@import 'components/utilities'; 
-
-
-/* Vendors  
-------------------------- */     
-@import 'vendors/datepicker'; 
-@import 'vendors/dropzone'; 
-@import 'vendors/editor'; 
-@import 'vendors/notification'; 
-@import 'vendors/selectbox'; 
+// Utility classes
+@import "wired/utilities/utilities";
+@import "wired/utilities/utilities-responsive";
+@import "wired/utilities/utilities-spacing";
+ 

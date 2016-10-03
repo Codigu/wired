@@ -1,0 +1,32 @@
+//
+// Breadcrumbs
+// --------------------------------------------------
+
+
+.breadcrumb {
+  padding: $breadcrumb-padding-vertical $breadcrumb-padding-horizontal;
+  margin-bottom: $line-height-computed;
+  list-style: none;
+
+  > li {
+    display: inline-block;
+
+    + li:before {
+      @extend .icon;
+      content: "\f105";
+      padding: 0 5px;
+      color: $breadcrumb-color;
+    }
+  }
+  
+  > li,
+  > li > a {
+    font-family: $font-family-heading;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  > .active {
+    color: $breadcrumb-active-color;
+  }
+}
