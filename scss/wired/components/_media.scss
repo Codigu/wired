@@ -59,6 +59,7 @@
 .media-heading {
   margin-top: 0;
   margin-bottom: 5px;
+  display: inline-block;
 }
 
 // Media list variation
@@ -67,4 +68,11 @@
 .media-list {
   padding-left: 0;
   list-style: none;
+}
+
+.media-meta {
+  display: inline-block;
+  margin-left: 5px;
+  color: rgba($brand-black,.4);
+  font-size: 60%;
 }

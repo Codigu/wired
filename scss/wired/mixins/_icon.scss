@@ -1,0 +1,15 @@
+//  Font Awesome Icon
+// --------------------------
+
+@mixin icon() {
+  display: inline-block;
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+  font-size: 14px;
+  line-height: 22px;
+  text-rendering: auto; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

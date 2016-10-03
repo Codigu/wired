@@ -6,13 +6,14 @@
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-base:              #000 !default;
-$gray-darker:            lighten($gray-base, 13.5%) !default; // #222
-$gray-dark:              lighten($gray-base, 20%) !default;   // #333
-$gray:                   lighten($gray-base, 33.5%) !default; // #555
-$gray-light:             lighten($gray-base, 46.7%) !default; // #777
-$gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
+$gray-base:             #000 !default;
+$gray-darker:           lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:             lighten($gray-base, 20%) !default;   // #333
+$gray:                  lighten($gray-base, 33.5%) !default; // #555
+$gray-light:            lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:          lighten($gray-base, 93.5%) !default; // #eee
 
+$brand-base:            $gray-dark !default;
 $brand-primary:         #5f68a7 !default; 
 $brand-success:         #10cfbd !default;
 $brand-info:            #48b0f7 !default;
@@ -283,7 +284,7 @@ $table-border-color:            $brand-gray !default;
 
 $btn-font-weight:                normal !default;
 
-$btn-default-color:              $gray !default;
+$btn-default-color:              $gray-light !default;
 $btn-default-bg:                 #fff !default;
 $btn-default-border:             $brand-gray !default;
  
@@ -680,6 +681,25 @@ $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) 
 $state-danger-text:              #a94442 !default;
 $state-danger-bg:                #f2dede !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+
+
+// Cards
+$card-header-padding:           20px 20px 7px 20px !default;
+$card-body-padding:             20px !default;
+$card-footer-padding:           10px 20px !default;
+
+$card-spacer-x:                 15px !default;
+$card-spacer-y:                 10px !default;
+$card-border-width:             1px !default;
+$card-border-radius:            $border-radius-base !default;
+$card-border-color:             $brand-gray !default;
+$card-border-radius-inner:      $card-border-radius !default;
+$card-cap-bg:                   transparent !default;
+$card-bg:                       $brand-white !default;
+$card-link-hover-color:         $brand-white !default;
+$card-img-overlay-padding:      20px !default;
+$card-deck-margin:              14px !default;
+$card-columns-sm-up-column-gap: 1.25rem !default;
 
 
 // Tooltips

@@ -258,7 +258,7 @@
       font-weight: normal; 
 
       &:after {
-        @extend .icon;
+        @include icon();;
         content: "\f056";
         position: absolute;
         right: 13px;

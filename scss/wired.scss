@@ -20,35 +20,36 @@
 @import "wired/core/code";
 @import "wired/core/forms"; 
 @import "wired/core/grid"; 
-@import "wired/core/icons";
 @import "wired/core/images";
 @import "wired/core/scaffolding";
 @import "wired/core/tables"; 
-
+ 
 // Components
+@import "wired/components/alerts";
+@import "wired/components/badges"; 
+@import "wired/components/breadcrumbs";
+@import "wired/components/button-groups";
+@import "wired/components/card";
+@import "wired/components/close";
 @import "wired/components/component-animations"; 
 @import "wired/components/dropdowns"; 
 @import "wired/components/fullscreen"; 
-@import "wired/components/button-groups";
 @import "wired/components/input-groups";
-@import "wired/components/navs";
-@import "wired/components/navbar";
-@import "wired/components/breadcrumbs";
-@import "wired/components/pagination";
-@import "wired/components/pager";
-@import "wired/components/labels";
-@import "wired/components/badges";
 @import "wired/components/jumbotron";
-@import "wired/components/thumbnails";
-@import "wired/components/alerts";
-@import "wired/components/progress-bars";
-@import "wired/components/media";
+@import "wired/components/labels";
 @import "wired/components/list-group";
+@import "wired/components/media";
+@import "wired/components/navbar";
+@import "wired/components/navs"; 
 @import "wired/components/offcanvas";
+@import "wired/components/pager";
+@import "wired/components/pagination";
 @import "wired/components/panels";
+@import "wired/components/thumbnails";
+@import "wired/components/progress-bars";
 @import "wired/components/responsive-embed";
 @import "wired/components/wells";
-@import "wired/components/close";
+
  
 // Components w/ JavaScript
 @import "wired/components/modals";

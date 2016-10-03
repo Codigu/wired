@@ -268,14 +268,14 @@ abbr[data-original-title] {
 }
 
 // Blockquotes
-blockquote {
+.blockquote {
   padding-left: 30px;
   margin: 0 0 $line-height-computed;
   font-size: $blockquote-font-size;
   position: relative;
 
   &:before {
-    @extend .icon; 
+    @include icon();; 
     content: "\f10d"; 
     left: 0;
     position: absolute;

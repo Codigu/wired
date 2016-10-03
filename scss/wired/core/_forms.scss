@@ -473,7 +473,7 @@ input[type="search"] {
         input[type=checkbox]:checked + label {
             position: relative;
             &::after {
-                @extend .icon;
+                @include icon();;
                 content: "\F00C";
                 position: absolute;
                 right: -27px;
@@ -539,7 +539,7 @@ input[type="search"] {
                 border-width: 9px;
             }
             &::after {  
-              @extend .icon;
+              @include icon();;
               content: "\F00C";
               color: $brand-dark;
               font-size: 12px !important;

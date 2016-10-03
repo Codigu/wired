@@ -10,15 +10,15 @@ var runSequence   = require('run-sequence');
 var autoprefixer  = require('gulp-autoprefixer');
 
 // Convert Sass files into Css files
-gulp.task('sass', function () {
- return gulp.src('sass/**/*.scss')
+gulp.task('scss', function () {
+ return gulp.src('scss/**/*.scss')
           .pipe(sass().on('error', sass.logError))
           .pipe(autoprefixer())
           .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('minify-sass', function () {
- return gulp.src('sass/**/*.scss')
+gulp.task('minify-scss', function () {
+ return gulp.src('scss/**/*.scss')
           .pipe(sass().on('error', sass.logError))
           .pipe(autoprefixer())
           .pipe(sass({outputStyle: 'compressed'})) 
@@ -44,14 +44,14 @@ gulp.task('minify-js', function (cb) {
 
 // Build all assets from Sass to Css and compressed bundle js
 gulp.task('build', function(){
-    runSequence('sass', 'minify-sass', 'js', 'minify-js');
+    runSequence('scss', 'minify-sass', 'js', 'minify-js');
 }); 
  
 // Watch for every changes on both sass and js
 gulp.task('watch', function () { 
-  gulp.watch('**/*.scss', ['sass']); 
+  gulp.watch('**/*.scss', ['scss']); 
   gulp.watch('**/*.js', ['js']); 
 });
 
-// Default Task
+// Default Task 
 gulp.task('default', ['build']); 

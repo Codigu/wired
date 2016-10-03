@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
     <head>
       <meta charset="utf-8">
       <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -8,8 +8,8 @@
       <meta name="apple-mobile-web-app-status-bar-style" content="default">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <meta name="apple-touch-fullscreen" content="yes">
-      <meta content="" name="description"/>
-      <meta content="" name="author"/>
+      <meta content="Hand Crafted UI Framework on top of Bootstrap 3" name="description"/>
+      <meta content="Larry Geams Parangan" name="author"/>
       
       <!-- Favicons -->
       <link rel="apple-touch-icon" href="images/ico/60.png">
