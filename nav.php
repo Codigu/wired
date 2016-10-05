@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse navbar-md navbar-static-top"> 
+<nav class="navbar navbar-sm navbar-inverse navbar-fixed-top"> 
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#navbar">
@@ -10,9 +10,8 @@
          <img src="images/logo-light.svg" width="90" alt="">
       </a>
     </div>
-    <div id="navbar" class="offcanvas offcanvas-left" >
-
-      <ul class="nav navbar-nav navbar-right">
+    <div id="navbar" class="navbar-offcanvas navbar-right" >
+      <ul class="nav navbar-nav">
         <li class="active"><a href="#0">Home</a></li>
         <li><a href="#0">About</a></li>
         <li class="dropdown">
