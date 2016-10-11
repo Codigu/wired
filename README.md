@@ -1,5 +1,5 @@
 ### Wired
-A hand crafted UI framework based of bootstrap 3
+A hand crafted UI framework based on bootstrap 3
 
 ### Quick start
 - Clone the repo: `git clone https://github.com/larrygeams/wired.git`
