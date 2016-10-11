@@ -14,8 +14,8 @@ wired/
 │   ├── wired.css
 │   ├── wired.min.css
 └── js/
-    ├── bootstrap.js
-    └── bootstrap.min.js
+    ├── wired.js
+    └── wired.min.js
 ```
 
 We provide compiled CSS and JS (`wired.*`), as well as compiled and minified CSS and JS (`wired.min.*`). 
