@@ -1,0 +1,30 @@
+// Colors
+//
+//## Gray and brand colors for use across Bootstrap.
+
+$gray-base:             #000 !default;
+$gray-darker:           lighten($gray-base, 13.5%) !default; // #222
+$gray-dark:             lighten($gray-base, 20%) !default;   // #333
+$gray:                  lighten($gray-base, 33.5%) !default; // #555
+$gray-light:            lighten($gray-base, 46.7%) !default; // #777
+$gray-lighter:          lighten($gray-base, 93.5%) !default; // #eee
+
+// Wired Colors
+$brand-base:            $gray-dark !default;
+$brand-primary:         #5f68a7 !default; 
+$brand-success:         #10cfbd !default;
+$brand-info:            #48b0f7 !default;
+$brand-warning:         #f8d053 !default;
+$brand-danger:          #f55753 !default;
+$brand-dark:            #2B303B !default;
+$brand-white:           #fff !default;
+$brand-gray:            #f0f0f0 !default;
+$brand-black:           $gray-base;
+
+// Social COlors
+$brand-facebook:        #3B5998 !default;
+$brand-twitter:         #55ACEE !default;
+$brand-google:          #DD4B39  !default;
+$brand-linkedin:        #1F88BE  !default;
+$brand-instagram:       #8146B0  !default;
+$brand-youtube:         #CC181E  !default;

@@ -2,7 +2,6 @@
 // Offcanvas
 // --------------------------------------------------
 .offcanvas-open { 
-  overflow: hidden; 
 
   .navbar:before {
     position: fixed;
@@ -18,90 +17,97 @@
 }
 
 .navbar {
-  .offcanvas {
-    position: fixed;
-    top: 0;
-    bottom: 0; 
-    left: 0;
-    z-index: 101;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    height: 100%;
-    width: 250px;
-    max-width: 100%;
-    padding: 10px 15px; 
-    background-color: $brand-white; 
-    transform: translate3d(100%,0,0);
-    transition: all 0.4s cubic-bezier(0.19,1,0.22,1);
+ 
+  &.navbar-inverse .navbar-offcanvas { 
+    background-color: $navbar-inverse-bg;
+  }
 
-    &.offcanvas-left {
-      left: auto;
-      right: 0; 
-      z-index: 999;
-      transform: translate3d(100%,0,0);
-    }
-
-    &.in {
-      visibility: visible;
-      opacity: 1;
-      transform: translate3d(0,0,0);
-    } 
-
-    .icon { display: none; }
-    .icon-label { display: block; }
+  .navbar-offcanvas {
+    position: initial;
+    overflow-y: initial;
+    height: auto;
+    width: auto;
+    padding: 0;
+    background-color: transparent;
+    transform: translate3d(0,0,0);
+    @include box-shadow(none);
+ 
+    .icon { display: block; }
+    .icon-label { display: none; }
 
     .dropdown-menu {
-      position: relative;
-      float: none;
-      border: 0;
+      position: absolute;
+      float: left;
+      border: 1px solid $dropdown-border;
 
       > li > a {
         padding: 10px 15px;
       }
 
       .caret {
-        float: right;
-        margin-top: 2px;
+        float: none;
+        margin-top: 0;
       }
-    }
+    } // .dropdown-menu
+    
+  }
 
-    }
 
    @each $breakpoint in map-keys($grid-breakpoints) {
-    @include media-breakpoint-up($breakpoint) { 
+    @include media-breakpoint-down($breakpoint) { 
       &-#{ $breakpoint } {
-        .offcanvas {
+        .navbar-offcanvas {
           visibility: visible;
           opacity: 1;
-          position: initial;
-          overflow-y: initial;
-          height: auto;
-          width: auto;
-          padding: 0;
-          transform: translate3d(0,0,0) !important;
-          @include box-shadow(none);
+          position: fixed;
+          top: 0;
+          bottom: 0; 
+          left: auto;
+          right: 0;
+          z-index: 101;
+          overflow-y: auto;
+          -webkit-overflow-scrolling: touch;
+          height: 100%;
+          width: 250px;
+          max-width: 100%;
+          padding: 10px 15px; 
+          background-color: $brand-white; 
+          transform: translate3d(100%,0,0);
+          transition: all 0.4s cubic-bezier(0.19,1,0.22,1);
 
-          .icon { display: block; }
-          .icon-label { display: none; }
- 
+          &.offcanvas-left {
+            left: 0;
+            right: auto; 
+            transform: translate3d(-100%,0,0);
+          }
+
+          &.in {
+            visibility: visible;
+            opacity: 1;
+            transform: translate3d(0,0,0);
+          } 
+
+          .navbar-nav {
+            padding-top: 50px;
+            padding-bottom: 50px;
+          }
+          
           .dropdown-menu {
-            position: absolute;
-            float: left;
-            border: 1px solid $dropdown-border;
+            position: relative;
+            float: none;
+            border: 0;
 
             > li > a {
               padding: 10px 15px;
             }
 
             .caret {
-              float: none;
-              margin-top: 0;
+              float: right;
+              margin-top: 2px;
             }
-          } // .dropdown-menu
-          
+          }
         }
       } 
     }  // @media-breakpoint-up
   } 
 }
-

@@ -128,6 +128,45 @@
   }
 }
 
+// Input Group Icon
+.input-group-icon {
+
+  .form-control {
+    padding-right: 36px !important;
+  }
+
+  .icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    width: 36px;
+    height: 100%;
+    padding: 0;
+    text-align: center;
+    background: transparent !important;
+  }
+
+  .fa {
+    cursor: default;
+    line-height: 1;
+    text-align: center;
+    margin: 0;
+    height: 100%;
+    display: block;
+    color: $gray-light;
+  }
+
+  .fa:before {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
 // Reset rounded corners
 .input-group .form-control:first-child,
 .input-group-addon:first-child,

@@ -9,6 +9,8 @@
 // other navbar variations.
 
 .menu-open {
+  overflow: hidden;
+
   .navbar-toggle {
     .icon-bar:first-of-type {
       transform: rotate(45deg) translateY(5px) translateX(3px);
@@ -32,71 +34,56 @@
   @include clearfix;
   
   .navbar-header { 
-    float: none;
-    @include clearfix();
+    float: left; 
   }
 
-  .navbar-right  {  
-    float: none !important; 
-    margin: 0;
-  } 
-
-  .navbar-nav {
-    float: none; 
-    margin: 0;
-
-    > li { float: none; }
-    li + li { margin-left: 0; }
+  .navbar-toggle { 
+    display: none; 
   }
 
-  .navbar-toggle {
-    display: block;
-    position: relative;
-    float: right;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: transparent;
-    background-image: none;
-    border: 1px solid transparent;
-    @include border-radius(4px);
-    z-index: 100;
-    cursor: pointer;
-   
-    .icon { line-height: inherit; }
+  .navbar-nav { 
 
-    .icon-bar {
-      background-color: $gray-dark;
-      display: block;
-      width: 22px;
-      height: 2px;
-      border-radius: 1px;
-      transition: all 0.3s ease-in-out;
-      transform-origin: 50% 50%;
-    }
+    > li { display: inline-block; }
+    > li + li { margin-left: 1rem; }
   }
 
   @each $breakpoint in map-keys($grid-breakpoints) {
-    @include media-breakpoint-up($breakpoint) {
-     &-#{$breakpoint} {
-      .navbar-header { float: left; }
-      .navbar-toggle { display: none; }
+    @include media-breakpoint-down($breakpoint) {
+      &-#{$breakpoint} {
+        float: none;
 
-      .navbar-right {
-        float: right !important;
-        margin-right: -15px; 
+        .navbar-header { 
+          float: none;
+          @include clearfix();
+        }
+        
+        .navbar-right  {  
+          float: none !important; 
+          margin: 0;
+        } 
+
+        .navbar-toggle { 
+          display: inline-block !important; 
+        }
+
+        .navbar-nav {
+          float: none; 
+          margin: 0;
+
+          > li { display: block; }
+          li + li { margin-left: 0; }
+        }
+
       }
-
-      .navbar-toggle { display: none; }
-
-      .navbar-nav { 
-        float: left;  
-
-        > li { float: left; }
-        > li + li { margin-left: 1rem; }
-      }
-    }
     } // @media-breakpoint-up
   }
+}
+
+// Navbar global line height
+//
+
+.navbar-line-height {
+  line-height: $navbar-line-height; 
 }
 
 
@@ -106,12 +93,14 @@
 // styling of responsive aspects.
 
 .navbar-header {
+  position: relative;
+  @extend .navbar-line-height;
   @include clearfix;
 
   @media (min-width: $grid-float-breakpoint) {
     float: left;
   }
-}
+} 
 
 
 // Navbar collapse (body)
@@ -125,16 +114,17 @@
 // content for the user's viewport.
 
 .navbar-collapse {
+  display: none;
   overflow-x: visible;
   padding-right: $navbar-padding-horizontal;
   padding-left:  $navbar-padding-horizontal;
-  border-top: 1px solid transparent;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
-  @include clearfix;
   -webkit-overflow-scrolling: touch;
+  @include clearfix; 
+  
 
   &.in {
     overflow-y: auto;
+    display: block;
   }
 
   @media (min-width: $grid-float-breakpoint) {
@@ -223,6 +213,11 @@
   @media (min-width: $grid-float-breakpoint) {
     border-radius: 0;
   }
+  
+  // 
+  @media (orientation: landscape)  {
+    position: relative;
+  }
 }
 .navbar-fixed-top {
   top: 0;
@@ -238,12 +233,12 @@
 // Brand/project name
 
 .navbar-brand {
-  float: left;
-  padding: $navbar-padding-vertical $navbar-padding-horizontal;
+  display: inline-block;
+  padding-left: $navbar-padding-horizontal;
+  padding-right: $navbar-padding-horizontal;
   font-size: $font-size-large;
-  line-height: $line-height-computed;
   position: relative;
-  z-index: 999;
+  z-index: 102;
 
   &:hover,
   &:focus {
@@ -251,7 +246,7 @@
   }
 
   > img {
-    display: block;
+    display: inline-block;
   }
 
   @media (min-width: $grid-float-breakpoint) {
@@ -268,17 +263,29 @@
 // Custom button for toggling the `.navbar-collapse`, powered by the collapse
 // JavaScript plugin.
 
-.navbar-toggle {
-  position: relative;
-  float: right;
-  margin-right: $navbar-padding-horizontal;
-  padding: 9px 10px;
-  @include navbar-vertical-align(34px);
+.navbar-toggle { 
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  padding: 10px;
   background-color: transparent;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  background-image: none; 
   border: 1px solid transparent;
+  z-index: 102;
+  cursor: pointer;
+  transform: translateY(-50%);
   @include border-radius($border-radius-base);
 
+  &.toggle-left {
+    left: 15px; 
+    right: 0;
+  }
+
+  &.toggle-right {
+    right: 15px;
+    left: 0;
+  }
+  
   // We remove the `outline` here, but later compensate by attaching `:hover`
   // styles to `:focus`.
   &:focus {
@@ -287,14 +294,19 @@
 
   // Bars
   .icon-bar {
+    background-color: $gray-dark;
     display: block;
     width: 22px;
     height: 2px;
+    transition: all 0.3s ease-in-out;
+    transform-origin: 50% 50%;
     @include border-radius(1px);
   }
   .icon-bar + .icon-bar {
     margin-top: 4px;
   }
+
+  // 
 
   @media (min-width: $grid-float-breakpoint) {
     display: none;
@@ -309,6 +321,7 @@
 
 .navbar-nav {
   margin: ($navbar-padding-vertical / 2) (-$navbar-padding-horizontal);
+  @extend .navbar-line-height;
 
   > li > a {
     padding-top:    10px;
@@ -343,11 +356,11 @@
 
   // Uncollapse the nav
   @media (min-width: $grid-float-breakpoint) {
-    float: left;
     margin: 0;
 
     > li {
-      float: left;
+      display: inline-block;
+
       > a {
         padding-top:    $navbar-padding-vertical;
         padding-bottom: $navbar-padding-vertical;
@@ -356,7 +369,7 @@
   }
 }
 
-
+ 
 // Navbar form
 //
 // Extension of the `.form-inline` with some extra flavor for optimum display in
@@ -457,7 +470,7 @@
 @media (min-width: $grid-float-breakpoint) {
   .navbar-left {
     float: left !important;
-  }
+  } 
   .navbar-right {
     float: right !important;
   margin-right: -$navbar-padding-horizontal;
@@ -527,11 +540,6 @@
     .icon-bar {
       background-color: $navbar-default-toggle-icon-bar-bg;
     }
-  }
-
-  .navbar-collapse,
-  .navbar-form {
-    border-color: $navbar-default-border;
   }
 
   // Dropdown menu items
@@ -608,7 +616,6 @@
 
 .navbar-inverse {
   background-color: $navbar-inverse-bg;
-  border-color: $navbar-inverse-border;
 
   .navbar-brand {
     color: $navbar-inverse-brand-color;
@@ -630,7 +637,6 @@
       &:hover,
       &:focus {
         color: $navbar-inverse-link-hover-color;
-        background-color: $navbar-inverse-link-hover-bg;
       }
     }
     > .active > a {
@@ -638,7 +644,6 @@
       &:hover,
       &:focus {
         color: $navbar-inverse-link-active-color;
-        background-color: $navbar-inverse-link-active-bg;
       }
     }
     > .disabled > a {
@@ -653,19 +658,9 @@
 
   // Darken the responsive nav toggle
   .navbar-toggle {
-    border-color: $navbar-inverse-toggle-border-color;
-    &:hover,
-    &:focus {
-      background-color: $navbar-inverse-toggle-hover-bg;
-    }
     .icon-bar {
       background-color: $navbar-inverse-toggle-icon-bar-bg;
     }
-  }
-
-  .navbar-collapse,
-  .navbar-form {
-    border-color: darken($navbar-inverse-bg, 7%);
   }
 
   // Dropdowns

@@ -1,61 +1,51 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 (function( $ ) {
-  require('./wired/wired.fullscreen.js');
-  require('./wired/wired.offcanvas.js');
+  require('./wired/wired.menu.js');
   require('./wired/wired.smooth.scroll.js');
 })( jQuery ); 
  
-},{"./wired/wired.fullscreen.js":2,"./wired/wired.offcanvas.js":3,"./wired/wired.smooth.scroll.js":4}],2:[function(require,module,exports){
-(function( $ ) {
-    'use strict';
-    /*
-     * Fullscreen Menu
-     * Full screen menu navigation */
-    $('[data-toggle="fullscreen"]').on('click', function(event) {
-        event.preventDefault();
-        
-        var self = $(this);
-        var target = self.data('target');
-
-        $('body').toggleClass('menu-open fullscreen-open');
-        $(target).toggleClass('in');
-
-    });
-})( jQuery ); 
-
-},{}],3:[function(require,module,exports){
+},{"./wired/wired.menu.js":2,"./wired/wired.smooth.scroll.js":3}],2:[function(require,module,exports){
 (function($) {
     'use strict';
+
     /*
-     * Offcanvas Menu
+     * Toggle Menu
      * offcanvas menu navigation */
-    var body = document.body;
+    var $body   = $(document.body);
+    var $menu   = $('.navbar-toggle');
+    var $type   = $( $menu.data('toggle') );
+    var $target = $( $menu.data('target') );
 
-    $('[data-toggle="offcanvas"]').on('click', function(event) {
-        event.preventDefault();
+    $menu.on('click', function(event) {
 
-        var self = $(this);
-        var target = self.data('target');
+        $body.toggleClass($type.selector + '-open menu-open');
+        $target.toggleClass('in');
 
-        $(body).toggleClass('menu-open offcanvas-open');
-        $(target).toggleClass('in');
+        console.log($type);
 
         return false;
-
     });
 
-    $(document).on('click', function(event){
-        if( $(event.target).closest('.offcanvas').length > 0 ) {
-            return false;
+    // CLicking outside the target contianer 
+    $body.on('click', function(event) {
+        if ( $body.hasClass($type.selector + '-open') ) {
+            if ( $(event.target).hasClass($target.selector) ) {
+                return false;
+            } else if(  $(event.target).hasClass('dropdown-toggle') ) {
+                return true;
+            }
+
+            $body.removeClass($type.selector + '-open menu-open');
+            $target.removeClass('in');
         }
-
-      $(body).removeClass('menu-open offcanvas-open');
-      $('.offcanvas').removeClass('in');
     });
+
+
+
 
 })(jQuery);
- 
-},{}],4:[function(require,module,exports){
+
+},{}],3:[function(require,module,exports){
 (function($) {
     'use strict';
     /*

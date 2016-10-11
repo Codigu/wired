@@ -1,4 +1,15 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Sass cache Directory
 .sass-cache
 *.css.map
+
+# Dependency directories
 bourbon
 node_modules
+
+# Optional npm cache directory
+.npm

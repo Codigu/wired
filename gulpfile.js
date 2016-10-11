@@ -44,7 +44,7 @@ gulp.task('minify-js', function (cb) {
 
 // Build all assets from Sass to Css and compressed bundle js
 gulp.task('build', function(){
-    runSequence('scss', 'minify-sass', 'js', 'minify-js');
+    runSequence('scss', 'minify-scss', 'js', 'minify-js');
 }); 
  
 // Watch for every changes on both sass and js
