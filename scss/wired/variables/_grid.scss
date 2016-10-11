@@ -1,0 +1,31 @@
+// Grid breakpoints
+//
+// Define the minimum and maximum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 544px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
+) !default;
+
+// Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         30px !default;
+$grid-gutter-width-sm:      20px !default;
+$grid-gutter-width-xs:      10px !default;
+
+$grid-gutter-sm:            ($grid-gutter-width-sm / 2);
+$grid-gutter-xs:            ($grid-gutter-width-xs / 2);
+
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-sm-min !default;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;

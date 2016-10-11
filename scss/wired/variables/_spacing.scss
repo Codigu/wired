@@ -1,0 +1,94 @@
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+
+$spacer:                5px !default;
+$spacer-x:              $spacer !default;
+$spacer-y:              $spacer !default;
+$spacers: (
+  0: (
+    x:   0,
+    y:   0
+  ),
+  5: (
+    x:   $spacer-x,
+    y:   $spacer-y
+  ),
+  10: (
+    x:   ($spacer-x * 2),
+    y:   ($spacer-y * 2)
+  ),
+  15: (
+    x:   ($spacer-x * 3),
+    y:   ($spacer-y * 3)
+  ),
+  20: (
+    x:   ($spacer-x * 4),
+    y:   ($spacer-y * 4)
+  ),
+  25: (
+    x:   ($spacer-x * 5),
+    y:   ($spacer-y * 5)
+  ),
+  30: (
+    x:   ($spacer-x * 6),
+    y:   ($spacer-y * 6)
+  ),
+  35: (
+    x:   ($spacer-x * 7),
+    y:   ($spacer-x * 7)
+  ),
+  40: (
+    x:   ($spacer-x * 8),
+    y:   ($spacer-y * 8)
+  ),
+  45: (
+    x:   ($spacer-x * 9),
+    y:   ($spacer-y * 9)
+  ),
+  50: (
+    x:   ($spacer-x * 10),
+    y:   ($spacer-y * 10)
+  ),
+  55: (
+    x:   ($spacer-x * 11),
+    y:   ($spacer-y * 11)
+  ),
+  60: (
+    x:   ($spacer-x * 12),
+    y:   ($spacer-y * 12)
+  ),
+  65: (
+    x:   ($spacer-x * 13),
+    y:   ($spacer-y * 13)
+  ),
+  70: (
+    x:   ($spacer-x * 14),
+    y:   ($spacer-y * 14)
+  ),
+  75: (
+    x:   ($spacer-x * 15),
+    y:   ($spacer-y * 15)
+  ),
+  80: (
+    x:   ($spacer-x * 16),
+    y:   ($spacer-y * 16)
+  ),
+  85: (
+    x:   ($spacer-x * 17),
+    y:   ($spacer-y * 17)
+  ),
+  90: (
+    x:   ($spacer-x * 18),
+    y:   ($spacer-y * 18)
+  ),
+  95: (
+    x:   ($spacer-x * 19),
+    y:   ($spacer-y * 19)
+  ),
+  100: (
+    x:   ($spacer-x * 20),
+    y:   ($spacer-y * 20)
+  )
+) !default;
