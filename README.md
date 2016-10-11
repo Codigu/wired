@@ -3,6 +3,8 @@ A hand crafted UI framework based on bootstrap 3
  
 ### Quick start
 - Clone the repo: `git clone https://github.com/larrygeams/wired.git`
+- Run npm command to install dependencies: `npm install`
+- Next, run gulp task to build assets: `gulp`
 
 ### What's included
 
