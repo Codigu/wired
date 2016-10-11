@@ -1,0 +1,27 @@
+{
+  "name": "wired",
+  "description": "Hand Crafted UI Framework based on Bootstrap 3",
+  "main": "gulpfile.js",
+  "authors": [
+    "Larry Geams Parangan"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "css",
+    "framework",
+    "sass",
+    "bootstrap",
+    "wired",
+    "responsive",
+    "web",
+    "mobile-first"
+  ],
+  "homepage": "https://github.com/larrygeams/wired",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
