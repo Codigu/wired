@@ -15,6 +15,10 @@
     // Inner gutter via padding
     padding-left:  ceil(($grid-gutter-width / 2));
     padding-right: floor(($grid-gutter-width / 2));
+
+    @if $enable-flex {
+      width: 100%;
+    }
   }
 }
 
@@ -61,6 +65,13 @@
       margin-left: percentage(($index / $grid-columns));
     }
   }
+  @if $enable-flex {
+      .col-#{$class}-#{$index} {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+    }
 }
 
 // [converter] This is defined recursively in LESS, but Sass supports real loops

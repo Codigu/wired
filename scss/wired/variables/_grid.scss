@@ -20,6 +20,13 @@ $grid-columns:              12 !default;
 $grid-gutter-width:         30px !default;
 $grid-gutter-width-sm:      20px !default;
 $grid-gutter-width-xs:      10px !default;
+$grid-gutter-widths: (
+  xs: $grid-gutter-width,
+  sm: $grid-gutter-width,
+  md: $grid-gutter-width,
+  lg: $grid-gutter-width,
+  xl: $grid-gutter-width
+) !default;
 
 $grid-gutter-sm:            ($grid-gutter-width-sm / 2);
 $grid-gutter-xs:            ($grid-gutter-width-xs / 2);
