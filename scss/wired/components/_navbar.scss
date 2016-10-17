@@ -13,7 +13,7 @@
 
   .navbar-toggle {
     .icon-bar:first-of-type {
-      transform: rotate(45deg) translateY(5px) translateX(3px);
+      transform: rotate(45deg) translateY(5px) translateX(4px);
     }
 
     .icon-bar:nth-of-type(2) {
@@ -213,11 +213,7 @@
   @media (min-width: $grid-float-breakpoint) {
     border-radius: 0;
   }
-  
-  // 
-  @media (orientation: landscape)  {
-    position: relative;
-  }
+
 }
 .navbar-fixed-top {
   top: 0;
@@ -229,6 +225,14 @@
   border-width: 1px 0 0;
 }
 
+
+// Light / Dark
+
+.navbar-light {
+  .nav > li > a {
+    color: $brand-white;
+  }
+}
 
 // Brand/project name
 
@@ -321,6 +325,7 @@
 
 .navbar-nav {
   margin: ($navbar-padding-vertical / 2) (-$navbar-padding-horizontal);
+  float: left;
   @extend .navbar-line-height;
 
   > li > a {

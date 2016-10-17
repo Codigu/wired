@@ -2,16 +2,15 @@
 // Labels
 // --------------------------------------------------
 
+label,
 .label {
   font-family: $font-family-heading;
   font-size: 11px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 400;
   display: inline;
-  padding: 3px 10px;
   font-size: 60%;
   line-height: 1;
-  color: $label-color;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
