@@ -1,0 +1,42 @@
+/* 
+* Docs
+*/
+
+html, body {
+	height: 100%; 
+	letter-spacing: 1px;
+}
+
+// Navbar 
+.wd-docs .navbar {
+	margin-bottom: 0;
+	background-color: #fff;
+}
+
+
+// Buttons
+
+.wd-docs .btn-outline {
+	border-width: 2px !important;
+} 
+
+// Home
+
+.wd-docs.home {
+
+	.body, .footer {
+		h1 {
+			margin-top: 0;
+		}
+
+		a {
+			color: #fff !important;
+		}
+	}
+}
+
+.wd-docs .pull-bottom {
+	position: absolute;
+	left: 0; right: 0;
+	bottom: 0;
+}
