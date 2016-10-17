@@ -16,7 +16,7 @@
     "web",
     "mobile-first"
   ],
-  "homepage": "https://github.com/larrygeams/wired",
+  "homepage": "https://github.com/Codigu/wired",
   "ignore": [
     "**/.*",
     "node_modules",

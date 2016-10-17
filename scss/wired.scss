@@ -2,7 +2,7 @@
  * Name: Wired 
  * url: http://larrygeams.github.io/wired
  * author: Larry Geams Parangan
- * version: 2.0.0
+ * version: 2.1.0
  */
 
 // Core variables and mixins 
@@ -58,7 +58,4 @@
 @import "wired/components/carousel";
 
 // Utility classes
-@import "wired/utilities/utilities";
-@import "wired/utilities/utilities-responsive";
-@import "wired/utilities/utilities-spacing";
- 
+@import "wired/core/utilities";

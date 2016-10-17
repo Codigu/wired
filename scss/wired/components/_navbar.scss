@@ -23,7 +23,7 @@
     .icon-bar:last-of-type {
       transform: rotate(-45deg) translateY(-5px) translateX(4px);
     }
-  }
+  } 
 }
 
 .navbar {
@@ -44,8 +44,8 @@
   .navbar-nav { 
 
     > li { display: inline-block; }
-    > li + li { margin-left: 1rem; }
-  }
+    > li + li { margin-left: 5px; }
+  } 
 
   @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-down($breakpoint) {

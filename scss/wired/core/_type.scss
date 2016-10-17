@@ -85,79 +85,7 @@ mark,
   padding: .2em;
 }
 
-// Alignment
-.text-left           { text-align: left; }
-.text-right          { text-align: right; }
-.text-center         { text-align: center; }
-.text-justify        { text-align: justify; }
-.text-nowrap         { white-space: nowrap; }
 
-@each $breakpoint in map-keys($grid-breakpoints) {
-  @include media-breakpoint-up($breakpoint) {
-    .text-#{$breakpoint}-left {
-      text-align: left !important;
-    }
-    .text-#{$breakpoint}-right {
-      text-align: right !important;
-    }
-    .text-#{$breakpoint}-center {
-      text-align: center !important;
-    }
-    .text-#{$breakpoint}-justify {
-      text-align: justify !important;
-    }
-    .text-#{$breakpoint}-nowrap {
-      text-align: nowrap !important;
-    }
-  }
-}
-
-// Transformation
-.text-lowercase      { text-transform: lowercase; }
-.text-uppercase      { text-transform: uppercase; }
-.text-capitalize     { text-transform: capitalize; }
-
-
-// Contextual colors
-.text-muted {
-  color: $text-muted;
-}
-
-.text-white { 
-  color: $brand-white; 
-}
-
-@include text-emphasis-variant('.text-primary', $state-primary-bg);
-
-@include text-emphasis-variant('.text-success', $state-success-text);
-
-@include text-emphasis-variant('.text-info', $state-info-text);
-
-@include text-emphasis-variant('.text-warning', $state-warning-text);
-
-@include text-emphasis-variant('.text-danger', $state-danger-text);
-
-// Contextual backgrounds
-// For now we'll leave these alongside the text classes until v4 when we can
-// safely shift things around (per SemVer rules).
-.bg-white {
-  background-color: $brand-white !important;
-}
-
-.bg-black {
-  background-color: $brand-black; 
-  color: $brand-white;
-} 
-
-@include bg-variant('.bg-primary', $state-primary-bg);
-
-@include bg-variant('.bg-success', $state-success-bg);
-
-@include bg-variant('.bg-info', $state-info-bg);
-
-@include bg-variant('.bg-warning', $state-warning-bg);
-
-@include bg-variant('.bg-danger', $state-danger-bg);
 
 
 // Page header

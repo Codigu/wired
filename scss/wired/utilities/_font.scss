@@ -1,0 +1,46 @@
+// Fonts
+// -------------------------
+.font-base {
+    font-family: $font-family-base !important;
+}
+
+.font-heading {
+    font-family: $font-family-heading !important;
+}
+
+.font-serif {
+    font-family: $font-family-serif !important;
+}
+
+@each $prop,
+$abbrev in (font-size: fs) {
+    @each $size,
+    $lengths in $sizes {
+        $length: map-get($lengths, size);
+        .#{$abbrev}-#{$size} {
+            #{$prop}: $length !important;
+        }
+    }
+}
+
+// Weight and italics
+.light {
+    font-weight: 300 !important;
+}
+
+.normal {
+    font-weight: normal;
+}
+
+.strong,
+.bold {
+    font-weight: bold;
+}
+
+.semi-bold {
+    font-weight: 500 !important;
+}
+
+.italic {
+    font-style: italic;
+}

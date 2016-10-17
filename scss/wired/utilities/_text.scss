@@ -1,0 +1,49 @@
+// Alignment
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        .text-#{$breakpoint}-left {
+            text-align: left !important;
+        }
+        .text-#{$breakpoint}-right {
+            text-align: right !important;
+        }
+        .text-#{$breakpoint}-center {
+            text-align: center !important;
+        }
+        .text-#{$breakpoint}-justify {
+            text-align: justify !important;
+        }
+        .text-#{$breakpoint}-nowrap {
+            text-align: nowrap !important;
+        }
+    }
+}
+
+// Transformation
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+// Contextual colors
+.text-muted {
+    color: $text-muted;
+}
+
+.text-white {
+    color: $brand-white;
+}
+
+@include text-emphasis-variant('.text-primary', $state-primary-bg);
+@include text-emphasis-variant('.text-success', $state-success-text);
+@include text-emphasis-variant('.text-info', $state-info-text);
+@include text-emphasis-variant('.text-warning', $state-warning-text);
+@include text-emphasis-variant('.text-danger', $state-danger-text);

@@ -1,0 +1,21 @@
+// Rows
+// -------------------------
+.gutter-xs {
+    margin-left: -$grid-gutter-xs;
+    margin-right: -$grid-gutter-xs;
+    > [class^="col-"],
+    > [class*="col-"] {
+        padding-left: $grid-gutter-xs;
+        padding-right: $grid-gutter-xs;
+    }
+}
+
+.gutter-sm {
+    margin-left: -$grid-gutter-sm;
+    margin-right: -$grid-gutter-sm;
+    > [class^="col-"],
+    > [class*="col-"] {
+        padding-left: $grid-gutter-sm;
+        padding-right: $grid-gutter-sm;
+    }
+}

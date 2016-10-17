@@ -1,8 +1,8 @@
 {
   "name": "wired",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Hand Crafted UI Framework based on Bootstrap 3",
-  "homepage": "https://github.com/larrygeams/wired#readme",
+  "homepage": "https://github.com/Codigu/wired#readme",
   "author": "Larry Geams Parangan",
   "keywords": [
     "css",
@@ -22,13 +22,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/larrygeams/wired.git"
+    "url": "git+https://github.com/Codigu/wired.git"
   },
   "bugs": {
-    "url": "https://github.com/larrygeams/wired/issues"
+    "url": "https://github.com/Codigu/wired/issues"
   },
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.6.3",
     "jquery": "1.9.1 - 3"
   },
   "devDependencies": {

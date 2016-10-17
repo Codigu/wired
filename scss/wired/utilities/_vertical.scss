@@ -1,0 +1,53 @@
+// Columns
+// -------------------------
+.container-height {
+    display: table;
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.row-height {
+    display: table-row;
+}
+
+.col-height {
+    display: table-cell;
+    float: none;
+}
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        .container-#{$breakpoint}-height {
+            display: table;
+            padding-left: 0px;
+            padding-right: 0px;
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+        .row-#{$breakpoint}-height {
+            display: table-row;
+        }
+        .col-#{$breakpoint}-height {
+            display: table-cell;
+            float: none;
+        }
+    }
+}
+
+// Vertical ALignment
+// -------------------------
+.v-align-bottom {
+    vertical-align: bottom !important;
+}
+
+.v-align-top {
+    vertical-align: top !important;
+}
+
+.v-align-middle {
+    vertical-align: middle !important;
+}
