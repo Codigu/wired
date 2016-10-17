@@ -2723,8 +2723,7 @@ body {
   font-size: 14px;
   line-height: 1.42857;
   color: #5f6a7d;
-  background-color: #fff;
-  letter-spacing: 1px; }
+  background-color: #fff; }
 
 input,
 button,
@@ -4371,7 +4370,7 @@ button.list-group-item-danger {
   .navbar .navbar-nav > li {
     display: inline-block; }
   .navbar .navbar-nav > li + li {
-    margin-left: 1rem; }
+    margin-left: 5px; }
   @media (max-width: 767px) {
     .navbar-xs {
       float: none; }

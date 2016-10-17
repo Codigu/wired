@@ -45,20 +45,17 @@ gulp.task('minify-js', function(cb) {
 // Copy files from one directory to another
 gulp.task('copy', function() {
 
-    // Font Awesome 
+    // Dependencies
     gulp.src([
-        'node_modules/font-awesome/*/**'
-    ]).pipe(gulp.dest('dist/fonts'));
-
-    // jQuery
-    gulp.src([
-        'node_modules/jquery/dist/jquery.min.js'
-    ]).pipe(gulp.dest('plugins'));
+        'node_modules/font-awesome/*/**',
+        'node_modules/jquery/dist/jquery.min.js',
+        'node_modules/bootstrap/dist/*/**',
+    ], { base: 'node_modules' }).pipe(gulp.dest('plugins'));
 });
 
 // Build all assets from Sass to Css and compressed bundle js
 gulp.task('build', function() {
-    runSequence('scss', 'minify-scss', 'js', 'minify-js');
+    runSequence('copy', 'scss', 'minify-scss', 'js', 'minify-js');
 });
 
 // Watch for every changes on both sass and js
@@ -68,4 +65,4 @@ gulp.task('watch', function() {
 });
 
 // Default Task 
-gulp.task('default', ['build']);
+gulp.task('default', ['watch']);
