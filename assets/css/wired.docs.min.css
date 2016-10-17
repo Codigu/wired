@@ -1,0 +1,69 @@
+.show-grid {
+    margin-bottom: 15px
+}
+
+.show-grid [class^=col-] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(95, 104, 167, .18);
+    border: 1px solid rgba(95, 104, 167, .29)
+}
+
+.wd-example {
+    border: 1px solid #ddd
+}
+
+.wd-example .example {
+    padding: 10px 10px 15px;
+    border-bottom: 1px solid #ddd
+}
+
+.wd-example pre {
+    padding: 15px 10px;
+    margin: 0;
+    border: 0;
+    background-color: #f8f8f8
+}
+
+.wd-docs-sidebar.affix{
+	top: 0;
+	height: 100%;
+	padding-top: 70px;
+	padding-bottom: 20px;
+}
+
+.wd-docs-sidebar .menu{
+	height: 100%;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+.wd-docs-sidebar .menu li a {
+    color: #707982
+}
+
+.wd-docs-sidebar .menu li a:focus,
+.wd-docs-sidebar .menu li a:hover {
+    color: #3887be;
+    background-color: transparent
+}
+
+.wd-docs-sidebar .menu li.active>a {
+    border-left: 1px solid #3887be;
+    color: #3887be;
+    font-weight: 700
+}
+
+.wd-docs-sidebar .menu li.active .menu {
+    display: block
+}
+
+.wd-docs-sidebar .menu .menu {
+    display: none
+}
+
+.wd-docs-sidebar .menu .menu li a {
+    padding-left: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px
+}
