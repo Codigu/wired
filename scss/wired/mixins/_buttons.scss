@@ -56,7 +56,7 @@
   }
 }
 
-@mixin button-outline-variant($color) { 
+@mixin button-outline-variant($color, $hover: #fff) { 
   color: $color;
   background-image: none;
   background-color: transparent;
@@ -64,14 +64,14 @@
   border-color: $color;
 
   &:hover{
-    color: #fff;
+    color: $hover;
     background-color: $color;
         border-color: $color;
   }
 
   &:focus,
   &.focus {
-    color: #fff;
+    color: $hover;
     background-color: $color;
         border-color: $color;
   }
@@ -79,14 +79,14 @@
   &:active,
   &.active,
   .open > &.dropdown-toggle {
-    color: #fff;
+    color: $hover;
     background-color: $color;
         border-color: $color;
 
     &:hover,
     &:focus,
     &.focus {
-      color: #fff;
+      color: $hover;
       background-color: darken($color, 17%);
           border-color: darken($color, 25%);
     }

@@ -90,13 +90,24 @@ a.btn {
 }
 
 // Outline buttons
-// ------------------------- 
-.btn-outline {
-  @include button-variant($brand-white, transparent , $brand-white);
-}
+// -------------------------  
 
+.btn-outline {
+  color: $brand-white;
+  background-image: none;
+  background-color: transparent;
+  border-width: 2px;
+  border-color: $brand-white;
+
+  &:hover,
+  &:focus,
+  &.focus {
+    color: $brand-white;
+  }
+}
+  
 .btn-outline-default {
-  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+  @include button-outline-variant($brand-white, $btn-default-color);
 } 
 .btn-outline-primary {
   @include button-outline-variant($btn-primary-bg);
