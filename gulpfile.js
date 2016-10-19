@@ -49,7 +49,7 @@ gulp.task('copy', function() {
     gulp.src([
         'node_modules/font-awesome/*/**',
         'node_modules/jquery/dist/jquery.min.js',
-        'node_modules/bootstrap/dist/*/**',
+        'node_modules/bootstrap/*/**',
     ], { base: 'node_modules' }).pipe(gulp.dest('plugins'));
 });
 
