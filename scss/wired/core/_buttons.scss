@@ -19,6 +19,7 @@
   white-space: nowrap;
   outline: 0 !important;
   transition: all 0.2s linear;
+  background-color: $gray-lighter;
   @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
 
   &,
@@ -61,6 +62,11 @@ a.btn {
     pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
   }
 }
+
+.btn-cons {
+  min-width: 120px;
+}
+
   
 
 // Alternate buttons

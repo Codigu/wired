@@ -199,7 +199,7 @@ input[type="search"] {
     label {
         text-transform: uppercase;
         font-family: $font-family-heading;
-        font-size: 12px;
+        font-size: 11   px;
     }
 
     .help {
@@ -226,8 +226,8 @@ input[type="search"] {
         font-family: arial;
         font-size: 20px;
         position: absolute;
-        right: 15px;
-        top: 9px;
+        right: 12px;
+        top: 3px;
     }
 
     &.disabled {
@@ -519,8 +519,8 @@ input[type="search"] {
             width: 16px; 
             height: 16px;
             position: absolute; 
-            left: 3px; 
-            top: 0;
+            left: 4px; 
+            top: -1px;
             font-size: 11px;
             @include transition(border 0.2s linear 0s, color 0.2s linear 0s);
         }
@@ -838,17 +838,17 @@ input[type="checkbox"] {
     line-height: $input-height-small;
 }
 
-// Feedback states
+// Feedback states 
 .has-success {
-    @include form-control-validation($state-success-text, $state-success-text, $state-success-bg);
+    @include form-control-validation($state-success-text, $state-success-bg, $state-success-bg);
 }
 
 .has-warning {
-    @include form-control-validation($state-warning-text, $state-warning-text, $state-warning-bg);
+    @include form-control-validation($state-warning-text, $state-warning-bg, $state-warning-bg);
 }
 
 .has-error {
-    @include form-control-validation($state-danger-text, $state-danger-text, $state-danger-bg);
+    @include form-control-validation($state-danger-text, $state-danger-bg, $state-danger-bg);
 }
 
 // Reposition feedback icon if input has visible label above
