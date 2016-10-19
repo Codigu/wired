@@ -1,0 +1,9 @@
+// Container
+
+.container {
+	@each $breakpoint, $width in $grid-breakpoints {
+	  &-#{$breakpoint} {
+	    max-width: $width;
+	  }
+	}
+}
