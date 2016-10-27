@@ -11,7 +11,8 @@
     &.#{$state} > td,
     &.#{$state} > th {
       background-color: $background;
-    }
+      color: $brand-white;  
+    }  
   }
 
   // Hover states for `.table-hover`
@@ -23,6 +24,7 @@
     &:hover > .#{$state},
     &.#{$state}:hover > th {
       background-color: darken($background, 5%);
+      color: $brand-white;
     }
   }
 }

@@ -5,8 +5,8 @@
     $('.js-target[href^="#"]').click(function(event) {
         event.preventDefault();
 
-        var id = $(this).attr("href");
-        var target = $(id).offset().top;
+        const id = $(this).attr("href");
+        let target = $(id).offset().top;
 
         $('html, body').animate({ scrollTop: target }, 500);
 

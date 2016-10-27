@@ -40,14 +40,17 @@
 
 // Vertical ALignment
 // -------------------------
+.col-bottom,
 .v-align-bottom {
     vertical-align: bottom !important;
 }
 
+.col-top,
 .v-align-top {
     vertical-align: top !important;
 }
 
+.col-middle,
 .v-align-middle {
     vertical-align: middle !important;
 }

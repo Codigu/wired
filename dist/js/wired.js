@@ -11,32 +11,30 @@
     /*
      * Toggle Menu
      * offcanvas menu navigation */
-    var $body   = $(document.body);
-    var $menu   = $('.navbar-toggle');
-    var $type   = $( $menu.data('toggle') );
-    var $target = $( $menu.data('target') );
+    const $body   = $(document.body);
+    const $menu   = $('.navbar-toggle');
+    const type   = $menu.data('toggle');
+    const target = $menu.data('target');
 
     $menu.on('click', function(event) {
 
-        $body.toggleClass($type.selector + '-open menu-open');
-        $target.toggleClass('in');
-
-        console.log($type);
-
+        $body.toggleClass(type + '-open menu-open');
+        $(target).toggleClass('in');
+        
         return false;
     });
 
     // CLicking outside the target contianer 
     $body.on('click', function(event) {
-        if ( $body.hasClass($type.selector + '-open') ) {
+        if ( $body.hasClass(type + '-open') ) {
             if ( $(event.target).hasClass($target.selector) ) {
                 return false;
             } else if(  $(event.target).hasClass('dropdown-toggle') ) {
                 return true;
             }
 
-            $body.removeClass($type.selector + '-open menu-open');
-            $target.removeClass('in');
+            $body.removeClass(type + '-open menu-open');
+            $(target).removeClass('in');
         }
     });
 
@@ -53,8 +51,8 @@
     $('.js-target[href^="#"]').click(function(event) {
         event.preventDefault();
 
-        var id = $(this).attr("href");
-        var target = $(id).offset().top;
+        const id = $(this).attr("href");
+        let target = $(id).offset().top;
 
         $('html, body').animate({ scrollTop: target }, 500);
 

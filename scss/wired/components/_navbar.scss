@@ -12,8 +12,13 @@
   overflow: hidden;
 
   .navbar-toggle {
+    .icon-bar {
+
+      transform-origin: center;
+    }
+
     .icon-bar:first-of-type {
-      transform: rotate(45deg) translateY(5px) translateX(4px);
+      transform: rotate(45deg) translateY(4px) translateX(4px);
     }
 
     .icon-bar:nth-of-type(2) {
@@ -21,7 +26,8 @@
     }
 
     .icon-bar:last-of-type {
-      transform: rotate(-45deg) translateY(-5px) translateX(4px);
+      width: 22px;
+      transform: rotate(-45deg) translateY(-4px) translateX(4px);
     }
   } 
 }
@@ -252,13 +258,6 @@
   > img {
     display: inline-block;
   }
-
-  @media (min-width: $grid-float-breakpoint) {
-    .navbar > .container &,
-    .navbar > .container-fluid & {
-      margin-left: -$navbar-padding-horizontal;
-    }
-  }
 }
 
 
@@ -308,6 +307,10 @@
   }
   .icon-bar + .icon-bar {
     margin-top: 4px;
+  }
+
+  .icon-bar:last-of-type {
+    width: 15px;
   }
 
   // 
@@ -492,8 +495,7 @@
 
 // Default navbar
 .navbar-default {
-  background-color: $navbar-default-bg;
-  border-color: $navbar-default-border;
+  box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.08);
 
   .navbar-brand {
     color: $navbar-default-brand-color;
@@ -537,11 +539,6 @@
   }
 
   .navbar-toggle {
-    border-color: $navbar-default-toggle-border-color;
-    &:hover,
-    &:focus {
-      background-color: $navbar-default-toggle-hover-bg;
-    }
     .icon-bar {
       background-color: $navbar-default-toggle-icon-bar-bg;
     }
