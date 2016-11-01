@@ -19,7 +19,7 @@
   white-space: nowrap;
   outline: 0 !important;
   transition: all 0.2s linear;
-  background-color: $gray-lighter;
+  background-color: $color-gray-lighter;
   @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
 
   &,
@@ -64,7 +64,7 @@ a.btn {
 }
 
 .btn-cons {
-  min-width: 120px;
+  min-width: 140px;
 }
 
   
@@ -99,22 +99,19 @@ a.btn {
 // -------------------------  
 
 .btn-outline {
-  color: $brand-white;
+  color: $color-white;
   background-image: none;
   background-color: transparent;
   border-width: 2px;
-  border-color: $brand-white;
+  border-color: $color-white;
 
   &:hover,
   &:focus,
   &.focus {
-    color: $brand-white;
+    color: $color-white;
   }
 }
   
-.btn-outline-default {
-  @include button-outline-variant($brand-white, $btn-default-color);
-} 
 .btn-outline-primary {
   @include button-outline-variant($btn-primary-bg);
 }
@@ -138,27 +135,27 @@ a.btn {
 // Social buttons
 // ------------------------- 
 .btn-facebook {
-  @include button-variant($brand-white, $brand-facebook, $brand-facebook);
+  @include button-variant($color-white, $color-facebook, $color-facebook);
 }
 
 .btn-twitter {
-  @include button-variant($brand-white, $brand-twitter, $brand-twitter);
+  @include button-variant($color-white, $color-twitter, $color-twitter);
 }
 
 .btn-google {
-  @include button-variant($brand-white, $brand-google, $brand-google);
+  @include button-variant($color-white, $color-google, $color-google);
 }
 
 .btn-linkedin {
-  @include button-variant($brand-white, $brand-linkedin, $brand-linkedin);
+  @include button-variant($color-white, $color-linkedin, $color-linkedin);
 }
 
 .btn-instagram {
-  @include button-variant($brand-white, $brand-instagram, $brand-facebook);
+  @include button-variant($color-white, $color-instagram, $color-instagram);
 }
 
 .btn-youtube {
-  @include button-variant($brand-white, $brand-youtube, $brand-youtube);
+  @include button-variant($color-white, $color-youtube, $color-youtube);
 }
 
 // Icon buttons
@@ -178,7 +175,7 @@ a.btn {
     width: 36px;
     text-align: center;
     margin: 0;
-    background-color: rgba($brand-black, .05);
+    background-color: rgba($color-black, .05);
   }
 
   .fa:before { 

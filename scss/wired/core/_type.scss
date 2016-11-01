@@ -206,7 +206,7 @@ abbr[data-original-title] {
   position: relative;
 
   &:before {
-    @include icon();; 
+    @include icon(); 
     content: "\f10d"; 
     left: 0;
     position: absolute;
