@@ -11,7 +11,7 @@
     &.#{$state} > td,
     &.#{$state} > th {
       background-color: $background;
-      color: $brand-white;  
+      color: $color-white;  
     }  
   }
 
@@ -24,7 +24,7 @@
     &:hover > .#{$state},
     &.#{$state}:hover > th {
       background-color: darken($background, 5%);
-      color: $brand-white;
+      color: $color-white;
     }
   }
 }
