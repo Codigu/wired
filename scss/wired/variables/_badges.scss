@@ -2,10 +2,10 @@
 //
 //##
 
-$badge-color:                 $gray !default;
+$badge-color:                 $color-fade !default;
 //** Linked badge text color on hover
 $badge-link-hover-color:      #fff !default;
-$badge-bg:                    $gray-lighter !default;
+$badge-bg:                    $color-gray-lighter !default;
 
 //** Badge text color in active nav link
 $badge-active-color:          $link-color !default;

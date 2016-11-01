@@ -3,7 +3,7 @@
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 
 $padding-base-vertical:     8px !default;
-$padding-base-horizontal:   15px !default;
+$padding-base-horizontal:   18px !default;
 
 $padding-large-vertical:    10px !default;
 $padding-large-horizontal:  28px !default;
@@ -24,7 +24,7 @@ $border-radius-base:        $border-radius-small !default;
 //** Global color for active items (e.g., navs or dropdowns).
 $component-active-color:    #fff !default;
 //** Global background color for active items (e.g., navs or dropdowns).
-$component-active-bg:       $brand-primary !default;
+$component-active-bg:       $color-primary !default;
 
 //** Width of the `border` for generating carets that indicate dropdowns.
 $caret-width-base:          4px !default;

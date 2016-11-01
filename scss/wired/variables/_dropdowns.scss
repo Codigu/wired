@@ -5,16 +5,16 @@
 //** Background for the dropdown menu.
 $dropdown-bg:                    #fff !default;
 //** Dropdown menu `border-color`.
-$dropdown-border:                $brand-gray !default;
+$dropdown-border:                $color-fade !default;
 //** Dropdown menu `border-color` **for IE8**.
-$dropdown-fallback-border:       $gray-lighter !default;
+$dropdown-fallback-border:       $color-gray-lighter !default;
 //** Divider color for between dropdown items.
-$dropdown-divider-bg:            $brand-gray !default;
+$dropdown-divider-bg:            $color-fade !default;
 
 //** Dropdown link text color.
-$dropdown-link-color:            $gray-dark !default;
+$dropdown-link-color:            $color-gray-dark !default;
 //** Hover color for dropdown links.
-$dropdown-link-hover-color:      darken($gray-dark, 5%) !default;
+$dropdown-link-hover-color:      darken($color-gray-dark, 5%) !default;
 //** Hover background for dropdown links.
 $dropdown-link-hover-bg:         #fafafa !default;
 
@@ -24,10 +24,10 @@ $dropdown-link-active-color:     $component-active-color !default;
 $dropdown-link-active-bg:        $component-active-bg !default;
 
 //** Disabled dropdown menu item background color.
-$dropdown-link-disabled-color:   $gray-light !default;
+$dropdown-link-disabled-color:   $color-gray-light !default;
 
 //** Text color for headers within dropdown menus.
-$dropdown-header-color:          $gray-light !default;
+$dropdown-header-color:          $color-gray-light !default;
 
 //** Deprecated `$dropdown-caret-color` as of v3.1.0
 $dropdown-caret-color:           #000 !default;

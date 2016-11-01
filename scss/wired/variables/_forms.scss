@@ -5,12 +5,12 @@
 //** `<input>` background color
 $input-bg:                       #fff !default;
 //** `<input disabled>` background color
-$input-bg-disabled:              rgba($gray-lighter, 0.66) !default;
+$input-bg-disabled:              rgba($color-gray-lighter, 0.66) !default;
 
 //** Text color for `<input>`s
-$input-color:                    $gray !default;
+$input-color:                    $color-gray !default;
 //** `<input>` border color
-$input-border:                   $brand-gray !default;
+$input-border:                   $color-fade !default;
 
 // TODO: Rename `$input-border-radius` to `$input-border-radius-base` in v4
 //** Default `.form-control` border radius
@@ -37,11 +37,11 @@ $input-height-small:             (floor($font-size-small * $line-height-small) +
 //** `.form-group` margin
 $form-group-margin-bottom:       15px !default;
 
-$legend-color:                   $gray-dark !default;
-$legend-border-color:            $brand-gray !default;
+$legend-color:                   $color-gray-dark !default;
+$legend-border-color:            $color-gray !default;
 
 //** Background color for textual input addons
-$input-group-addon-bg:           $gray-lighter !default;
+$input-group-addon-bg:           $color-gray-lighter !default;
 //** Border color for textual input addons
 $input-group-addon-border-color: $input-border !default;
 
@@ -53,22 +53,30 @@ $cursor-disabled:                not-allowed !default;
 // Form states and alerts
 //
 //## Define colors for form feedback states and, by default, alerts.
-$state-primary-text:             $brand-white !default;
-$state-primary-bg:               $brand-primary !default;
+$state-primary-text:             $color-white !default;
+$state-primary-bg:               $color-primary !default;
 $state-primary-border:           darken(adjust-hue($state-primary-bg, -10), 5%) !default;
 
-$state-success-text:             $brand-white !default;
-$state-success-bg:               $brand-success !default;
+$state-success-text:             $color-white !default;
+$state-success-bg:               $color-success !default;
 $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
 
-$state-info-text:                $brand-white !default;
-$state-info-bg:                  $brand-info !default;
+$state-info-text:                $color-white !default;
+$state-info-bg:                  $color-info !default;
 $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
 
-$state-warning-text:             $brand-white !default;
-$state-warning-bg:               $brand-warning !default;
+$state-warning-text:             $color-white !default;
+$state-warning-bg:               $color-warning !default;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
 
-$state-danger-text:              $brand-white !default;
-$state-danger-bg:                $brand-danger !default;
+$state-danger-text:              $color-white !default;
+$state-danger-bg:                $color-danger !default;
 $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+
+$state-menu-text:              $color-white !default;
+$state-menu-bg:                $color-dark !default;
+$state-menu-border:            darken(adjust-hue($state-menu-bg, -10), 5%) !default;
+
+$state-master-text:              $color-white !default;
+$state-master-bg:                $color-gray !default;
+$state-master-border:            darken(adjust-hue($state-master-bg, -10), 5%) !default;
