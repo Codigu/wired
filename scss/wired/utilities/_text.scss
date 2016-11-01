@@ -54,7 +54,7 @@
 }
 
 .text-white {
-    color: $brand-white;
+    color: $color-white;
 }
 
 @include text-emphasis-variant('.text-primary', $state-primary-bg);

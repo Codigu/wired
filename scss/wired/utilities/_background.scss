@@ -2,12 +2,12 @@
 // For now we'll leave these alongside the text classes until v4 when we can
 // safely shift things around (per SemVer rules).
 .bg-white {
-    background-color: $brand-white !important;
+    background-color: $color-white !important;
 }
 
 .bg-black {
-    background-color: $brand-black;
-    color: $brand-white;
+    background-color: $color-black;
+    color: $color-white;
 }
 
 @include bg-variant('.bg-primary', $state-primary-bg);
@@ -15,3 +15,5 @@
 @include bg-variant('.bg-info', $state-info-bg);
 @include bg-variant('.bg-warning', $state-warning-bg);
 @include bg-variant('.bg-danger', $state-danger-bg);
+@include bg-variant('.bg-menu', $state-menu-bg);
+@include bg-variant('.bg-master', $state-master-bg);
