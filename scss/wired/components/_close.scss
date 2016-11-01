@@ -9,7 +9,7 @@
   font-weight: $close-font-weight;
   line-height: 1;
   color: $close-color;
-  text-shadow: $close-text-shadow;
+  transition: opacity 0.3s ease-in-out;
   @include opacity(.2);
 
   &:hover,
@@ -17,7 +17,7 @@
     color: $close-color;
     text-decoration: none;
     cursor: pointer;
-    @include opacity(.5);
+    @include opacity(.4);
   }
 
   // [converter] extracted button& to button.close

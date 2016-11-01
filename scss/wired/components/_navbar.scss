@@ -9,15 +9,12 @@
   position: relative;
   min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: $navbar-margin-bottom;
-  border: 1px solid transparent;
   float: none;
   @include clearfix;
-  
   .navbar-right {
     float: none;
     margin: 0;
   }
-
   .navbar-nav {
     float: none;
     margin: 0;
@@ -28,14 +25,12 @@
       margin-left: 0;
     }
   }
-
   @media (min-width: $grid-float-breakpoint) {
     .navbar-header {
       float: left;
     }
     .navbar-nav {
-      float: left; 
-
+      float: left;
       > li {
         display: inline-block;
       }
@@ -44,37 +39,30 @@
       }
     }
   }
-
   @each $breakpoint in map-keys($grid-breakpoints) {
     @include media-breakpoint-down($breakpoint) {
       &-#{$breakpoint} {
-        
         // Remove float attr 
         .navbar-header {
           float: none;
         }
-
         // show toggle menu
         .navbar-toggle {
           display: block;
         }
-        
         // Navigation
         .navbar-nav,
         .navbar-left,
         .navbar-right {
           float: none !important;
-          margin: 0; 
+          margin: 0;
         }
-
         .navbar-nav li {
-           display: block;
-        } 
-
+          display: block;
+        }
         .navbar-nav li a {
           font-size: 14px;
         }
-
         // Offcanvas 
         .navbar-offcanvas {
           position: fixed;
@@ -82,18 +70,28 @@
           height: 100%;
           width: 250px;
           padding: 10px 15px;
-          background-color: $brand-white;
+          background-color: $color-white;
           transform: translate3d(100%, 0, 0) !important;
-
           .navbar-nav {
             margin-top: 50px;
           }
-
           .close {
             display: block;
           }
         }
+        // Fullscreen
+        .navbar-fullscreen {
+          visibility: hidden;
+          opacity: 0;
+          position: fixed;
+          padding: 80px 5%;
+          background-color: $color-white;
+          z-index: 99;
 
+          .navbar-nav li a {
+            font-size: 14px !important;
+          }
+        }
       }
     } // @media-breakpoint-up
   } // @each
@@ -223,7 +221,7 @@
 // Light / Dark
 .navbar-light {
   .nav > li > a {
-    color: $brand-white;
+    color: $color-white;
   }
 }
 
@@ -233,8 +231,6 @@
   padding-left: $navbar-padding-horizontal;
   padding-right: $navbar-padding-horizontal;
   font-size: $font-size-large;
-  position: relative;
-  z-index: 102;
   &:hover,
   &:focus {
     text-decoration: none;
@@ -253,7 +249,7 @@
   top: 50%;
   right: 15px;
   padding: 10px;
-  background-color: $brand-white;
+  background-color: $color-white;
   background-image: none;
   border: 1px solid transparent;
   z-index: 102;
@@ -275,7 +271,7 @@
   }
   // Bars
   .icon-bar {
-    background-color: $gray-dark;
+    background-color: $color-gray-dark;
     display: block;
     width: 20px;
     height: 2px;
@@ -313,7 +309,6 @@
       transform: rotate(-45deg) translateY(-4px) translateX(4px);
     }
   }
-
   // Add backdrop to specify offcanvas 
   &.offcanvas-open {
     .navbar:before {
@@ -321,7 +316,7 @@
       width: 100%;
       height: 100%;
       z-index: 100;
-      background-color: rgba($gray-base, 0.3)
+      background-color: rgba($color-gray-base, 0.3)
     }
   }
 }
@@ -338,7 +333,7 @@
     padding-top: 10px;
     padding-bottom: 10px;
     line-height: $line-height-computed;
-    color: $brand-base;
+    color: $color-base;
   }
   @media (max-width: $grid-float-breakpoint-max) {
     // Dropdowns get custom display when collapsed
@@ -475,13 +470,11 @@
 // --------------------------------------------------
 // Default navbar
 .navbar-default {
-  background-color: $brand-white;
+  background-color: $color-white;
   box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.08);
-
   .navbar-brand {
     color: $navbar-default-brand-color;
     transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-
     &:hover,
     &:focus {
       color: $navbar-default-brand-hover-color;
@@ -495,7 +488,6 @@
     > li > a {
       color: $navbar-default-link-color;
       transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-
       &:hover,
       &:focus {
         color: $navbar-default-link-hover-color;
@@ -630,7 +622,6 @@
   // Darken the responsive nav toggle
   .navbar-toggle {
     background-color: transparent;
-
     .icon-bar {
       background-color: $navbar-inverse-toggle-icon-bar-bg;
     }

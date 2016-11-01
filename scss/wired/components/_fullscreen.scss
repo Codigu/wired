@@ -2,6 +2,7 @@
 // Fullscreen
 // --------------------------------------------------
 .navbar-fullscreen {
+    display: none;
     visibility: hidden;
     opacity: 0;
     position: fixed;
@@ -16,10 +17,11 @@
     width: 100%;
     max-width: 100%;
     padding: 80px 5%;
-    background-color: $brand-white;
+    background-color: $color-white;
     transition: visibility 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
     &.in {
+        display: block;
         visibility: visible;
         opacity: 1;
     }

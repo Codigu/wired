@@ -85,28 +85,28 @@
   @include border-radius($input-border-radius);
 
   &.primary {
-    background-color: $brand-primary;
-    color: $brand-white;
+    background-color: $color-primary;
+    color: $color-white;
   }
 
   &.success {
-    background-color: $brand-success;
-    color: $brand-white;
+    background-color: $color-success;
+    color: $color-white;
   }
 
   &.info {
-    background-color: $brand-info;
-    color: $brand-white;
+    background-color: $color-info;
+    color: $color-white;
   }
 
   &.warning {
-    background-color: $brand-warning;
-    color: $brand-white;
+    background-color: $color-warning;
+    color: $color-white;
   }
 
   &.danger {
-    background-color: $brand-danger;
-    color: $brand-white;
+    background-color: $color-danger;
+    color: $color-white;
   }
 
   // Sizing
@@ -154,7 +154,7 @@
     margin: 0;
     height: 100%;
     display: block;
-    color: $gray-light;
+    color: $color-gray-light;
   }
 
   .fa:before {

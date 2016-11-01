@@ -111,19 +111,19 @@
 //
 
 .card-primary {
-  @include card-variant($brand-primary, $brand-primary);
+  @include card-variant($color-primary, $color-primary);
 }
 .card-success {
-  @include card-variant($brand-success, $brand-success);
+  @include card-variant($color-success, $color-success);
 }
 .card-info {
-  @include card-variant($brand-info, $brand-info);
+  @include card-variant($color-info, $color-info);
 }
 .card-warning {
-  @include card-variant($brand-warning, $brand-warning);
+  @include card-variant($color-warning, $color-warning);
 }
 .card-danger {
-  @include card-variant($brand-danger, $brand-danger);
+  @include card-variant($color-danger, $color-danger);
 }
 
 // Remove all backgrounds

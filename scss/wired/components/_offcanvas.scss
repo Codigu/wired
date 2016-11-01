@@ -9,14 +9,14 @@
   bottom: 0;
   left: auto;
   right: 0;
-  z-index: 102;
+  z-index: 1031;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   height: 100%;
   width: 250px;
   max-width: 100%;
   padding: 10px 15px;
-  background-color: $brand-white;
+  background-color: $color-white;
   transform: translate3d(100%, 0, 0);
   transition: left 0.3s cubic-bezier(0.19, 1, 0.22, 1), right 0.3s cubic-bezier(0.19, 1, 0.22, 1), transform 0.3s cubic-bezier(0.19, 1, 0.22, 1), visibility 0.3s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.3s cubic-bezier(0.19, 1, 0.22, 1);
   &.offcanvas-left {
@@ -35,7 +35,9 @@
   .navbar-nav + .navbar-nav {
     margin-top: 0;
   }
-
+   .navbar-nav li a {
+      font-size: 14px;
+    }
   .dropdown-menu {
     position: relative;
     float: none;
@@ -51,7 +53,7 @@
   .close {
     width: 42px;
     height: 36px;
-    color: $gray;
+    color: $color-gray;
     line-height: 36px;
     font-size: 25px;
     display: block;

@@ -103,9 +103,9 @@
 }
 
 // Nav tab Simple layout
-.nav-tabs-simple {
+.nav-tabs-line {
   border-bottom: 0px;
-  border-bottom: 1px solid rgba($gray-base, 0.1);
+  border-bottom: 1px solid rgba($color-gray-base, 0.1);
 
   > li {
     margin-bottom: 0;
@@ -114,15 +114,15 @@
     &:hover,
     &.active {
       a{  
-        color: $brand-primary !important;
-        border-bottom-color: $brand-primary !important; 
+        color: $color-primary !important;
+        border-bottom-color: $color-primary !important; 
       }
     }
 
     a{
       background-color: transparent !important;
       margin: auto;
-      color: $gray;
+      color: $color-gray;
       border-top: 0 !important;
       border-left: 0 !important;
       border-right: 0 !important;
@@ -150,7 +150,7 @@
       background: transparent;
       box-shadow: none;
       border-color: transparent;
-      color: $brand-primary !important;
+      color: $color-primary !important;
 
       &:hover, 
       &:focus, 
@@ -172,7 +172,7 @@
         top: 100%;
       }
       &:after {
-        border-top-color: $brand-white;
+        border-top-color: $color-white;
         border-width: 10px;
         margin-left: -10px;
       }
@@ -185,14 +185,14 @@
 
     > a {
       overflow: visible;
-      color: $gray;
+      color: $color-gray;
       border-color: transparent !important; 
       transition: all 0.3s linear;
     }
   }
 
   ~ .tab-content {
-    background: $brand-white;
+    background: $color-white;
   }
 }
 

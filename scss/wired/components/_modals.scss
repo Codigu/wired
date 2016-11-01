@@ -1,12 +1,10 @@
 //
 // Modals
 // --------------------------------------------------
-
 // .modal-open      - body class for killing the scroll
 // .modal           - container to scroll within
 // .modal-dialog    - positioning shell for the actual modal
 // .modal-content   - actual modal w/ bg and corners and shit
-
 // Kill the scroll on the body
 .modal-open {
   overflow: hidden;
@@ -21,116 +19,109 @@
   right: 0;
   bottom: 0;
   left: 0;
+  padding: 10px;
   z-index: $zindex-modal;
   -webkit-overflow-scrolling: touch;
-
   // Prevent Chrome on Windows from adding a focus outline. For details, see
   // https://github.com/twbs/bootstrap/pull/10951.
   outline: 0;
-
   // When fading in the modal, animate it to slide down
   &.fade .modal-dialog {
     @include translate(0, -25%);
     @include transition-transform(0.3s ease-out);
   }
-
   &.fade.slide-up {
+    &.in .modal-dialog {
+      @include translate(0, 0);
+    }
     .modal-dialog {
       margin: 0 auto;
+      display: table;
+      height: 100%;
       @include translate(0, 75%);
     }
-
-    &.in .modal-dialog{
-      @include translate(0, 0); 
-    }
   }
-
-  &.fade.stick-up .modal-dialog {
-    margin: 0 auto;
-
-    .modal-content-wrapper { vertical-align: top; }
-  }
-
-  &.fade.fill-in {
+  &.fade.stick-up {
+    padding: 0;
     .modal-dialog {
-      transform: scale(0.6);
+      margin: 0 auto;
     }
-
+    .modal-content-wrapper {
+      vertical-align: top;
+    }
+  }
+  &.fade.fill-in {
+    &.in {
+      background-color: rgba($color-white, 0.95);
+    }
+    &.in .modal-dialog {
+      transform: scale(1);
+    }
+    .modal-dialog {
+      display: table;
+      height: 100%;
+      transform: scale(0.95);
+    }
     .close {
       margin-top: 20px;
       margin-right: 20px;
     }
-
     .modal-content {
       background: transparent;
     }
-
-    &.in { 
-      background-color: rgba($brand-white, 0.95); 
-    }
-
-    &.in .modal-dialog { 
-      transform: scale(1);
-    }
   }
-
-  &.fade.slide-right {
- 
-    .modal-dialog {
+  &.fade.slide-right,
+  &.fade.slide-left {
+    padding: 0;
+    &.in .modal-dialog {
+      transform: translate3d(0, 0, 0);
+    }
+    .modal-dialog { 
       position: absolute;
-      right: 0;
-      left: auto;
+      
       height: 100%;
       margin: 0;
+    }
+    .modal-content-wrapper,
+    .modal-content {
+      height: 100%;
+      display: block;
+      border-radius: 0;
+    }
+
+    .modal-footer {
+      text-align: center;
+
+      .btn {
+        display: block;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &.fade.slide-right {
+    .modal-dialog {
+      right: 0;
+      left: auto;
       transform: translate3d(100%, 0, 0);
     }
-
-    .modal-content-wrapper,
-    .modal-content { 
-      height: 100%;
-      display: block;
-    }
-
-    &.in .modal-dialog {
-      transform: translate3d(0, 0, 0);
-    }
   }
-
   &.fade.slide-left {
- 
     .modal-dialog {
-      position: absolute;
       left: 0;
       left: auto;
-      height: 100%;
       transform: translate3d(-100%, 0, 0);
     }
-
-    .modal-content-wrapper,
-    .modal-content { 
-      height: 100%;
-      display: block;
-    }
-
-    &.in {
-      padding-left: 0 !important;
-    }
-
-    &.in .modal-dialog {
-      transform: translate3d(0, 0, 0);
-    }
   }
-
-  &.in .modal-dialog { 
-    @include translate(0, 0); 
-  } 
-  
+  &.in .modal-dialog {
+    @include translate(0, 0);
+  }
 }
 
-.modal-open .modal { 
+.modal-open .modal {
   overflow-x: hidden;
   overflow-y: auto;
-
   &.disable-scroll {
     overflow: hidden;
   }
@@ -140,8 +131,6 @@
 .modal-dialog {
   position: relative;
   width: auto;
-  display: table;
-  height: 100%;
   margin: 30px auto;
 }
 
@@ -155,7 +144,7 @@
   position: relative;
   background-color: $modal-content-bg;
   @include border-radius($border-radius-large);
-  @include box-shadow(0 3px 9px rgba(0,0,0,.5));
+  @include box-shadow(0 3px 9px rgba(0, 0, 0, .5));
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: 0;
@@ -171,8 +160,12 @@
   z-index: $zindex-modal-background;
   background-color: $modal-backdrop-bg;
   // Fade for backdrop
-  &.fade { @include opacity(0); }
-  &.in { @include opacity($modal-backdrop-opacity); }
+  &.fade {
+    @include opacity(0);
+  }
+  &.in {
+    @include opacity($modal-backdrop-opacity);
+  }
 }
 
 // Modal header
@@ -181,6 +174,7 @@
   padding: $modal-title-padding;
   @include clearfix;
 }
+
 // Close icon
 .modal-header .close {
   margin-top: -2px;
@@ -204,7 +198,6 @@
   padding: $modal-footer-padding;
   text-align: right; // right align buttons
   @include clearfix; // clear it in case folks use .pull-* classes on buttons
-
   // Properly space out buttons
   .btn + .btn {
     margin-left: 5px;
@@ -234,16 +227,18 @@
   // Automatically set modal's width for larger viewports
   .modal-dialog {
     width: $modal-md;
-    margin: auto;
   }
   .modal-content {
-    @include box-shadow(0 5px 15px rgba(0,0,0,.5));
+    @include box-shadow(0 5px 15px rgba(0, 0, 0, .5));
   }
-
   // Modal sizes
-  .modal-sm { width: $modal-sm; }
+  .modal-sm {
+    width: $modal-sm;
+  }
 }
 
 @media (min-width: $screen-md-min) {
-  .modal-lg { width: $modal-lg; }
+  .modal-lg {
+    width: $modal-lg;
+  }
 }

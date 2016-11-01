@@ -6,7 +6,7 @@
 // Base class
 .panel {
   margin-bottom: $line-height-computed;
-  background-color: $brand-white;
+  background-color: $color-white;
   border: 1px solid transparent;
   @include border-radius($panel-border-radius); 
   @include box-shadow(0 1px 1px rgba(0,0,0,.05)); 
@@ -46,7 +46,6 @@
   margin-bottom: 0;
   font-family: $font-family-heading;
   font-size: 12px;
-  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   color: inherit;
@@ -254,20 +253,21 @@
     position: relative;
 
     .panel-title > a {
-      color: $gray;
+      color: $color-gray;
       font-weight: normal; 
 
       &:after {
-        @include icon();;
-        content: "\f056";
+        @include icon();
+        content: "\f106";
         position: absolute;
         right: 13px;
-        top: 36%;
-        color: $gray-light;
+        top: 33%;
+        font-size: 18px;
+        color: $color-gray-light;
       }
 
       &.collapsed:after {
-        content: "\f055";
+        content: "\f107"; 
       }
     }
 

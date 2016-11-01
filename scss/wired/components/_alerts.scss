@@ -7,6 +7,7 @@
 // -------------------------
 
 .alert {
+  font-size: 13px;
   padding: $alert-padding;
   margin-bottom: $line-height-computed;
   border: 1px solid transparent;
@@ -50,7 +51,6 @@
     position: relative;
     top: -2px;
     right: -21px;
-    color: inherit;
   }
 }
 
@@ -72,4 +72,32 @@
 
 .alert-danger {
   @include alert-variant($alert-danger-bg, $alert-danger-border, $alert-danger-text);
+}
+
+
+// Notifation bar
+.alert-notification {
+  position: fixed;
+  top: 60px;
+  left: 0; 
+  right: 0;
+
+  .alert {
+    border-radius: 0;
+    border: 0; 
+    margin-bottom: 0;
+  }
+}
+
+// Toaster 
+.alert-toaster {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+
+  .alert {
+    border-radius: 0;
+    border: 0;
+  }
 }
