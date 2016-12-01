@@ -13,7 +13,7 @@
     display: table-row;
 }
 
-.col-height {
+.column-height {
     display: table-cell;
     float: none;
 }
@@ -31,7 +31,7 @@
         .row-#{$breakpoint}-height {
             display: table-row;
         }
-        .col-#{$breakpoint}-height {
+        .column-#{$breakpoint}-height {
             display: table-cell;
             float: none;
         }

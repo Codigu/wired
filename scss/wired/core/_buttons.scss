@@ -6,9 +6,9 @@
 // Base styles 
 // --------------------------------------------------
  
-.btn {
+.button {
   display: inline-block;
-  margin-bottom: 0; // For input.btn
+  margin-bottom: 0; // For input.button
   font-weight: $btn-font-weight;
   text-align: center;
   vertical-align: middle;
@@ -52,10 +52,10 @@
     @include box-shadow(none);
   }
 
-  // [converter] extracted a& to a.btn
+  // [converter] extracted a& to a.button
 }
 
-a.btn {
+a.button {
   &.disabled,
   fieldset[disabled] & {
     pointer-events: none; // Future-proof disabling of clicks on `<a>` elements
@@ -66,88 +66,88 @@ a.btn {
 // Alternate buttons
 // --------------------------------------------------
 
-.btn-default {
+.button-default {
   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
 }
-.btn-primary {
+.button-primary {
   @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
 // Success appears as green
-.btn-success {
+.button-success {
   @include button-variant($btn-success-color, $btn-success-bg, $btn-success-border);
 }
 // Info appears as blue-green
-.btn-info {
+.button-info {
   @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border);
 }
 // Warning appears as orange
-.btn-warning {
+.button-warning {
   @include button-variant($btn-warning-color, $btn-warning-bg, $btn-warning-border);
 }
 // Danger and error appear as red
-.btn-danger {
+.button-danger {
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
 
 // Outline buttons
 // ------------------------- 
-.btn-outline {
+.button-outline {
   @include button-variant($brand-white, transparent , $brand-white);
 }
 
-.btn-outline-default {
+.button-outline-default {
   @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
 } 
-.btn-outline-primary {
+.button-outline-primary {
   @include button-outline-variant($btn-primary-bg);
 }
 // Success appears as green 
-.btn-outline-success {
+.button-outline-success {
   @include button-outline-variant($btn-success-bg);
 }
 // Info appears as blue-green
-.btn-outline-info {
+.button-outline-info {
   @include button-outline-variant($btn-info-bg);
 }
 // Warning appears as orange
-.btn-outline-warning {
+.button-outline-warning {
   @include button-outline-variant($btn-warning-bg);
 }
 // Danger and error appear as red
-.btn-outline-danger {
+.button-outline-danger {
   @include button-outline-variant($btn-danger-bg);
 }
 
 // Social buttons
 // ------------------------- 
-.btn-facebook {
+.button-facebook {
   @include button-variant($brand-white, $brand-facebook, $brand-facebook);
 }
 
-.btn-twitter {
+.button-twitter {
   @include button-variant($brand-white, $brand-twitter, $brand-twitter);
 }
 
-.btn-google {
+.button-google {
   @include button-variant($brand-white, $brand-google, $brand-google);
 }
 
-.btn-linkedin {
+.button-linkedin {
   @include button-variant($brand-white, $brand-linkedin, $brand-linkedin);
 }
 
-.btn-instagram {
+.button-instagram {
   @include button-variant($brand-white, $brand-instagram, $brand-facebook);
 }
 
-.btn-youtube {
+.button-youtube {
   @include button-variant($brand-white, $brand-youtube, $brand-youtube);
 }
 
 // Icon buttons
 // -------------------------
 
-.btn-icon {
+.button-icon {
   position: relative;
   padding-left: 55px !important;
   padding-right: 21px !important;
@@ -177,7 +177,7 @@ a.btn {
 // -------------------------
 
 // Make a button look and behave like a link
-.btn-link {
+.button-link {
   color: $link-color;
   font-weight: normal;
   @include border-radius(0);
@@ -216,15 +216,15 @@ a.btn {
 // Button Sizes
 // --------------------------------------------------
 
-.btn-lg {
+.button-lg {
   // line-height: ensure even-numbered height of button next to large input
   @include button-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
 }
-.btn-sm {
+.button-sm {
   // line-height: ensure proper height of button next to small input
   @include button-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
 }
-.btn-xs {
+.button-xs {
   @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
 }
 
@@ -232,13 +232,13 @@ a.btn {
 // Block button
 // --------------------------------------------------
 
-.btn-block {
+.button-block {
   display: block;
   width: 100%;
 }
 
 // Vertically space out multiple block buttons
-.btn-block + .btn-block {
+.button-block + .button-block {
   margin-top: 5px; 
 }
 
@@ -246,13 +246,13 @@ a.btn {
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  &.btn-block {
+  &.button-block {
     width: 100%;
   }
 }
 
 // Rounded button
 // --------------------------------------------------
-.btn-rounded {
+.button-rounded {
     border-radius: 100px;
 }

@@ -4,9 +4,9 @@
 // any value of `$grid-columns`.
 
 // [converter] This is defined recursively in LESS, but Sass supports real loops
-@mixin make-grid-columns($i: 1, $list: ".col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
+@mixin make-grid-columns($i: 1, $list: ".column-xs-#{$i}, .column-sm-#{$i}, .column-md-#{$i}, .column-lg-#{$i}") {
   @for $i from (1 + 1) through $grid-columns {
-    $list: "#{$list}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+    $list: "#{$list}, .column-xs-#{$i}, .column-sm-#{$i}, .column-md-#{$i}, .column-lg-#{$i}";
   }
   #{$list} {
     position: relative;
@@ -24,9 +24,9 @@
 
 
 // [converter] This is defined recursively in LESS, but Sass supports real loops
-@mixin float-grid-columns($class, $i: 1, $list: ".col-#{$class}-#{$i}") {
+@mixin float-grid-columns($class, $i: 1, $list: ".column-#{$class}-#{$i}") {
   @for $i from (1 + 1) through $grid-columns {
-    $list: "#{$list}, .col-#{$class}-#{$i}";
+    $list: "#{$list}, .column-#{$class}-#{$i}";
   }
   #{$list} {
     float: left;
@@ -36,37 +36,37 @@
 
 @mixin calc-grid-column($index, $class, $type) {
   @if ($type == width) and ($index > 0) {
-    .col-#{$class}-#{$index} {
+    .column-#{$class}-#{$index} {
       width: percentage(($index / $grid-columns));
     }
   }
   @if ($type == push) and ($index > 0) {
-    .col-#{$class}-push-#{$index} {
+    .column-#{$class}-push-#{$index} {
       left: percentage(($index / $grid-columns));
     }
   }
   @if ($type == push) and ($index == 0) {
-    .col-#{$class}-push-0 {
+    .column-#{$class}-push-0 {
       left: auto;
     }
   }
   @if ($type == pull) and ($index > 0) {
-    .col-#{$class}-pull-#{$index} {
+    .column-#{$class}-pull-#{$index} {
       right: percentage(($index / $grid-columns));
     }
   }
   @if ($type == pull) and ($index == 0) {
-    .col-#{$class}-pull-0 {
+    .column-#{$class}-pull-0 {
       right: auto;
     }
   }
   @if ($type == offset) {
-    .col-#{$class}-offset-#{$index} {
+    .column-#{$class}-offset-#{$index} {
       margin-left: percentage(($index / $grid-columns));
     }
   }
   @if $enable-flex {
-      .col-#{$class}-#{$index} {
+      .column-#{$class}-#{$index} {
         flex-basis: 0;
         flex-grow: 1;
         max-width: 100%;

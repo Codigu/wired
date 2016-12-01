@@ -435,10 +435,10 @@
 .navbar-btn {
   @include navbar-vertical-align($input-height-base);
 
-  &.btn-sm {
+  &.button-sm {
     @include navbar-vertical-align($input-height-small);
   }
-  &.btn-xs {
+  &.button-xs {
     @include navbar-vertical-align(22);
   }
 }
@@ -596,7 +596,7 @@
     }
   }
 
-  .btn-link {
+  .button-link {
     color: $navbar-default-link-color;
     &:hover,
     &:focus {
@@ -718,7 +718,7 @@
     }
   }
 
-  .btn-link {
+  .button-link {
     color: $navbar-inverse-link-color;
     &:hover,
     &:focus {
